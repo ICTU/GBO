@@ -1,0 +1,43 @@
+publiccodeYmlVersion: "0.1"
+
+name: PSA GBO
+url: "https://github.com/ICTU/psa-gbo-dvtp.git"
+# softwareVersion: "1.0"    # Optional
+releaseDate: "tbd"
+platforms:
+  - web
+
+categories:
+ - documentation
+
+developmentStatus: development
+
+softwareType: "documentation"
+
+description:
+ en:
+   # localisedName: github-policy   # Optional
+   shortDescription: >
+         Project Startarchitectuur GBO
+
+   longDescription: >
+         Architectuur voor het project Gemeenschappelijke Bronontsluiting (GBO) / Data delen via toestemming aan private partijen (DvTP)
+
+   features:
+      - PSA
+      - Diagrammen die in PSA gebruikt worden
+      - Use Cases die in project toegepast worden
+
+legal:
+ license: nog vast te stellen
+
+maintenance:
+ type: "community"
+
+ contacts:
+   - name: Govert Claus
+
+localisation:
+ localisationReady: false
+ availableLanguages:
+   - nl

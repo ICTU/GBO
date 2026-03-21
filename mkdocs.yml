@@ -1,0 +1,65 @@
+site_name: PSA GBO
+
+theme:
+  name: material
+  language: nl
+  features:
+    - navigation.sections
+    - content.code.copy
+    - content.code.annotate
+
+markdown_extensions:
+
+  # Mermaid diagrammen
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  # Includes voor diagrammen
+  - pymdownx.snippets:
+      base_path:
+        - docs
+      check_paths: true
+
+  # Automatische inhoudsopgave
+  - toc:
+      permalink: true
+      toc_depth: 2
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/pdf.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - javascripts/mermaid-init.js
+
+plugins:
+  - search
+  - print-site:
+      add_to_navigation: false
+      print_page_title: "PSA GBO / DvTP"
+      enumerate_headings: true
+
+nav:
+  - Voorblad: voorblad.md
+
+  - Over dit document: index.md
+
+  - PSA:
+    - Inleiding: psa/inleiding.md
+    - Context: psa/context.md
+    - Architectuurprincipes: psa/architectuurprincipes.md
+    - Ontwerpprincipes: psa/ontwerpprincipes.md
+    - Ecosysteem en oplossingsrichting: psa/ecosysteem.md
+    - Interactiepatronen: psa/interactiepatronen.md
+    - Logische architectuur: psa/generieke-functies.md
+    - Capabilities: psa/capabilities.md
+    - Realisatiestrategie: psa/realisatiestrategie.md
+    - Open Vraagstukken en ontwerpkeuzes: psa/vraagstukken.md
+
+  - Use Cases:
+    - Zorgeloos Vastgoed: use-cases/zorgeloos-vastgoed.md
+    - Gebruik vastgoedgegevens: use-cases/lvg.md

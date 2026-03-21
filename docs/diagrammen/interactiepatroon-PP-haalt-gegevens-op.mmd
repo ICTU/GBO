@@ -1,0 +1,31 @@
+<figure>
+
+``` mermaid
+
+sequenceDiagram
+    actor Burger
+    participant DV as Dienstverlener<br/>(privaat / EU-overheid)
+    participant GBO as GBO<br/>toestemmingscheck + ontsluiting
+    participant Bron as Bronhouder<br/>overheidsbron
+    participant TR as Transformatie<br/>formaat afnemer
+
+    DV->>Burger: 1. Vraag toestemming<br/>(redirect naar overheidsportaal)
+    Burger->>GBO: 2. Authenticatie DigiD<br/>+ toestemming verlenen
+    GBO-->>DV: 3. Toestemmingstoken<br/>(OAuth 2.0 / consent token)
+
+    DV->>GBO: 4. Gegevensverzoek<br/>+ toestemmingstoken + mTLS
+    GBO->>GBO: 5. Valideer token<br/>(geldig? scope? TTL?)
+    GBO->>Bron: 6. Ophaalverzoek<br/>(OAuth 2.0 · REST/GraphQL)
+    Bron-->>GBO: 7. Gegevens<br/>(gezegeld door bronhouder)
+    GBO->>TR: 8. Transformeer naar<br/>afnemerformaat
+
+    alt DvTP (private partij)
+        TR-->>DV: 9a. REST/GraphQL response<br/>(eigen formaat)
+    else SDG/OOTS (EU overheid)
+        TR-->>DV: 9b. AS4 / eDelivery<br/>(SDG evidence format)
+    end
+
+```
+
+<figcaption>Interactiepatroon Private Partij haalt gegevens op</figcaption>
+</figure>
