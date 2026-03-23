@@ -1,6 +1,6 @@
 # Logische architectuur (generieke functies)
 
-De oplossingsrichting met generieke bronontsluiting wordt gerealiseerd door **generieke functies**.
+De oplossingsrichting met gemeenschappelijke bronontsluiting wordt gerealiseerd door **generieke functies**.
 
 ## Overzicht generieke functies
 

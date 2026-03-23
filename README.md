@@ -1,6 +1,6 @@
 # Project Start Architectuur (PSA)
 
-## Delen via Toestemming naar Private Partijen (DvTP) / Generieke BronOntsluiting (GBO)
+## Delen via Toestemming naar Private Partijen (DvTP) / Gemeenschappelijke BronOntsluiting (GBO)
 
 Deze repository bevat de **Project Start Architectuur (PSA)** voor het programma **DvTP/GBO**.
 

@@ -85,7 +85,7 @@ Pas een gelaagde componentarchitectuur toe (vergelijkbaar met het Common Ground 
 Gegevens worden zoveel mogelijk real-time bevraagd bij de bronhouder via API's, in plaats van gekopieerd naar lokale registers of tussenopslagplaatsen. Kopieën zijn tijdelijke uitzonderingen die expliciet worden gemotiveerd (bijv. technische onmogelijkheid van real-time bevraging) en worden beheerst.
 
 **Toelichting voor GBO:**
-Het GBO fungeert als *integratielaag*, niet als *gegevensmagazijn*. Bronhouders (BRP, Belastingdienst, UWV, DUO, BAG/BRK) worden bevraagd via de generieke bronontsluiting-API. Tussenopslag is alleen toegestaan als performance of beschikbaarheid dit vereist, met expliciete AVG-grondslag.
+Het GBO fungeert als *integratielaag*, niet als *gegevensmagazijn*. Bronhouders (BRP, Belastingdienst, UWV, DUO, BAG/BRK) worden bevraagd via de gemeenschappelijke bronontsluiting-API. Tussenopslag is alleen toegestaan als performance of beschikbaarheid dit vereist, met expliciete AVG-grondslag.
 
 **Bronnen:**
 - Common Ground informatiearchitectuurprincipes (VNG Realisatie / GEMMA Online)
