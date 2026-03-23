@@ -42,4 +42,5 @@ Dit is nodig voor de Wallet, maar mogelijk ook voor de andere use cases. Er is [
 Hoe één bronhouder-API leidt tot drie verschillende afnemerprotocollen (DvTP/REST+OAuth, OOTS/AS4+eDelivery, Wallet/OID4VC)? Dit is het technische hart van de "bronhouder één keer, afnemer naar wens"-ambitie.
 
 - RINIS biedt een dienst om berichten uit te wisselen tussen OOTS/eDelivery/AS4 en REST-API?  
-- Vanuit Service2 (?) en UBO is gekeken naar het koppelen van SDG/OOTS en de Wallet. (lijkt niet goed te passen in onze oplossingsrichting waar we vanuit REST-API/ GraphQL willen werken)
+- Vanuit [Synergy](https://ec.europa.eu/digital-building-blocks/sites/spaces/OOTS/pages/930450665/Two+systems+one+vision) en UBO is gekeken naar het koppelen van OOTS en de Wallet.
+- Onze oplossingsrichting werkt vanuit de FDS-standaarden (REST-API/ GraphQL).
