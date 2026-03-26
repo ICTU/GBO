@@ -60,6 +60,5 @@ nav:
     - Realisatiestrategie: psa/realisatiestrategie.md
     - Open Vraagstukken en ontwerpkeuzes: psa/vraagstukken.md
 
-  - Use Cases:
-    - Zorgeloos Vastgoed: use-cases/zorgeloos-vastgoed.md
-    - Gebruik vastgoedgegevens: use-cases/lvg.md
+  - Referentie Architectuur:
+    - Reference architecture: ref-arch/gbo-reference-architecture.md
