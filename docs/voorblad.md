@@ -1,4 +1,4 @@
-# GBO / DvTP
+# GBO
 ## Project Start Architectuur
 
 ![ICTU](media/ictu-logo.png)
