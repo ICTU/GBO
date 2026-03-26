@@ -19,13 +19,9 @@ sequenceDiagram
     Bron-->>GBO: 7. Gegevens<br/>(gezegeld door bronhouder)
     GBO->>TR: 8. Transformeer naar<br/>afnemerformaat
 
-    alt DvTP (private partij)
-        TR-->>DV: 9a. REST/GraphQL response<br/>(eigen formaat)
-    else SDG/OOTS (EU overheid)
-        TR-->>DV: 9b. AS4 / eDelivery<br/>(SDG evidence format)
-    end
+    TR-->>DV: 9a. REST/GraphQL response<br/>(eigen formaat)
 
 ```
 
-<figcaption>Interactiepatroon Private Partij haalt gegevens op</figcaption>
+<figcaption>Interactiepatroon Private Partij haalt gegevens op met toestemming van de burger</figcaption>
 </figure>
