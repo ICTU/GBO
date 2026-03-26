@@ -87,7 +87,7 @@ De vier functies in deze laag vormen de voorwaarden waaronder de generieke funct
 
 - Iedere gegevensuitvraag — ongeacht het traject of de afnemer — doorloopt dezelfde autorisatieketen. Er zijn geen trajectspecifieke omwegen of parallelle handhavingspunten.
 - Het beleid is uitgedrukt in een formele, machineleesbare taal. Menselijk leesbare beschrijvingen zijn afgeleid van dezelfde bron, niet de bron zelf.
-- De autorisatiebeslissing is gebaseerd op: de identiteit van de afnemer, de gevraagde gegevens, de aanwezige grondslag (raadpleging van Toestemming & Grondslag), en de context van het verzoek. Deze vier elementen zijn altijd expliciet aanwezig in de beslissing.
+- De autorisatiebeslissing is gebaseerd op: de identiteit van de afnemer, de gevraagde gegevens, de aanwezige grondslag (via toestemmingenregister, grondslagenregister of impliciet in request), en de context van het verzoek. Deze vier elementen zijn altijd expliciet aanwezig in de beslissing.
 - De autorisatiecomponent raadpleegt de grondslag real-time op het moment van uitvraag — er is geen vertrouwen op eerder uitgegeven tokens die de grondslagstatus "bevroren" vastleggen.
 - Beleidsdefinities zijn per traject instelbaar zonder wijziging van de autorisatie-infrastructuur zelf.
 - De beslissing (allow/deny) en de relevante context worden vastgelegd ten behoeve van auditbaarheid.
