@@ -10,13 +10,13 @@
 
 ### D-01 · Decentraal wat kan, centraal wat moet
 
-**Betekenis:**
+**Betekenis:**  
 Taken, bevoegdheden en voorzieningen worden belegd op het laagst mogelijke niveau dat nog doelmatig en doeltreffend is. Centrale voorzieningen worden ingericht als decentrale alternatieven aantoonbaar onvoldoende zijn — bijvoorbeeld vanwege schaalniveau, interoperabiliteitseisen of beveiligingsrisico's. Voor de GBO betekent dit: generieke functies (authenticatie, toegang, bronontsluiting) worden centraal ingericht; domeinspecifieke functies mogen bij de betrokken partij blijven.
 
-**Toelichting voor GBO:**
+**Toelichting voor GBO:**  
 Bronhouders beheren zelf hun gegevens. Het GBO-stelsel biedt een centrale *integratielaag*, maar geen centrale *gegevensopslag*. Keuzes voor centrale voorzieningen worden expliciet gemotiveerd, maar kunnen ook op verzoek van bronhouders gemaakt worden.
 
-**Bronnen:**
+**Bronnen:**  
 - Gemeentewet art. 117 lid 2 / Provinciewet art. 115 lid 2 (subsidiariteitsbeginsel)
 - Code Interbestuurlijke Verhoudingen — "Decentraal wat kan, centraal wat moet"
 - GDI-Meerjarenvisie 2024–2028 (Bureau MIDO / BZK)
@@ -26,51 +26,51 @@ Bronhouders beheren zelf hun gegevens. Het GBO-stelsel biedt een centrale *integ
 
 ### D-02 · Afspraken gaan boven standaarden, standaarden gaan boven voorzieningen
 
-**Betekenis:**
-De voorkeursvolgorde bij het realiseren van een generieke functie is:
+**Betekenis:**  
+De voorkeursvolgorde bij het realiseren van een generieke functie is:  
 1. **Afspraken** — onderlinge afspraken tussen partijen zijn de lichtste en meest flexibele vorm;
 2. **Standaarden** — als afspraken onvoldoende zijn, wordt een formele standaard vastgesteld;
 3. **Voorzieningen** — pas als standaarden niet volstaan, wordt een gedeelde technische voorziening ingericht.
 
 Dit principe voorkomt dat er onnodig zware centrale voorzieningen worden gebouwd die innovatie remmen en afhankelijkheden creëren.
 
-**Toelichting voor GBO:**
+**Toelichting voor GBO:**  
 Kies bij elke nieuwe GBO-functie eerst de lichtste adequate oplossing. Sla stappen niet over. Documenteer waarom een hogere trede nodig is.
 
-**Bronnen:**
-- GA Basisprincipes — principe D (NORA Online / Bureau MIDO)
-- MIDO-kader 2024 — principe "afspraken boven standaarden boven voorzieningen"
-- GDI Meerjarenvisie 2024–2028, §4 (principe U)
-- Computable / Manifestgroep: *'Afspraken boven standaarden boven voorzieningen'* (2017)
-- Digitaleoverheid.nl — GDI-beschrijving bouwstenentypen
+**Bronnen:**  
+- GA Basisprincipes — principe D (NORA Online / Bureau MIDO)  
+- MIDO-kader 2024 — principe "afspraken boven standaarden boven voorzieningen"  
+- GDI Meerjarenvisie 2024–2028, §4 (principe U)  
+- Computable / Manifestgroep: *'Afspraken boven standaarden boven voorzieningen'* (2017)  
+- Digitaleoverheid.nl — GDI-beschrijving bouwstenentypen  
 
 ---
 
 ### D-03 · Gebruik landelijke generieke voorzieningen (GDI-bouwstenen) tenzij…
 
-**Betekenis:**
+**Betekenis:**  
 Overheidsorganisaties maken bij voorkeur gebruik van beschikbare GDI-bouwstenen (DigiD, eHerkenning, Digikoppeling, MijnOverheid, etc.) in plaats van eigen parallelle voorzieningen te bouwen. Afwijken is alleen toegestaan als de GDI-bouwsteen aantoonbaar niet voldoet aan de functionele of wettelijke eisen, en wordt gemotiveerd conform 'pas toe of leg uit'.
 
-**Toelichting voor GBO:**
+**Toelichting voor GBO:**  
 Voor authenticatie: DigiD / eHerkenning / EUDIW. Voor transport: Digikoppeling REST-profiel. Voor gegevensuitwisseling: Digilevering/Digipoort waar van toepassing. Eigen voorzieningen zijn aanvullend, niet vervangend.
 
-**Bronnen:**
-- GDI-Meerjarenvisie 2024–2028 (Bureau MIDO)
-- GDI Programmeringsplan 2024 (Rijksoverheid / MIDO)
-- Digitaleoverheid.nl — GDI bouwstenoverzicht
-- NORA — gebruik generieke bouwstenen (BP07)
+**Bronnen:**  
+- GDI-Meerjarenvisie 2024–2028 (Bureau MIDO)  
+- GDI Programmeringsplan 2024 (Rijksoverheid / MIDO)  
+- Digitaleoverheid.nl — GDI bouwstenoverzicht  
+- NORA — gebruik generieke bouwstenen (BP07)  
 
 ---
 
 ### D-04 · Robuust, modulair en flexibel ontwerp
 
-**Betekenis:**
+**Betekenis:**  
 Het stelsel is opgebouwd uit losgekoppelde, vervangbare modules met heldere interfaces. Elk component kan onafhankelijk worden doorontwikkeld of vervangen zonder andere componenten te raken. Het stelsel heeft geen single point of failure en is ontworpen op continuïteit.
 
-**Toelichting voor GBO:**
+**Toelichting voor GBO:**  
 Pas een gelaagde componentarchitectuur toe conform het NORA Vijflaagsmodel (interactie, procesinrichting, integratie, diensten, gegevensbronnen). Definieer expliciete API-contracten tussen lagen. Sla geen gegevens op die ook real-time bij de bron bevraagd kunnen worden.
 
-**Bronnen:**
+**Bronnen:**  
 - GA Basisprincipes — principe V (Bureau MIDO)
 - GDI-Meerjarenvisie 2024–2028
 - NORA Vijflaagsmodel (noraonline.nl)
@@ -84,13 +84,13 @@ Pas een gelaagde componentarchitectuur toe conform het NORA Vijflaagsmodel (inte
 
 ### D-05 · Gegevens bij de bron — geen onnodige kopieën
 
-**Betekenis:**
+**Betekenis:**  
 Gegevens worden zoveel mogelijk real-time bevraagd bij de bronhouder via API's, in plaats van gekopieerd naar lokale registers of tussenopslagplaatsen. Kopieën zijn tijdelijke uitzonderingen die expliciet worden gemotiveerd (bijv. technische onmogelijkheid van real-time bevraging) en worden beheerst.
 
-**Toelichting voor GBO:**
+**Toelichting voor GBO:**  
 Het GBO fungeert als *integratielaag*, niet als *gegevensmagazijn*. Bronhouders (BRP, Belastingdienst, UWV, DUO, BAG/BRK) worden bevraagd via de gemeenschappelijke bronontsluiting-API. Tussenopslag is alleen toegestaan als performance of beschikbaarheid dit vereist, met expliciete AVG-grondslag.
 
-**Bronnen:**
+**Bronnen:**  
 - NORA NAP12 — Informeer bij de bron (noraonline.nl)
 - GEMMA Informatiearchitectuurprincipes — eenmalige vastlegging (VNG Realisatie, opgegaan in GEMMA 2024/2025)
 - Haal Centraal-programma (VNG Realisatie) — "bevragen bij de bron"
@@ -100,13 +100,13 @@ Het GBO fungeert als *integratielaag*, niet als *gegevensmagazijn*. Bronhouders 
 
 ### D-06 · Componentgebaseerd werken — herbruikbare bouwstenen
 
-**Betekenis:**
+**Betekenis:**  
 Functionaliteit wordt opgesplitst in kleine, herbruikbare componenten die elk één verantwoordelijkheid hebben (single responsibility). Componenten zijn interoperabel via gestandaardiseerde API's en kunnen door verschillende afnemers worden hergebruikt zonder afhankelijkheid van één leverancier.
 
-**Toelichting voor GBO:**
+**Toelichting voor GBO:**  
 Denk aan afzonderlijke componenten voor: authenticatie, toestemmingsbeheer, bronontsluiting per registratie, pseudoniemvertaling, logging. Elk component heeft een eigen beheerder en een stabiel API-contract.
 
-**Bronnen:**
+**Bronnen:**  
 - NORA NAP07 — Bouw diensten modulair op (noraonline.nl)
 - NORA Vijflaagsmodel — serviceoriëntatie als leidende architectuurstijl
 - GEMMA Informatiearchitectuurprincipes — componentgebaseerd werken (VNG Realisatie, opgegaan in GEMMA 2024/2025)
@@ -115,10 +115,10 @@ Denk aan afzonderlijke componenten voor: authenticatie, toestemmingsbeheer, bron
 
 ### D-07 · Open source tenzij er zwaarwegende redenen zijn om dat niet te doen
 
-**Betekenis:**
+**Betekenis:**  
 Componenten en standaarden worden bij voorkeur als open source ontwikkeld en gepubliceerd, zodat samenwerking, hergebruik en transparantie worden bevorderd. Hierdoor neemt de kans op vendor lock-in af en kunnen marktpartijen en andere overheden bijdragen.
 
-**Bronnen:**
+**Bronnen:**  
 - NORA — gebruik open standaarden en open source (noraonline.nl)
 - Werkagenda Waardengedreven Digitaliseren (BZK)
 - GEMMA Realisatieprincipes — "Open Source Software wordt gestimuleerd" (VNG Realisatie)
@@ -127,13 +127,13 @@ Componenten en standaarden worden bij voorkeur als open source ontwikkeld en gep
 
 ### D-13 · Standaardiseer waar mogelijk, maak uitzonderingen expliciet
 
-**Betekenis:**
+**Betekenis:**  
 Hergebruik van bestaande standaarden, patronen en voorzieningen heeft sterk de voorkeur boven het ontwikkelen van nieuwe oplossingen. Als een uitzondering nodig is, wordt deze gedocumenteerd als architectuurbeslissing (ADR — Architecture Decision Record) met een onderbouwde motivatie.
 
-**Toelichting voor GBO:**
+**Toelichting voor GBO:**  
 Stel een ADR-register bij als onderdeel van de GBO-documentatie. Elke afwijking van een verplichte standaard of een vastgesteld architectuurprincipe krijgt een eigen ADR met: context, beslissing, overwogen alternatieven, en consequenties.
 
-**Bronnen:**
+**Bronnen:**  
 - NORA BP09 — Pas open standaarden toe
 - NORA Architectuurprincipes (noraonline.nl)
 - GA Basisprincipes — principe D & H (Bureau MIDO)
@@ -142,10 +142,10 @@ Stel een ADR-register bij als onderdeel van de GBO-documentatie. Elke afwijking 
 
 ### D-14 · Interoperabiliteit — semantische en technische afstemming
 
-**Betekenis:**
+**Betekenis:**  
 Gegevens die het GBO uitwisselt, zijn semantisch eenduidig gedefinieerd via vastgestelde informatiemodellen (GGM, NEN3610, IMGeo, etc.) en ontologieën (RDF/SHACL). Technische koppelvlakken zijn gedocumenteerd conform OpenAPI Specification. Hierdoor kunnen afnemers gegevens machineleesbaar verwerken zonder handmatige interpretatie.
 
-**Bronnen:**
+**Bronnen:**  
 - NORA Domeinarchitectuur Gegevensuitwisseling — semantiek & validatie
 - Gemeentelijk Gegevensmodel (GGM) — VNG
 - Forum Standaardisatie — standaarden voor semantische interoperabiliteit
@@ -157,13 +157,13 @@ Gegevens die het GBO uitwisselt, zijn semantisch eenduidig gedefinieerd via vast
 
 ### D-08 · Pas toe of leg uit — verplichte open standaarden
 
-**Betekenis:**
+**Betekenis:**  
 Overheidsorganisaties zijn verplicht de open standaarden op de 'pas toe of leg uit'-lijst van Forum Standaardisatie toe te passen. Afwijken is alleen toegestaan als er een zwaarwegende en gedocumenteerde reden is. Voor het GBO gelden in elk geval als verplicht: REST API Design Rules, NL GOV OAuth 2.0-profiel, NL GOV OIDC-profiel, Digikoppeling, en — zodra beschikbaar — OID4VC/OID4VP.
 
-**Toelichting voor GBO:**
+**Toelichting voor GBO:**  
 Neem in het stelselontwerp een expliciete mapping op van GBO-koppelvlakken naar verplichte standaarden. Documenteer elk koppelvlak dat afwijkt van de 'pas toe'-standaard.
 
-**Bronnen:**
+**Bronnen:**  
 - Forum Standaardisatie — 'Pas toe of leg uit'-lijst
 - Logius API-standaarden: REST API Design Rules, NL GOV OAuth 2.0, NL GOV OIDC
 - GDI-Meerjarenvisie 2024–2028 — collectieve voorzieningen "pas toe of leg uit"
@@ -173,7 +173,7 @@ Neem in het stelselontwerp een expliciete mapping op van GBO-koppelvlakken naar 
 
 ### D-09 · API-first — ontsluiting via gestandaardiseerde API's
 
-**Betekenis:**
+**Betekenis:**  
 Elke GBO-functie en elke bronontsluiting wordt primair aangeboden als een goed gedocumenteerde, versie-beheerde API. De API is het primaire koppelvlak; gebruikersinterfaces en batchprocessen zijn secundair. API's worden ontworpen conform de NLGov REST API Design Rules.
 
 **Toelichting voor GBO — REST vs. GraphQL:**
@@ -184,7 +184,7 @@ De NLGov REST API Design Rules zijn verplicht ('pas toe of leg uit') voor REST-A
 
 Overweeg een hybride aanpak: REST-endpoints voor standaard bevragingen (conform verplichte standaard), GraphQL voor flexibele attribuutselectie door afnemers.
 
-**Bronnen:**
+**Bronnen:**  
 - NLGov REST API Design Rules (Forum Standaardisatie, verplicht 'pas toe of leg uit' — Logius)
 - Kennisplatform API's (developer.overheid.nl)
 - GEMMA Informatiearchitectuurprincipes — "maximaal openstellen voor hergebruik via API's"
@@ -196,13 +196,13 @@ Overweeg een hybride aanpak: REST-endpoints voor standaard bevragingen (conform 
 
 ### D-10 · Informatiebeveiliging en privacy by design
 
-**Betekenis:**
+**Betekenis:**  
 Beveiligings- en privacymaatregelen worden vanaf het eerste ontwerp ingebakken in het stelsel — niet achteraf toegevoegd als laag. Dit omvat: minimale gegevensverwerking, pseudonimisering, toegangsbeperking op need-to-know-basis, encryptie in transit en at rest, en expliciete beveiligingsarchitectuur per component.
 
-**Toelichting voor GBO:**
+**Toelichting voor GBO:**  
 Voer voor elk nieuw component een Data Protection Impact Assessment (DPIA) uit. Stel een expliciete beveiligingsclassificatie vast per gegevenstype. Ontwerp de toegangslaag op basis van zero-trust-principes (geen impliciete vertrouwensrelaties tussen componenten).
 
-**Bronnen:**
+**Bronnen:**  
 - AVG art. 25 — privacy by design & by default
 - BIO2 (Baseline Informatiebeveiliging Overheid 2) — gebaseerd op ISO/IEC 27001:2022 & 27002:2022
 - GA Basisprincipes — principe H (privacy by design, security by design)
@@ -213,13 +213,13 @@ Voer voor elk nieuw component een Data Protection Impact Assessment (DPIA) uit. 
 
 ### D-11 · Least privilege — toegang op basis van minimale rechten
 
-**Betekenis:**
+**Betekenis:**  
 Elke afnemer, component en beheerder krijgt uitsluitend de toegang die strikt noodzakelijk is voor de uit te voeren taak. Autorisaties zijn granulaar, tijdgebonden en worden actief ingetrokken als ze niet meer nodig zijn. Er zijn geen statische 'admin'-accounts met brede rechten.
 
-**Toelichting voor GBO:**
+**Toelichting voor GBO:**  
 Implementeer OAuth 2.0-scopes per API-endpoint en per gegevenstype. Koppel autorisaties aan grondslag en doelbinding (zie architectuurprincipe P-01). Log elke autorisatiebeslissing.
 
-**Bronnen:**
+**Bronnen:**  
 - BIO2 — toegangsbeheer (ISO 27002 domein 8)
 - NL GOV Assurance profile for OAuth 2.0 (Logius)
 - AVG art. 5 lid 1 sub b (doelbinding) & sub c (dataminimalisatie)
@@ -228,10 +228,10 @@ Implementeer OAuth 2.0-scopes per API-endpoint en per gegevenstype. Koppel autor
 
 ### D-12 · Aantoonbare veiligheid — audit en pen-testing
 
-**Betekenis:**
+**Betekenis:**  
 De beveiliging van het stelsel wordt periodiek getoetst door onafhankelijke audits en penetratietests. Bevindingen worden transparant gerapporteerd en aantoonbaar opgevolgd. Het stelsel voldoet aan de BIO2-normen en — voor vitale functies — aan de eisen van de Cyberbeveiligingswet.
 
-**Bronnen:**
+**Bronnen:**  
 - BIO2 (Baseline Informatiebeveiliging Overheid 2) — risicomanagement & audit
 - NIS2-richtlijn / Cyberbeveiligingswet — zorgplicht en meldplicht
 - ISO/IEC 27001:2022 — ISMS-certificering
