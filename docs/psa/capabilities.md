@@ -263,7 +263,9 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 
 ### Afspraken
 
-| Stelselafspraak | Centraal — GBO/FDS | ⚠️ Nog te maken als GBO-aansluiteis; LDV-standaard zelf beschikbaar |
+| Afspraak | Type | Beheer | Invulling |
+|---|---|---|---|
+| LDV-conforme logging is verplicht voor alle GBO-componenten | Stelselafspraak | Centraal — GBO/FDS | ⚠️ Nog te maken als GBO-aansluiteis; LDV-standaard zelf in consultatie |
 | Cross-component correlatie via gestandaardiseerde trace-identifier | Stelselafspraak | Centraal — GBO | ⚠️ Nog te maken als GBO-technisch profiel |
 | Burger heeft inzagerecht in verwerkingen; logstructuur maakt dit mogelijk | Stelselafspraak | Centraal — GBO, AVG art. 15 als basis | ⚠️ Inzagevoorziening voor burger nog te ontwerpen |
 | Wallet-lokale logs vallen buiten server-side correlatie | Architectuurafspraak | Centraal — GBO | ⚠️ Vast te leggen als GBO-architectuurkeuze |
@@ -330,10 +332,10 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 
 > ℹ️ **Scope-afbakening:** GBO overweegt een **centrale PuB-EAA-uitgifte-dienst** in te richten die namens overheidsbronhouders attesteringen uitgeeft op basis van de generieke bronontsluiting (Capability 5), en een **centrale verificatiedienst** waar vertrouwende partijen de geldigheid van uitgegeven attesteringen kunnen controleren. De keuze of beide voorzieningen centraal worden ingericht, decentraal per bronhouder, of dat de uitgifte elders (buiten GBO) wordt belegd, is nog niet gemaakt en wordt hier als open vraag behandeld.
 
-### Afspraken  
+### Afspraken
 
-| Afspraak | Type | Beheer | Invulling |  
-|---|---|---|---|  
+| Afspraak | Type | Beheer | Invulling |
+|---|---|---|---|
 | Welke overheidsbronnen PuB-EAAs uitgeven en voor welke attribuuttypen | Stelselafspraak | Centraal — GBO, per bronhouder te activeren | ⚠️ Nog te maken; lijst van attribuuttypen sluit aan op canonieke schema's (C9) |
 | Attestation Rulebook per attribuuttype: vereiste gegevens, opmaak, bewijzen, beveiligingseisen, intrekkingsbeleid | Stelselafspraak | Centraal — GBO, aansluiting EC/ARF-rulebooks | ⚠️ Nog te maken per attribuuttype; Europese standaardrulebooks in ontwikkeling |
 | Wallet binding: koppeling van uitgifte aan specifieke wallet-instantie van de burger | Architectuurafspraak | Centraal — GBO | ⚠️ Nog te maken als GBO-technisch profiel; conform ARF wallet binding vereisten |
