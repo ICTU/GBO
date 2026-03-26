@@ -31,24 +31,32 @@ Vanuit de [architectuur- en ontwerpprincipes](./architectuurprincipes.md) worden
 
 ## Juridisch & Identiteit
 
-De drie functies in deze laag vormen de voorwaarden waaronder de generieke functies mogen opereren. Ze zijn geen onderdeel van de gegevensstroom zelf, maar worden door alle generieke functies geraadpleegd.
+De vier functies in deze laag vormen de voorwaarden waaronder de generieke functies mogen opereren. Ze zijn geen onderdeel van de gegevensstroom zelf, maar worden door alle generieke functies geraadpleegd.
 
-### Toestemming & Grondslag
+### Toestemming
 
-**Doel:** Vaststellen en beheren van de juridische grondslag voor gegevensdeling, per traject (DvTP-toestemming, SDG/OOTS-wettelijke basis, eIDAS2-presentatie).
+**Doel:** Vaststellen en beheren van de testemming voor gegevensdeling.
 
 **Eisen:**
 
-- De functie ondersteunt meerdere grondslagtypen (toestemming burger, wettelijke verplichting, gerechtvaardigd belang) zonder dat de verwerkende systemen daar trajectspecifiek voor hoeven te worden ingericht.
 - Toestemming van de burger is altijd herleidbaar tot een specifiek doel, een specifieke afnemer, en een specifieke gegevensvraag (doelbinding).
-- De grondslag is machineleesbaar raadpleegbaar op het moment van gegevensuitvraag — niet alleen vastgelegd in een document of token dat van tevoren is uitgegeven.
+- De toestemming is machineleesbaar raadpleegbaar op het moment van gegevensuitvraag — niet alleen vastgelegd in een document of token dat van tevoren is uitgegeven.
 - Intrekking van toestemming werkt met onmiddellijke ingang: een ingetrokken grondslag leidt bij de eerstvolgende uitvraag automatisch tot weigering, zonder dat daarvoor aparte notificaties of tokeninvalidatie nodig zijn.
-- De burger heeft inzage in welke grondslagen namens hem actief zijn en kan deze zelf beheren via een toegankelijke interface.
-- De vastlegging van grondslagen voldoet aan de eisen van de AVG, de Wdo en de van toepassing zijnde AMvB's.
+- De burger heeft inzage in welke toestemmingen namens hem actief zijn en kan deze zelf beheren via een toegankelijke interface.
+- De vastlegging van toestemmingen voldoet aan de eisen van de AVG, de Wdo en de van toepassing zijnde AMvB's.
 
-### Burgeridentificatie & Pseudonimisering
+### Burgeridentificatie  
 
-**Doel:** Het vaststellen van de identiteit van de burger ten behoeve van gegevensontsluiting, waarbij het BSN uitsluitend circuleert binnen de overheidsinfrastructuur en nooit zichtbaar is voor private afnemers.
+**Doel:** Het vaststellen van de identiteit van de burger ten behoeve van gegevensontsluiting.
+
+**Eisen:**
+
+- De identiteitsvaststelling sluit aan op de voor het traject vereiste betrouwbaarheidsniveaus (eIDAS Laag/Substantieel/Hoog) en maakt gebruik van erkende authenticatiemiddelen.
+- Voor het EDI-wallet traject ondersteunt de functie het ontvangen van een burgeridentiteit via een wallet-presentatie (conform eIDAS2/ARF), met verificatie via de relevante Trusted List.
+
+### Pseudonimisering
+
+**Doel:** Het garanderen dat het BSN uitsluitend circuleert binnen de overheidsinfrastructuur en nooit zichtbaar is voor private afnemers.
 
 **Eisen:**
 
@@ -56,8 +64,6 @@ De drie functies in deze laag vormen de voorwaarden waaronder de generieke funct
 - Pseudoniemen voor verschillende private partijen zijn niet onderling koppelbaar, ook niet wanneer die partijen samenwerken.
 - Herhaald gebruik van hetzelfde pseudoniem voor dezelfde burger levert cryptografisch onkoppelbare uitvoer op (geen correlatierisico over tijd).
 - De omzetting van BSN naar pseudoniem — en terug, aan de bronhouderszijde — vindt plaats in een door de overheid beheerde en gecertificeerde voorziening.
-- De identiteitsvaststelling sluit aan op de voor het traject vereiste betrouwbaarheidsniveaus (eIDAS Laag/Substantieel/Hoog) en maakt gebruik van erkende authenticatiemiddelen.
-- Voor het EDI-wallet traject ondersteunt de functie het ontvangen van een burgeridentiteit via een wallet-presentatie (conform eIDAS2/ARF), met verificatie via de relevante Trusted List.
 
 ### Vertrouwensstelsel & Authenticatie van organisaties
 
