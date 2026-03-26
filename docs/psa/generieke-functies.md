@@ -88,10 +88,10 @@ De vier functies in deze laag vormen de voorwaarden waaronder de generieke funct
 - Iedere gegevensuitvraag — ongeacht het traject of de afnemer — doorloopt dezelfde autorisatieketen. Er zijn geen trajectspecifieke omwegen of parallelle handhavingspunten.
 - Het beleid is uitgedrukt in een formele, machineleesbare taal. Menselijk leesbare beschrijvingen zijn afgeleid van dezelfde bron, niet de bron zelf.
 - De autorisatiebeslissing is gebaseerd op: de identiteit van de afnemer, de gevraagde gegevens, de aanwezige grondslag (via toestemmingenregister, grondslagenregister of impliciet in request), en de context van het verzoek. Deze vier elementen zijn altijd expliciet aanwezig in de beslissing.
-- De autorisatiecomponent raadpleegt de grondslag real-time op het moment van uitvraag — er is geen vertrouwen op eerder uitgegeven tokens die de grondslagstatus "bevroren" vastleggen.
+- De autorisatiecomponent raadpleegt de toestemming real-time op het moment van uitvraag — er is geen vertrouwen op eerder uitgegeven tokens die de toestemmingsstatus "bevroren" vastleggen.
 - Beleidsdefinities zijn per traject instelbaar zonder wijziging van de autorisatie-infrastructuur zelf.
 - De beslissing (allow/deny) en de relevante context worden vastgelegd ten behoeve van auditbaarheid.
-- BSN-resolving vindt pas plaats *na* de autorisatiebeslissing, binnen de handhavingscomponent — niet als invoer voor de beleidsevaluatie.
+- BSN-resolving vindt pas plaats *na* de autorisatiebeslissing (PDP), binnen de handhavingscomponent (PEP) — niet als invoer voor de beleidsevaluatie.
 
 ---
 
@@ -104,7 +104,7 @@ De vier functies in deze laag vormen de voorwaarden waaronder de generieke funct
 - De toestemmingsinteractie is begrijpelijk voor de burger: doel, afnemer en gegevens zijn in gewone taal gepresenteerd, niet in technische of juridische termen.
 - De burger authenticeert zich op een betrouwbaarheidsniveau dat passend is bij de gevoeligheid van de betrokken gegevens.
 - Na het geven van toestemming ontvangt de burger een bevestiging, en kan hij via dezelfde of een gelijkwaardige interface zijn actieve toestemmingen inzien en intrekken.
-- De UI-component schrijft de vastgelegde toestemming weg naar de grondslagregistratie (zie Toestemming & Grondslag en Generieke functie 5), zodat de autorisatiecomponent deze real-time kan raadplegen.
+- De UI-component schrijft de vastgelegde toestemming weg naar het toestemmingenregister, zodat de autorisatiecomponent deze real-time kan raadplegen.
 - De pseudonimiseringsactie (BSN → pseudoniem voor de afnemer) vindt plaats als onderdeel van het toestemmingsproces, transparant voor de burger en zonder dat het BSN wordt gedeeld.
 - De functie ondersteunt federatief inloggen en machtigingenbeheer voor organisaties die namens een burger of een andere organisatie handelen.
 
@@ -117,8 +117,8 @@ De vier functies in deze laag vormen de voorwaarden waaronder de generieke funct
 **Eisen:**
 
 - Een bronhouder realiseert één generieke ontsluiting. Er zijn geen trajectspecifieke endpoints of koppelingen per afnemer.
-- De interface ondersteunt selectieve gegevensuitvraag: de afnemer vraagt exact de velden op die voor het specifieke gebruik nodig zijn, niet een vaste dataset. Dataminimalisatie is structureel ingebouwd, niet afhankelijk van afsprakenstelsel of goede wil.
-- De set van toegestane gegevensvragen per gebruik is vooraf geregistreerd (via een catalogus of template-mechanisme) en door beleid afdwingbaar. Willekeurige, niet-geregistreerde queries zijn niet mogelijk.
+- De interface ondersteunt selectieve gegevensuitvraag: de afnemer kan exact de velden opvragen die voor het specifieke gebruik nodig zijn. Dataminimalisatie is structureel ingebouwd, niet afhankelijk van afsprakenstelsel of goede wil.
+- De set van toegestane gegevensvragen per gebruik is vooraf geregistreerd (via een catalogus of template-mechanisme) en door beleid afdwingbaar. Binnen de toegestane gegevensvraag bepaalt de afnemer welke gegevens voor zijn situatie nodig zijn. Afwijkingen die buiten de toegestane gegevensvraag vallen zijn niet mogelijk.
 - De interface is onafhankelijk van het BSN als externe sleutel: het subject-identifier in een uitvraag van een private afnemer is altijd een pseudoniem of een consent-referentie; BSN-resolving is een interne aangelegenheid van de ontsluiting.
 - Bronhouders implementeren de ontsluiting eenmalig; aanpassingen voor nieuwe afnemers of trajecten vereisen geen bronhouder-specifieke ontwikkeling, alleen aanpassing van het beleid en de query-registratie.
 - Verzoeken vanuit andere EU-lidstaten (SDG/OOTS) worden aan de GBO-zijde vertaald naar het binnenlandse formaat en protocol. Bronhouders zien geen EU-specifiek transportprotocol.
