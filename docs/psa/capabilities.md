@@ -3,13 +3,8 @@
 Dit hoofdstuk beschrijft **wat het stelsel moet kunnen** en is een uitwerking van de generieke functies naar afspraken, standaarden en voorzieningen, die als "capabilities" door het stelsel geleverd moeten worden.
 
 
-## Overzicht vereiste capabilities
+## Leeswijzer
 
-In de onderstaande diagram staan de capabilities die het stelsel moet leveren om de generieke functie in te vullen.
-
---8<-- "diagrammen/generieke-functies-capabilities.mmd"
-
-Deze capabilities worden in de volgende paragrafen uitgewerkt naar afspraken, standaarden en voorzieningen.  
 Per capability is aangegeven:  
 - **Type invulling:** afspraak, standaard of voorziening  
 - **Beheer:** centraal (GBO-stelsel of bestaand stelsel beheert) of decentraal (bronhouder / afnemer implementeert zelf)  
@@ -18,7 +13,7 @@ Per capability is aangegeven:
 - **Gap:** wat er nog ontbreekt of nog ingevuld moet worden (apart gemarkeerd met ⚠️)  
 
 
-De context is het GBO-stelsel, ingebed in NORA/GDI en het Federatief Datastelsel (FDS), met aansluiting op het eIDAS2/ARF Europees kader. Stelselafspraken landen in bestaande afsprakenstelsels: FDS en TIP.
+De context is het GBO-stelsel, ingebed in NORA/GDI en het Federatief Datastelsel (FDS), met aansluiting op het eIDAS2/ARF Europees kader. Stelselafspraken landen in bestaande afsprakenstelsels: FDS en TIP ([Trusted Information Partners](https://www.trustedinformationpartners.nl)).
 
 De structuur "afspraken boven standaarden boven voorzieningen" is het expliciete uitgangspunt van FDS en wordt hier overgenomen. Waar mogelijk worden bestaande FDS-stelselfuncties hergebruikt (zie met name capabilities 3 en 5). Het **iWlz-afsprakenstelsel** geldt als blauwdruk voor de inrichting van het GBO-afsprakenstelsel zelf: gelaagd opgebouwd (organisatiebeleid → proces → informatie → applicatie → IT-infrastructuur → uitwisselprofielen), met een formeel RFC-proces voor wijzigingen.
 
@@ -194,16 +189,16 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 
 ---
 
-## Capability 6 — Grensoverschrijdende gegevensuitwisseling (OOTS-adapter)
+## Capability 6 — Grensoverschrijdende gegevensuitwisseling (OOTS-brug)
 
-*Verzoeken vanuit andere EU-lidstaten via het OOTS-stelsel worden vertaald naar het binnenlandse GBO-protocol. Bronhouders zien geen EU-specifiek transport. De adapter is een EU-rechtelijke verplichting.*
+*Verzoeken vanuit andere EU-lidstaten via het OOTS-stelsel worden vertaald naar het binnenlandse GBO-protocol. Bronhouders zien geen EU-specifiek transport. De brug is een EU-rechtelijke verplichting.*
 
 ### Afspraken
 
 | Afspraak | Type | Beheer | Invulling |
 |---|---|---|---|
-| De OOTS-adapter is de enige AS4-toegangspoort; binnenlands verkeer gebruikt FSC direct | Architectuurafspraak | Centraal — GBO | ⚠️ Nog te maken als GBO-architectuurprincipe |
-| SMP-registratie van GBO-bronhouders voor OOTS-discovery wordt centraal beheerd door de adapter | Stelselafspraak | Centraal — GBO | ⚠️ Nog te maken |
+| De OOTS-brug is de enige AS4-toegangspoort; binnenlands verkeer gebruikt FSC direct | Architectuurafspraak | Centraal — GBO | ⚠️ Nog te maken als GBO-architectuurprincipe |
+| SMP-registratie van GBO-bronhouders voor OOTS-discovery wordt centraal beheerd door de brug | Stelselafspraak | Centraal — GBO | ⚠️ Nog te maken |
 | Autorisatie van OOTS-verzoeken doorloopt dezelfde PEP/PDP-keten als binnenlandse verzoeken | Architectuurafspraak | Centraal — GBO | ⚠️ Nog te maken als GBO-architectuurprincipe |
 
 ### Standaarden
@@ -275,7 +270,7 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 
 | Standaard | Beheer | Bestaande invulling |
 |---|---|---|
-| Logboek Dataverwerkingen (LDV) | VNG / Logius | **Beschikbaar** als standaard; pilots bij gemeenten; FDS-adoptie in voorbereiding |
+| Logboek Dataverwerkingen (LDV) | Logius | In publieke consultatie voor vaststelling bij MIDO (consultatie gesloten januari 2026); referentie-implementatie beschikbaar via Digilab; opname op Forum Standaardisatie lijst aanbevolen standaarden wordt beoogd |
 | OpenTelemetry — gedistribueerde tracing en correlatie | CNCF | **Beschikbaar**; breed ingezet in overheids-IT; trace-ID als correlatiesleutel over componenten |
 | W3C Trace Context — HTTP-header standaard voor trace propagation | W3C | **Beschikbaar**; onderdeel OpenTelemetry-ecosysteem |
 
@@ -331,7 +326,7 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 
 > ⚖️ **Juridische randvoorwaarde:** De vereisten voor PuB-EAA-uitgifte zijn vastgelegd in Uitvoeringsverordening (EU) 2025/1569 en de bijbehorende ETSI-normen. Overheidsorganen die PuB-EAAs uitgeven moeten beschikken over een goedgekeurd Conformity Assessment Report (CAR) van een geaccrediteerde Conformity Assessment Body (CAB). De Europese regelgeving op dit punt is nog in ontwikkeling; de uitwerking van GBO op dit vlak loopt parallel aan de nadere invulling van het Europese kader.
 
-> ℹ️ **Scope-afbakening:** het is mogelijk om een **centrale PuB-EAA-uitgifte-dienst** in te richten die namens overheidsbronhouders attesteringen uitgeeft op basis van de gemeenschappelijke bronontsluiting (Capability 5), en een **centrale verificatiedienst** waar vertrouwende partijen de geldigheid van uitgegeven attesteringen kunnen controleren. De keuze of beide voorzieningen centraal worden ingericht, decentraal per bronhouder, of dat de uitgifte elders (buiten GBO) wordt belegd, is nog niet gemaakt en wordt hier als open vraag behandeld - zie ook [vraagstukken en ontwerpkeuzes](./vraagstukken.md).
+> ℹ️ **Scope-afbakening:** GBO overweegt een **centrale PuB-EAA-uitgifte-dienst** in te richten die namens overheidsbronhouders attesteringen uitgeeft op basis van de generieke bronontsluiting (Capability 5), en een **centrale verificatiedienst** waar vertrouwende partijen de geldigheid van uitgegeven attesteringen kunnen controleren. De keuze of beide voorzieningen centraal worden ingericht, decentraal per bronhouder, of dat de uitgifte elders (buiten GBO) wordt belegd, is nog niet gemaakt en wordt hier als open vraag behandeld.
 
 ### Afspraken
 
@@ -381,9 +376,9 @@ De gaps zijn onderverdeeld in drie categorieën:
 | 3 — Vertrouwensstelsel | — | GBO-vertrouwensprofiel (welke trust anchors per traject); OIN ↔ KvK ↔ eIDAS-identifier koppeling; GBO-aansluitvoorwaarden | FDS Poortwachter; FDS Marktmeester; FSC Directory; PKI Overheid; OIN-register |
 | 4 — Autorisatie (PEP/PDP) | — | Volledige PEP/PDP/PIP-keten nog te realiseren; GBO AuthZEN-profiel; Policy Store; BSN-resolving post-decision | OPA/Rego (iWlz, productie); FTV/AuthZEN (pilot) |
 | 5 — Bronontsluiting API | — | Query Template Registry; GraphQL als FDS-datadienst-type positioneren; GBO onboardingprocedure bronhouders | FSC (productie); FDS Poortwachter; DCAT-AP NL; iWlz GraphQL-patroon |
-| 6 — OOTS-adapter | — | OOTS-EDM Adapter; SMP Publisher; operationele inrichting Domibus voor GBO | Domibus (open source, EC); AS4/OOTS-EDM standaarden |
+| 6 — OOTS-brug | — | OOTS-EDM Adapter; SMP Publisher; operationele inrichting Domibus voor GBO | Domibus (open source, EC); AS4/OOTS-EDM standaarden |
 | 7 — Toestemmingsportaal | Wdo-grondslag DvTP; wettelijke verankering vrijwilligheidseis en gelijkwaardig alternatief als aansluiteis | Portaal zelf; BSNk-onboarding portaal; UX-richtlijnen toestemmingspresentatie; transparantie-eis uitwerking | DigiD; BSNk Activate |
-| 8 — Logging & Audit | — | LDV-profiel per GBO-component; inzagevoorziening burger | LDV-standaard; OpenTelemetry; iWlz TraceID/SpanID RFC (productie) |
+| 8 — Logging & Audit | — | LDV-profiel per GBO-component; inzagevoorziening burger | LDV (in consultatie, referentie-impl. beschikbaar); OpenTelemetry; iWlz TraceID/SpanID RFC (productie) |
 | 9 — Semantiek | — | Schema Registry; serialisatie-service; mappings naar OOTS-EDM en PuB-EAA | FDS Datacatalogus; DCAT-AP NL; OOTS-EDM |
 | 10 — Attesteringsuitgifte | CAR-certificering uitgifte-dienst; opname op NL Trusted List (RDI) | Centrale uitgifte-dienst; Attestation Rulebooks per attribuuttype; wallet binding profiel; verificatiedienst; intrekkingsbeleid | OpenID4VCI; SD-JWT VC; ARF; NL Wallet (pilot) |
 
@@ -398,7 +393,7 @@ De aanbevolen lagenstructuur voor het GBO-afsprakenstelsel, analoog aan iWlz:
 | Laag | Inhoud voor GBO |
 |---|---|
 | Organisatiebeleid | Governance, rollen (bronhouder, afnemer, GBO-beheer), ontwerpkeuzes, serviceafspraken, wijzigingsbeheer |
-| Proces | GBO-trajectprocessen: DvTP-toestemmingsstroom, OOTS-stroom, EDI-wallet uitgifte- en presentatiestroom |
+| Proces | GBO-trajectprocessen: DvTP-toestemmingsstroom, OOTS-brugstroom, EDI-wallet uitgifte- en presentatiestroom |
 | Informatie | Gegevensmodellen per bronhouder, canonieke schema's, mappings naar OOTS-EDM en PuB-EAA |
 | Applicatie | Technische afspraken per capability: PEP/PDP-keten, FSC-profiel, BSNk PP-integratie, query-templates |
 | IT-infrastructuur | Connectiviteit (FSC), certificaten (PKI Overheid), netwerkeisen, SLA's |
