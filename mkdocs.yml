@@ -60,5 +60,5 @@ nav:
     - Realisatiestrategie: psa/realisatiestrategie.md
     - Open Vraagstukken en ontwerpkeuzes: psa/vraagstukken.md
 
-  - Referentie Architectuur:
+  - Technisch ontwerp:
     - Reference architecture: ref-arch/gbo-reference-architecture.md
