@@ -11,10 +11,10 @@
 ### D-01 · Decentraal wat kan, centraal wat moet
 
 **Betekenis:**
-Taken, bevoegdheden en voorzieningen worden belegd op het laagst mogelijke niveau dat nog doelmatig en doeltreffend is. Centrale voorzieningen worden alleen ingericht als decentrale alternatieven aantoonbaar onvoldoende zijn — bijvoorbeeld vanwege schaalniveau, interoperabiliteitseisen of beveiligingsrisico's. Voor de GBO betekent dit: generieke functies (authenticatie, toegang, bronontsluiting) mogen centraal; domeinspecifieke functies blijven bij de betrokken partij.
+Taken, bevoegdheden en voorzieningen worden belegd op het laagst mogelijke niveau dat nog doelmatig en doeltreffend is. Centrale voorzieningen worden ingericht als decentrale alternatieven aantoonbaar onvoldoende zijn — bijvoorbeeld vanwege schaalniveau, interoperabiliteitseisen of beveiligingsrisico's. Voor de GBO betekent dit: generieke functies (authenticatie, toegang, bronontsluiting) worden centraal ingericht; domeinspecifieke functies mogen bij de betrokken partij blijven.
 
 **Toelichting voor GBO:**
-Bronhouders beheren zelf hun gegevens. Het GBO biedt een centrale *integratielaag*, maar geen centrale *gegevensopslag*. Keuzes voor centrale voorzieningen worden expliciet gemotiveerd.
+Bronhouders beheren zelf hun gegevens. Het GBO-stelsel biedt een centrale *integratielaag*, maar geen centrale *gegevensopslag*. Keuzes voor centrale voorzieningen worden expliciet gemotiveerd, maar kunnen ook op verzoek van bronhouders gemaakt worden.
 
 **Bronnen:**
 - Gemeentewet art. 117 lid 2 / Provinciewet art. 115 lid 2 (subsidiariteitsbeginsel)
@@ -68,16 +68,19 @@ Voor authenticatie: DigiD / eHerkenning / EUDIW. Voor transport: Digikoppeling R
 Het stelsel is opgebouwd uit losgekoppelde, vervangbare modules met heldere interfaces. Elk component kan onafhankelijk worden doorontwikkeld of vervangen zonder andere componenten te raken. Het stelsel heeft geen single point of failure en is ontworpen op continuïteit.
 
 **Toelichting voor GBO:**
-Pas een gelaagde componentarchitectuur toe (vergelijkbaar met het Common Ground 5-lagenmodel). Definieer expliciete API-contracten tussen lagen. Sla geen gegevens op die ook real-time bij de bron bevraagd kunnen worden.
+Pas een gelaagde componentarchitectuur toe conform het NORA Vijflaagsmodel (interactie, procesinrichting, integratie, diensten, gegevensbronnen). Definieer expliciete API-contracten tussen lagen. Sla geen gegevens op die ook real-time bij de bron bevraagd kunnen worden.
 
 **Bronnen:**
 - GA Basisprincipes — principe V (Bureau MIDO)
 - GDI-Meerjarenvisie 2024–2028
-- Common Ground 5-lagenmodel (VNG Realisatie / GEMMA)
+- NORA Vijflaagsmodel (noraonline.nl)
+- GEMMA Informatiearchitectuurprincipes — componentgebaseerd werken (VNG Realisatie)
 
 ---
 
-## Kader 2 — Common Ground (VNG / GEMMA)
+## Kader 2 — NORA (Nederlandse Overheid Referentie Architectuur)
+
+> De NORA is het overkoepelende architectuurkader voor de gehele Nederlandse overheid en daarmee het primaire inhoudelijke kader voor GBO na GDI. De principes die eerder onder Common Ground (VNG/GEMMA) waren ondergebracht, zijn hier opgenomen: de Common Ground informatiearchitectuurprincipes zijn in 2024/2025 formeel opgegaan in de vernieuwde GEMMA-architectuurprincipes, die onderdeel uitmaken van de NORA-familie. Waar relevant wordt de GEMMA-herkomst van een principe in de bronnen vermeld.
 
 ### D-05 · Gegevens bij de bron — geen onnodige kopieën
 
@@ -88,8 +91,8 @@ Gegevens worden zoveel mogelijk real-time bevraagd bij de bronhouder via API's, 
 Het GBO fungeert als *integratielaag*, niet als *gegevensmagazijn*. Bronhouders (BRP, Belastingdienst, UWV, DUO, BAG/BRK) worden bevraagd via de gemeenschappelijke bronontsluiting-API. Tussenopslag is alleen toegestaan als performance of beschikbaarheid dit vereist, met expliciete AVG-grondslag.
 
 **Bronnen:**
-- Common Ground informatiearchitectuurprincipes (VNG Realisatie / GEMMA Online)
-- Common Ground Propositie 2024 (VNG)
+- NORA NAP12 — Informeer bij de bron (noraonline.nl)
+- GEMMA Informatiearchitectuurprincipes — eenmalige vastlegging (VNG Realisatie, opgegaan in GEMMA 2024/2025)
 - Haal Centraal-programma (VNG Realisatie) — "bevragen bij de bron"
 - developer.overheid.nl — Vorderingenoverzicht Rijk (casestudy)
 
@@ -104,9 +107,9 @@ Functionaliteit wordt opgesplitst in kleine, herbruikbare componenten die elk é
 Denk aan afzonderlijke componenten voor: authenticatie, toestemmingsbeheer, bronontsluiting per registratie, pseudoniemvertaling, logging. Elk component heeft een eigen beheerder en een stabiel API-contract.
 
 **Bronnen:**
-- Common Ground realisatieprincipes (VNG Realisatie / commonground.nl)
-- Common Ground 5-lagenmodel (GEMMA Online)
-- GEMMA Informatiearchitectuur — "maximaal openstellen voor hergebruik"
+- NORA NAP07 — Bouw diensten modulair op (noraonline.nl)
+- NORA Vijflaagsmodel — serviceoriëntatie als leidende architectuurstijl
+- GEMMA Informatiearchitectuurprincipes — componentgebaseerd werken (VNG Realisatie, opgegaan in GEMMA 2024/2025)
 
 ---
 
@@ -116,9 +119,37 @@ Denk aan afzonderlijke componenten voor: authenticatie, toestemmingsbeheer, bron
 Componenten en standaarden worden bij voorkeur als open source ontwikkeld en gepubliceerd, zodat samenwerking, hergebruik en transparantie worden bevorderd. Hierdoor neemt de kans op vendor lock-in af en kunnen marktpartijen en andere overheden bijdragen.
 
 **Bronnen:**
-- Common Ground realisatieprincipes — "Open Source Software wordt gestimuleerd"
-- GEMMA Informatiearchitectuur
+- NORA — gebruik open standaarden en open source (noraonline.nl)
 - Werkagenda Waardengedreven Digitaliseren (BZK)
+- GEMMA Realisatieprincipes — "Open Source Software wordt gestimuleerd" (VNG Realisatie)
+
+---
+
+### D-13 · Standaardiseer waar mogelijk, maak uitzonderingen expliciet
+
+**Betekenis:**
+Hergebruik van bestaande standaarden, patronen en voorzieningen heeft sterk de voorkeur boven het ontwikkelen van nieuwe oplossingen. Als een uitzondering nodig is, wordt deze gedocumenteerd als architectuurbeslissing (ADR — Architecture Decision Record) met een onderbouwde motivatie.
+
+**Toelichting voor GBO:**
+Stel een ADR-register bij als onderdeel van de GBO-documentatie. Elke afwijking van een verplichte standaard of een vastgesteld architectuurprincipe krijgt een eigen ADR met: context, beslissing, overwogen alternatieven, en consequenties.
+
+**Bronnen:**
+- NORA BP09 — Pas open standaarden toe
+- NORA Architectuurprincipes (noraonline.nl)
+- GA Basisprincipes — principe D & H (Bureau MIDO)
+
+---
+
+### D-14 · Interoperabiliteit — semantische en technische afstemming
+
+**Betekenis:**
+Gegevens die het GBO uitwisselt, zijn semantisch eenduidig gedefinieerd via vastgestelde informatiemodellen (GGM, NEN3610, IMGeo, etc.) en ontologieën (RDF/SHACL). Technische koppelvlakken zijn gedocumenteerd conform OpenAPI Specification. Hierdoor kunnen afnemers gegevens machineleesbaar verwerken zonder handmatige interpretatie.
+
+**Bronnen:**
+- NORA Domeinarchitectuur Gegevensuitwisseling — semantiek & validatie
+- Gemeentelijk Gegevensmodel (GGM) — VNG
+- Forum Standaardisatie — standaarden voor semantische interoperabiliteit
+- EU Interoperabiliteitsraamwerk (EIF) / Interoperable Europe Act
 
 ---
 
@@ -156,12 +187,12 @@ Overweeg een hybride aanpak: REST-endpoints voor standaard bevragingen (conform 
 **Bronnen:**
 - NLGov REST API Design Rules (Forum Standaardisatie, verplicht 'pas toe of leg uit' — Logius)
 - Kennisplatform API's (developer.overheid.nl)
-- Common Ground — "generieke API voor aansluiting"
+- GEMMA Informatiearchitectuurprincipes — "maximaal openstellen voor hergebruik via API's"
 - EU Open Data Richtlijn — API-verplichting voor overheidsdata (art. 5)
 
 ---
 
-## Kader 4 — Informatiebeveiliging & Privacy (BIO / AVG / NIS2)
+## Kader 4 — Informatiebeveiliging &amp; Privacy (BIO / AVG / NIS2)
 
 ### D-10 · Informatiebeveiliging en privacy by design
 
@@ -207,36 +238,6 @@ De beveiliging van het stelsel wordt periodiek getoetst door onafhankelijke audi
 
 ---
 
-## Kader 5 — NORA
-
-### D-13 · Standaardiseer waar mogelijk, maak uitzonderingen expliciet
-
-**Betekenis:**
-Hergebruik van bestaande standaarden, patronen en voorzieningen heeft sterk de voorkeur boven het ontwikkelen van nieuwe oplossingen. Als een uitzondering nodig is, wordt deze gedocumenteerd als architectuurbeslissing (ADR — Architecture Decision Record) met een onderbouwde motivatie.
-
-**Toelichting voor GBO:**
-Stel een ADR-register bij als onderdeel van de GBO-documentatie. Elke afwijking van een verplichte standaard of een vastgesteld architectuurprincipe krijgt een eigen ADR met: context, beslissing, overwogen alternatieven, en consequenties.
-
-**Bronnen:**
-- NORA BP09 — Pas open standaarden toe
-- NORA Architectuurprincipes (noraonline.nl)
-- GA Basisprincipes — principe D & H (Bureau MIDO)
-
----
-
-### D-14 · Interoperabiliteit — semantische en technische afstemming
-
-**Betekenis:**
-Gegevens die het GBO uitwisselt, zijn semantisch eenduidig gedefinieerd via vastgestelde informatiemodellen (GGM, NEN3610, IMGeo, etc.) en ontologieën (RDF/SHACL). Technische koppelvlakken zijn gedocumenteerd conform OpenAPI Specification. Hierdoor kunnen afnemers gegevens machineleesbaar verwerken zonder handmatige interpretatie.
-
-**Bronnen:**
-- NORA Domeinarchitectuur Gegevensuitwisseling — semantiek & validatie
-- Gemeentelijk Gegevensmodel (GGM) — VNG
-- Forum Standaardisatie — standaarden voor semantische interoperabiliteit
-- EU Interoperabiliteitsraamwerk (EIF) / Interoperable Europe Act
-
----
-
 ## Overzichtstabel
 
 | ID   | Principe                                                        | Cluster                           | Primair kader              |
@@ -244,10 +245,10 @@ Gegevens die het GBO uitwisselt, zijn semantisch eenduidig gedefinieerd via vast
 | D-01 | Decentraal wat kan, centraal wat moet                           | Governance & organisatie          | GDI / GA / Gemeentewet     |
 | D-02 | Afspraken > standaarden > voorzieningen                         | Governance & organisatie          | GDI / GA (MIDO)            |
 | D-03 | Gebruik landelijke GDI-bouwstenen tenzij…                       | Governance & organisatie          | GDI / NORA                 |
-| D-04 | Robuust, modulair en flexibel ontwerp                           | Technische architectuur           | GDI / Common Ground        |
-| D-05 | Gegevens bij de bron — geen onnodige kopieën                    | Gegevensarchitectuur              | Common Ground / NORA       |
-| D-06 | Componentgebaseerd werken — herbruikbare bouwstenen             | Technische architectuur           | Common Ground (VNG)        |
-| D-07 | Open source tenzij zwaarwegende redenen                         | Technische architectuur           | Common Ground / BZK        |
+| D-04 | Robuust, modulair en flexibel ontwerp                           | Technische architectuur           | GDI / NORA                 |
+| D-05 | Gegevens bij de bron — geen onnodige kopieën                    | Gegevensarchitectuur              | NORA (NAP12) / GEMMA       |
+| D-06 | Componentgebaseerd werken — herbruikbare bouwstenen             | Technische architectuur           | NORA (NAP07) / GEMMA       |
+| D-07 | Open source tenzij zwaarwegende redenen                         | Technische architectuur           | NORA / BZK                 |
 | D-08 | Pas toe of leg uit — verplichte open standaarden                | Standaarden & koppelvlakken       | Forum Standaardisatie      |
 | D-09 | API-first — NLGov REST API Design Rules (en GraphQL-afweging)  | Standaarden & koppelvlakken       | Forum Standaardisatie / EU |
 | D-10 | Informatiebeveiliging en privacy by design                      | Beveiliging & privacy             | BIO2 / AVG / NIS2          |
