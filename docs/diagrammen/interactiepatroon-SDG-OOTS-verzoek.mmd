@@ -22,9 +22,9 @@ sequenceDiagram
     end
 
     rect rgb(238, 237, 254)
-        Note over GBO,BRG: ③ Toestemming burger (DvTP)
-        GBO->>BRG: Toestemmings-UI (DvTP)
-        BRG->>GBO: Toestemming + BSN
+        Note over GBO,BRG: ③ Toestemming burger (GBO)
+        GBO->>BRG: Toestemmingsvoorziening (GBO)
+        BRG->>GBO: Toestemming + Consent-ID (incl. BSN)
     end
 
     rect rgb(250, 238, 218)
@@ -34,7 +34,7 @@ sequenceDiagram
 
     rect rgb(225, 245, 238)
         Note over GBO,BRH: ⑤ Bronontsluiting (GBO generieke API)
-        GBO->>BRH: OAuth 2.0 API-aanroep (GBO-formaat)
+        GBO->>BRH: API-aanroep (GBO-formaat)
         BRH->>GBO: Gegevens (JSON/REST)
     end
 
