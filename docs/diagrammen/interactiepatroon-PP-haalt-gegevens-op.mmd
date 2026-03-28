@@ -37,11 +37,13 @@ sequenceDiagram
 
     rect rgb(238, 237, 254)
         DV->>BRH: Gegevensverzoek<br/>(consent_id · mTLS / certificaat)
-        Note over BRH: Authenticeer dienstverlener (via certificaat)<br/>en controleer of DV bevoegd is<br />(FSC contract / Trusted List)
+        BRH->>BRH: Authenticeer dienstverlener<br />(via certificaat)
+        BRH->>BRH: Controleer bevoegdheid<br />(via FSC contract/Trusted List)
         BRH->>TR: Valideer consent_id<br/>(geldig? scope? TTL?)
         TR-->>BRH: Consent geldig + PP-id
         BRH->>PP: De-pseudonimiseer PP-id<br/>(BSNk PP)
         PP-->>BRH: BSN
+        BRH->>BRH: Controleer data scope<br />(template match)
         BRH-->>DV: Gevraagde gegevens<br/>(gezegeld door bronhouder)
     end
 
