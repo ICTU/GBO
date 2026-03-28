@@ -1,6 +1,6 @@
 # Interactiepatronen GBO
 
-Dit document beschrijft de belangrijkste interactiepatronen voor GBO zoals afgeleid uit de use cases. In de patronen is op verschillende plekken sprake van een "dienst"; dit kunnen standaarden of centrale of decentrale voorzieningen zijn. Daar wordt verderop in de PSA dieper op ingegaan.  
+Dit document beschrijft de belangrijkste interactiepatronen voor GBO zoals afgeleid uit de use cases. In de patronen is op verschillende plekken sprake van een "dienst"; dit kunnen standaarden of centrale of decentrale voorzieningen zijn. Daar wordt in het hoofdstuk [Capabilities](./capabilities.md) dieper op ingegaan.  
 
 
 ## Gegevensverzoek van private partij met toestemming aan bronhouder (DvTP)
