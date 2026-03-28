@@ -39,8 +39,18 @@ Hoe laten we attributen elektronisch kwalificeren? Hoe wordt de "attesteringsuit
 Dit is nodig voor de Wallet, maar mogelijk ook voor de andere use cases. Er is [Europese Wetgeving](https://eur-lex.europa.eu/legal-content/NL/TXT/HTML/?uri=OJ:L_202501569), maar die laat nog ruimte voor de inrichting en wie welke rol invult.  
 
 - Gebruik QEAA / QTSP?
-- Inrichten Pub-EEA?
+- Inrichten Pub-EAA?
 - Centrale verificatiedienst tbv QEAA?
+
+
+## Centrale Componenten
+
+Ontwerpprincipe D01 stelt "Decentraal wat kan, centraal wat moet". Dit geldt als uitgangspunt, maar als een centrale voorziening voldoende voordelen biedt, past in de geldende wet- en regelgeving en niet tegn andere ontwerpprincipes ingaat, dan kan ervoor gekozen worden hiervoor te kiezen.  
+Bij de volgende voorzieningen die in theorie decentraal ingericht kunnen worden, wordt een centrale inrichting overwogen:
+
+- PuB-EAA dienst waar alle overheidsbronnen gebruik van kunnen maken.
+- Verificatiedienst waarmee QTSP's gegevens kunnen verifiëren en waar alle overheidsbronnen gebruik van kunnen maken.
+- Vertaalvoorziening om GraphQL verzoeken om te zetten naar REST/API verzoeken voor overheidsbronnen die (nog) geen eigen GraphQL implementatie willen/ kunnen realiseren.
 
 
 ## Transformatie-architectuur
