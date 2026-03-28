@@ -17,6 +17,7 @@ Het BSN mag bij private partijen niet direct worden doorgegeven. Dit vereist een
 
 - BSNk-PP dienst van BZK?
 
+
 ## Vertrouwensstelsel
 
 Welke partijen mogen deelnemen, hoe worden ze geaccrediteerd, welke niveaus van zekerheid gelden per gegevenstype, en hoe verhouden PKI(O), eHerkenning, eIDAS, FDS en TIP-afspraken zich tot elkaar?
@@ -27,6 +28,11 @@ Welke partijen mogen deelnemen, hoe worden ze geaccrediteerd, welke niveaus van 
 De wettelijke grondslag (via Wdo/AMvB), de technische implementatie (toestemmingsregister, tokens, TTL), intrekking, en het onderscheid met OOTS waar toestemming een "verklaring van instemming" is, en de wallet waar de burger zelf de credential beheert.
 
 
+## Toestemmingsvoorziening
+
+De OOTS-verplichte toestemmingspreview (SDG-verordening) is momenteel belegd bij RINIS-basisinrichting. Als GBO de toestemmingsflow overneemt, moet worden bepaald of het preview-scherm bij RINIS blijft of naar GBO verhuist. Dit raakt de verantwoordelijkheidsverdeling en dient te worden beslecht vóór technisch ontwerp.
+
+
 ## Gekwalificeerde elektronische attesteringen van attributen
 
 Hoe laten we attributen elektronisch kwalificeren? Hoe wordt de "attesteringsuitgifte" ingericht?  
@@ -34,7 +40,7 @@ Dit is nodig voor de Wallet, maar mogelijk ook voor de andere use cases. Er is [
 
 - Gebruik QEAA / QTSP?
 - Inrichten Pub-EEA?
-- Centrale verificatiedienst?
+- Centrale verificatiedienst tbv QEAA?
 
 
 ## Transformatie-architectuur
