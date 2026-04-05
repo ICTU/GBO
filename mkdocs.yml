@@ -40,7 +40,7 @@ plugins:
   - search
   - print-site:
       add_to_navigation: false
-      print_page_title: "PSA GBO / DvTP"
+      print_page_title: "PSA GBO"
       enumerate_headings: true
 
 nav:

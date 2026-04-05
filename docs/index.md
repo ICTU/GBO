@@ -11,8 +11,8 @@ Deze PSA is opgebouwd uit verschillende modules om het beheer overzichtelijk te 
 | **Status** | Concept / In review |
 | **Versie** | 0.0.1 |
 | **Eigenaar** | ICTU |
-| **GithubRep** | https://github.com/Govert-Claus/GBO-DvTP |
-| **PDF** | [Pagina die als PDF afgedrukt kan worden](/GBO-DvTP/print_page/) |
+| **GithubRep** | https://github.com/ICTU/GBO |
+| **PDF** | [Pagina die als PDF afgedrukt kan worden](/GBO/print_page/) |
 | **Laatst bijgewerkt** | {{ git_revision_date }} |
 
 ## Leeswijzer
