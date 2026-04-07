@@ -28,6 +28,11 @@ markdown_extensions:
       permalink: true
       toc_depth: 2
 
+extra:
+  version:
+    provider: mike
+    alias: true
+
 extra_css:
   - stylesheets/extra.css
   - stylesheets/pdf.css
