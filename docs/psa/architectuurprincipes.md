@@ -173,7 +173,7 @@
 **Bronnen:**  
 - EU Data Governance Act art. 5 (condities hergebruik)  
 - Wabb art. 10 (BSN-verbod private partijen)  
-- DvTP-kader (Digitale Verwerking Toestemming Private partijen)  
+- DvTP-kader (Data delen via Toestemming met Private partijen)  
 
 ---
 
