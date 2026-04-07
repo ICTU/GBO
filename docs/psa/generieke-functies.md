@@ -184,7 +184,7 @@ De vier functies in deze laag vormen de voorwaarden waaronder de generieke funct
 
 ## Generieke functie 8 — Beheer & Continuïteit
 
-**Doel:** Het GBO-stelsel is beheersbaar, monitorbaar en aantoonbaar betrouwbaar. Iedere gegevensuitvraag is herleidbaar: wie heeft wanneer welke gegevens over welke burger opgevraagd, op basis van welke grondslag, met welk besluit.
+**Doel:** Het GBO-stelsel is beheersbaar, monitorbaar en aantoonbaar betrouwbaar. Iedere gegevensuitvraag is herleidbaar: welke afnemer heeft wanneer welke gegevens over welke burger opgevraagd, op basis van welke grondslag, met welk besluit.
 
 **Eisen:**
 

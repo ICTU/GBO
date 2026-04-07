@@ -47,7 +47,7 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 
 | Voorziening | Type | Beheer | Instantiëring | Bestaande invulling |
 |---|---|---|---|---|
-| Toestemmingsregister / grondslagregister | Centrale voorziening | Centraal — GBO-stelsel (of Logius als beheerder) | Gedeelde instantie | ⚠️ Logius heeft kennis via MedMij-toestemmingsinfrastructuur; nog geen generieke GBO-voorziening |
+| Toestemmingsregister / grondslagregister | Centrale voorziening | Centraal — GBO-stelsel (of Logius als beheerder) | Gedeelde instantie | ⚠️ In de zorg gebruikt men Mitz waarvan geleerd kan worden; nog geen generieke GBO-voorziening |
 | Inzage- en beheerinterface voor burger (Mijn Toestemmingen) | Centrale voorziening | Centraal — GBO/Logius | Gedeelde instantie | ⚠️ Raakvlak MijnOverheid; nog geen generieke invulling |
 | Policy Store (centrale beleidsdefinities overige grondslagen) | Centrale voorziening | Centraal — GBO | Gedeeld | ⚠️ Nog te realiseren - zie ook Capability 4 |
 
