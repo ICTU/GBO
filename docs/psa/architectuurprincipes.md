@@ -30,7 +30,7 @@
 
 ### P-03 · Privacy by design & by default
 
-**Stelling:** Privacybeschermende maatregelen — waaronder pseudonimisering — zijn ingebakken in het ontwerp van het stelsel, niet achteraf toegevoegd.
+**Stelling:** Privacybeschermende maatregelen — waaronder pseudonimisering — zijn ingebakken in het ontwerp van het stelsel, niet achteraf toegevoegd. Welke maatregelen nodig zijn kan per situatie verschillen, maar het moet altijd vanaf het ontwerp meegnomen worden.
 
 **Bronnen:**  
 - AVG art. 25  
