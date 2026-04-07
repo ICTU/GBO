@@ -17,10 +17,10 @@ Taken, bevoegdheden en voorzieningen worden belegd op het laagst mogelijke nivea
 Bronhouders beheren zelf hun gegevens. Het GBO-stelsel biedt een centrale *integratielaag*, maar geen centrale *gegevensopslag*. Keuzes voor centrale voorzieningen worden expliciet gemotiveerd, maar kunnen ook op verzoek van bronhouders gemaakt worden.
 
 **Bronnen:**  
-- Gemeentewet art. 117 lid 2 / Provinciewet art. 115 lid 2 (subsidiariteitsbeginsel)
-- Code Interbestuurlijke Verhoudingen — "Decentraal wat kan, centraal wat moet"
-- GDI-Meerjarenvisie 2024–2028 (Bureau MIDO / BZK)
-- Architectuur Digitale Overheid 2030
+- Gemeentewet art. 117 lid 2 / Provinciewet art. 115 lid 2 (subsidiariteitsbeginsel)  
+- Code Interbestuurlijke Verhoudingen — "Decentraal wat kan, centraal wat moet"  
+- GDI-Meerjarenvisie 2024–2028 (Bureau MIDO / BZK)  
+- Architectuur Digitale Overheid 2030  
 
 ---
 
@@ -71,10 +71,10 @@ Het stelsel is opgebouwd uit losgekoppelde, vervangbare modules met heldere inte
 Pas een gelaagde componentarchitectuur toe conform het NORA Vijflaagsmodel (interactie, procesinrichting, integratie, diensten, gegevensbronnen). Definieer expliciete API-contracten tussen lagen. Sla geen gegevens op die ook real-time bij de bron bevraagd kunnen worden.
 
 **Bronnen:**  
-- GA Basisprincipes — principe V (Bureau MIDO)
-- GDI-Meerjarenvisie 2024–2028
-- NORA Vijflaagsmodel (noraonline.nl)
-- GEMMA Informatiearchitectuurprincipes — componentgebaseerd werken (VNG Realisatie)
+- GA Basisprincipes — principe V (Bureau MIDO)  
+- GDI-Meerjarenvisie 2024–2028  
+- NORA Vijflaagsmodel (noraonline.nl)  
+- GEMMA Informatiearchitectuurprincipes — componentgebaseerd werken (VNG Realisatie)  
 
 ---
 
@@ -91,10 +91,10 @@ Gegevens worden zoveel mogelijk real-time bevraagd bij de bronhouder via API's, 
 Het GBO fungeert als *integratielaag*, niet als *gegevensmagazijn*. Bronhouders (BRP, Belastingdienst, UWV, DUO, BAG/BRK) worden bevraagd via de gemeenschappelijke bronontsluiting-API. Tussenopslag is alleen toegestaan als performance of beschikbaarheid dit vereist, met expliciete AVG-grondslag.
 
 **Bronnen:**  
-- NORA NAP12 — Informeer bij de bron (noraonline.nl)
-- GEMMA Informatiearchitectuurprincipes — eenmalige vastlegging (VNG Realisatie, opgegaan in GEMMA 2024/2025)
-- Haal Centraal-programma (VNG Realisatie) — "bevragen bij de bron"
-- developer.overheid.nl — Vorderingenoverzicht Rijk (casestudy)
+- NORA NAP12 — Informeer bij de bron (noraonline.nl)  
+- GEMMA Informatiearchitectuurprincipes — eenmalige vastlegging (VNG Realisatie, opgegaan in GEMMA 2024/2025)  
+- Haal Centraal-programma (VNG Realisatie) — "bevragen bij de bron"  
+- developer.overheid.nl — Vorderingenoverzicht Rijk (casestudy)  
 
 ---
 
@@ -107,9 +107,9 @@ Functionaliteit wordt opgesplitst in kleine, herbruikbare componenten die elk é
 Denk aan afzonderlijke componenten voor: authenticatie, toestemmingsbeheer, bronontsluiting per registratie, pseudoniemvertaling, logging. Elk component heeft een eigen beheerder en een stabiel API-contract.
 
 **Bronnen:**  
-- NORA NAP07 — Bouw diensten modulair op (noraonline.nl)
-- NORA Vijflaagsmodel — serviceoriëntatie als leidende architectuurstijl
-- GEMMA Informatiearchitectuurprincipes — componentgebaseerd werken (VNG Realisatie, opgegaan in GEMMA 2024/2025)
+- NORA NAP07 — Bouw diensten modulair op (noraonline.nl)  
+- NORA Vijflaagsmodel — serviceoriëntatie als leidende architectuurstijl  
+- GEMMA Informatiearchitectuurprincipes — componentgebaseerd werken (VNG Realisatie, opgegaan in GEMMA 2024/2025)  
 
 ---
 
@@ -119,9 +119,9 @@ Denk aan afzonderlijke componenten voor: authenticatie, toestemmingsbeheer, bron
 Componenten en standaarden worden bij voorkeur als open source ontwikkeld en gepubliceerd, zodat samenwerking, hergebruik en transparantie worden bevorderd. Hierdoor neemt de kans op vendor lock-in af en kunnen marktpartijen en andere overheden bijdragen.
 
 **Bronnen:**  
-- NORA — gebruik open standaarden en open source (noraonline.nl)
-- Werkagenda Waardengedreven Digitaliseren (BZK)
-- GEMMA Realisatieprincipes — "Open Source Software wordt gestimuleerd" (VNG Realisatie)
+- NORA — gebruik open standaarden en open source (noraonline.nl)  
+- Werkagenda Waardengedreven Digitaliseren (BZK)  
+- GEMMA Realisatieprincipes — "Open Source Software wordt gestimuleerd" (VNG Realisatie)  
 
 ---
 
@@ -134,9 +134,9 @@ Hergebruik van bestaande standaarden, patronen en voorzieningen heeft sterk de v
 Stel een ADR-register bij als onderdeel van de GBO-documentatie. Elke afwijking van een verplichte standaard of een vastgesteld architectuurprincipe krijgt een eigen ADR met: context, beslissing, overwogen alternatieven, en consequenties.
 
 **Bronnen:**  
-- NORA BP09 — Pas open standaarden toe
-- NORA Architectuurprincipes (noraonline.nl)
-- GA Basisprincipes — principe D & H (Bureau MIDO)
+- NORA BP09 — Pas open standaarden toe  
+- NORA Architectuurprincipes (noraonline.nl)  
+- GA Basisprincipes — principe D & H (Bureau MIDO)  
 
 ---
 
@@ -146,10 +146,10 @@ Stel een ADR-register bij als onderdeel van de GBO-documentatie. Elke afwijking 
 Gegevens die het GBO uitwisselt, zijn semantisch eenduidig gedefinieerd via vastgestelde informatiemodellen (GGM, NEN3610, IMGeo, etc.) en ontologieën (RDF/SHACL). Technische koppelvlakken zijn gedocumenteerd conform OpenAPI Specification. Hierdoor kunnen afnemers gegevens machineleesbaar verwerken zonder handmatige interpretatie.
 
 **Bronnen:**  
-- NORA Domeinarchitectuur Gegevensuitwisseling — semantiek & validatie
-- Gemeentelijk Gegevensmodel (GGM) — VNG
-- Forum Standaardisatie — standaarden voor semantische interoperabiliteit
-- EU Interoperabiliteitsraamwerk (EIF) / Interoperable Europe Act
+- NORA Domeinarchitectuur Gegevensuitwisseling — semantiek & validatie  
+- Gemeentelijk Gegevensmodel (GGM) — VNG  
+- Forum Standaardisatie — standaarden voor semantische interoperabiliteit  
+- EU Interoperabiliteitsraamwerk (EIF) / Interoperable Europe Act  
 
 ---
 
@@ -164,10 +164,10 @@ Overheidsorganisaties zijn verplicht de open standaarden op de 'pas toe of leg u
 Neem in het stelselontwerp een expliciete mapping op van GBO-koppelvlakken naar verplichte standaarden. Documenteer elk koppelvlak dat afwijkt van de 'pas toe'-standaard.
 
 **Bronnen:**  
-- Forum Standaardisatie — 'Pas toe of leg uit'-lijst
-- Logius API-standaarden: REST API Design Rules, NL GOV OAuth 2.0, NL GOV OIDC
-- GDI-Meerjarenvisie 2024–2028 — collectieve voorzieningen "pas toe of leg uit"
-- NORA BP09 — Pas open standaarden toe
+- Forum Standaardisatie — 'Pas toe of leg uit'-lijst  
+- Logius API-standaarden: REST API Design Rules, NL GOV OAuth 2.0, NL GOV OIDC  
+- GDI-Meerjarenvisie 2024–2028 — collectieve voorzieningen "pas toe of leg uit"  
+- NORA BP09 — Pas open standaarden toe  
 
 ---
 
@@ -177,18 +177,18 @@ Neem in het stelselontwerp een expliciete mapping op van GBO-koppelvlakken naar 
 Elke GBO-functie en elke bronontsluiting wordt primair aangeboden als een goed gedocumenteerde, versie-beheerde API. De API is het primaire koppelvlak; gebruikersinterfaces en batchprocessen zijn secundair. API's worden ontworpen conform de NLGov REST API Design Rules.
 
 **Toelichting voor GBO — REST vs. GraphQL:**
-De NLGov REST API Design Rules zijn verplicht ('pas toe of leg uit') voor REST-API's. GraphQL valt buiten deze verplichting maar is niet verboden. Een keuze voor GraphQL vereist:
-- Expliciete motivatie (bijv. flexibele selectie van attributen reduceert dataminimalisatierisico's);
-- Aantoonbare naleving van vergelijkbare beveiligings-, autorisatie- en auditprincipes;
-- Documentatie conform OpenAPI Specification of vergelijkbaar schema.
+De NLGov REST API Design Rules zijn verplicht ('pas toe of leg uit') voor REST-API's. GraphQL valt buiten deze verplichting maar is niet verboden. Een keuze voor GraphQL vereist:  
+- Expliciete motivatie (bijv. flexibele selectie van attributen reduceert dataminimalisatierisico's);  
+- Aantoonbare naleving van vergelijkbare beveiligings-, autorisatie- en auditprincipes;  
+- Documentatie conform OpenAPI Specification of vergelijkbaar schema.  
 
 Overweeg een hybride aanpak: REST-endpoints voor standaard bevragingen (conform verplichte standaard), GraphQL voor flexibele attribuutselectie door afnemers.
 
 **Bronnen:**  
-- NLGov REST API Design Rules (Forum Standaardisatie, verplicht 'pas toe of leg uit' — Logius)
-- Kennisplatform API's (developer.overheid.nl)
-- GEMMA Informatiearchitectuurprincipes — "maximaal openstellen voor hergebruik via API's"
-- EU Open Data Richtlijn — API-verplichting voor overheidsdata (art. 5)
+- NLGov REST API Design Rules (Forum Standaardisatie, verplicht 'pas toe of leg uit' — Logius)  
+- Kennisplatform API's (developer.overheid.nl)  
+- GEMMA Informatiearchitectuurprincipes — "maximaal openstellen voor hergebruik via API's"  
+- EU Open Data Richtlijn — API-verplichting voor overheidsdata (art. 5)  
 
 ---
 
@@ -203,11 +203,11 @@ Beveiligings- en privacymaatregelen worden vanaf het eerste ontwerp ingebakken i
 Voer voor elk nieuw component een Data Protection Impact Assessment (DPIA) uit. Stel een expliciete beveiligingsclassificatie vast per gegevenstype. Ontwerp de toegangslaag op basis van zero-trust-principes (geen impliciete vertrouwensrelaties tussen componenten).
 
 **Bronnen:**  
-- AVG art. 25 — privacy by design & by default
-- BIO2 (Baseline Informatiebeveiliging Overheid 2) — gebaseerd op ISO/IEC 27001:2022 & 27002:2022
-- GA Basisprincipes — principe H (privacy by design, security by design)
-- NIS2-richtlijn (EU) 2022/2555 — verplichting beveiligingsmaatregelen vitale infrastructuur
-- Cyberbeveiligingswet (Cbw, implementatie NIS2)
+- AVG art. 25 — privacy by design & by default  
+- BIO2 (Baseline Informatiebeveiliging Overheid 2) — gebaseerd op ISO/IEC 27001:2022 & 27002:2022  
+- GA Basisprincipes — principe H (privacy by design, security by design)  
+- NIS2-richtlijn (EU) 2022/2555 — verplichting beveiligingsmaatregelen vitale infrastructuur  
+- Cyberbeveiligingswet (Cbw, implementatie NIS2)  
 
 ---
 
@@ -220,21 +220,22 @@ Elke afnemer, component en beheerder krijgt uitsluitend de toegang die strikt no
 Implementeer OAuth 2.0-scopes per API-endpoint en per gegevenstype. Koppel autorisaties aan grondslag en doelbinding (zie architectuurprincipe P-01). Log elke autorisatiebeslissing.
 
 **Bronnen:**  
-- BIO2 — toegangsbeheer (ISO 27002 domein 8)
-- NL GOV Assurance profile for OAuth 2.0 (Logius)
-- AVG art. 5 lid 1 sub b (doelbinding) & sub c (dataminimalisatie)
+- BIO2 — toegangsbeheer (ISO 27002 domein 8)  
+- NL GOV Assurance profile for OAuth 2.0 (Logius)  
+- AVG art. 5 lid 1 sub b (doelbinding) & sub c (dataminimalisatie)  
 
 ---
 
 ### D-12 · Aantoonbare veiligheid — audit en pen-testing
 
 **Betekenis:**  
-De beveiliging van het stelsel wordt periodiek getoetst door onafhankelijke audits en penetratietests. Bevindingen worden transparant gerapporteerd en aantoonbaar opgevolgd. Het stelsel voldoet aan de BIO2-normen en — voor vitale functies — aan de eisen van de Cyberbeveiligingswet.
+De beveiliging van het stelsel wordt periodiek getoetst door onafhankelijke audits en penetratietests. Bevindingen worden transparant gerapporteerd en aantoonbaar opgevolgd. Het stelsel voldoet aan de BIO2-normen en — voor vitale functies — aan de eisen van de Cyberbeveiligingswet.  
+Ook deelnemers moeten aantoonbaar voldoen aan beveiligings- en privacy-eisen bij aansluiting op het stelsel.
 
 **Bronnen:**  
-- BIO2 (Baseline Informatiebeveiliging Overheid 2) — risicomanagement & audit
-- NIS2-richtlijn / Cyberbeveiligingswet — zorgplicht en meldplicht
-- ISO/IEC 27001:2022 — ISMS-certificering
+- BIO2 (Baseline Informatiebeveiliging Overheid 2) — risicomanagement & audit  
+- NIS2-richtlijn / Cyberbeveiligingswet — zorgplicht en meldplicht  
+- ISO/IEC 27001:2022 — ISMS-certificering  
 
 ---
 
