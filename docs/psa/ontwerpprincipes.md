@@ -143,7 +143,7 @@ Stel een ADR-register bij als onderdeel van de GBO-documentatie. Elke afwijking 
 ### D-14 · Interoperabiliteit — semantische en technische afstemming
 
 **Betekenis:**  
-Gegevens die het GBO uitwisselt, zijn semantisch eenduidig gedefinieerd via vastgestelde informatiemodellen (GGM, NEN3610, IMGeo, etc.) en ontologieën (RDF/SHACL). Technische koppelvlakken zijn gedocumenteerd conform OpenAPI Specification. Hierdoor kunnen afnemers gegevens machineleesbaar verwerken zonder handmatige interpretatie.
+Gegevens die via het GBO worden uitgewisseld, zijn semantisch eenduidig vastgelegd en zijn zoveel mogelijk gebaseerd op bestaande informatiemodellen (waaronder GGM, NEN3610 en IMGeo) en bijbehorende standaarden voor datamodellering en ontologieën (zoals MIM, UML en RDF/SHACL). Technische koppelvlakken zijn gebaseerd op deze informatiemodellen en gespecificeerd volgens de OpenAPI Specification, waardoor afnemers gegevens machineleesbaar kunnen verwerken zonder aanvullende interpretatie.
 
 **Bronnen:**  
 - NORA Domeinarchitectuur Gegevensuitwisseling — semantiek & validatie  
@@ -158,7 +158,7 @@ Gegevens die het GBO uitwisselt, zijn semantisch eenduidig gedefinieerd via vast
 ### D-08 · Pas toe of leg uit — verplichte open standaarden
 
 **Betekenis:**  
-Overheidsorganisaties zijn verplicht de open standaarden op de 'pas toe of leg uit'-lijst van Forum Standaardisatie toe te passen. Afwijken is alleen toegestaan als er een zwaarwegende en gedocumenteerde reden is. Voor het GBO gelden in elk geval als verplicht: REST API Design Rules, NL GOV OAuth 2.0-profiel, NL GOV OIDC-profiel, Digikoppeling, en — zodra beschikbaar — OID4VC/OID4VP.
+Overheidsorganisaties zijn verplicht de open standaarden op de 'pas toe of leg uit'-lijst van Forum Standaardisatie toe te passen. Afwijken is alleen toegestaan als er een zwaarwegende en gedocumenteerde reden is. Voor het GBO gelden in elk geval als verplicht: REST API Design Rules, NL GOV OAuth 2.0-profiel, NL GOV OIDC-profiel, Digikoppeling, MIM, DCAT2, SHACL en — zodra beschikbaar — OID4VC/OID4VP.
 
 **Toelichting voor GBO:**  
 Neem in het stelselontwerp een expliciete mapping op van GBO-koppelvlakken naar verplichte standaarden. Documenteer elk koppelvlak dat afwijkt van de 'pas toe'-standaard.
