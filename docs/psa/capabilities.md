@@ -315,7 +315,7 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 
 | Voorziening | Type | Beheer | Instantiëring | Bestaande invulling |
 |---|---|---|---|---|
-| GBO Schema Registry / Catalogus | Centrale voorziening | Canonieke definitie centraal vastgesteld (GBO), decentraal geïnitieerd via RFC-proces | Gedeeld | ⚠️ Nog te realiseren; bouwt op FDS-datacatalogus infrastructuur |
+| GBO Schema Registry / Catalogus | Centrale voorziening | Canonieke definitie als leesbare tekst (markdown/HTML) en ook machineleesbaar (RDF/OWL/SHACL), centraal vastgesteld (GBO), decentraal geïnitieerd via RFC-proces. | Gedeeld | ⚠️ Nog te realiseren; bouwt op FDS-datacatalogus infrastructuur |
 | Serialisatie-service (canoniek schema → JSON / XML / SD-JWT VC / mdoc) | Centrale voorziening | Centraal — GBO | Gedeeld | ⚠️ Nog te realiseren |
 | FDS Datacatalogus (bestaande DCAT-infrastructuur) | Centrale voorziening | FDS / Logius | Gedeeld | **Beschikbaar**; GBO-uitbreiding voor schema-registry gewenst |
 
