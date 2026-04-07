@@ -51,7 +51,7 @@
 
 ### P-13 · Transparantie & inzage voor de burger
 
-**Stelling:** De burger heeft recht op inzage in welke gegevens over hem zijn uitgewisseld, met wie en op welke grondslag. Het stelsel ondersteunt dit via een inzageloket (Regie op Gegevens).
+**Stelling:** De burger heeft recht op inzage in welke gegevens over hem / haar zijn uitgewisseld, met wie en op welke grondslag.
 
 **Bronnen:**  
 - AVG art. 13–15 (informatieplicht, inzagerecht)  
@@ -64,7 +64,7 @@
 
 ### P-08 · Eenmalige vastlegging, meervoudig gebruik (EV-MG)
 
-**Stelling:** Gegevens worden eenmalig bij de bron vastgelegd en vanuit die bron hergebruikt. Het stelsel bevordert gegevensdeling in plaats van gegevenskopiëren.
+**Stelling:** Gegevens worden eenmalig bij de bron vastgelegd en vanuit die bron hergebruikt. Het stelsel bevordert gegevensdeling in plaats van gegevens kopiëren.
 
 **Bronnen:**  
 - NORA BP08 — Gebruik open standaarden  
@@ -75,7 +75,7 @@
 
 ### P-09 · Open standaarden & leveranciersonafhankelijkheid
 
-**Stelling:** Het stelsel maakt gebruik van open standaarden (OAuth 2.0, REST/GraphQL, Digikoppeling, OID4VC) van de Forum Standaardisatie 'pas toe of leg uit'-lijst, zodat vendor lock-in wordt voorkomen.
+**Stelling:** Het stelsel maakt gebruik van open standaarden (zoals OAuth 2.0, REST/GraphQL, Digikoppeling, OID4VC) van de Forum Standaardisatie 'pas toe of leg uit'-lijst, zodat vendor lock-in wordt voorkomen.
 
 **Bronnen:**  
 - NORA Domeinarchitectuur Gegevensuitwisseling §4.2  
@@ -108,7 +108,7 @@
 
 ### P-15 · Ontkoppeling voor wendbaarheid en robuustheid
 
-**Stelling:** Afnemers, de generieke kern en bronhouders zijn technisch ontkoppeld via gestandaardiseerde API-koppelvlakken, zodat componenten onafhankelijk kunnen worden doorontwikkeld en vervangen.
+**Stelling:** Afnemers, de generieke kern en bronhouders zijn technisch ontkoppeld via gestandaardiseerde koppelvlakken, zodat componenten onafhankelijk kunnen worden doorontwikkeld en vervangen.
 
 **Bronnen:**  
 - GDI-Architectuur Basisprincipes — "Gebruik van flexibele en ontkoppelde functies"  
@@ -144,7 +144,7 @@
 
 ### P-06 · Ondersteuning van de Europese digitale identiteitswallet (EUDIW)
 
-**Stelling:** Het stelsel is ontworpen om in de toekomst attributen uit te wisselen via de EU Digital Identity Wallet (OID4VC/OID4VP), zodat grensoverschrijdende dienstverlening (SDG/OOTS) mogelijk is.
+**Stelling:** Het stelsel is ontworpen om in de toekomst attributen uit te wisselen via de EU Digital Identity Wallet (OID4VC/OID4VP), zodat grensoverschrijdende dienstverlening mogelijk is.
 
 **Bronnen:**  
 - eIDAS2 Verordening (EU) 2024/1183  
@@ -157,7 +157,7 @@
 
 ### P-10 · Datasoevereiniteit: de bronhouder behoudt regie
 
-**Stelling:** Bronhouders behouden volledige zeggenschap over hun gegevens en de condities waaronder die worden ontsloten. Het GBO faciliteert ontsluiting maar neemt geen eigenaarschap.
+**Stelling:** Bronhouders behouden volledige zeggenschap over hun gegevens en de condities waaronder die worden ontsloten. GBO heeft geen eigenaarschap over de data welke ontsloten wordt, maar faciliteert deze enkel.
 
 **Bronnen:**  
 - EU Data Governance Act (DGA) Verordening 2022/868  
@@ -168,7 +168,7 @@
 
 ### P-16 · Eerlijke en niet-discriminerende toegang voor private partijen
 
-**Stelling:** Private partijen kunnen deelnemen aan het stelsel onder transparante, proportionele en niet-discriminerende toetredingsvoorwaarden, mits zij voldoen aan de gestelde beveiligings- en privacynormen en géén BSN verwerken.
+**Stelling:** Private partijen kunnen deelnemen aan het stelsel onder transparante, proportionele en niet-discriminerende toetredingsvoorwaarden, mits zij voldoen aan de gestelde beveiligings- en privacynormen en géén BSN verwerken, behalve als daar een wettelijke grondslag voor bestaat.
 
 **Bronnen:**  
 - EU Data Governance Act art. 5 (condities hergebruik)  
@@ -181,7 +181,7 @@
 
 ### P-04 · BSN-loos voor private afnemers (pseudonimisering)
 
-**Stelling:** Private partijen mogen het BSN niet verwerken (Wabb art. 10). Het GBO levert aan private afnemers uitsluitend sectorale of context-specifieke pseudoniemen; de BSN-koppeling blijft binnen de vertrouwde kern.
+**Stelling:** Private partijen mogen het BSN niet verwerken (Wabb art. 10). Het GBO levert aan private afnemers uitsluitend sectorale of context-specifieke pseudoniemen; de BSN-koppeling blijft binnen de vertrouwde kern. NB: als private partijen een wettelijke grondslag hebben om het BSN wel te verwerken, kan dit wel gedeeld worden.
 
 **Bronnen:**  
 - Wet algemene bepalingen BSN (Wabb) art. 10  
