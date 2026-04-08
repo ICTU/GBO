@@ -12,15 +12,15 @@ GBO (Gemeenschappelijke Bronontsluiting) provides a common source access layer e
 
 The architecture rests on seven pillars:
 
-| Pillar                    | Standard                                                                                                                                                                                                                    | Proven by                                   |
-| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
-| **Data access**           | GraphQL with registered query templates                                                                                                                                                                                     | iWlz (healthcare, production)               |
-| **Authorization**         | Five-factor authorization model → federated PDP (OPA/Rego) via AuthZEN, no central authorization server. FSC Manager issues cert-bound JWTs. PAP (Policy Administration Point) distributes signed bundles via OCI registry. | iWlz + FTV + FSC                            |
-| **Connectivity**          | FSC (domestic REST) + AS4 bridge (cross-border, EU mandate)                                                                                                                                                                 | FSC (government), Domibus (EU)              |
-| **Consent / Legal basis** | Toestemmingsregister as PIP for consent-based access; legal basis encoded in policy bundles for law-mandated access. Two paths, same PDP.                                                                                   | New -- replaces DvTP's custom authorization |
-| **Pseudonymization**      | BSNk PP polymorphic pseudonyms for BSN-free private sector queries                                                                                                                                                          | BSNk PP (Logius, production)                |
-| **EUDI issuance**         | PubEAA Provider (shared, optional per bronhouder) + OpenID4VCI                                                                                                                                                              | New -- avoids 100% QTSP reliance            |
-| **EUDI verification**     | Authentic Source Interface (ETSI TS 119 478, I2 Verify + I4 Authorize)                                                                                                                                                      | New -- Article 45e mandate                  |
+| Pillar                    | Standard                                                                                                                                                                                                                              | Proven by                                   |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- |
+| **Data access**           | GraphQL with scope-driven field authorization (dienstencatalogus) + constraint-based where-clause binding, validated via `graphql.parse_query()` AST inspection                                                                       | iWlz / nID (healthcare, production)         |
+| **Authorization**         | Five-factor authorization model → federated PDP (OPA/Rego) via AuthZEN, no central authorization server. FSC Manager issues cert-bound JWTs. PAP (Policy Administration Point) distributes signed bundles via OCI registry.           | iWlz + FTV + FSC                            |
+| **Connectivity**          | FSC (domestic REST) + AS4 bridge (cross-border, EU mandate)                                                                                                                                                                           | FSC (government), Domibus (EU)              |
+| **Consent / Legal basis** | Toestemmingsregister as PIP for consent-based access; legal basis encoded in policy bundles for law-mandated access. Two paths, same PDP. Single consent spans multiple bronhouders; wettelijke dienstencatalogus caps maximum scope. | New -- replaces DvTP's custom authorization |
+| **Pseudonymization**      | BSNk PP polymorphic pseudonyms for BSN-free private sector queries                                                                                                                                                                    | BSNk PP (Logius, production)                |
+| **EUDI issuance**         | PubEAA Provider (shared, optional per bronhouder) + OpenID4VCI                                                                                                                                                                        | New -- avoids 100% QTSP reliance            |
+| **EUDI verification**     | Authentic Source Interface (ETSI TS 119 478, I2 Verify + I4 Authorize)                                                                                                                                                                | New -- Article 45e mandate                  |
 
 ---
 
@@ -158,7 +158,45 @@ With GraphQL, data minimization is the default. Each consumer sends a query sele
 
 The citizen experience is identical. The change is plumbing: what happens after consent is recorded, and how the data request is authorized.
 
-### 3. BSNk PP for BSN Pseudonymization
+### 3. Consent Model: Multi-Source Scoping, Dienstencatalogus, and Integrator Onboarding
+
+**Decision**: Toestemmingen (consents) are not 1:1 linked to a single bronhouder or data source. A single toestemmingsaanvraag can span multiple bronhouders and data elements simultaneously. A wettelijke dienstencatalogus defines the maximum reikwijdte (scope) of what may be requested. Integrators (softwarepartijen) that technically execute API calls must be separately onboarded.
+
+**Multi-source consent**: A citizen giving consent for a mortgage application does not give five separate consents to five separate bronhouders. Instead, the toestemmingsportaal presents a single consent screen covering all required data elements across sources. One consent action, multiple bronhouders:
+
+| Bronhouder      | Data element       | Voorbeeld scope-ID |
+| --------------- | ------------------ | ------------------ |
+| Belastingdienst | IB vorig jaar      | `bd:ib:2025`       |
+| Belastingdienst | IB jaar daarvoor   | `bd:ib:2024`       |
+| DUO             | Studieschuld       | `duo:studieschuld` |
+| UWV             | Inkomen            | `uwv:inkomen`      |
+| BKR             | Kredietregistratie | `bkr:registratie`  |
+
+The toestemmingsregister stores this as a single consent record with multiple scope entries. Each scope entry references a bronhouder + data element + time period. When a dienstverlener later queries a specific bronhouder, the PDP checks whether the consent record includes a matching scope entry for that bronhouder -- not whether a separate consent exists.
+
+**Wettelijke dienstencatalogus as ceiling**: The dienstencatalogus is a legally anchored register (grondslag in AMvB / ministeriële regeling) that defines the maximum reikwijdte of data that may be requested per use case. It acts as a policy ceiling:
+
+- The consent screen can only show data elements that appear in the dienstencatalogus for the relevant use case
+- The PDP enforces the catalog as a hard constraint -- even if a consent record somehow includes a scope outside the catalog, the policy denies it
+- The catalog is maintained by Bureau DvTP and updated through a formal governance process (sectorvertegenwoordiger → Bureau DvTP → departementale toetsing)
+
+This separation means: the dienstencatalogus defines what is _maximally possible_, the citizen's consent defines what is _actually permitted_ for a specific request.
+
+**Two-axis enforcement — scopes + constraints**: GraphQL authorization in GBO combines two complementary mechanisms, following the pattern proven by nID/iWlz in production:
+
+- **Scopes** (field-level / column axis): The dienstencatalogus defines which GraphQL fields are allowed per scope. Each scope in a consent record (e.g., `bd:ib:2025`) maps to a set of allowed fields in the catalog. The PDP parses the incoming GraphQL query into an AST using OPA's built-in `graphql.parse_query()` and verifies that every requested field is within the allowed set for the granted scopes. This enforces data minimization — a hypotheekverlener cannot request `inkomenUitBox3` if the scope only allows `verzamelinkomen` and `inkomenUitBox1`.
+- **Constraints** (record-level / row axis): Like nID/iWlz, the PDP enforces that mandatory `where`-clause arguments are present in the query and that their values match the caller's identity claims. For DvTP, the `consent_id` must appear as a where-clause argument (binding the query to a specific citizen's consent). For Gov-to-Gov, the requesting organization's OIN and legal basis must appear. The PDP inspects the AST to verify these structural constraints — not just field names, but argument presence and value binding.
+
+Together, scopes answer "which fields may you see?" and constraints answer "which records may you access?". Neither alone is sufficient: scopes without constraints allow accessing any citizen's data; constraints without scopes allow seeing all fields including those outside the consent.
+
+**Integrator / softwarepartij onboarding**: The dienstverlener (e.g., a hypotheekverlener) is not always the party that technically sends API requests. In practice, a softwarepartij (integrator) builds and operates the technical integration. This party must be separately onboarded:
+
+- The integrator receives its own PKI-O certificate and FSC registration
+- The FSC Manager verifies both the integrator's identity (① org identity) and the dienstverlener on whose behalf they act (② org permission via delegation grant)
+- The integrator acts as a transparent relay -- it cannot access or modify the data content (consistent with DvTP's "doorgeefluik" principle)
+- Onboarding includes: compliance check (AVG, security), technical certification, and registration in the dienstencatalogus as an approved softwarepartij for the relevant use case
+
+### 4. BSNk PP for BSN Pseudonymization
 
 **Decision**: Private dienstverleners never see or process the BSN. The Toestemmingsportaal uses BSNk PP (Logius' production polymorphic pseudonymization infrastructure) to generate per-party encrypted pseudonyms. Bronhouders receive the actual BSN through the identity path. The consent_id serves as the opaque bridge between the two worlds.
 
@@ -195,17 +233,17 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
 
 **Precedent**: BSNk PP has been operational since ~2019, serving the entire eToegang ecosystem. It is not a proposal; it is an integration of existing government infrastructure.
 
-### 4. Five-factor authorization model — Federated PDP, No Central Authorization Server
+### 5. Five-factor authorization model — Federated PDP, No Central Authorization Server
 
 **Decision**: Authorization is not one question but five independent checks. Each has a different change frequency, decision maker, and protocol. All are evaluated by a federated PDP (OPA/Rego) at each bronhouder. There is **no central authorization server**.
 
-| #   | Concern              | Policy Question                         | Protocol                                                       | Decision Format               | Evaluation Moment                                  |
-| --- | -------------------- | --------------------------------------- | -------------------------------------------------------------- | ----------------------------- | -------------------------------------------------- |
-| ①   | **Org identity**     | "Is this a legitimate org?"             | X.509 / mTLS (PKI-Overheid)                                    | Certificate                   | At TLS handshake                                   |
-| ②   | **Org permission**   | "May this org access this service?"     | FSC Contract + JWT (RFC 8705 cert-bound)                       | Signed Grant → JWT            | At token request (FSC Manager)                     |
-| ③   | **Access basis**     | "Is there a legal/consent basis?"       | Toestemmingsregister PIP query OR legal basis in policy bundle | Consent record or policy rule | Per-request (consent) or from bundle (legal basis) |
-| ④   | **Data scope**       | "Which fields may be returned?"         | OPA/Rego + GraphQL AST matching                                | Template match                | Per-request (local)                                |
-| ⑤   | **Request validity** | "Is this specific request well-formed?" | OpenID AuthZEN 1.0                                             | allow/deny                    | Per-request (local)                                |
+| #   | Concern              | Policy Question                         | Protocol                                                       | Decision Format                                            | Evaluation Moment                                  |
+| --- | -------------------- | --------------------------------------- | -------------------------------------------------------------- | ---------------------------------------------------------- | -------------------------------------------------- |
+| ①   | **Org identity**     | "Is this a legitimate org?"             | X.509 / mTLS (PKI-Overheid)                                    | Certificate                                                | At TLS handshake                                   |
+| ②   | **Org permission**   | "May this org access this service?"     | FSC Contract + JWT (RFC 8705 cert-bound)                       | Signed Grant → JWT                                         | At token request (FSC Manager)                     |
+| ③   | **Access basis**     | "Is there a legal/consent basis?"       | Toestemmingsregister PIP query OR legal basis in policy bundle | Consent record or policy rule                              | Per-request (consent) or from bundle (legal basis) |
+| ④   | **Data scope**       | "Which fields may be returned?"         | OPA/Rego + `graphql.parse_query()` AST inspection              | Scope (allowed fields) + Constraint (where-clause binding) | Per-request (local)                                |
+| ⑤   | **Request validity** | "Is this specific request well-formed?" | OpenID AuthZEN 1.0                                             | allow/deny                                                 | Per-request (local)                                |
 
 Every data request passes through all five checks as a pipeline:
 
@@ -288,13 +326,13 @@ One PDP, one policy language, one enforcement point. Multiple trajectories, mult
 
 For the full protocol-level analysis including JWT anatomy, Rego examples, and sequence diagrams for each system, see [Authorization Models Analysis](authorization-models-analysis.md).
 
-### 5. FSC-Primary Connectivity
+### 6. FSC-Primary Connectivity
 
 **Decision**: FSC handles all domestic connectivity. Cross-border (OOTS) traffic arrives via an AS4 bridge that translates to FSC at the edge. There is no need for additional domestic transport protocols -- FSC is the single domestic connectivity stack.
 
 Bronhouders implement one connectivity stack (FSC Inway). The GBO edge layer handles OOTS cross-border translation.
 
-### 6. AS4 Bridge for SDG-OOTS (EU Mandate)
+### 7. AS4 Bridge for SDG-OOTS (EU Mandate)
 
 **Decision**: A Domibus Access Point handles SDG-OOTS cross-border evidence exchange. This is an EU regulatory requirement (Single Digital Gateway Regulation), not a choice.
 
@@ -304,84 +342,131 @@ GBO builds this bridge because it must. The bridge translates OOTS AS4 requests 
 
 ## Component Architecture
 
-### GraphQL Schema Registry + Query Templates
+### GraphQL Schema Registry + Scope-Driven Field Authorization
 
-Each bronhouder publishes a GraphQL schema describing their data. Consent scopes and attestation types map to **registered query templates** -- predefined queries that define exactly which fields a particular use case may access.
+Each bronhouder publishes a GraphQL schema describing their data. The **dienstencatalogus** defines which fields are allowed per scope — not as static query templates, but as field allowlists that the PDP evaluates against the parsed query AST at runtime. This follows the approach proven by nID/iWlz, extended with field-level scope enforcement for DvTP's data minimization requirements.
 
 ```mermaid
 graph LR
     subgraph "Schema Registry (GBO Catalogus)"
-        SCHEMA_BD[Belastingdienst: Inkomensgegevens, Schulden]
-        SCHEMA_RV[RvIG: Persoonsgegevens, Adres]
-        SCHEMA_DUO[DUO: Diploma, Inschrijving]
+        SCHEMA_BD["Belastingdienst (BRI): InkomensgegevensPerJaar, Aanslag"]
+        SCHEMA_DUO["DUO: Diploma, Inschrijving, Studieschuld"]
+        SCHEMA_UWV["UWV: Inkomen, Dienstverbanden"]
     end
 
-    subgraph "Query Templates"
-        T1["aankoop-woning (DvTP)"]
-        T2["income-evidence-eu (OOTS)"]
-        T3["income-attestation (EUDI)"]
+    subgraph "Dienstencatalogus (scope → allowed fields)"
+        S1["bd:ib:* → verzamelinkomen, inkomenUitBox1, grondslag, peilDatum"]
+        S2["duo:studieschuld → hoofdsom, openstaandSaldo, maandbedrag"]
+        S3["uwv:inkomen → brutoJaarinkomen, dienstverbanden"]
     end
 
-    T1 -->|"subset of"| SCHEMA_BD
-    T2 -->|"subset of"| SCHEMA_BD
-    T3 -->|"subset of"| SCHEMA_BD
+    S1 -->|"subset of"| SCHEMA_BD
+    S2 -->|"subset of"| SCHEMA_DUO
+    S3 -->|"subset of"| SCHEMA_UWV
 ```
 
-**Example: Belastingdienst schema (partial)**
+The PDP uses OPA's built-in `graphql.parse_query()` to parse the incoming query into an AST, then enforces two checks:
+
+1. **Scope check (field axis)**: every field in the query's selection set must appear in the allowed field set for the granted scopes in the dienstencatalogus
+2. **Constraint check (record axis)**: mandatory `where`-clause arguments must be present and their values must match the caller's identity claims (consent_id for DvTP, OIN + legal_basis for Gov-to-Gov)
+
+**Example: Belastingdienst BRI schema (subset of [full schema](../schemas/belastingdienst-bri-schema.graphql))**
 
 ```graphql
-type Inkomensgegevens {
+type InkomensgegevensPerJaar {
   belastingjaar: Int!
-  verzamelinkomen: Money!
-  toetsingsinkomen: Money!
-  brutoInkomen: Money!
-  belastingdruk: Percentage!
-  voorlopigeTeruggave: Money
-  definitieveAanslag: Boolean!
+  verzamelinkomen: Int
+  inkomenUitBox1: Int
+  inkomenUitBox2: Int
+  inkomenUitBox3: Int
+  grondslag: CodeOmschrijving # e.g. "Definitieve aanslag IB"
+  status: CodeOmschrijving # e.g. "Definitief vastgesteld"
+  peilDatum: Date
 }
 
-type Schulden {
-  hypotheekschuld: Money
-  studielening: Money
-  openstaandeBelastingschuld: Money
-  alimentatie: Money
+type Aanslag {
+  belastingjaar: Int!
+  soort: SoortAanslag! # VOORLOPIG | DEFINITIEF
+  dagtekening: Date!
+  verzamelinkomen: Int
+  verschuldigdeBelasting: Int
+  teBetalen: Int # positief = betalen, negatief = terug
+  status: AanslagStatus!
+}
+
+input InkomensgegevensInput {
+  burgerservicenummer: BSN!
+  belastingjaren: [Int!]
+  # Data minimization via GraphQL selection set — PDP validates fields against dienstencatalogus
+}
+
+type Query {
+  inkomensgegevens(input: InkomensgegevensInput!): [InkomensgegevensPerJaar!]!
+  aanslagen(input: AanslagenInput!): [Aanslag!]!
+  inkomensverklaring(
+    input: InkomensverklaringInput!
+  ): InkomensverklaringResponse!
 }
 ```
 
-Note: BSN is **not** in the consumer-facing schema. The GraphQL API uses `consent_id` as the subject identifier for DvTP queries. The PEP resolves `consent_id → BSN` internally via BSNk PP before forwarding to the bronhouder's internal register.
+Note: this is the **bronhouder-internal** schema — it uses `burgerservicenummer: BSN!` directly. For DvTP queries, the dienstverlener never sees BSN. The PEP sits in front and translates: the consumer sends a query with `consent_id`, the PEP resolves `consent_id → PI → BSNk Transform → EI → BSN`, then forwards the query to the bronhouder's internal API with the BSN substituted. Debt data (hypotheekschuld, studieschuld) is **not** in the BRI — it comes from other bronhouders (DUO, BKR).
 
-**Example: Query template for "aankoop-woning" consent scope**
+**Example: DvTP query for "aankoop-woning" consent — Belastingdienst leg**
+
+The dienstverlener sends a query with `consentId` as subject. The PEP intercepts, resolves consent_id → BSN via BSNk PP, and forwards to the bronhouder's internal API. Here is the **consumer-facing** query:
 
 ```graphql
-# Template ID: aankoop-woning
-# Used by: DvTP consent scope for mortgage applications
-# Subject: consent_id (opaque reference -- dienstverlener never sees BSN)
-# PEP resolves consent_id → PI → EI → BSN internally via BSNk PP
-query AankoopWoning($consent_id: UUID!, $belastingjaar: Int!) {
-  inkomensgegevens(
-    consent: { id: { eq: $consent_id } }
-    belastingjaar: { eq: $belastingjaar }
-  ) {
+# Dienstverlener sends this via FSC — consentId is the subject, no BSN
+# The selection set IS the data minimization — PDP checks fields against catalog
+query AankoopWoningInkomen($consentId: UUID!, $jaren: [Int!]!) {
+  inkomensgegevens(input: { consentId: $consentId, belastingjaren: $jaren }) {
+    belastingjaar
     verzamelinkomen
-    toetsingsinkomen
-    # brutoInkomen -- NOT included
-    # belastingdruk -- NOT included
-  }
-  schulden(consent: { id: { eq: $consent_id } }) {
-    hypotheekschuld
-    studielening
-    # openstaandeBelastingschuld -- NOT included
+    inkomenUitBox1
+    grondslag {
+      code
+      omschrijving
+    }
+    # inkomenUitBox2 — not in scope bd:ib:*, PDP would reject
+    # inkomenUitBox3 — not in scope bd:ib:*, PDP would reject
   }
 }
 ```
 
-The same bronhouder schema serves all three trajectories. Only the query templates differ:
+The PEP translates this to the bronhouder-internal query (substituting BSN for consentId):
 
-| Template             | Trajectory | Fields included                                                  |
-| -------------------- | ---------- | ---------------------------------------------------------------- |
-| `aankoop-woning`     | DvTP       | verzamelinkomen, toetsingsinkomen, hypotheekschuld, studielening |
-| `income-evidence-eu` | SDG-OOTS   | Maps to OOTS-EDM income evidence type fields                     |
-| `income-attestation` | EUDI       | Fields for PuB-EAA income attestation credential                 |
+```graphql
+# Bronhouder-internal — PEP has resolved consentId → BSN via BSNk PP
+query {
+  inkomensgegevens(
+    input: { burgerservicenummer: "123456789", belastingjaren: [2025, 2024] }
+  ) {
+    belastingjaar
+    verzamelinkomen
+    inkomenUitBox1
+    grondslag {
+      code
+      omschrijving
+    }
+  }
+}
+```
+
+The PDP validates the consumer-facing query by:
+
+1. **Parsing** the query into an AST via `graphql.parse_query()`
+2. **Scope check**: the consent record includes `bd:ib:2025` → dienstencatalogus maps this to allowed fields `{verzamelinkomen, inkomenUitBox1, grondslag, peilDatum}` → all requested fields are in this set → pass
+3. **Constraint check**: `consentId` argument is present and matches a valid consent_id with `withdrawn == false` and `valid_until` in the future → pass
+
+The dienstverlener sends separate queries to each bronhouder in the consent (one to Belastingdienst for income, one to DUO for studieschuld, one to UWV for employment income, etc.). Each bronhouder's PDP independently validates its leg against the shared consent record and its own catalog entry.
+
+The same bronhouder schema serves all trajectories. The dienstencatalogus defines different allowed field sets per scope:
+
+| Scope                | Trajectory | Allowed fields (Belastingdienst BRI)                  |
+| -------------------- | ---------- | ----------------------------------------------------- |
+| `bd:ib:*`            | DvTP       | verzamelinkomen, inkomenUitBox1, grondslag, peilDatum |
+| `income-evidence-eu` | SDG-OOTS   | Maps to OOTS-EDM income evidence type fields          |
+| `income-attestation` | EUDI       | Fields for PuB-EAA income attestation credential      |
 
 ### PEP/PDP/PIP Authorization Chain
 
@@ -415,7 +500,7 @@ graph TB
 
     PEP -->|"POST /access/v1/evaluation<br/>(AuthZEN 1.0)"| PDP
     PDP -.->|"③ consent check<br/>(DvTP only)"| PIP_C
-    PDP -->|"③ legal basis<br/>④ template match<br/>⑤ request validity<br/>(all local)"| BUNDLE
+    PDP -->|"③ legal basis<br/>④ scope + constraint check<br/>⑤ request validity<br/>(all local)"| BUNDLE
     PDP -->|"ALLOW or DENY<br/>+ obligations (field mask)"| PEP
 
     PEP -->|"if ALLOW"| GQL["GraphQL API"]
@@ -430,6 +515,8 @@ graph TB
 
 **The core GBO authorization policy (Rego pseudocode)**:
 
+This follows the two-axis model: scopes (field-level) + constraints (record-level), using OPA's built-in `graphql.parse_query()` for AST inspection — the same approach proven in production by nID/iWlz.
+
 ```rego
 package gbo.authz
 
@@ -438,13 +525,17 @@ import future.keywords.if
 
 default allow := false
 
+# Parse the incoming GraphQL query into an AST (OPA built-in, same as nID/iWlz)
+query_ast := graphql.parse_query(input.request.query)
+
 # Main policy: all five concerns must pass
 # Concerns ① and ② are pre-verified by the FSC Inway (JWT + cert-binding)
 # The PDP evaluates concerns ③, ④, and ⑤
 allow if {
     valid_org_permission       # Concern ② (double-check grant_hash in active_grants)
     valid_access_basis         # Concern ③ (consent OR legal basis)
-    valid_data_scope           # Concern ④ (GraphQL query matches template)
+    valid_data_scope           # Concern ④ (scope: allowed fields from dienstencatalogus)
+    valid_constraints          # Concern ④b (constraint: mandatory where-clause binding)
     valid_request              # Concern ⑤ (well-formed, within rate limits)
 }
 
@@ -459,10 +550,13 @@ valid_access_basis if { valid_citizen_consent }
 valid_access_basis if { valid_legal_basis }
 
 # ③a Consent path (DvTP): query toestemmingsregister PIP per-request
+# Consent record spans multiple bronhouders; PDP checks the scope entry for THIS bronhouder
 valid_citizen_consent if {
     input.pip.consent.exists == true
     input.pip.consent.withdrawn == false
     time.now_ns() < time.parse_rfc3339_ns(input.pip.consent.valid_until)
+    input.context.scope in input.pip.consent.granted_scopes          # scope entry for this bronhouder
+    input.context.scope in data.dienstencatalogus[input.action.use_case].allowed_scopes  # catalog ceiling
 }
 
 # ③b Legal basis path: no PIP call — evaluated from signed policy bundle
@@ -472,13 +566,28 @@ valid_legal_basis if {
     input.context.scope in basis.allowed_scopes
 }
 
-# ④ Data scope: GraphQL query matches an allowed template
+# ④ Scope axis: every field in the query AST must be in the allowed field set
+#    The dienstencatalogus maps each scope to an allowed field set per bronhouder
 valid_data_scope if {
-    template := data.query_templates[_]
-    template.operation == input.action.name
-    every field in input.action.fields {
-        field in template.allowed_fields
+    allowed := data.dienstencatalogus[input.context.scope].allowed_fields
+    operation := query_ast.Operations[0]
+    every selection in operation.SelectionSet {
+        every field in selection.SelectionSet {
+            field.Name in allowed
+        }
     }
+}
+
+# ④b Constraint axis: mandatory input arguments must be present and identity-bound
+#    Like nID/iWlz: inspect AST arguments, not just field names
+valid_constraints if {
+    operation := query_ast.Operations[0]
+    # consentId must appear as an input argument (DvTP)
+    some selection in operation.SelectionSet
+    some arg in selection.Arguments
+    arg.Name == "input"
+    some field in arg.Value.Children
+    field.Name == "consentId"
 }
 
 # ⑤ Request validity: rate limit, format, timestamp
@@ -489,6 +598,15 @@ valid_request if {
 
 # NOTE: BSN resolution (BSNk Transform) happens AFTER this decision, inside the PEP
 ```
+
+**How the two axes work together** — the dienstencatalogus drives both:
+
+| Axis                     | What it checks                                              | Data source                                         | nID/iWlz precedent                                                                                             |
+| ------------------------ | ----------------------------------------------------------- | --------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| **Scope** (fields)       | Requested fields ⊆ allowed fields for this scope            | `dienstencatalogus[scope].allowed_fields`           | New for GBO — nID does not restrict fields because all iWlz actors are government/healthcare with broad access |
+| **Constraint** (records) | Mandatory where-clause arguments present and identity-bound | AST argument inspection via `graphql.parse_query()` | Direct from nID — `where_required()` pattern, proven in production                                             |
+
+The scope axis is necessary because DvTP serves private-sector consumers who should only see the specific fields covered by the citizen's consent. The constraint axis ensures queries are bound to the correct citizen and organization. Neither alone is sufficient.
 
 ### OOTS AS4 Bridge
 
@@ -670,18 +788,18 @@ sequenceDiagram
     PORTAL->>BSNK: BSNk Transform(PP, target=HV OIN)
     BSNK-->>PORTAL: Encrypted Pseudonym (EP) for HV
 
-    PORTAL->>Jan: Shows consent screen: -"Hypotheekverlener BV wil uw -verzamelinkomen en toetsingsinkomen -(2024, 2025) en hypotheekschuld -en studielening opvragen bij de -Belastingdienst. Geldig voor 30 dagen."
+    PORTAL->>Jan: Shows consent screen: -"Hypotheekverlener BV wil de volgende -gegevens opvragen: -- Belastingdienst: inkomensgegevens (2024, 2025) -- DUO: studieschuld -- UWV: inkomen -- BKR: kredietregistratie -Geldig voor 30 dagen."
     Jan->>PORTAL: Geeft toestemming (consent granted)
 
-    PORTAL->>CREG: Write consent record: -consent_id=550e8400..., PI=..., -provider=HV, scope=aankoop-woning, -expires=2026-04-11
-    Note over CREG: No BSN stored -- only PI -(encrypted curve point)
+    PORTAL->>CREG: Write consent record: -consent_id=550e8400..., PI=..., -provider=HV, -scopes=[bd:ib:2025, bd:ib:2024, -duo:studieschuld, uwv:inkomen, -bkr:registratie], -expires=2026-04-11
+    Note over CREG: No BSN stored -- only PI. -Single consent, multiple bronhouders.
 
     PORTAL->>Jan: Redirect back to HV with -consent_token(consent_id, EP, scope, expiry, sig)
     Note over HV: HV decrypts EP with own key -+ closing key = party-specific pseudonym. -HV NEVER sees BSN.
 
     Note over HV,GQL: Phase 2: Token Issuance (Manager PDP evaluates ① ②)
 
-    HV->>FSC_O: GraphQL query (template: aankoop-woning) -variables: consent_id=550e8400..., jaar=2025
+    HV->>FSC_O: GraphQL query (scope: bd:ib) -variables: consentId=550e8400..., jaren=[2025,2024]
 
     FSC_O->>MGR: POST /token (mTLS + PKI-O cert) -{ grant_hash: "abc123", -scope: "dvtp:aankoop-woning" }
 
@@ -700,7 +818,7 @@ sequenceDiagram
     PDP->>CREG: Consent exists for -consent_id 550e8400... + HV + aankoop-woning?
     CREG-->>PDP: Yes, valid until 2026-04-11
 
-    PDP->>PDP: Query structure conforms to -registered template "aankoop-woning"? -Yes.
+    PDP->>PDP: Scope check: requested fields ⊆ -catalog[bd:ib:2025].allowed_fields? Yes. -Constraint check: consent_id in -where-clause? Yes.
 
     PDP-->>PEP: ALLOW -(obligations: allowed_fields)
 
@@ -710,7 +828,7 @@ sequenceDiagram
     PEP->>PEP: Decrypt EI with own key = BSN
 
     PEP->>GQL: Execute GraphQL query -(BSN substituted internally, -never exposed to dienstverlener)
-    Note over GQL: Returns ONLY authorized fields: -verzamelinkomen, toetsingsinkomen, -hypotheekschuld, studielening
+    Note over GQL: Returns ONLY authorized fields: -verzamelinkomen, inkomenUitBox1, -grondslag, peilDatum
 
     GQL-->>PEP: Sealed response (qualified electronic seal)
     PEP-->>FSC_I: Response + log to Logboek Dataverwerkingen
@@ -723,25 +841,23 @@ sequenceDiagram
 ### What the GraphQL Request Looks Like
 
 ```graphql
-# Sent by Hypotheekverlener via FSC
-# Must match registered template "aankoop-woning" exactly
-# Note: consent_id is the subject -- NO BSN in the request
-query AankoopWoning($consent_id: UUID!, $belastingjaar: Int!) {
-  inkomensgegevens(
-    consent: { id: { eq: $consent_id } }
-    belastingjaar: { eq: $belastingjaar }
-  ) {
+# Sent by Hypotheekverlener via FSC — Belastingdienst leg only
+# PDP validates: selection set fields ⊆ catalog[bd:ib:*] + consentId in input
+# Note: consentId is the subject -- NO BSN in the request
+query AankoopWoningInkomen($consentId: UUID!, $jaren: [Int!]!) {
+  inkomensgegevens(input: { consentId: $consentId, belastingjaren: $jaren }) {
+    belastingjaar
     verzamelinkomen
-    toetsingsinkomen
-  }
-  schulden(consent: { id: { eq: $consent_id } }) {
-    hypotheekschuld
-    studielening
+    inkomenUitBox1
+    grondslag {
+      code
+      omschrijving
+    }
   }
 }
 ```
 
-**Variables**: `{ "consent_id": "550e8400-e29b-41d4-a716-446655440000", "belastingjaar": 2025 }`
+**Variables**: `{ "consentId": "550e8400-e29b-41d4-a716-446655440000", "jaren": [2025, 2024] }`
 
 The PEP intercepts this query, resolves `consent_id → PI → BSNk Transform → EI → BSN`, and substitutes the BSN into the bronhouder's internal query. The dienstverlener's query and response contain no BSN at any point.
 
@@ -776,17 +892,20 @@ INPUT (from JWT claims + request):
   subject.org_id       = "OIN:00000004003214345001" (from JWT sub)
   subject.fsc_grant    = "abc123" (from JWT grant_hash)
   action.scope         = "aankoop-woning"
-  action.query         = <GraphQL query body (fields: verzamelinkomen, toetsingsinkomen, ...)>
+  action.query         = <GraphQL AST (fields: verzamelinkomen, inkomenUitBox1, grondslag)>
   resource.consent_id  = "550e8400-e29b-41d4-a716-446655440000"
   context.trajectory   = "dvtp"
 
 POLICY CHECKS:
-  ③ Does consent exist for consent_id+provider+scope?    -> YES (PIP query to register)
-  ③ Is consent still valid (not expired, not withdrawn)?  -> YES (expires 2026-04-11)
-  ④ Does query conform to template "aankoop-woning"?      -> YES (valid subset)
-  ⑤ Rate limit OK? Format valid?                          -> YES
+  ③ Does consent exist for consent_id+provider?            -> YES (PIP query to register)
+  ③ Does consent include scope for this bronhouder?        -> YES (bd:ib:2025 ∈ granted_scopes)
+  ③ Is consent still valid (not expired, not withdrawn)?   -> YES (expires 2026-04-11)
+  ③ Is scope within dienstencatalogus ceiling?             -> YES (bd:ib:2025 ∈ catalog[aankoop-woning])
+  ④ Scope: are all requested fields in catalog[bd:ib:*]?   -> YES (verzamelinkomen, inkomenUitBox1, grondslag ⊆ allowed)
+  ④ Constraint: is consentId in input arguments?            -> YES (identity-bound)
+  ⑤ Rate limit OK? Format valid?                           -> YES
 
-DECISION: ALLOW (obligations: allowed_fields=[verzamelinkomen, toetsingsinkomen, ...])
+DECISION: ALLOW (obligations: allowed_fields=[verzamelinkomen, inkomenUitBox1, grondslag, peilDatum])
 
 POST-DECISION (inside PEP, not visible to dienstverlener):
   6. Retrieve PI from consent record
@@ -930,9 +1049,9 @@ sequenceDiagram
     participant LOTE as Trusted List / LoTE
 
     Jan->>HV: "Ik wil een hypotheek aanvragen"
-    HV->>WALLET: OpenID4VP Presentation Request -(requested: income-attestation, -fields: verzamelinkomen, toetsingsinkomen)
+    HV->>WALLET: OpenID4VP Presentation Request -(requested: income-attestation, -fields: verzamelinkomen, inkomenUitBox1)
 
-    WALLET->>Jan: "Hypotheekverlener BV vraagt: -- Verzamelinkomen -- Toetsingsinkomen - -Wilt u deze gegevens delen?"
+    WALLET->>Jan: "Hypotheekverlener BV vraagt: -- Verzamelinkomen -- Inkomen uit box 1 - -Wilt u deze gegevens delen?"
 
     Note over Jan,WALLET: Selective disclosure: wallet presents -only the requested fields, not the full attestation
 
@@ -983,7 +1102,7 @@ sequenceDiagram
     AZS-->>QTSP: OAuth access token -(scope: verify-income, bsn: 123456789)
 
     Note over QTSP,GQL: Phase 3: Attribute Verification (I2)
-    QTSP->>ASIP: I2 Verify Request -(OAuth token, attributes: {verzamelinkomen: 45000, -toetsingsinkomen: 42000}, PID: 123456789)
+    QTSP->>ASIP: I2 Verify Request -(OAuth token, attributes: {verzamelinkomen: 45000, -inkomenUitBox1: 42000}, PID: 123456789)
 
     ASIP->>FSC_I: GraphQL query via FSC -(template: income-verification, BSN: 123456789)
     FSC_I->>PEP: Intercept request
@@ -996,7 +1115,7 @@ sequenceDiagram
     FSC_I-->>ASIP: Income data via FSC
 
     ASIP->>ASIP: Compare QTSP-provided values -with authentic source values
-    ASIP-->>QTSP: Verification result: -verzamelinkomen: VERIFIED -toetsingsinkomen: VERIFIED
+    ASIP-->>QTSP: Verification result: -verzamelinkomen: VERIFIED -inkomenUitBox1: VERIFIED
 
     Note over QTSP: QTSP now has verified authentic source -confirmation. Issues QEAA.
     QTSP->>QTSP: Issue QEAA -(qualified electronic seal)
