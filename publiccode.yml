@@ -1,43 +1,48 @@
-publiccodeYmlVersion: "0.1"
+publiccodeYmlVersion: "0.5"
 
-name: PSA GBO
-url: "https://github.com/ICTU/psa-gbo-dvtp.git"
-# softwareVersion: "1.0"    # Optional
-releaseDate: "tbd"
-platforms:
-  - web
-
-categories:
- - documentation
-
+name: Project Start Architectuur GBO
+url: https://github.com/tomootes/GBO
+softwareType: configurationFiles
 developmentStatus: development
 
-softwareType: "documentation"
-
 description:
- en:
-   # localisedName: github-policy   # Optional
-   shortDescription: >
-         Project Startarchitectuur GBO
+  nl:
+    shortDescription: >-
+      Project Startarchitectuur voor het programma Gemeenschappelijke
+      BronOntsluiting (GBO) / Delen via Toestemming naar Private Partijen
+      (DvTP).
+    longDescription: |
+      De Project Start Architectuur (PSA) voor het programma DvTP/GBO beschrijft
+      de generieke infrastructuur en het afsprakenstelsel waarmee gegevens van
+      overheidsorganisaties beschikbaar kunnen worden gemaakt voor burgers,
+      private partijen en Europese toepassingen zoals EDI Wallet en Single
+      Digital Gateway (SDG/OOTS).
 
-   longDescription: >
-         Architectuur voor het project Gemeenschappelijke Bronontsluiting (GBO) / Data delen via toestemming aan private partijen (DvTP)
-
-   features:
-      - PSA
-      - Diagrammen die in PSA gebruikt worden
-      - Use Cases die in project toegepast worden
+      De PSA beschrijft de context en doelstelling van de oplossing, de
+      architectuurprincipes en kaders, het capability model, de generieke
+      functies en de logische architectuur. De technische invulling volgt in
+      een aparte software-architectuur.
+    features:
+      - Project Startarchitectuur
+      - Diagrammen in Mermaid formaat
+      - Use cases voor het project
 
 legal:
- license: nog vast te stellen
+  license: W3C
+  mainCopyrightOwner: ICTU
 
-maintenance:
- type: "community"
-
- contacts:
-   - name: Govert Claus
+intendedAudience:
+  countries:
+    - NL
+  scope:
+    - government
 
 localisation:
- localisationReady: false
- availableLanguages:
-   - nl
+  localisationReady: false
+  availableLanguages:
+    - nl
+
+maintenance:
+  type: community
+  contacts:
+    - name: Govert Claus
