@@ -5,9 +5,9 @@
 sequenceDiagram
     autonumber
     participant EU as EU dienst<br/>(SDG/OOTS)
+    participant BRG as Burger<br/>(rechthebbende)
     participant RINIS as RINIS<br/>(nationaal OOTS-punt)
     participant GBO as GBO<br/>(GBO voorziening)
-    participant BRG as Burger<br/>(rechthebbende)
     participant BRH as Bronhouder<br/>(BRP / DUO / …)
 
     rect rgb(230, 241, 251)
@@ -22,9 +22,9 @@ sequenceDiagram
     end
 
     rect rgb(238, 237, 254)
-        Note over GBO,BRG: ③ Toestemming burger (GBO)
+        Note over GBO,BRG: ③ Toestemming burger (GBO - conform DvTP)
         GBO->>BRG: Toestemmingsvoorziening (GBO)
-        BRG->>GBO: Toestemming + Consent-ID (incl. BSN)
+        BRG->>GBO: Toestemming + Consent-ID (incl. gepseud. BSN)
     end
 
     rect rgb(250, 238, 218)
@@ -35,7 +35,7 @@ sequenceDiagram
     rect rgb(225, 245, 238)
         Note over GBO,BRH: ⑤ Bronontsluiting (GBO generieke API)
         GBO->>BRH: API-aanroep (GBO-formaat)
-        BRH->>GBO: Gegevens (JSON/REST)
+        BRH->>GBO: Gegevens (GBO-formaat)
     end
 
     rect rgb(250, 238, 218)

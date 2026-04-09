@@ -600,7 +600,7 @@
             
   
   <span class="md-ellipsis">
-    Technisch ontwerp
+    Globaal ontwerp
   </span>
   
 
@@ -609,6 +609,74 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Globaal ontwerp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ontwerp/concept-globaal-ontwerp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Globaal ontwerp
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Technisch ontwerp
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Technisch ontwerp
           </label>
@@ -736,7 +804,7 @@ sequenceDiagram
         DV-&gt;&gt;Burger: Redirect naar toestemmingsvoorziening GBO&lt;br/&gt;(met scope + doelbinding)
         Burger-&gt;&gt;TV: Volgt redirect
         TV-&gt;&gt;Auth: Authenticatieverzoek
-        Note over Auth: DigiD óf EDI-Wallet (eIDAS 2.0)
+        Note over Auth: DigiD of ander eIDAS-middel
         Auth-&gt;&gt;Burger: Authenticeer burger
         Burger--&gt;&gt;Auth: Authenticatie
         Auth--&gt;&gt;TV: BSN (geverifieerde identiteit)
@@ -848,9 +916,9 @@ Als de overheid het gegeven kwalificeert kan de bronhouder dit zelf doen, maar h
 sequenceDiagram
     autonumber
     participant EU as EU dienst&lt;br/&gt;(SDG/OOTS)
+    participant BRG as Burger&lt;br/&gt;(rechthebbende)
     participant RINIS as RINIS&lt;br/&gt;(nationaal OOTS-punt)
     participant GBO as GBO&lt;br/&gt;(GBO voorziening)
-    participant BRG as Burger&lt;br/&gt;(rechthebbende)
     participant BRH as Bronhouder&lt;br/&gt;(BRP / DUO / …)
 
     rect rgb(230, 241, 251)
@@ -865,9 +933,9 @@ sequenceDiagram
     end
 
     rect rgb(238, 237, 254)
-        Note over GBO,BRG: ③ Toestemming burger (GBO)
+        Note over GBO,BRG: ③ Toestemming burger (GBO - conform DvTP)
         GBO-&gt;&gt;BRG: Toestemmingsvoorziening (GBO)
-        BRG-&gt;&gt;GBO: Toestemming + Consent-ID (incl. BSN)
+        BRG-&gt;&gt;GBO: Toestemming + Consent-ID (incl. gepseud. BSN)
     end
 
     rect rgb(250, 238, 218)
@@ -878,7 +946,7 @@ sequenceDiagram
     rect rgb(225, 245, 238)
         Note over GBO,BRH: ⑤ Bronontsluiting (GBO generieke API)
         GBO-&gt;&gt;BRH: API-aanroep (GBO-formaat)
-        BRH-&gt;&gt;GBO: Gegevens (JSON/REST)
+        BRH-&gt;&gt;GBO: Gegevens (GBO-formaat)
     end
 
     rect rgb(250, 238, 218)
