@@ -43,7 +43,7 @@ GBO hergebruikt maximaal wat er al is:
 - Europese afspraken en standaarden
 - Pseudonimiseringsvoorziening (BSNk PP of PRS - hier moet nog over besloten worden).
 - CBAC/PBAC architecturen voor autorisatie en toegang.
-- [TLS 1.2 en 1.3](https://www.forumstandaardisatie.nl/export-standaarden/xml/verplicht) (inclusief [X.509-certificaten](https://www.forumstandaardisatie.nl/open-standaarden/x509)) voor machine-to-machine communicatie.
+- [TLS 1.2 en 1.3](https://www.forumstandaardisatie.nl/export-standaarden/xml/verplicht) (inclusief [X.509-certificaten](https://www.forumstandaardisatie.nl/open-standaarden/x509)) voor system-to-system communicatie.
 
 Waar FDS generieke afspraken, standaarden en voorzieningen als landelijk afsprakenstelsel invult, voegt GBO afspraken en standaarden van stelselfuncties toe die nog niet zijn bepaald, maar wel nodig zijn om DvTP, EDI-Stelsel en de OOTS-brug te laten functioneren.
 

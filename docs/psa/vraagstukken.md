@@ -15,7 +15,9 @@ eHerkenning is de logische kandidaat, maar de onboarding, accreditatie en het on
 
 Het BSN mag bij private partijen niet direct worden doorgegeven. Dit vereist een pseudonimiseringslaag of sector-ID, terwijl voor OOTS de eIDAS-identifier geldt en de wallet werkt met SD-JWT VC-attributen. Dit zijn drie verschillende regimes op één generieke ontsluiting.
 
+Welke pseudonimiseringsvoorziening gaat GBO gebruiken?  
 - BSNk-PP dienst van BZK?
+- PRS dat vanuit VWS ontwikkeld wordt?
 
 
 ## Vertrouwensstelsel
