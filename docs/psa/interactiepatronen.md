@@ -11,7 +11,12 @@ Een private dienstverlener haalt gegevens op bij een bronhouder op basis van een
 
 ### Interactie
 
+<figure>
+
 --8<-- "diagrammen/interactiepatroon-PP-haalt-gegevens-op.mmd"
+
+<figcaption>Interactiepatroon Private Partij haalt gegevens op met toestemming van de burger</figcaption>
+</figure>
 
 ### Toelichting
 
@@ -29,7 +34,12 @@ Een burger vraagt een gegeven op als gekwalificeerd elektronisch attest van een 
 
 ### Interactie
 
+<figure>
+
 --8<-- "diagrammen/interactiepatroon-EDI-Wallet.mmd"
+
+<figcaption>Gegevensverzoek van burger om credential via wallet te delen</figcaption>
+</figure>
 
 ### Toelichting
 
@@ -45,7 +55,12 @@ Een Europese overheidsdienst vraagt een gegeven (Evidence Request) aan een Neder
 
 ### Interactie
 
+<figure>
+
 --8<-- "diagrammen/interactiepatroon-SDG-OOTS-verzoek.mmd"
+
+<figcaption>Interactiepatroon gegevensverzoek Europese overheidsdienst via SDG/OOTS</figcaption>
+</figure>
 
 ### Toelichting
 

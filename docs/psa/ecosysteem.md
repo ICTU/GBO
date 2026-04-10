@@ -33,8 +33,12 @@ Om de gegevens uit te wisselen zijn afspraken nodig en mogelijk een of enkele vo
 
 In de contextdiagram worden de actoren ten opzichte van elkaar en van het GBO stelsel geschetst.
 
+<figure>
+
 --8<-- "diagrammen/context-diagram.mmd"
 
+<figcaption>Contextdiagram</figcaption>
+</figure>
 
 ## Oplossingsrichting  
 

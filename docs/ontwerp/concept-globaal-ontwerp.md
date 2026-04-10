@@ -15,9 +15,20 @@ Het programma Gemeenschappelijke Bronontsluiting (GBO) realiseert een generieke 
 
 -   private dienstverleners op basis van burgertoestemming (DvTP -- Data delen via toestemming met private partijen),
 
+<<<<<<< Updated upstream
 -   Europese overheden via het Single Digital Gateway/Once Only Technical System (SDG/OOTS) en
 
 -   burgers via een EDI-Wallet (eIDAS2/ARF).
+=======
+<figure>
+
+--8<-- "diagrammen/context-diagram.mmd"
+
+<figcaption>Contextdiagram</figcaption>
+</figure>
+
+Het doel hiervan is om interoperabiliteit en hergebruik bij gegevensuitwisselingen te bevorderen en op die manier de implementatielast bij partijen, zowel bronhouders als afnemers, te verlagen. Dit zowel bij gegevensuitwisselingen tussen overheidspartijen als tussen overheid en private partijen.
+>>>>>>> Stashed changes
 
 GBO is geen nieuw, losstaand stelsel. Het sluit aan op het Federatief Datastelsel (FDS) als basisafsprakenstelsel en breidt dit gericht uit met afspraken, standaarden en voorzieningen die nodig zijn voor de drie toepassingen.
 
@@ -47,6 +58,7 @@ GBO ondersteunt drie interactiepatronen, elk met eigen actoren, grondslagen en t
 
 ## 2.1 Patroon A — gegevensverzoek van private partij (DvTP)
 
+<<<<<<< Updated upstream
 Een private dienstverlener haalt overheidsgegevens op bij een bronhouder, uitsluitend op basis van een geldige, expliciete toestemming van de burger. De burger authenticeert zich via DigiD of ander EIDAS authenticatiemiddel op het vereiste betrouwbaarheidsniveau en geeft geïnformeerde toestemming voor een specifiek doel, een specifieke afnemer en een specifieke set gegevens. GBO registreert de toestemming in een toestemmingenregister, levert een consent_id aan de private partij, valideert het op het moment van uitvraag real-time, en zorgt dat het BSN de private partij nooit bereikt — in de plaats daarvan ontvangt de afnemer een partijspecifiek pseudoniem via BSNk PP.
 
 De bronhouder controleert of de private partij bevoegd is om de gegevens op te vragen, controleert het consent_id en depseudonimiseert het BSN. Het antwoord aan de private partij wordt geleverd als REST- of GraphQL-response in het afnemerformaat.
@@ -56,12 +68,36 @@ De bronhouder controleert of de private partij bevoegd is om de gegevens op te v
 Figuur 1: interactiepatroon DvTP (dienstverlener is een private partij)
 
 ## 2.2 Patroon B — burger vult EDI-Wallet (OID4VCI)
+=======
+<figure>
+
+--8<-- "diagrammen/interactiepatroon-PP-haalt-gegevens-op.mmd"
+
+<figcaption>Interactiepatroon Private Partij haalt gegevens op met toestemming van de burger</figcaption>
+</figure>
+
+## 2.2 Patroon B - burger gebruikt EDI-Wallet
+>>>>>>> Stashed changes
 
 Een burger vraagt een overheidsattribuut op als verifieerbare credential (VC) voor opname in zijn EDI-Wallet. De wallet initieert een OID4VCI-ophaalverzoek richting GBO, dat de bron bevraagt en het resultaat retourneert als SD-JWT VC of mdoc (ISO 18013-5). De credential is cryptografisch gezegeld door de bronhouder en kan daarna door de burger worden gepresenteerd aan dienstverleners via OID4VP, zonder verdere tussenkomst van GBO.
 
 GBO vervult in dit patroon de rol van PuB-EAA-uitgevende instantie (zie ook sectie 4.5). De verificatiedienst voor QTSP's die zelf credentials willen uitreiken of verifiëren is een aanvullend GBO-component beschreven in sectie 4.6.
 
+<<<<<<< Updated upstream
 ![](media/image2.png){width="6.268055555555556in" height="5.633333333333334in"}
+=======
+<figure>
+
+--8<-- "diagrammen/interactiepatroon-EDI-Wallet.mmd"
+
+<figcaption>
+Gegevensverzoek van burger om credential via wallet te delen<br />
+NB: gegeven kan als PuB-EAA (rechtstreeks van overheidsbron) of QEAA (via QTSP) in de Wallet komen.
+</figcaption>
+
+</figure>
+
+>>>>>>> Stashed changes
 
 Figuur 2: interactiepatroon burger deelt gegeven via EDI-Wallet met dienstverlener\
 NB: opvragen van gegeven kan als PuB-EAA (rechtstreeks van overheidsbron) of QEAA (via QTSP)
@@ -70,9 +106,20 @@ NB: opvragen van gegeven kan als PuB-EAA (rechtstreeks van overheidsbron) of QEA
 
 Een Europese overheidsdienst stuurt via het OOTS-netwerk een Evidence Request voor een Nederlandse burger. RINIS fungeert als nationaal OOTS-toegangspunt (AS4/eDelivery) en geeft de payload als REST/JSON door aan GBO. GBO verzorgt de toestemmingsinteractie met de burger (DvTP-flow), de identiteitsvaststelling, de bronontsluiting en de semantische mapping naar het SDG Evidence-formaat. Bronhouders zien uitsluitend de GBO-API en hoeven geen OOTS-kennis te hebben. De terugkoppeling volgt de omgekeerde route: GBO retourneert aan RINIS, RINIS verpakt in AS4.
 
+<<<<<<< Updated upstream
 ![](media/image3.png){width="6.268055555555556in" height="5.571527777777778in"}
 
 Figuur 3: interactiepatroon gegevensverzoek vanuit Europese overheidsorganisatie via SDG/OOTS
+=======
+<figure>
+
+--8<-- "diagrammen/interactiepatroon-SDG-OOTS.mmd"
+
+<figcaption>Interactiepatroon gegevensverzoek Europese overheidsdienst via SDG/OOTS</figcaption>
+</figure>
+
+Het voordeel voor bronhouders is dat ze met GBO hun gegevens met één implementatie kunnen ontsluiten voor DvTP, EDI en SDG-OOTS. Voor afnemers van gegevens is het voordeel dat ze op een uniforme wijze diensten kunnen aanroepen en gegevensbronnen kunnen benaderen in termen van identificatie, authenticatie, connectiviteit, diensten, autorisatie en toegang.
+>>>>>>> Stashed changes
 
 # 3 Generieke functies — GBO
 
@@ -140,9 +187,19 @@ GBO gebruikt het Federatief Datastelsel (FDS) als basisafsprakenstelsel en herge
 
 Dit hoofdstuk beschrijft de voorgestelde technische bouwstenen van GBO en hun onderlinge relatie. De technische invulling is in lijn met de generieke functies uit sectie 3 en de aanvullingen/ verbijzonderingen op FDS uit sectie 4. Het onderstaande diagram vormt de basis voor de verdere technische uitwerking.
 
+<<<<<<< Updated upstream
 ![](media/image4.png){width="6.268055555555556in" height="4.345833333333333in"}
 
 Figuur 4: Technisch ontwerp GBO stelsel
+=======
+<figure>
+
+--8<-- "diagrammen/technisch-ontwerp.mmd"
+
+<figcaption>Technisch ontwerp GBO</figcaption>
+</figure>
+
+>>>>>>> Stashed changes
 
 ## 5.1 Bouwstenen en hun rol
 
