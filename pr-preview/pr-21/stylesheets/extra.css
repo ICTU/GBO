@@ -1,0 +1,7 @@
+/* overschrijf de width: fit-content voor het figure element */
+.md-typeset figure {
+  width: 100% !important;
+}
+.md-typeset .mermaid {
+  text-align: center;
+}
