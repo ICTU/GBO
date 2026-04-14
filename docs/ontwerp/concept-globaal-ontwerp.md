@@ -72,7 +72,7 @@ De bronhouder controleert of de private partij bevoegd is om de gegevens op te v
 
 Een burger vraagt een overheidsattribuut op als verifieerbare credential (VC) voor opname in zijn EDI-Wallet. De wallet initieert een OID4VCI-ophaalverzoek richting GBO, dat de bron bevraagt en het resultaat retourneert als SD-JWT VC of mdoc (ISO 18013-5). De credential is cryptografisch gezegeld door de bronhouder en kan daarna door de burger worden gepresenteerd aan dienstverleners via OID4VP, zonder verdere tussenkomst van GBO.
 
-GBO ondersteunt functioneel/technisch in dit patroon de rol van PuB-EAA-uitgevende instantie, maar is zelf geen PuB-EAA verstrekker. De verificatiedienst voor QTSP's die zelf credentials willen uitreiken of verifiëren is een aanvullend GBO-component. Beide diensten (PubEAA-verstrekker en verificatiedienst) maken gebruik van een authenticatie- & autorisatiedienst die door GBO aangeboden wordt.
+GBO ondersteunt functioneel/technisch in dit patroon de rol van PuB-EAA-uitgevende instantie, maar is zelf geen PuB-EAA verstrekker. De verificatiedienst voor QTSP's die zelf credentials willen uitreiken of verifiëren is een aanvullend GBO-component. Beide diensten (PubEAA-verstrekker en verificatiedienst) maken gebruik van een autorisatiedienst die door GBO aangeboden wordt.
 
 <figure>
 --8<-- "diagrammen/interactiepatroon-EDI-Wallet.mmd"
@@ -261,6 +261,8 @@ Wat er nog moet worden afgesproken of gerealiseerd:
 - **Credentialschema's per use case**: semantische mapping van bronhouder-attributen naar de attestatieschema's die door de EDI-Wallet worden vereist.
 - Een **signing-infrastructuur** voor het cryptografisch zegelen van credentials, conform eIDAS2/ARF en de relevante Europese Trusted Lists.
 - Standaardisatie van de **credentialformaten**: SD-JWT VC voor online presentatie en mdoc (ISO 18013-5) voor offline/proximity-scenario's.
+- Inrichting van een **Authentic Source Interface** (conform ETSI TS 119 478) als GBO-component, inclusief de I3 Retrieve- en I4 Authorize-interfaces (zie ook 4.5).
+
 
 ## 4.5 Verificatiedienst voor QTSP's (Authentic Source Interface)
 
@@ -331,4 +333,5 @@ De volgende bouwstenen zijn nog niet beschikbaar als GBO-voorziening en moeten w
 - Keuze en inrichting centrale PAP
 - PuB-EAA-uitgifte-component (OID4VCI-endpoint, credentialschema's per use case)
 - QTSP-verificatiedienst
+- Autorisatieserver t.b.v. Pub-EAA-uitgifte-component en QTSP-verificatiedienst
 - GBO afsprakenstelsel (aansluitvoorwaarden, RFC-proces, stelselrollen) - nb: moet landen in bestaande stelsels FDS en TIP
