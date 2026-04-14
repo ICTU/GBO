@@ -879,10 +879,10 @@ sequenceDiagram
         PubEAA-&gt;&gt;Auth: Autorisatieverzoek
         Auth-&gt;&gt;Wallet: Authenticatie- &amp; autorisatieverzoek
         Wallet-&gt;&gt;Burger: Toont verzoek &amp; vraagt consent
-        Burger-&gt;&gt;Wallet: Geeft consent
-        Wallet-&gt;&gt;Auth: Authenticatie / consent (OID4VCP)
-        Auth-&gt;&gt;PubEAA: Autorisatie
-        PubEAA-&gt;&gt;Bron: Bevraag bron
+        Burger-&gt;&gt;Wallet: Geeft consent &amp; presenteert PID / eID
+        Wallet-&gt;&gt;Auth: Authenticatie / consent (OID4VCP met PID / eID)
+        Auth-&gt;&gt;PubEAA: Autorisatie (incl. identificatie burger)
+        PubEAA-&gt;&gt;Bron: Bevraag bron (met access token)
         Bron--&gt;&gt;PubEAA: Attribuutgegevens
         PubEAA-&gt;&gt;PubEAA: Kwalificeer attribuutgegevens
         PubEAA--&gt;&gt;Wallet: PuB-EAA credential&lt;br/&gt;(SD-JWT VC · ISO 18013-5,&lt;br/&gt;QESeal door overheidsinstantie)
@@ -900,10 +900,10 @@ sequenceDiagram
         VerifDienst-&gt;&gt;Auth: Autorisatieverzoek
         Auth-&gt;&gt;Wallet: Authenticatie- &amp; autorisatieverzoek
         Wallet-&gt;&gt;Burger: Toont verzoek &amp; vraagt consent
-        Burger-&gt;&gt;Wallet: Geeft consent
-        Wallet-&gt;&gt;Auth: Authenticatie / consent (OID4VCP)
-        Auth-&gt;&gt;VerifDienst: Autorisatie
-        VerifDienst-&gt;&gt;Bron: Bevraag bron
+        Burger-&gt;&gt;Wallet: Geeft consent &amp; presenteert PID / eID
+        Wallet-&gt;&gt;Auth: Authenticatie / consent (OID4VCP met PID / eID)
+        Auth-&gt;&gt;VerifDienst: Autorisatie (incl. identificatie burger)
+        VerifDienst-&gt;&gt;Bron: Bevraag bron (met access token)
         Bron--&gt;&gt;VerifDienst: Attribuutgegevens
         VerifDienst--&gt;&gt;QTSP: Geverifieerd attribuut
         QTSP--&gt;&gt;Wallet: QEAA credential&lt;br/&gt;(SD-JWT VC · ISO 18013-5,&lt;br/&gt;QES/QESeal door QTSP)
