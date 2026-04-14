@@ -59,7 +59,7 @@ nav:
     - Ecosysteem en oplossingsrichting: psa/ecosysteem.md
     - Interactiepatronen: psa/interactiepatronen.md
     - Logische architectuur: psa/generieke-functies.md
-    - Capabilities: psa/capabilities.md
+    - Stelselfuncties: psa/capabilities.md
     - Realisatiestrategie: psa/realisatiestrategie.md
     - Open Vraagstukken en ontwerpkeuzes: psa/vraagstukken.md
 

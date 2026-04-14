@@ -31,11 +31,6 @@ Welke pseudonimiseringsvoorziening gaat GBO gebruiken?
 Welke partijen mogen deelnemen, hoe worden ze geaccrediteerd, welke niveaus van zekerheid gelden per gegevenstype, en hoe verhouden PKI(O), eHerkenning, eIDAS, FDS en TIP-afspraken zich tot elkaar?
 
 
-## Toestemming
-
-De wettelijke grondslag (via Wdo/AMvB), de technische implementatie (toestemmingsregister, tokens, TTL), intrekking, en het onderscheid met OOTS waar toestemming een "verklaring van instemming" is, en de wallet waar de burger zelf de credential beheert.
-
-
 ## Toestemmingsvoorziening SDG-OOTS
 
 De OOTS-verplichte toestemmingspreview (SDG-verordening) is momenteel belegd bij RINIS-basisinrichting. Vooralsnog gaan we ervan uit dat dit zo blijft. Als GBO de toestemmingsflow overneemt, moet worden bepaald of het preview-scherm bij RINIS blijft of naar GBO verhuist. Dit raakt de verantwoordelijkheidsverdeling en dient te worden beslecht vóór technisch ontwerp.
@@ -49,6 +44,8 @@ Dit is nodig voor de Wallet, maar mogelijk ook voor de andere use cases. Er is [
 - Gebruik QEAA / QTSP?
 - Inrichten Pub-EAA?
 - Centrale verificatiedienst tbv QEAA?
+
+Vooralsnog gaan we uit van een centrale Pub-EAA verstrekker en een centrale verificatiedienst t.b.v. QEAA. Daarmee zijn alle opties mogelijk: bronhouder treedt zelf op als Pub-EAA-verstrekker, bronhouder gebruikt centrale Pub-EAA-verstrekker, QTSP geeft attesteringen uit die bij bronhouder geverifieerd zijn.
 
 
 ## Centrale Componenten

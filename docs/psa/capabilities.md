@@ -410,10 +410,10 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 
 ## Overzicht: gaps per stelselfunctie
 
-De gaps zijn onderverdeeld in drie categorieën:
-- ⚖️ **Juridische gap** — vereist wetgeving of AMvB voordat de technische invulling zinvol is
-- ⚠️ **Technische/organisatorische gap** — nog te realiseren binnen bestaand juridisch kader
-- ✅ **Beschikbaar** — bestaande invulling die hergebruikt wordt
+De gaps zijn onderverdeeld in drie categorieën:  
+- ⚖️ **Juridische gap** — vereist wetgeving of AMvB voordat de technische invulling zinvol is  
+- ⚠️ **Technische/organisatorische gap** — nog te realiseren binnen bestaand juridisch kader  
+- ✅ **Beschikbaar** — bestaande invulling die hergebruikt wordt  
 
 | Stelselfunctie | Juridische gaps ⚖️ | Technische / organisatorische gaps ⚠️ | Bestaande basis ✅ |
 |---|---|---|---|
