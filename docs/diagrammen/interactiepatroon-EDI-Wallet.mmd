@@ -20,10 +20,10 @@ sequenceDiagram
         PubEAA->>Auth: Autorisatieverzoek
         Auth->>Wallet: Authenticatie- & autorisatieverzoek
         Wallet->>Burger: Toont verzoek & vraagt consent
-        Burger->>Wallet: Geeft consent
-        Wallet->>Auth: Authenticatie / consent (OID4VCP)
-        Auth->>PubEAA: Autorisatie
-        PubEAA->>Bron: Bevraag bron
+        Burger->>Wallet: Geeft consent & presenteert PID / eID
+        Wallet->>Auth: Authenticatie / consent (OID4VCP met PID / eID)
+        Auth->>PubEAA: Autorisatie (incl. identificatie burger)
+        PubEAA->>Bron: Bevraag bron (met access token)
         Bron-->>PubEAA: Attribuutgegevens
         PubEAA->>PubEAA: Kwalificeer attribuutgegevens
         PubEAA-->>Wallet: PuB-EAA credential<br/>(SD-JWT VC · ISO 18013-5,<br/>QESeal door overheidsinstantie)
@@ -41,10 +41,10 @@ sequenceDiagram
         VerifDienst->>Auth: Autorisatieverzoek
         Auth->>Wallet: Authenticatie- & autorisatieverzoek
         Wallet->>Burger: Toont verzoek & vraagt consent
-        Burger->>Wallet: Geeft consent
-        Wallet->>Auth: Authenticatie / consent (OID4VCP)
-        Auth->>VerifDienst: Autorisatie
-        VerifDienst->>Bron: Bevraag bron
+        Burger->>Wallet: Geeft consent & presenteert PID / eID
+        Wallet->>Auth: Authenticatie / consent (OID4VCP met PID / eID)
+        Auth->>VerifDienst: Autorisatie (incl. identificatie burger)
+        VerifDienst->>Bron: Bevraag bron (met access token)
         Bron-->>VerifDienst: Attribuutgegevens
         VerifDienst-->>QTSP: Geverifieerd attribuut
         QTSP-->>Wallet: QEAA credential<br/>(SD-JWT VC · ISO 18013-5,<br/>QES/QESeal door QTSP)
