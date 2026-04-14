@@ -855,7 +855,7 @@ sequenceDiagram
     participant QTSP as QTSP
     participant PubEAA as PuB-EAA&lt;br/&gt;voorziening
     participant VerifDienst as Verificatie-&lt;br/&gt;dienst
-    participant Auth as Authenticatie &amp; &lt;br /&gt;Autorisatie&lt;br/&gt;voorziening
+    participant Auth as Autorisatie&lt;br/&gt;voorziening
     participant Bron as Overheids-&lt;br/&gt;bron
     participant DV as Dienst-&lt;br/&gt;verlener
 
@@ -866,9 +866,9 @@ sequenceDiagram
         Wallet-&gt;&gt;PubEAA: Credential Request (OID4VCI)
         Note over PubEAA: PuB-EAA voorziening: aangeboden&lt;br/&gt;door bron zelf óf centraal via GBO
         PubEAA-&gt;&gt;Auth: Autorisatieverzoek
-        Auth-&gt;&gt;Burger: Authenticatie- &amp; autorisatieverzoek
-        Burger-&gt;&gt;Auth: Autorisatie (met BSN)
-        Auth-&gt;&gt;PubEAA: Autorisatie (met BSN)
+        Auth-&gt;&gt;Wallet: Authenticatie- &amp; autorisatieverzoek
+        Wallet-&gt;&gt;Auth: Authenticatie / Toestemming (OID4VCP)
+        Auth-&gt;&gt;PubEAA: Autorisatie
         PubEAA-&gt;&gt;Bron: Bevraag bron
         Bron--&gt;&gt;PubEAA: Attribuutgegevens
         PubEAA-&gt;&gt;PubEAA: Kwalificeer attribuutgegevens
@@ -881,16 +881,13 @@ sequenceDiagram
     rect rgb(238, 237, 254)
         Burger-&gt;&gt;Wallet: Vraag attribuut op (OID4VCI initiate)
         Wallet-&gt;&gt;QTSP: Credential Request (OID4VCI)
-        QTSP-&gt;&gt;Wallet: Authenticatieverzoek
-        Wallet-&gt;&gt;Burger: Authenticatieverzoek
-        Wallet-&gt;&gt;QTSP: Athenticatie (met BSN)
         Note over QTSP: QTSP verifieert attribuut&lt;br/&gt;via verificatiedienst
         QTSP-&gt;&gt;VerifDienst: Verificatieverzoek
         Note over VerifDienst: Verificatiedienst: aangeboden&lt;br/&gt;door bron of centraal via GBO
         VerifDienst-&gt;&gt;Auth: Autorisatieverzoek
-        Auth-&gt;&gt;Burger: Authenticatie- &amp; autorisatieverzoek
-        Burger-&gt;&gt;Auth: Autorisatie (met BSN)
-        Auth-&gt;&gt;VerifDienst: Autorisatie (met BSN)
+        Auth-&gt;&gt;Wallet: Authenticatie- &amp; autorisatieverzoek
+        Wallet-&gt;&gt;Auth: Authenticatie / Toestemming (OID4VCP)
+        Auth-&gt;&gt;VerifDienst: Autorisatie
         VerifDienst-&gt;&gt;Bron: Bevraag bron
         Bron--&gt;&gt;VerifDienst: Attribuutgegevens
         VerifDienst--&gt;&gt;QTSP: Geverifieerd attribuut
@@ -912,7 +909,7 @@ sequenceDiagram
 
 <h3 id="toelichting_1">Toelichting<a class="headerlink" href="#toelichting_1" title="Permanent link">&para;</a></h3>
 <p>Iedere bronhouder kan in theorie gegevens uitleveren aan wallets, maar deze gegevens krijgen pas juridische waarde als ze gekwalificeerd zijn. Dat kwalificeren kan op twee manieren: de overheid ondertekent het gegeven, waardoor het een PuB-EAA wordt, of een gekwalificeerde verlener van vertrouwensdiensten (QTSP) doet dit.<br />
-Als de overheid het gegeven kwalificeert kan de bronhouder dit zelf doen, maar het kan schaalvoordeel bieden om dit te centraliseren in een GBO PuB-EAA-dienst. Als een QTSP het gegeven kwalificeert, moet deze QTSP het gegeven kunnen verifiëren via een verificatiedienst. Ook hier kan een bronhouder de dienst zelf aanbieden, of kan ervoor gekozen worden om dit te centraliseren in een GBO verificatiedienst. Ook de authenticatie- &amp; autorisatiedienst die door de Pub-EAA-dienst en de verificatiedienst aangeroepen wordt, kan door de bronhouder aangeboden worden, maar het biedt schaalvoordeel om dat te centraliseren in een GBO dienst.</p>
+Als de overheid het gegeven kwalificeert kan de bronhouder dit zelf doen, maar het kan schaalvoordeel bieden om dit te centraliseren in een GBO PuB-EAA-dienst. Als een QTSP het gegeven kwalificeert, moet deze QTSP het gegeven kunnen verifiëren via een verificatiedienst. Ook hier kan een bronhouder de dienst zelf aanbieden, of kan ervoor gekozen worden om dit te centraliseren in een GBO verificatiedienst. Ook de autorisatiedienst die door de Pub-EAA-dienst en de verificatiedienst aangeroepen wordt, kan door de bronhouder aangeboden worden, maar het biedt schaalvoordeel om dat te centraliseren in een GBO dienst.</p>
 <h2 id="gegevensverzoek-van-europese-overheidsdienst-aan-nederlandse-overheidsbron">Gegevensverzoek van Europese overheidsdienst aan Nederlandse overheidsbron<a class="headerlink" href="#gegevensverzoek-van-europese-overheidsdienst-aan-nederlandse-overheidsbron" title="Permanent link">&para;</a></h2>
 <h3 id="doel_2">Doel<a class="headerlink" href="#doel_2" title="Permanent link">&para;</a></h3>
 <p>Een Europese overheidsdienst vraagt een gegeven (Evidence Request) aan een Nederlandse overheidsbron om een dienst aan een Nederlandse burger te kunnen leveren.</p>

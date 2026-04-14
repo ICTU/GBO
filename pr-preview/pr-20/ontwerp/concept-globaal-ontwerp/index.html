@@ -856,7 +856,7 @@ sequenceDiagram
 
 <h2 id="22-patroon-b-burger-gebruikt-edi-wallet">2.2 Patroon B - burger gebruikt EDI-Wallet<a class="headerlink" href="#22-patroon-b-burger-gebruikt-edi-wallet" title="Permanent link">&para;</a></h2>
 <p>Een burger vraagt een overheidsattribuut op als verifieerbare credential (VC) voor opname in zijn EDI-Wallet. De wallet initieert een OID4VCI-ophaalverzoek richting GBO, dat de bron bevraagt en het resultaat retourneert als SD-JWT VC of mdoc (ISO 18013-5). De credential is cryptografisch gezegeld door de bronhouder en kan daarna door de burger worden gepresenteerd aan dienstverleners via OID4VP, zonder verdere tussenkomst van GBO.</p>
-<p>GBO ondersteunt functioneel/technisch in dit patroon de rol van PuB-EAA-uitgevende instantie, maar is zelf geen PuB-EAA verstrekker. De verificatiedienst voor QTSP's die zelf credentials willen uitreiken of verifiëren is een aanvullend GBO-component. Beide diensten (PubEAA-verstrekker en verificatiedienst) maken gebruik van een authenticatie- &amp; autorisatiedienst die door GBO aangeboden wordt.</p>
+<p>GBO ondersteunt functioneel/technisch in dit patroon de rol van PuB-EAA-uitgevende instantie, maar is zelf geen PuB-EAA verstrekker. De verificatiedienst voor QTSP's die zelf credentials willen uitreiken of verifiëren is een aanvullend GBO-component. Beide diensten (PubEAA-verstrekker en verificatiedienst) maken gebruik van een autorisatiedienst die door GBO aangeboden wordt.</p>
 <figure>
 <pre class="mermaid"><code>
 sequenceDiagram
@@ -866,7 +866,7 @@ sequenceDiagram
     participant QTSP as QTSP
     participant PubEAA as PuB-EAA&lt;br/&gt;voorziening
     participant VerifDienst as Verificatie-&lt;br/&gt;dienst
-    participant Auth as Authenticatie &amp; &lt;br /&gt;Autorisatie&lt;br/&gt;voorziening
+    participant Auth as Autorisatie&lt;br/&gt;voorziening
     participant Bron as Overheids-&lt;br/&gt;bron
     participant DV as Dienst-&lt;br/&gt;verlener
 
@@ -877,9 +877,9 @@ sequenceDiagram
         Wallet-&gt;&gt;PubEAA: Credential Request (OID4VCI)
         Note over PubEAA: PuB-EAA voorziening: aangeboden&lt;br/&gt;door bron zelf óf centraal via GBO
         PubEAA-&gt;&gt;Auth: Autorisatieverzoek
-        Auth-&gt;&gt;Burger: Authenticatie- &amp; autorisatieverzoek
-        Burger-&gt;&gt;Auth: Autorisatie (met BSN)
-        Auth-&gt;&gt;PubEAA: Autorisatie (met BSN)
+        Auth-&gt;&gt;Wallet: Authenticatie- &amp; autorisatieverzoek
+        Wallet-&gt;&gt;Auth: Authenticatie / Toestemming (OID4VCP)
+        Auth-&gt;&gt;PubEAA: Autorisatie
         PubEAA-&gt;&gt;Bron: Bevraag bron
         Bron--&gt;&gt;PubEAA: Attribuutgegevens
         PubEAA-&gt;&gt;PubEAA: Kwalificeer attribuutgegevens
@@ -892,16 +892,13 @@ sequenceDiagram
     rect rgb(238, 237, 254)
         Burger-&gt;&gt;Wallet: Vraag attribuut op (OID4VCI initiate)
         Wallet-&gt;&gt;QTSP: Credential Request (OID4VCI)
-        QTSP-&gt;&gt;Wallet: Authenticatieverzoek
-        Wallet-&gt;&gt;Burger: Authenticatieverzoek
-        Wallet-&gt;&gt;QTSP: Athenticatie (met BSN)
         Note over QTSP: QTSP verifieert attribuut&lt;br/&gt;via verificatiedienst
         QTSP-&gt;&gt;VerifDienst: Verificatieverzoek
         Note over VerifDienst: Verificatiedienst: aangeboden&lt;br/&gt;door bron of centraal via GBO
         VerifDienst-&gt;&gt;Auth: Autorisatieverzoek
-        Auth-&gt;&gt;Burger: Authenticatie- &amp; autorisatieverzoek
-        Burger-&gt;&gt;Auth: Autorisatie (met BSN)
-        Auth-&gt;&gt;VerifDienst: Autorisatie (met BSN)
+        Auth-&gt;&gt;Wallet: Authenticatie- &amp; autorisatieverzoek
+        Wallet-&gt;&gt;Auth: Authenticatie / Toestemming (OID4VCP)
+        Auth-&gt;&gt;VerifDienst: Autorisatie
         VerifDienst-&gt;&gt;Bron: Bevraag bron
         Bron--&gt;&gt;VerifDienst: Attribuutgegevens
         VerifDienst--&gt;&gt;QTSP: Geverifieerd attribuut
@@ -1289,6 +1286,7 @@ sequenceDiagram
 <li><strong>Credentialschema's per use case</strong>: semantische mapping van bronhouder-attributen naar de attestatieschema's die door de EDI-Wallet worden vereist.</li>
 <li>Een <strong>signing-infrastructuur</strong> voor het cryptografisch zegelen van credentials, conform eIDAS2/ARF en de relevante Europese Trusted Lists.</li>
 <li>Standaardisatie van de <strong>credentialformaten</strong>: SD-JWT VC voor online presentatie en mdoc (ISO 18013-5) voor offline/proximity-scenario's.</li>
+<li>Inrichting van een <strong>Authentic Source Interface</strong> (conform ETSI TS 119 478) als GBO-component, inclusief de I3 Retrieve- en I4 Authorize-interfaces (zie ook 4.5).</li>
 </ul>
 <h2 id="45-verificatiedienst-voor-qtsps-authentic-source-interface">4.5 Verificatiedienst voor QTSP's (Authentic Source Interface)<a class="headerlink" href="#45-verificatiedienst-voor-qtsps-authentic-source-interface" title="Permanent link">&para;</a></h2>
 <p>Naast PuB-EAA-uitgifte vereist artikel 45e van eIDAS2 dat overheidsbronnen een verificatiefunctie bieden waarmee Qualified Trust Service Providers (QTSP's) bronhouder-attributen kunnen verifiëren voor eigen attestatie-uitgifte. Ook dit valt buiten de scope van FDS en is een nieuwe EU-rechtelijke verplichting.</p>
@@ -1468,6 +1466,7 @@ graph TB
 <li>Keuze en inrichting centrale PAP</li>
 <li>PuB-EAA-uitgifte-component (OID4VCI-endpoint, credentialschema's per use case)</li>
 <li>QTSP-verificatiedienst</li>
+<li>Autorisatieserver t.b.v. Pub-EAA-uitgifte-component en QTSP-verificatiedienst</li>
 <li>GBO afsprakenstelsel (aansluitvoorwaarden, RFC-proces, stelselrollen) - nb: moet landen in bestaande stelsels FDS en TIP</li>
 </ul>
 
