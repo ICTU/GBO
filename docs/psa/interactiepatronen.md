@@ -43,8 +43,8 @@ Een burger vraagt een gegeven op als gekwalificeerd elektronisch attest van een 
 
 ### Toelichting
 
-Iedere bronhouder kan in theorie gegevens uitleveren aan wallets, maar deze gegevens krijgen pas juridische waarde als ze gekwalificeerd zijn. Dat kwalificeren kan op twee manieren: de overheid ondertekent het gegeven, waardoor het een PuB-EAA wordt, of een gekwalificeerde verlener van vertrouwensdiensten (QTSP).  
-Als de overheid het gegeven kwalificeert kan de bronhouder dit zelf doen, maar het kan schaalvoordeel bieden om dit te centraliseren in een GBO PuB-EAA-dienst. Als een QTSP het gegeven kwalificeert, moet deze QTSP het gegeven kunnen verifiëren via een verificatiedienst. Ook hier kan een bronhouder de dienst zelf aanbieden, of kan ervoor gekozen worden om dit te centraliseren in een GBO verificatiedienst.
+Iedere bronhouder kan in theorie gegevens uitleveren aan wallets, maar deze gegevens krijgen pas juridische waarde als ze gekwalificeerd zijn. Dat kwalificeren kan op twee manieren: de overheid ondertekent het gegeven, waardoor het een PuB-EAA wordt, of een gekwalificeerde verlener van vertrouwensdiensten (QTSP) doet dit.  
+Als de overheid het gegeven kwalificeert kan de bronhouder dit zelf doen, maar het kan schaalvoordeel bieden om dit te centraliseren in een GBO PuB-EAA-dienst. Als een QTSP het gegeven kwalificeert, moet deze QTSP het gegeven kunnen verifiëren via een verificatiedienst. Ook hier kan een bronhouder de dienst zelf aanbieden, of kan ervoor gekozen worden om dit te centraliseren in een GBO verificatiedienst. Ook de authenticatie- & autorisatiedienst die door de Pub-EAA-dienst en de verificatiedienst aangeroepen wordt, kan door de bronhouder aangeboden worden, maar het biedt schaalvoordeel om dat te centraliseren in een GBO dienst.
 
 
 ## Gegevensverzoek van Europese overheidsdienst aan Nederlandse overheidsbron
@@ -64,9 +64,9 @@ Een Europese overheidsdienst vraagt een gegeven (Evidence Request) aan een Neder
 
 ### Toelichting
 
-RINIS is het nationale toegangspunt voor eDelivery en verzorgt de basisinrichting OOTS — het Nederlandse toegangspunt en de generieke koppelingen met gerelateerde systemen. Dit is een transportrol: RINIS spreekt het AS4/eDelivery-protocol richting de EC Common Services, en vertaalt dit naar een nationaal berichtformaat.  
-GBO is een verwerkingsrol: identiteit, grondslag, toestemming, bronontsluiting, semantiek. Dit zijn inhoudelijke functies, geen transport.  
+RINIS is het nationale toegangspunt voor eDelivery en verzorgt de basisinrichting OOTS — het Nederlandse toegangspunt en de generieke koppelingen met gerelateerde systemen. RINIS verzorgt de toestemmingsinteractie met de burger en de identiteitsvastelling, en vertaalt het verzoek naar een nationaal berichtformaat.  
+GBO verzorgt de bronbevraging en en de semantische mapping naar het SDG Evidence-formaat.  
 
-De praktische knip zit op het grenswerk tussen fase 1 en fase 2 in het diagram: RINIS ontvangt het AS4-bericht van buiten, pakt de OOTS-payload uit en geeft die als REST-aanroep door aan GBO. Bij de terugkoppeling (fase 7) geldt het omgekeerde: GBO geeft de Evidence Response terug aan RINIS, die het opnieuw inpakt in AS4 voor verzending. Bronhouders zien uitsluitend de GBO-API — OOTS-kennis is voor hen niet nodig.  
+De praktische knip zit op het grenswerk tussen fase 3 en fase 4 in het diagram: RINIS ontvangt het AS4-bericht van buiten, verzorgt de toestemmingsflow, pakt de OOTS-payload uit en geeft die als REST-aanroep door aan GBO. Bij de terugkoppeling (fase 7) geldt het omgekeerde: GBO geeft de Evidence Response terug aan RINIS, die het opnieuw inpakt in AS4 voor verzending. Bronhouders zien uitsluitend de GBO-API — OOTS-kennis is voor hen niet nodig. Ook de toestemming en de autorisatie zijn al afgehandeld en vormen geen belemmering voor de bronhouder.   
 
 NB: Openstaand architectuurvraagstuk is nog waar de OOTS-specifieke toestemmingsflow (het "preview"-scherm dat de burger het bewijsstuk laat zien vóór afgifte, verplicht per SDG-verordening) belegd wordt. Momenteel zit dit in de RINIS-basisinrichting. Als GBO de toestemming afhandelt, moeten we afspreken of het OOTS-preview-scherm bij RINIS blijft of naar GBO verschuift — dat raakt de verantwoordelijkheidsverdeling tussen de twee voorzieningen.

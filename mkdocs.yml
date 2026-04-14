@@ -40,15 +40,18 @@ plugins:
   - search
   - print-site:
       add_to_navigation: false
-      print_page_title: "PSA GBO"
+      print_page_title: "Documentatie GBO"
       enumerate_headings: true
 
 nav:
-  - Voorblad: voorblad.md
 
-  - Over dit document: index.md
+  - Over deze repository: index.md
+
+  - Globaal ontwerp:
+    - Globaal ontwerp: ontwerp/concept-globaal-ontwerp.md
 
   - PSA:
+    - Voorblad: psa/voorblad.md
     - Inleiding: psa/inleiding.md
     - Context: psa/context.md
     - Architectuurprincipes: psa/architectuurprincipes.md
@@ -59,9 +62,6 @@ nav:
     - Capabilities: psa/capabilities.md
     - Realisatiestrategie: psa/realisatiestrategie.md
     - Open Vraagstukken en ontwerpkeuzes: psa/vraagstukken.md
-
-  - Globaal ontwerp:
-    - Globaal ontwerp: ontwerp/concept-globaal-ontwerp.md
 
   - Technisch ontwerp:
     - Reference architecture: ref-arch/gbo-reference-architecture.md

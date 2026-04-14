@@ -2,9 +2,12 @@
 
 Eerste ontwerp - ter bespreking
 
-_Versie 0.2 | Concept_
+_Versie 0.8 | Concept_
 
-_ICTU | April 2025_
+_ICTU | April 2026_
+
+> LET OP: Deze versie van het Globaal Ontwerp is nog in ontwikkeling en dient primair voor de discussie en verdere uitwerking van dit ontwerp, de projectstartarchitectuur en het technisch ontwerp. Er kunnen geen rechten aan dit document ontleend worden.
+
 
 # 1 Inleiding en doel
 
@@ -19,20 +22,20 @@ Het project Gemeenschappelijke Bronontsluiting (GBO) realiseert een aantal stels
 <figcaption>Figuur 1: Doel GBO - enkelvoudige bevraging van bronhouders voor verschillende informatiestromen.</figcaption>
 </figure>
 
-Het doel hiervan is om interoperabiliteit en hergebruik bij gegevensuitwisselingen te bevorderen en op die manier de implementatielast bij partijen, zowel bronhouders als afnemers, te verlagen. Dit zowel bij gegevensuitwisselingen tussen overheidspartijen als tussen overheid en private partijen.
-
-In figuur 2 is geschetst hoe een dergelijk stelsel eruit kan komen te zien.
+In figuur 2 is geschetst hoe een dergelijk stelsel er in de praktijk uit kan komen te zien.
 
 <figure>
 [figuur GBO stelsel nog in te voeren]
-<figcaption>Figuur 2: GBO stelsel met stelselfuncties, aanbieders (bronnen) en afnemers (waaronder de EUDI-Wallet).</figcaption>
+<figcaption>Figuur 2: GBO stelsel met aanbieders (bronnen) en afnemers (waaronder private dienstverleners en de EUDI-Wallet), die met behulp van stelselfuncties gegevens met elkaar uitwisselen.</figcaption>
 </figure>
 
-GBO is geen nieuw, losstaand stelsel. Het sluit aan op het Federatief Datastelsel (FDS) als basisafsprakenstelsel en Trusted Information Partners (TIP) voor Publiek-Privaat interacties. Het breidt gericht de afspraken, standaarden en voorzieningen binnen deze afsprakenstelsels uit die nodig zijn voor de drie toepassingen.
+Het doel van GBO is om interoperabiliteit en hergebruik bij gegevensuitwisselingen te bevorderen en op die manier de implementatielast bij partijen - zowel bronhouders als afnemers - te verlagen. Dit zowel bij gegevensuitwisselingen tussen overheidspartijen als tussen overheid en private partijen.
+
+GBO is geen nieuw, losstaand stelsel. Het sluit aan op het Federatief Datastelsel (FDS) als basisafsprakenstelsel en Trusted Information Partners (TIP) voor publiek-private interacties. Het breidt gericht de afspraken, standaarden en voorzieningen binnen deze afsprakenstelsels uit die nodig zijn voor de drie toepassingen.
 
 Centrale begrippen zijn: een juridische grondslag als afdwingbare basis voor gegevensverstrekking, dataminimalisatie via selectieve bevraging en generieke uniforme functies voor ontsluiting zodat bronhouders maar één keer hoeven aan te sluiten.
 
-De juridische basis wordt gevormd door een wettelijk kader (dit kan bijvoorbeeld de Wet digitale overheid (Wdo) of een wettelijk kader binnen een specifiek domein zijn) en de daarvoor uit te werken AMvB met onderliggende ministeriele regeling. Zolang die grondslag nog niet in werking is getreden, lopen technische uitwerking en wetgevingstraject parallel aan elkaar.
+De juridische basis wordt gevormd door een wettelijk kader en lagere regelgeving. Zolang die grondslag nog niet in werking is getreden, lopen technische uitwerking en wetgevingstraject parallel aan elkaar.
 
 ## Relatie met bestaande stelsels
 
@@ -40,7 +43,7 @@ GBO hergebruikt maximaal wat er al is:
 
 - FDS als afsprakenstelsel met o.a. FSC en FTV als standaarden voor gefedereerde connectiviteit en toegang.
 - Afspraken en standaarden in TIP verband.
-- Europese afspraken en standaarden
+- Europese afspraken en standaarden (eIDAS, ARF, SDG/OOTS) en de Nederlandse invulling hiervan (NL-Wallet, centraal Nederlands OOTS toegangspunt).
 - Pseudonimiseringsvoorziening (BSNk PP of PRS - hier moet nog over besloten worden).
 - CBAC/PBAC architecturen voor autorisatie en toegang.
 - [TLS 1.2 en 1.3](https://www.forumstandaardisatie.nl/export-standaarden/xml/verplicht) (inclusief [X.509-certificaten](https://www.forumstandaardisatie.nl/open-standaarden/x509)) voor system-to-system communicatie.
@@ -51,7 +54,7 @@ Met TIP wordt samengewerkt om ook landelijke en Europese standaarden en afsprake
 
 # 2 Interactiepatronen
 
-GBO ondersteunt drie interactiepatronen, elk met eigen actoren, grondslagen en technische protocollen. De drie interactiepatronen worden in volgende paragrafen geschetst.
+GBO ondersteunt drie interactiepatronen, elk met eigen actoren, grondslagen en protocollen. De drie interactiepatronen worden in volgende paragrafen geschetst.
 
 ## 2.1 Patroon A - gegevensverzoek van private partij (DvTP)
 
@@ -68,7 +71,7 @@ De bronhouder controleert of de private partij bevoegd is om de gegevens op te v
 
 Een burger vraagt een overheidsattribuut op als verifieerbare credential (VC) voor opname in zijn EDI-Wallet. De wallet initieert een OID4VCI-ophaalverzoek richting GBO, dat de bron bevraagt en het resultaat retourneert als SD-JWT VC of mdoc (ISO 18013-5). De credential is cryptografisch gezegeld door de bronhouder en kan daarna door de burger worden gepresenteerd aan dienstverleners via OID4VP, zonder verdere tussenkomst van GBO.
 
-GBO ondersteunt functioneel/technisch in dit patroon de rol van PuB-EAA-uitgevende instantie, maar is zelf geen PuB-EAA verstrekker. De verificatiedienst voor QTSP's die zelf credentials willen uitreiken of verifiëren is een aanvullend GBO-component.
+GBO ondersteunt functioneel/technisch in dit patroon de rol van PuB-EAA-uitgevende instantie, maar is zelf geen PuB-EAA verstrekker. De verificatiedienst voor QTSP's die zelf credentials willen uitreiken of verifiëren is een aanvullend GBO-component. Beide diensten (PubEAA-verstrekker en verificatiedienst) maken gebruik van een authenticatie- & autorisatiedienst die door GBO aangeboden wordt.
 
 <figure>
 --8<-- "diagrammen/interactiepatroon-EDI-Wallet.mmd"
@@ -76,11 +79,10 @@ GBO ondersteunt functioneel/technisch in dit patroon de rol van PuB-EAA-uitgeven
 NB: gegeven kan als PuB-EAA (rechtstreeks van overheidsbron) of QEAA (via QTSP) in de Wallet komen.
 </figcaption>
 </figure>
-NB: gegeven kan als PuB-EAA (rechtstreeks van overheidsbron) of QEAA (via QTSP) in de Wallet komen.
 
 ## 2.3 Patroon C - grensoverschrijdend verzoek via SDG/OOTS
 
-Een Europese overheidsdienst stuurt via het OOTS-netwerk een Evidence Request voor een Nederlandse burger. RINIS fungeert als nationaal OOTS-toegangspunt (AS4/eDelivery) en geeft de payload als REST/JSON door aan GBO. GBO verzorgt de toestemmingsinteractie met de burger (DvTP-flow), de identiteitsvaststelling, de bronontsluiting en de semantische mapping naar het SDG Evidence-formaat. Bronhouders zien uitsluitend de GBO-API en hoeven geen OOTS-kennis te hebben. De terugkoppeling volgt de omgekeerde route: GBO retourneert aan RINIS, RINIS verpakt in AS4.
+Een Europese overheidsdienst stuurt via het OOTS-netwerk een Evidence Request voor een Nederlandse burger. RINIS fungeert als nationaal OOTS-toegangspunt (AS4/eDelivery), verzorgt de toestemmingsinteractie met de burger en de identiteitsvaststelling, en geeft de payload als REST/JSON door aan GBO. GBO verzorgt de bronontsluiting en de semantische mapping naar het SDG Evidence-formaat. Bronhouders zien uitsluitend de GBO-API en hoeven geen OOTS-kennis te hebben. De terugkoppeling volgt de omgekeerde route: GBO retourneert aan RINIS, RINIS verpakt in AS4.
 
 <figure>
 --8<-- "diagrammen/interactiepatroon-SDG-OOTS-verzoek.mmd"

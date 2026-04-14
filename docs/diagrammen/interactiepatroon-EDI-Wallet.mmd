@@ -5,8 +5,9 @@ sequenceDiagram
     actor Burger
     participant Wallet as EDI-Wallet
     participant QTSP as QTSP
-    participant VerifDienst as Verificatie-<br/>dienst
     participant PubEAA as PuB-EAA<br/>voorziening
+    participant VerifDienst as Verificatie-<br/>dienst
+    participant Auth as Authenticatie & <br />Autorisatie<br/>voorziening
     participant Bron as Overheids-<br/>bron
     participant DV as Dienst-<br/>verlener
 
@@ -16,13 +17,14 @@ sequenceDiagram
         Burger->>Wallet: Vraag attribuut op (OID4VCI initiate)
         Wallet->>PubEAA: Credential Request (OID4VCI)
         Note over PubEAA: PuB-EAA voorziening: aangeboden<br/>door bron zelf óf centraal via GBO
-        PubEAA->>Wallet: Authenticatieverzoek
-        Wallet->>Burger: Authenticatieverzoek
-        Wallet->>PubEAA: Athenticatie (met BSN)
+        PubEAA->>Auth: Autorisatieverzoek
+        Auth->>Burger: Authenticatie- & autorisatieverzoek
+        Burger->>Auth: Autorisatie (met BSN)
+        Auth->>PubEAA: Autorisatie (met BSN)
         PubEAA->>Bron: Bevraag bron
         Bron-->>PubEAA: Attribuutgegevens
         PubEAA->>PubEAA: Kwalificeer attribuutgegevens
-        PubEAA-->>Wallet: PuB-EAA credential<br/>(SD-JWT VC · ISO 18013-5,<br/>gezegeld door overheidsinstantie)
+        PubEAA-->>Wallet: PuB-EAA credential<br/>(SD-JWT VC · ISO 18013-5,<br/>QESeal door overheidsinstantie)
         Wallet-->>Burger: PuB-EAA opgeslagen in wallet
     end
 
@@ -37,6 +39,10 @@ sequenceDiagram
         Note over QTSP: QTSP verifieert attribuut<br/>via verificatiedienst
         QTSP->>VerifDienst: Verificatieverzoek
         Note over VerifDienst: Verificatiedienst: aangeboden<br/>door bron of centraal via GBO
+        VerifDienst->>Auth: Autorisatieverzoek
+        Auth->>Burger: Authenticatie- & autorisatieverzoek
+        Burger->>Auth: Autorisatie (met BSN)
+        Auth->>VerifDienst: Autorisatie (met BSN)
         VerifDienst->>Bron: Bevraag bron
         Bron-->>VerifDienst: Attribuutgegevens
         VerifDienst-->>QTSP: Geverifieerd attribuut
