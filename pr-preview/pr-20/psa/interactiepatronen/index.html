@@ -215,11 +215,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../voorblad/" class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Voorblad
+    Over deze repository
   </span>
   
 
@@ -234,16 +234,64 @@
   
   
   
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Globaal ontwerp
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Globaal ontwerp
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../ontwerp/concept-globaal-ontwerp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Over dit document
+    Globaal ontwerp
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -289,6 +337,27 @@
             PSA
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../voorblad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Voorblad
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -600,7 +669,7 @@
             
   
   <span class="md-ellipsis">
-    Globaal ontwerp
+    Technisch ontwerp
   </span>
   
 
@@ -609,74 +678,6 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            Globaal ontwerp
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../ontwerp/concept-globaal-ontwerp/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Globaal ontwerp
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-        
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    Technisch ontwerp
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Technisch ontwerp
           </label>
@@ -852,8 +853,9 @@ sequenceDiagram
     actor Burger
     participant Wallet as EDI-Wallet
     participant QTSP as QTSP
-    participant VerifDienst as Verificatie-&lt;br/&gt;dienst
     participant PubEAA as PuB-EAA&lt;br/&gt;voorziening
+    participant VerifDienst as Verificatie-&lt;br/&gt;dienst
+    participant Auth as Authenticatie &amp; &lt;br /&gt;Autorisatie&lt;br/&gt;voorziening
     participant Bron as Overheids-&lt;br/&gt;bron
     participant DV as Dienst-&lt;br/&gt;verlener
 
@@ -863,13 +865,14 @@ sequenceDiagram
         Burger-&gt;&gt;Wallet: Vraag attribuut op (OID4VCI initiate)
         Wallet-&gt;&gt;PubEAA: Credential Request (OID4VCI)
         Note over PubEAA: PuB-EAA voorziening: aangeboden&lt;br/&gt;door bron zelf óf centraal via GBO
-        PubEAA-&gt;&gt;Wallet: Authenticatieverzoek
-        Wallet-&gt;&gt;Burger: Authenticatieverzoek
-        Wallet-&gt;&gt;PubEAA: Athenticatie (met BSN)
+        PubEAA-&gt;&gt;Auth: Autorisatieverzoek
+        Auth-&gt;&gt;Burger: Authenticatie- &amp; autorisatieverzoek
+        Burger-&gt;&gt;Auth: Autorisatie (met BSN)
+        Auth-&gt;&gt;PubEAA: Autorisatie (met BSN)
         PubEAA-&gt;&gt;Bron: Bevraag bron
         Bron--&gt;&gt;PubEAA: Attribuutgegevens
         PubEAA-&gt;&gt;PubEAA: Kwalificeer attribuutgegevens
-        PubEAA--&gt;&gt;Wallet: PuB-EAA credential&lt;br/&gt;(SD-JWT VC · ISO 18013-5,&lt;br/&gt;gezegeld door overheidsinstantie)
+        PubEAA--&gt;&gt;Wallet: PuB-EAA credential&lt;br/&gt;(SD-JWT VC · ISO 18013-5,&lt;br/&gt;QESeal door overheidsinstantie)
         Wallet--&gt;&gt;Burger: PuB-EAA opgeslagen in wallet
     end
 
@@ -884,6 +887,10 @@ sequenceDiagram
         Note over QTSP: QTSP verifieert attribuut&lt;br/&gt;via verificatiedienst
         QTSP-&gt;&gt;VerifDienst: Verificatieverzoek
         Note over VerifDienst: Verificatiedienst: aangeboden&lt;br/&gt;door bron of centraal via GBO
+        VerifDienst-&gt;&gt;Auth: Autorisatieverzoek
+        Auth-&gt;&gt;Burger: Authenticatie- &amp; autorisatieverzoek
+        Burger-&gt;&gt;Auth: Autorisatie (met BSN)
+        Auth-&gt;&gt;VerifDienst: Autorisatie (met BSN)
         VerifDienst-&gt;&gt;Bron: Bevraag bron
         Bron--&gt;&gt;VerifDienst: Attribuutgegevens
         VerifDienst--&gt;&gt;QTSP: Geverifieerd attribuut
@@ -904,8 +911,8 @@ sequenceDiagram
 </figure>
 
 <h3 id="toelichting_1">Toelichting<a class="headerlink" href="#toelichting_1" title="Permanent link">&para;</a></h3>
-<p>Iedere bronhouder kan in theorie gegevens uitleveren aan wallets, maar deze gegevens krijgen pas juridische waarde als ze gekwalificeerd zijn. Dat kwalificeren kan op twee manieren: de overheid ondertekent het gegeven, waardoor het een PuB-EAA wordt, of een gekwalificeerde verlener van vertrouwensdiensten (QTSP).<br />
-Als de overheid het gegeven kwalificeert kan de bronhouder dit zelf doen, maar het kan schaalvoordeel bieden om dit te centraliseren in een GBO PuB-EAA-dienst. Als een QTSP het gegeven kwalificeert, moet deze QTSP het gegeven kunnen verifiëren via een verificatiedienst. Ook hier kan een bronhouder de dienst zelf aanbieden, of kan ervoor gekozen worden om dit te centraliseren in een GBO verificatiedienst.</p>
+<p>Iedere bronhouder kan in theorie gegevens uitleveren aan wallets, maar deze gegevens krijgen pas juridische waarde als ze gekwalificeerd zijn. Dat kwalificeren kan op twee manieren: de overheid ondertekent het gegeven, waardoor het een PuB-EAA wordt, of een gekwalificeerde verlener van vertrouwensdiensten (QTSP) doet dit.<br />
+Als de overheid het gegeven kwalificeert kan de bronhouder dit zelf doen, maar het kan schaalvoordeel bieden om dit te centraliseren in een GBO PuB-EAA-dienst. Als een QTSP het gegeven kwalificeert, moet deze QTSP het gegeven kunnen verifiëren via een verificatiedienst. Ook hier kan een bronhouder de dienst zelf aanbieden, of kan ervoor gekozen worden om dit te centraliseren in een GBO verificatiedienst. Ook de authenticatie- &amp; autorisatiedienst die door de Pub-EAA-dienst en de verificatiedienst aangeroepen wordt, kan door de bronhouder aangeboden worden, maar het biedt schaalvoordeel om dat te centraliseren in een GBO dienst.</p>
 <h2 id="gegevensverzoek-van-europese-overheidsdienst-aan-nederlandse-overheidsbron">Gegevensverzoek van Europese overheidsdienst aan Nederlandse overheidsbron<a class="headerlink" href="#gegevensverzoek-van-europese-overheidsdienst-aan-nederlandse-overheidsbron" title="Permanent link">&para;</a></h2>
 <h3 id="doel_2">Doel<a class="headerlink" href="#doel_2" title="Permanent link">&para;</a></h3>
 <p>Een Europese overheidsdienst vraagt een gegeven (Evidence Request) aan een Nederlandse overheidsbron om een dienst aan een Nederlandse burger te kunnen leveren.</p>
@@ -915,32 +922,33 @@ Als de overheid het gegeven kwalificeert kan de bronhouder dit zelf doen, maar h
 <pre class="mermaid"><code>
 sequenceDiagram
     autonumber
+    participant BRG as Burger&lt;br/&gt;(rechthebbende)
     participant EU as EU dienst&lt;br/&gt;(SDG/OOTS)
     participant RINIS as RINIS&lt;br/&gt;(nationaal OOTS-punt)
     participant GBO as GBO&lt;br/&gt;(GBO voorziening)
-    participant BRG as Burger&lt;br/&gt;(rechthebbende)
     participant BRH as Bronhouder&lt;br/&gt;(BRP / DUO / …)
 
     rect rgb(230, 241, 251)
-        Note over EU,RINIS: ① Ontvangst OOTS-verzoek (eDelivery/AS4)
-        EU-&gt;&gt;RINIS: Evidence Request (eDelivery/AS4)
-        Note over RINIS: eDelivery → REST ontkoppeling
+        Note over BRG,EU: ① Burger neemt dienst af
+        BRG-&gt;&gt;EU: Dienst (vereist gegeven Bronhouder)
     end
 
-    rect rgb(250, 238, 218)
-        Note over RINIS,GBO: ② Doorzetten naar GBO (nationaal)
-        RINIS-&gt;&gt;GBO: OOTS-payload (REST/JSON)
+    rect rgb(230, 241, 251)
+        Note over EU,RINIS: ② Ontvangst OOTS-verzoek (eDelivery/AS4)
+        EU-&gt;&gt;RINIS: Evidence Request (eDelivery/AS4)
     end
+
 
     rect rgb(238, 237, 254)
-        Note over GBO,BRG: ③ Toestemming burger (GBO)
-        GBO-&gt;&gt;BRG: Toestemmingsvoorziening (GBO)
-        BRG-&gt;&gt;GBO: Toestemming + Consent-ID (incl. BSN)
+        Note over RINIS,BRG: ③ Authenticatie &amp; toestemming burger (RINIS)
+        RINIS-&gt;&gt;BRG: Toestemmingsvoorziening (RINIS)
+        BRG-&gt;&gt;RINIS: Toestemming (incl. BSN)
     end
 
     rect rgb(250, 238, 218)
-        Note over GBO: ④ Identiteit &amp; grondslag (intern GBO)
-        Note over GBO: BSN · pseudonimisering · AVG/grondslag
+        Note over RINIS,GBO: ④ Doorzetten naar GBO (nationaal)
+        RINIS-&gt;&gt;GBO: OOTS-payload (REST/JSON)
+        Note over RINIS: eDelivery → REST ontkoppeling
     end
 
     rect rgb(225, 245, 238)
@@ -966,9 +974,9 @@ sequenceDiagram
 </figure>
 
 <h3 id="toelichting_2">Toelichting<a class="headerlink" href="#toelichting_2" title="Permanent link">&para;</a></h3>
-<p>RINIS is het nationale toegangspunt voor eDelivery en verzorgt de basisinrichting OOTS — het Nederlandse toegangspunt en de generieke koppelingen met gerelateerde systemen. Dit is een transportrol: RINIS spreekt het AS4/eDelivery-protocol richting de EC Common Services, en vertaalt dit naar een nationaal berichtformaat.<br />
-GBO is een verwerkingsrol: identiteit, grondslag, toestemming, bronontsluiting, semantiek. Dit zijn inhoudelijke functies, geen transport.  </p>
-<p>De praktische knip zit op het grenswerk tussen fase 1 en fase 2 in het diagram: RINIS ontvangt het AS4-bericht van buiten, pakt de OOTS-payload uit en geeft die als REST-aanroep door aan GBO. Bij de terugkoppeling (fase 7) geldt het omgekeerde: GBO geeft de Evidence Response terug aan RINIS, die het opnieuw inpakt in AS4 voor verzending. Bronhouders zien uitsluitend de GBO-API — OOTS-kennis is voor hen niet nodig.  </p>
+<p>RINIS is het nationale toegangspunt voor eDelivery en verzorgt de basisinrichting OOTS — het Nederlandse toegangspunt en de generieke koppelingen met gerelateerde systemen. RINIS verzorgt de toestemmingsinteractie met de burger en de identiteitsvastelling, en vertaalt het verzoek naar een nationaal berichtformaat.<br />
+GBO verzorgt de bronbevraging en en de semantische mapping naar het SDG Evidence-formaat.  </p>
+<p>De praktische knip zit op het grenswerk tussen fase 3 en fase 4 in het diagram: RINIS ontvangt het AS4-bericht van buiten, verzorgt de toestemmingsflow, pakt de OOTS-payload uit en geeft die als REST-aanroep door aan GBO. Bij de terugkoppeling (fase 7) geldt het omgekeerde: GBO geeft de Evidence Response terug aan RINIS, die het opnieuw inpakt in AS4 voor verzending. Bronhouders zien uitsluitend de GBO-API — OOTS-kennis is voor hen niet nodig. Ook de toestemming en de autorisatie zijn al afgehandeld en vormen geen belemmering voor de bronhouder.   </p>
 <p>NB: Openstaand architectuurvraagstuk is nog waar de OOTS-specifieke toestemmingsflow (het "preview"-scherm dat de burger het bewijsstuk laat zien vóór afgifte, verplicht per SDG-verordening) belegd wordt. Momenteel zit dit in de RINIS-basisinrichting. Als GBO de toestemming afhandelt, moeten we afspreken of het OOTS-preview-scherm bij RINIS blijft of naar GBO verschuift — dat raakt de verantwoordelijkheidsverdeling tussen de twee voorzieningen.</p>
 
 
