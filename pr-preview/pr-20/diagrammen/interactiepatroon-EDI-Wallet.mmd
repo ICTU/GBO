@@ -19,7 +19,9 @@ sequenceDiagram
         Note over PubEAA: PuB-EAA voorziening: aangeboden<br/>door bron zelf óf centraal via GBO
         PubEAA->>Auth: Autorisatieverzoek
         Auth->>Wallet: Authenticatie- & autorisatieverzoek
-        Wallet->>Auth: Authenticatie / Toestemming (OID4VCP)
+        Wallet->>Burger: Toont verzoek & vraagt consent
+        Burger->>Wallet: Geeft consent
+        Wallet->>Auth: Authenticatie / consent (OID4VCP)
         Auth->>PubEAA: Autorisatie
         PubEAA->>Bron: Bevraag bron
         Bron-->>PubEAA: Attribuutgegevens
@@ -38,7 +40,9 @@ sequenceDiagram
         Note over VerifDienst: Verificatiedienst: aangeboden<br/>door bron of centraal via GBO
         VerifDienst->>Auth: Autorisatieverzoek
         Auth->>Wallet: Authenticatie- & autorisatieverzoek
-        Wallet->>Auth: Authenticatie / Toestemming (OID4VCP)
+        Wallet->>Burger: Toont verzoek & vraagt consent
+        Burger->>Wallet: Geeft consent
+        Wallet->>Auth: Authenticatie / consent (OID4VCP)
         Auth->>VerifDienst: Autorisatie
         VerifDienst->>Bron: Bevraag bron
         Bron-->>VerifDienst: Attribuutgegevens
