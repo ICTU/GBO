@@ -1,32 +1,54 @@
-site_name: PSA GBO
+site_name: Documentatie GBO
 
 theme:
   name: material
   language: nl
+  palette:
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
   features:
     - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
     - content.code.copy
     - content.code.annotate
 
 markdown_extensions:
+  - tables
+  - footnotes
+  - sane_lists
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - admonition
+  - attr_list
   # Mermaid diagrammen
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format:
-            !!python/name:pymdownx.superfences.fence_code_format # Includes voor diagrammen
-
-
+          format: !!python/name:pymdownx.superfences.fence_div_format
   - pymdownx.snippets:
       base_path:
         - docs
       check_paths: true
-
   # Automatische inhoudsopgave
   - toc:
       permalink: true
       toc_depth: 2
+
+site_url: https://ictu.github.io/gbo/
+repo_url: https://github.com/ictu/gbo
+repo_name: ictu/gbo
 
 extra_css:
   - stylesheets/extra.css
@@ -34,7 +56,12 @@ extra_css:
 
 extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
-  - javascripts/mermaid-init.js
+  - javascript/mermaid-init.js
+
+extra:
+  version:
+    provider: mike
+    alias: true
 
 plugins:
   - search
