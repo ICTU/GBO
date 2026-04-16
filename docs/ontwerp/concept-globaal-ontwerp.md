@@ -11,8 +11,10 @@ _ICTU | April 2026_
 
 # 1 Inleiding en doel
 
-Het project Gemeenschappelijke Bronontsluiting (GBO) realiseert een aantal stelselfuncties waarmee overheidsgegevens op een interoperabele, veilige, gecontroleerde en privacybeschermende manier beschikbaar worden gesteld aan drie typen afnemers:
+Diverse ontwikkelingen op nationaal (o.a. [NDS](https://www.digitaleoverheid.nl/nederlandse-digitaliseringsstrategie-nds/), [Regie op Gegevens](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/regie-op-gegevens/), [Wdo](https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/)) en Europees vlak (o.a. [Data Act](https://digital-strategy.ec.europa.eu/nl/policies/data-act), [SDG](https://single-market-economy.ec.europa.eu/single-market/single-digital-gateway_en), [EUDI-Wallet](https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/694487738/EU+Digital+Identity+Wallet+Home)) maken dat gegevens in overheidsbronnen breder en flexibeler gebruikt moeten kunnen worden. De verschillende ontwikkelingen zorgen voor een uitdaging bij de bronhouders: zij moeten verschillende gegevensstromen bedienen met verschillende technologieën en verschillende grondslagen.  
+Het afsprakenstelsel [FDS](https://realisatieibds.nl/page/view/564cc96c-115e-4e81-b5e6-01c99b1814ec/de-ontwikkeling-van-het-federatief-datastelsel) werkt aan het delen van gegevens binnen de overheid op een eenduidige, veilige en flexibele manier. Maar voor internationale gegevensuitwisselingen, uitwisselingen met private dienstverleners en het uitgeven van credentials biedt FDS (nog) geen oplossingen.  
 
+Het project Gemeenschappelijke Bronontsluiting (GBO) realiseert stelselfuncties waarmee overheidsgegevens op een interoperabele, veilige, gecontroleerde en privacybeschermende manier beschikbaar worden gesteld aan drie typen afnemers:  
 - Private dienstverleners op basis van burgertoestemming (DvTP - Data delen via toestemming met private dienstverleners).
 - Europese overheden via het Single Digital Gateway/Once Only Technical System (SDG/OOTS).
 - Burgers en organisaties via het EDI-Stelsel (eIDAS2/ARF).
@@ -31,12 +33,16 @@ In figuur 2 is geschetst hoe een dergelijk stelsel er in de praktijk uit kan kom
 
 Het doel van GBO is om interoperabiliteit en hergebruik bij gegevensuitwisselingen te bevorderen en op die manier de implementatielast bij partijen - zowel bronhouders als afnemers - te verlagen. Dit zowel bij gegevensuitwisselingen tussen overheidspartijen als tussen overheid en private partijen.
 
-GBO is geen nieuw, losstaand stelsel. Het sluit aan op het Federatief Datastelsel (FDS) als basisafsprakenstelsel en Trusted Information Partners (TIP) voor publiek-private interacties. Het breidt gericht de afspraken, standaarden en voorzieningen binnen deze afsprakenstelsels uit die nodig zijn voor de drie toepassingen.  
-In dit document is nog wel sprake van een GBO-stelsel en GBO-voorzieningen, maar dat is enkel om het stuk leesbaar te houden. Alle afspraken en voorzieningen moeten landen in bestaande afsprakenstelsels, zoals [FDS](https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/wiki/view/d0d0c6b6-b1bd-41a4-962a-b1e628c1ee82/afsprakenstelsel-fds), [GDI](https://www.digitaleoverheid.nl/mido/generieke-digitale-infrastructuur-gdi/) en [TIP](https://www.trustedinformationpartners.nl).
+GBO is geen nieuw, losstaand stelsel. Het sluit aan op het Federatief Datastelsel (FDS) als basisafsprakenstelsel en [Trusted Information Partners](https://www.trustedinformationpartners.nl) voor publiek-private interacties. Het breidt gericht de afspraken, standaarden en voorzieningen binnen deze afsprakenstelsels uit die nodig zijn voor de drie toepassingen.  
+In dit document is nog wel sprake van een GBO-stelsel en GBO-voorzieningen, maar dat is enkel om het stuk leesbaar te houden. Alle afspraken en voorzieningen moeten landen in bestaande afsprakenstelsels.
 
-Centrale begrippen zijn: een juridische grondslag als afdwingbare basis voor gegevensverstrekking, dataminimalisatie via selectieve bevraging en generieke uniforme functies voor ontsluiting zodat bronhouders maar één keer hoeven aan te sluiten.
+De juridische basis wordt gevormd door een wettelijk kader en lagere regelgeving. Zolang die grondslag nog niet in werking is getreden, lopen technische uitwerking en wetgevingstraject parallel aan elkaar.  
 
-De juridische basis wordt gevormd door een wettelijk kader en lagere regelgeving. Zolang die grondslag nog niet in werking is getreden, lopen technische uitwerking en wetgevingstraject parallel aan elkaar.
+In dit globaal ontwerp wordt op hoofdlijnen uiteengezet welke stelselvoorzieningen nodig zijn en hoe deze ingericht kunnen worden. Het doel van dit globaal ontwerp is het ophalen van input op de geschetste oplossingsrichting en het verder uitwerken van het ontwerp. Die uitwerking gebeurt in de volgende stukken:  
+- [Projectstartarchitectuur](https://ictu.github.io/GBO/psa/inleiding/): kaders en richtlijnen voor het ontwerp en de inrichting van de stelselvoorzieningen;  
+- [Technisch ontwerp](https://ictu.github.io/GBO/ref-arch/gbo-reference-architecture/): technisch ontwerp van de benodigde voorzieningen;  
+- [Informatiemodellen](nog-op-te-stellen): informatie- en gegevensmodellen van de gegevens die uitgewisseld worden - zowel de gegevens die opgevraagd worden, als gegevens die nodig zijn voor veilige, betrouwbare uitwisseling (zoals toestemmingen, "trusted lists", etc.).  
+
 
 ## Relatie met bestaande stelsels
 
