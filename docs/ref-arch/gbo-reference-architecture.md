@@ -1285,21 +1285,3 @@ Domestic dienstverleners use FSC directly. AS4 is reserved for cross-border traf
 4. Register data services in the EU catalogue of attributes via I1 (Discover), reusing OOTS common services infrastructure
 5. Build the Authorization Server (I4) using OAuth 2.0 -- citizen authorizes QTSP access via EUDI Wallet or eID (I5)
 6. Define PDP policies for QTSP verification requests: requester must be on Trusted List, citizen must have authorized, requested attributes must be in scope
-
----
-
-## Sources
-
-This document synthesizes analysis from:
-
-- [authorization-models-analysis.md](authorization-models-analysis.md) -- Authorization model decomposition: five concerns, protocol-level analysis of iWlz/FSC/FTV/OAuth2/PKI-O/toestemmingsregister, federated PDP design, policy lifecycle, JWT anatomy
-- [proposals/bsnk-pp-gbo-integration.md](proposals/bsnk-pp-gbo-integration.md) -- BSNk PP integration for BSN pseudonymization
-- [proposals/dvtp-pbac-alignment.md](proposals/dvtp-pbac-alignment.md) -- Consent-as-PIP architecture design
-- [proposals/graphql-pbac.md](proposals/graphql-pbac.md) -- GraphQL + PBAC design with iWlz precedent
-- [conflict-analysis/trust-model-comparison.md](conflict-analysis/trust-model-comparison.md) -- Five trust models compared
-- [synthesis/gbo-synthesis.md](synthesis/gbo-synthesis.md) -- Full per-layer synthesis with recommendations
-- [../02-normalized/dvtp/](../02-normalized/dvtp/) -- DvTP protocol analysis (17 components, 5 flows)
-- [../02-normalized/eudi/](../02-normalized/eudi/) -- EUDI Wallet ARF v2.7.4+ analysis
-- [../02-normalized/iwlz/](../02-normalized/iwlz/) -- iWlz reference patterns (GraphQL, OPA/Rego)
-- [../02-normalized/sdg-oots/](../02-normalized/sdg-oots/) -- SDG-OOTS reference implementation analysis
-- [../02-normalized/bsnk-pp/](../02-normalized/bsnk-pp/) -- BSNk PP polymorphic pseudonymization analysis
