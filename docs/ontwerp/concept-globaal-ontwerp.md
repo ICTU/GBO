@@ -267,7 +267,6 @@ Wat er nog moet worden afgesproken of gerealiseerd:
 - **Credentialschema's per use case**: semantische mapping van bronhouder-attributen naar de attestatieschema's die door de EDI-Wallet worden vereist.
 - Een **signing-infrastructuur** voor het cryptografisch zegelen van credentials, conform eIDAS2/ARF en de relevante Europese Trusted Lists.
 - Standaardisatie van de **credentialformaten**: SD-JWT VC voor online presentatie en mdoc (ISO 18013-5) voor offline/proximity-scenario's.
-- Inrichting van een **Authentic Source Interface** (conform ETSI TS 119 478) als GBO-component, inclusief de I3 Retrieve- en I4 Authorize-interfaces (zie ook 4.5).
 
 ### 4.5 Verificatiedienst voor QTSP's (Authentic Source Interface)
 
