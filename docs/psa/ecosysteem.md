@@ -22,7 +22,7 @@ De private partij is een organisatie die een dienst aan de burger levert en daar
 
 - SDG/OOTS  
 
-SDG/OOTS (Single Digital Gateway / Once Only Technical System) is een Europese voorziening waarmee Europese overheden gegevens uit overheidsbronnen van andere Europese lidstaten kan opvragen. De feitelijke actor is dan de overheidsfunctionaris die een persoonsgegeven nodig heeft voor het leveren van een dienst aan een burger die in het buitenland is.
+SDG/OOTS (Single Digital Gateway / Once Only Technical System) is een Europees netwerk van nationale voorzieningen en 'common services' waarmee Europese overheden gegevens uit overheidsbronnen van andere Europese lidstaten kunnen opvragen. De feitelijke actor is dan de overheidsfunctionaris die een persoonsgegeven nodig heeft voor het leveren van een dienst aan een burger die in het buitenland is.
 
 -   GBO stelsel  
 

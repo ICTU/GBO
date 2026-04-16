@@ -64,9 +64,7 @@ Een Europese overheidsdienst vraagt een gegeven (Evidence Request) aan een Neder
 
 ### Toelichting
 
-RINIS is het nationale toegangspunt voor eDelivery en verzorgt de basisinrichting OOTS — het Nederlandse toegangspunt en de generieke koppelingen met gerelateerde systemen. RINIS verzorgt de toestemmingsinteractie met de burger en de identiteitsvastelling, en vertaalt het verzoek naar een nationaal berichtformaat.  
+RINIS is het nationale toegangspunt voor eDelivery en verzorgt namens BZK de basisinrichting OOTS — het Nederlandse toegangspunt en de generieke koppelingen met gerelateerde systemen. RINIS verzorgt de toestemmingsinteractie met de burger en de identiteitsvastelling, en vertaalt het verzoek naar een nationaal berichtformaat.  
 GBO verzorgt de bronbevraging en en de semantische mapping naar het SDG Evidence-formaat.  
 
 De praktische knip zit op het grenswerk tussen fase 3 en fase 4 in het diagram: RINIS ontvangt het AS4-bericht van buiten, verzorgt de toestemmingsflow, pakt de OOTS-payload uit en geeft die als REST-aanroep door aan GBO. Bij de terugkoppeling (fase 7) geldt het omgekeerde: GBO geeft de Evidence Response terug aan RINIS, die het opnieuw inpakt in AS4 voor verzending. Bronhouders zien uitsluitend de GBO-API — OOTS-kennis is voor hen niet nodig. Ook de toestemming en de autorisatie zijn al afgehandeld en vormen geen belemmering voor de bronhouder.   
-
-NB: Openstaand architectuurvraagstuk is nog waar de OOTS-specifieke toestemmingsflow (het "preview"-scherm dat de burger het bewijsstuk laat zien vóór afgifte, verplicht per SDG-verordening) belegd wordt. Momenteel zit dit in de RINIS-basisinrichting. Als GBO de toestemming afhandelt, moeten we afspreken of het OOTS-preview-scherm bij RINIS blijft of naar GBO verschuift — dat raakt de verantwoordelijkheidsverdeling tussen de twee voorzieningen.

@@ -179,7 +179,7 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | Standaard | Beheer | Bestaande invulling |
 |---|---|---|
 | AuthZEN NL Gov (draft) — gestandaardiseerde interface tussen PEP en PDP | Logius | Draft-standaard; FTV (Federatieve Toegangsverlenig, Logius) loopt pilot |
-| OPA/Rego — machineleesbare beleidstaal voor PDP-evaluatie | Open Policy Agent / CNCF | **In productie bij iWlz** (ZIN/Ketenbureau iWlz) voor gevoelige zorgdata; directe precedentwaarde |
+| OPA/Rego — machineleesbare beleidstaal voor PDP-evaluatie | Open Policy Agent / CNCF | **In productie bij iWlz** (ZIN) voor gevoelige zorgdata; directe precedentwaarde |
 | XACML 3.0 — alternatieve PDP-standaard (minder actueel, maar breed ingezet) | OASIS | Beschikbaar; minder geschikt voor fine-grained data-access dan OPA/Rego |
 | PBAC (Policy-Based Access Control) als autorisatieparadigma | Conceptueel kader | Beschreven in FTV-architectuur; aansluiting GBO gewenst |
 
@@ -188,7 +188,7 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | Voorziening | Type | Beheer | Instantiëring | Bestaande invulling |
 |---|---|---|---|---|
 | PEP (Policy Enforcement Point) | Decentrale voorziening | Decentraal — per bronhouder geïnstantieerd | Eigen instantie per bronhouder | ⚠️ Nog te realiseren; GBO levert referentie-implementatie / deployable package |
-| PDP (Policy Decision Point) | Decentrale voorziening (centraal beheerde policies) | Policies centraal beheerd door GBO; PDP-instantie decentraal bij bronhouder | Eigen instantie per bronhouder | ⚠️ Nog te realiseren; iWlz OPA/Rego als precedent |
+| PDP (Policy Decision Point) | Decentrale voorziening (centraal beheerde policies) | Policies centraal beheerd door GBO; PDP-instantie decentraal bij bronhouder | Eigen instantie per bronhouder | ⚠️ Nog te realiseren; iWlz implementatie OPA/Rego als precedent |
 | PIP-interface naar grondslagregistratie | Koppelvlak | Centraal — GBO (grondslagregistratie als PIP) | Gedeeld koppelvlak | ⚠️ Nog te standaardiseren als GBO PIP-profiel (zie S01) |
 | Policy Store / PAP | Centrale voorziening | Centraal — GBO | Gedeeld | Zie S06 — Beleidsbeheer & -distributie |
 
@@ -421,7 +421,7 @@ De gaps zijn onderverdeeld in drie categorieën:
 | S02 — Toestemmingsportaal | Wdo-grondslag DvTP; wettelijke verankering vrijwilligheidseis en gelijkwaardig alternatief als aansluiteis | Portaal zelf; BSNk-onboarding portaal; UX-richtlijnen toestemmingspresentatie; transparantie-eis uitwerking | DigiD; BSNk Activate |
 | S03 — Burgeridentificatie & Pseudonimisering | — | BSNk PP-integratie voor DvTP (onboarding portaal en PEP); betrouwbaarheidsniveau-beleid per traject | BSNk PP (productie); DigiD; eIDAS-knooppunt |
 | S04 — Organisatie-authenticatie & Vertrouwensstelsel | — | GBO-vertrouwensprofiel (welke trust anchors per traject); OIN ↔ KvK ↔ eIDAS-identifier koppeling; GBO-aansluitvoorwaarden | FDS Poortwachter; FDS Marktmeester; FSC Directory; PKI Overheid; OIN-register |
-| S05 — Autorisatie (PEP/PDP/PIP) | — | Volledige PEP/PDP/PIP-keten nog te realiseren; GBO AuthZEN-profiel; BSN-resolving post-decision | OPA/Rego (iWlz, productie); FTV/AuthZEN (pilot) |
+| S05 — Autorisatie (PEP/PDP/PIP) | — | Volledige PEP/PDP/PIP-keten nog te realiseren; GBO AuthZEN-profiel; BSN-resolving post-decision | OPA/Rego; FTV/AuthZEN (pilot) |
 | S06 — Beleidsbeheer & -distributie (PAP) | — | Centrale PAP-voorziening; Policy Store; distributie-endpoint; governance-afspraken beleidswijziging; toepasbare grondslagen als machineleesbaar beleid | OPA Bundle API; OCI (beschikbaar) |
 | S07 — Gegevensontsluiting (Bronontsluiting API) | — | Query Template Registry; GraphQL als FDS-datadienst-type positioneren; GBO onboardingprocedure bronhouders | FSC (productie); FDS Poortwachter; DCAT-AP NL; iWlz GraphQL-patroon |
 | S08 — OOTS-adapter (Grensoverschrijdend) | — | GBO ↔ RINIS REST-koppeling; SMP-beheer; SDG-EDM mapping | RINIS basisinrichting beschikbaar; Domibus (open source, EC); AS4/OOTS-EDM standaarden |

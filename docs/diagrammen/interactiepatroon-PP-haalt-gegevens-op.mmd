@@ -27,8 +27,7 @@ sequenceDiagram
         Burger-->>TV: Verleent toestemming
         TV->>TR: Schrijf toestemming in register<br/>(PP-id · scope · doelbinding · TTL)
         TR-->>TV: consent_id
-        TV->>Burger: Redirect terug naar dienstverlener<br/>(met consent_id)
-        Burger->>DV: Volgt redirect (consent_id)
+        TV->>DV: Redirect terug naar dienstverlener<br/>(met consent_id)
     end
 
     Note over DV,BRH: Fase 2 — Gegevensopvraging bij bronhouder
@@ -39,9 +38,9 @@ sequenceDiagram
         BRH->>BRH: Controleer bevoegdheid<br />(via FSC contract/Trusted List)
         BRH->>TR: Valideer consent_id<br/>(geldig? scope? TTL?)
         TR-->>BRH: Consent geldig + PP-id
+        BRH->>BRH: Controleer data scope<br />(template match)
         BRH->>PP: De-pseudonimiseer PP-id<br/>(BSNk PP)
         PP-->>BRH: BSN
-        BRH->>BRH: Controleer data scope<br />(template match)
         BRH-->>DV: Gevraagde gegevens<br/>(gezegeld door bronhouder)
     end
 
