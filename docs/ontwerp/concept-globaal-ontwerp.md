@@ -41,7 +41,7 @@ De juridische basis wordt gevormd door een wettelijk kader en lagere regelgeving
 In dit globaal ontwerp wordt op hoofdlijnen uiteengezet welke stelselvoorzieningen nodig zijn en hoe deze ingericht kunnen worden. Het doel van dit globaal ontwerp is het ophalen van input op de geschetste oplossingsrichting en het verder uitwerken van het ontwerp. Die uitwerking gebeurt in de volgende stukken:  
 - [Projectstartarchitectuur](https://ictu.github.io/GBO/psa/inleiding/): kaders en richtlijnen voor het ontwerp en de inrichting van de stelselvoorzieningen;  
 - [Technisch ontwerp](https://ictu.github.io/GBO/ref-arch/gbo-reference-architecture/): technisch ontwerp van de benodigde voorzieningen;  
-- [Informatiemodellen](nog-op-te-stellen): informatie- en gegevensmodellen van de gegevens die uitgewisseld worden - zowel de gegevens die opgevraagd worden, als gegevens die nodig zijn voor veilige, betrouwbare uitwisseling (zoals toestemmingen, "trusted lists", etc.).  
+- Informatiemodellen (nog niet beschikbaar): informatie- en gegevensmodellen van de gegevens die uitgewisseld worden - zowel de gegevens die opgevraagd worden, als gegevens die nodig zijn voor veilige, betrouwbare uitwisseling (zoals toestemmingen, "trusted lists", etc.).  
 
 
 ### Relatie met bestaande stelsels
