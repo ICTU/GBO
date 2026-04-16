@@ -2,7 +2,7 @@
 
 Eerste ontwerp - ter bespreking
 
-_Versie 0.8 | Concept_
+_Concept_
 
 _ICTU | April 2026_
 

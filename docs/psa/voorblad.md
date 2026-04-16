@@ -1,10 +1,8 @@
 # GBO
+
 ## Project Start Architectuur
 
 ![ICTU](media/ictu-logo.png)
-
-Versie 0.1  
-Maart 2026
 
 ---
 
