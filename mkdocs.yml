@@ -9,15 +9,15 @@ theme:
     - content.code.annotate
 
 markdown_extensions:
-
   # Mermaid diagrammen
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+          format:
+            !!python/name:pymdownx.superfences.fence_code_format # Includes voor diagrammen
 
-  # Includes voor diagrammen
+
   - pymdownx.snippets:
       base_path:
         - docs
@@ -38,30 +38,31 @@ extra_javascript:
 
 plugins:
   - search
+  - mike:
+      canonical_version: "latest"
   - print-site:
       add_to_navigation: false
       print_page_title: "Documentatie GBO"
       enumerate_headings: true
 
 nav:
-
   - Over deze repository: index.md
 
   - Globaal ontwerp:
-    - Globaal ontwerp: ontwerp/concept-globaal-ontwerp.md
+      - Globaal ontwerp: ontwerp/concept-globaal-ontwerp.md
 
   - PSA:
-    - Voorblad: psa/voorblad.md
-    - Inleiding: psa/inleiding.md
-    - Context: psa/context.md
-    - Architectuurprincipes: psa/architectuurprincipes.md
-    - Ontwerpprincipes: psa/ontwerpprincipes.md
-    - Ecosysteem en oplossingsrichting: psa/ecosysteem.md
-    - Interactiepatronen: psa/interactiepatronen.md
-    - Logische architectuur: psa/generieke-functies.md
-    - Stelselfuncties: psa/capabilities.md
-    - Realisatiestrategie: psa/realisatiestrategie.md
-    - Open Vraagstukken en ontwerpkeuzes: psa/vraagstukken.md
+      - Voorblad: psa/voorblad.md
+      - Inleiding: psa/inleiding.md
+      - Context: psa/context.md
+      - Architectuurprincipes: psa/architectuurprincipes.md
+      - Ontwerpprincipes: psa/ontwerpprincipes.md
+      - Ecosysteem en oplossingsrichting: psa/ecosysteem.md
+      - Interactiepatronen: psa/interactiepatronen.md
+      - Logische architectuur: psa/generieke-functies.md
+      - Stelselfuncties: psa/capabilities.md
+      - Realisatiestrategie: psa/realisatiestrategie.md
+      - Open Vraagstukken en ontwerpkeuzes: psa/vraagstukken.md
 
   - Technisch ontwerp:
-    - Reference architecture: ref-arch/gbo-reference-architecture.md
+      - Reference architecture: ref-arch/gbo-reference-architecture.md
