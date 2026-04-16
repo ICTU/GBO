@@ -815,8 +815,7 @@ sequenceDiagram
         Burger--&gt;&gt;TV: Verleent toestemming
         TV-&gt;&gt;TR: Schrijf toestemming in register&lt;br/&gt;(PP-id · scope · doelbinding · TTL)
         TR--&gt;&gt;TV: consent_id
-        TV-&gt;&gt;Burger: Redirect terug naar dienstverlener&lt;br/&gt;(met consent_id)
-        Burger-&gt;&gt;DV: Volgt redirect (consent_id)
+        TV-&gt;&gt;DV: Redirect terug naar dienstverlener&lt;br/&gt;(met consent_id)
     end
 
     Note over DV,BRH: Fase 2 — Gegevensopvraging bij bronhouder
@@ -827,9 +826,9 @@ sequenceDiagram
         BRH-&gt;&gt;BRH: Controleer bevoegdheid&lt;br /&gt;(via FSC contract/Trusted List)
         BRH-&gt;&gt;TR: Valideer consent_id&lt;br/&gt;(geldig? scope? TTL?)
         TR--&gt;&gt;BRH: Consent geldig + PP-id
+        BRH-&gt;&gt;BRH: Controleer data scope&lt;br /&gt;(template match)
         BRH-&gt;&gt;PP: De-pseudonimiseer PP-id&lt;br/&gt;(BSNk PP)
         PP--&gt;&gt;BRH: BSN
-        BRH-&gt;&gt;BRH: Controleer data scope&lt;br /&gt;(template match)
         BRH--&gt;&gt;DV: Gevraagde gegevens&lt;br/&gt;(gezegeld door bronhouder)
     end
 </code></pre>
@@ -925,9 +924,9 @@ sequenceDiagram
     autonumber
     participant BRG as Burger&lt;br/&gt;(rechthebbende)
     participant EU as EU dienst&lt;br/&gt;(SDG/OOTS)
-    participant RINIS as RINIS&lt;br/&gt;(nationaal OOTS-punt)
+    participant RINIS as RINIS (namens BZK)&lt;br/&gt;(Basisinrichting OOTS)
     participant GBO as GBO&lt;br/&gt;(GBO voorziening)
-    participant BRH as Bronhouder&lt;br/&gt;(BRP / DUO / …)
+    participant BRH as Bronhouder&lt;br/&gt;(BRP / BD / …)
 
     rect rgb(230, 241, 251)
         Note over BRG,EU: ① Burger neemt dienst af
@@ -975,10 +974,9 @@ sequenceDiagram
 </figure>
 
 <h3 id="toelichting_2">Toelichting<a class="headerlink" href="#toelichting_2" title="Permanent link">&para;</a></h3>
-<p>RINIS is het nationale toegangspunt voor eDelivery en verzorgt de basisinrichting OOTS — het Nederlandse toegangspunt en de generieke koppelingen met gerelateerde systemen. RINIS verzorgt de toestemmingsinteractie met de burger en de identiteitsvastelling, en vertaalt het verzoek naar een nationaal berichtformaat.<br />
+<p>RINIS is het nationale toegangspunt voor eDelivery en verzorgt namens BZK de basisinrichting OOTS — het Nederlandse toegangspunt en de generieke koppelingen met gerelateerde systemen. RINIS verzorgt de toestemmingsinteractie met de burger en de identiteitsvastelling, en vertaalt het verzoek naar een nationaal berichtformaat.<br />
 GBO verzorgt de bronbevraging en en de semantische mapping naar het SDG Evidence-formaat.  </p>
 <p>De praktische knip zit op het grenswerk tussen fase 3 en fase 4 in het diagram: RINIS ontvangt het AS4-bericht van buiten, verzorgt de toestemmingsflow, pakt de OOTS-payload uit en geeft die als REST-aanroep door aan GBO. Bij de terugkoppeling (fase 7) geldt het omgekeerde: GBO geeft de Evidence Response terug aan RINIS, die het opnieuw inpakt in AS4 voor verzending. Bronhouders zien uitsluitend de GBO-API — OOTS-kennis is voor hen niet nodig. Ook de toestemming en de autorisatie zijn al afgehandeld en vormen geen belemmering voor de bronhouder.   </p>
-<p>NB: Openstaand architectuurvraagstuk is nog waar de OOTS-specifieke toestemmingsflow (het "preview"-scherm dat de burger het bewijsstuk laat zien vóór afgifte, verplicht per SDG-verordening) belegd wordt. Momenteel zit dit in de RINIS-basisinrichting. Als GBO de toestemming afhandelt, moeten we afspreken of het OOTS-preview-scherm bij RINIS blijft of naar GBO verschuift — dat raakt de verantwoordelijkheidsverdeling tussen de twee voorzieningen.</p>
 
 
 
