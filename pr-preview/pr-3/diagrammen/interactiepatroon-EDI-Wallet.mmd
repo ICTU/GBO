@@ -1,5 +1,3 @@
-<figure>
-
 ``` mermaid
 
 sequenceDiagram
@@ -7,8 +5,9 @@ sequenceDiagram
     actor Burger
     participant Wallet as EDI-Wallet
     participant QTSP as QTSP
-    participant VerifDienst as Verificatie-<br/>dienst
     participant PubEAA as PuB-EAA<br/>voorziening
+    participant VerifDienst as Verificatie-<br/>dienst
+    participant Auth as Autorisatie<br/>voorziening
     participant Bron as Overheids-<br/>bron
     participant DV as Dienst-<br/>verlener
 
@@ -18,13 +17,16 @@ sequenceDiagram
         Burger->>Wallet: Vraag attribuut op (OID4VCI initiate)
         Wallet->>PubEAA: Credential Request (OID4VCI)
         Note over PubEAA: PuB-EAA voorziening: aangeboden<br/>door bron zelf óf centraal via GBO
-        PubEAA->>Wallet: Authenticatieverzoek
-        Wallet->>Burger: Authenticatieverzoek
-        Wallet->>PubEAA: Athenticatie (met BSN)
-        PubEAA->>Bron: Bevraag bron
+        PubEAA->>Auth: Autorisatieverzoek
+        Auth->>Wallet: Authenticatie- & autorisatieverzoek
+        Wallet->>Burger: Toont verzoek & vraagt consent
+        Burger->>Wallet: Geeft consent & presenteert PID / eID
+        Wallet->>Auth: Authenticatie / consent (OID4VCP met PID / eID)
+        Auth->>PubEAA: Autorisatie (incl. identificatie burger)
+        PubEAA->>Bron: Bevraag bron (met access token)
         Bron-->>PubEAA: Attribuutgegevens
         PubEAA->>PubEAA: Kwalificeer attribuutgegevens
-        PubEAA-->>Wallet: PuB-EAA credential<br/>(SD-JWT VC · ISO 18013-5,<br/>gezegeld door overheidsinstantie)
+        PubEAA-->>Wallet: PuB-EAA credential<br/>(SD-JWT VC · ISO 18013-5,<br/>QESeal door overheidsinstantie)
         Wallet-->>Burger: PuB-EAA opgeslagen in wallet
     end
 
@@ -33,13 +35,16 @@ sequenceDiagram
     rect rgb(238, 237, 254)
         Burger->>Wallet: Vraag attribuut op (OID4VCI initiate)
         Wallet->>QTSP: Credential Request (OID4VCI)
-        QTSP->>Wallet: Authenticatieverzoek
-        Wallet->>Burger: Authenticatieverzoek
-        Wallet->>QTSP: Athenticatie (met BSN)
         Note over QTSP: QTSP verifieert attribuut<br/>via verificatiedienst
         QTSP->>VerifDienst: Verificatieverzoek
         Note over VerifDienst: Verificatiedienst: aangeboden<br/>door bron of centraal via GBO
-        VerifDienst->>Bron: Bevraag bron
+        VerifDienst->>Auth: Autorisatieverzoek
+        Auth->>Wallet: Authenticatie- & autorisatieverzoek
+        Wallet->>Burger: Toont verzoek & vraagt consent
+        Burger->>Wallet: Geeft consent & presenteert PID / eID
+        Wallet->>Auth: Authenticatie / consent (OID4VCP met PID / eID)
+        Auth->>VerifDienst: Autorisatie (incl. identificatie burger)
+        VerifDienst->>Bron: Bevraag bron (met access token)
         Bron-->>VerifDienst: Attribuutgegevens
         VerifDienst-->>QTSP: Geverifieerd attribuut
         QTSP-->>Wallet: QEAA credential<br/>(SD-JWT VC · ISO 18013-5,<br/>QES/QESeal door QTSP)
@@ -55,6 +60,3 @@ sequenceDiagram
     end
 
 ```
-
-<figcaption>Gegevensverzoek van burger om credential via wallet te delen</figcaption>
-</figure>

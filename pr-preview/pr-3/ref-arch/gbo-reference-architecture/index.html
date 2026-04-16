@@ -8,21 +8,29 @@
       
       
       
+        <link rel="canonical" href="https://ictu.github.io/gbo/ref-arch/gbo-reference-architecture/">
+      
       
         <link rel="prev" href="../../psa/vraagstukken/">
       
       
       
+        
+      
+      
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Reference architecture - PSA GBO</title>
+        <title>Reference architecture - Documentatie GBO</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -61,17 +69,23 @@
     
       <link rel="stylesheet" href="../../stylesheets/pdf.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-    
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -100,21 +114,21 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="PSA GBO" class="md-header__button md-logo" aria-label="PSA GBO" data-md-component="logo">
+    <a href="../.." title="Documentatie GBO" class="md-header__button md-logo" aria-label="Documentatie GBO" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            PSA GBO
+            Documentatie GBO
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -127,37 +141,65 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Zoeken" placeholder="Zoeken" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Zoeken">
         
         <button type="reset" class="md-search__icon md-icon" title="Leegmaken" aria-label="Leegmaken" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Zoeken initialiseren
@@ -168,7 +210,20 @@
     </div>
   </div>
 </div>
+      
     
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ictu/gbo" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ictu/gbo
+  </div>
+</a>
+      </div>
     
   </nav>
   
@@ -193,38 +248,32 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigatie" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigatie" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="PSA GBO" class="md-nav__button md-logo" aria-label="PSA GBO" data-md-component="logo">
+    <a href="../.." title="Documentatie GBO" class="md-nav__button md-logo" aria-label="Documentatie GBO" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    PSA GBO
+    Documentatie GBO
   </label>
   
-  <ul class="md-nav__list" data-md-scrollfix>
+    <div class="md-nav__source">
+      <a href="https://github.com/ictu/gbo" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
     
-      
-      
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ictu/gbo
+  </div>
+</a>
+    </div>
   
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../voorblad/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Voorblad
-  </span>
-  
-
-      </a>
-    </li>
-  
-
+  <ul class="md-nav__list" data-md-scrollfix>
     
       
       
@@ -236,9 +285,16 @@
       <a href="../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Over dit document
+    
+  
+    Over deze repository
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -252,6 +308,7 @@
   
   
   
+    
     
     
     
@@ -265,15 +322,113 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Globaal ontwerp
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Globaal ontwerp
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ontwerp/concept-globaal-ontwerp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Globaal ontwerp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     PSA
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -282,9 +437,41 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            PSA
+            
+  
+    PSA
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../psa/voorblad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Voorblad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -296,9 +483,16 @@
       <a href="../../psa/inleiding/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Inleiding
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -317,9 +511,16 @@
       <a href="../../psa/context/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Context
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -338,9 +539,16 @@
       <a href="../../psa/architectuurprincipes/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Architectuurprincipes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -359,9 +567,16 @@
       <a href="../../psa/ontwerpprincipes/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Ontwerpprincipes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -380,9 +595,16 @@
       <a href="../../psa/ecosysteem/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Ecosysteem en oplossingsrichting
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -401,9 +623,16 @@
       <a href="../../psa/interactiepatronen/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Interactiepatronen
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -422,9 +651,16 @@
       <a href="../../psa/generieke-functies/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Logische architectuur
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -443,9 +679,16 @@
       <a href="../../psa/capabilities/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Capabilities
+    
+  
+    Stelselfuncties
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -464,9 +707,16 @@
       <a href="../../psa/realisatiestrategie/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Realisatiestrategie
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -485,9 +735,16 @@
       <a href="../../psa/vraagstukken/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Open Vraagstukken en ontwerpkeuzes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -514,6 +771,7 @@
     
     
     
+    
       
         
         
@@ -530,9 +788,16 @@
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Technisch ontwerp
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -541,7 +806,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Technisch ontwerp
+            
+  
+    Technisch ontwerp
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -564,9 +833,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Reference architecture
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -575,9 +851,16 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Reference architecture
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -600,7 +883,9 @@
         <li class="md-nav__item">
   <a href="#executive-summary" class="md-nav__link">
     <span class="md-ellipsis">
-      Executive Summary
+      
+        Executive Summary
+      
     </span>
   </a>
   
@@ -609,7 +894,9 @@
         <li class="md-nav__item">
   <a href="#architecture-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Architecture Overview
+      
+        Architecture Overview
+      
     </span>
   </a>
   
@@ -618,7 +905,9 @@
         <li class="md-nav__item">
   <a href="#core-design-decisions" class="md-nav__link">
     <span class="md-ellipsis">
-      Core Design Decisions
+      
+        Core Design Decisions
+      
     </span>
   </a>
   
@@ -627,7 +916,9 @@
         <li class="md-nav__item">
   <a href="#component-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Component Architecture
+      
+        Component Architecture
+      
     </span>
   </a>
   
@@ -656,74 +947,17 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhoudsopgave
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#executive-summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Executive Summary
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architecture-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Architecture Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-design-decisions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Core Design Decisions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#component-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      Component Architecture
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+
+
+  
+  
 
 
 <h1 id="gbo-reference-architecture">GBO Reference Architecture<a class="headerlink" href="#gbo-reference-architecture" title="Permanent link">&para;</a></h1>
@@ -785,7 +1019,7 @@
 </table>
 <hr />
 <h2 id="architecture-overview">Architecture Overview<a class="headerlink" href="#architecture-overview" title="Permanent link">&para;</a></h2>
-<pre class="mermaid"><code>
+<div class="mermaid">
 graph TB
     subgraph Consumers
         direction TB
@@ -873,7 +1107,7 @@ graph TB
     style WALLET fill:#1a3c4d,stroke:#333,color:#fff
     style EU_PROC fill:#1a3c4d,stroke:#333,color:#fff
     style GOV fill:#1a3c4d,stroke:#333,color:#fff
-    style QTSP fill:#1a3c4d,stroke:#333,color:#fff</code></pre>
+    style QTSP fill:#1a3c4d,stroke:#333,color:#fff</div>
 <p>The architecture separates concerns cleanly:</p>
 <ul>
 <li><strong>Bronhouders</strong> expose a single GraphQL API behind an FSC Inway with PBAC enforcement. They do not implement trajectory-specific protocols. Each bronhouder runs a federated PDP (OPA/Rego) loaded with centrally-authored, signed policy bundles.</li>
@@ -1071,7 +1305,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
 </tbody>
 </table>
 <p>Every data request passes through all five checks as a pipeline:</p>
-<pre class="mermaid"><code>graph LR
+<div class="mermaid">graph LR
     REQ[Request] --&gt; C1
     C1["① Org Identity&lt;br/&gt;mTLS + PKI-O X.509"] --&gt; C2
     C2["② Org Permission&lt;br/&gt;FSC Contract + JWT"] --&gt; C3
@@ -1084,7 +1318,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
     style C2 fill:#2d5f8a,stroke:#333,color:#fff
     style C3 fill:#8b3a8b,stroke:#333,color:#fff
     style C4 fill:#8a6d2d,stroke:#333,color:#fff
-    style C5 fill:#8a2d2d,stroke:#333,color:#fff</code></pre>
+    style C5 fill:#8a2d2d,stroke:#333,color:#fff</div>
 <p><strong>Policy-driven FSC Manager</strong>: The FSC Manager is upgraded from a simple grant lookup to a <strong>policy-driven token issuer</strong> — it runs its own OPA/Rego PDP, loaded from the same PAP as the bronhouder PDP, with access to PIPs for organizational attribute verification. This solves two problems at once:</p>
 <ol>
 <li><strong>Organizational attributes</strong> — PKI-O proves <em>who</em> (OIN), but not <em>what kind</em> of organization. The Manager's PDP queries sector PIPs (KvK SBI codes, professional registers like KNB for notarissen, BIG for healthcare) to verify "this OIN is a notaris" before issuing a JWT with a <code>sector</code> claim.</li>
@@ -1119,7 +1353,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
 </tbody>
 </table>
 <p><strong>Policy lifecycle</strong>: Policies are authored centrally (GBO Gremium), stored in Git, built into signed OPA bundles, published to an OCI registry that acts as the <strong>PAP (Policy Administration Point)</strong>, and pulled by each bronhouder's PDP independently at regular intervals.</p>
-<pre class="mermaid"><code>graph LR
+<div class="mermaid">graph LR
     subgraph BUILD["Central — Policy Distribution"]
         GOV["GBO Gremium"] --&gt;|"author"| GIT["Git repo"]
         GIT --&gt;|"merge + CI"| OCI["PAP — OCI Registry&lt;br/&gt;signed bundles"]
@@ -1143,7 +1377,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
 
     style BUILD fill:#1a2a3a,stroke:#48a,color:#fff
     style RUNTIME fill:#1a3a1a,stroke:#4a4,color:#fff
-    style PIPS fill:#3a1a3a,stroke:#a4a,color:#fff</code></pre>
+    style PIPS fill:#3a1a3a,stroke:#a4a,color:#fff</div>
 <p>All authorization evidence -- consent records (DvTP), legal basis (OOTS, domestic law-based), wallet presentations (EUDI) -- is translated into AuthZEN Subject/Action/Resource/Context evaluations at the PEP, then evaluated by OPA/Rego policies:</p>
 <table>
 <thead>
@@ -1199,7 +1433,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
 <h2 id="component-architecture">Component Architecture<a class="headerlink" href="#component-architecture" title="Permanent link">&para;</a></h2>
 <h3 id="graphql-schema-registry-scope-driven-field-authorization">GraphQL Schema Registry + Scope-Driven Field Authorization<a class="headerlink" href="#graphql-schema-registry-scope-driven-field-authorization" title="Permanent link">&para;</a></h3>
 <p>Each bronhouder publishes a GraphQL schema describing their data. The <strong>dienstencatalogus</strong> defines which fields are allowed per scope — not as static query templates, but as field allowlists that the PDP evaluates against the parsed query AST at runtime. This follows the approach proven by nID/iWlz, extended with field-level scope enforcement for DvTP's data minimization requirements.</p>
-<pre class="mermaid"><code>graph LR
+<div class="mermaid">graph LR
     subgraph "Schema Registry (GBO Catalogus)"
         SCHEMA_BD["Belastingdienst (BRI): InkomensgegevensPerJaar, Aanslag"]
         SCHEMA_DUO["DUO: Diploma, Inschrijving, Studieschuld"]
@@ -1214,7 +1448,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
 
     S1 --&gt;|"subset of"| SCHEMA_BD
     S2 --&gt;|"subset of"| SCHEMA_DUO
-    S3 --&gt;|"subset of"| SCHEMA_UWV</code></pre>
+    S3 --&gt;|"subset of"| SCHEMA_UWV</div>
 <p>The PDP uses OPA's built-in <code>graphql.parse_query()</code> to parse the incoming query into an AST, then enforces two checks:</p>
 <ol>
 <li><strong>Scope check (field axis)</strong>: every field in the query's selection set must appear in the allowed field set for the granted scopes in the dienstencatalogus</li>
@@ -1326,7 +1560,7 @@ type InkomensgegevensPerJaar {
 </tbody>
 </table>
 <h3 id="peppdppip-authorization-chain">PEP/PDP/PIP Authorization Chain<a class="headerlink" href="#peppdppip-authorization-chain" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TB
+<div class="mermaid">graph TB
     REQ["Consumer request&lt;br/&gt;mTLS + PKI-O cert"] --&gt; MGR
 
     subgraph "Token Issuance (concerns ① ②)"
@@ -1365,7 +1599,7 @@ type InkomensgegevensPerJaar {
     style S_PIP fill:#3a1a3a,stroke:#a4a,color:#fff
     style PIP_C fill:#3a1a3a,stroke:#a4a,color:#fff
     style BUNDLE fill:#1a3a1a,stroke:#4a4,color:#fff
-    style M_BUNDLE fill:#1a3a1a,stroke:#4a4,color:#fff</code></pre>
+    style M_BUNDLE fill:#1a3a1a,stroke:#4a4,color:#fff</div>
 <p><strong>The core GBO authorization policy (Rego pseudocode)</strong>:</p>
 <p>This follows the two-axis model: scopes (field-level) + constraints (record-level), using OPA's built-in <code>graphql.parse_query()</code> for AST inspection — the same approach proven in production by nID/iWlz.</p>
 <p>```rego
@@ -1464,7 +1698,7 @@ valid_access_basis if { valid_legal_basis }</p>
 </table>
 <p>The scope axis is necessary because DvTP serves private-sector consumers who should only see the specific fields covered by the citizen's consent. The constraint axis ensures queries are bound to the correct citizen and organization. Neither alone is sufficient.</p>
 <h3 id="oots-as4-bridge">OOTS AS4 Bridge<a class="headerlink" href="#oots-as4-bridge" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TB
+<div class="mermaid">graph TB
     subgraph "Cross-border (EU)"
         EU_AP[Member State Access Points]
     end
@@ -1487,7 +1721,7 @@ valid_access_basis if { valid_legal_basis }</p>
     TRANSLATOR -.-&gt;|"publish"| SMP_PUB
 
     style DOMIBUS fill:#2d7a2d,stroke:#333,color:#fff
-    style TRANSLATOR fill:#2d7a2d,stroke:#333,color:#fff</code></pre>
+    style TRANSLATOR fill:#2d7a2d,stroke:#333,color:#fff</div>
 <p><strong>OOTS bridge specifications</strong>:</p>
 <table>
 <thead>
@@ -1526,7 +1760,7 @@ valid_access_basis if { valid_legal_basis }</p>
 <p>The bridge translates OOTS requests into FSC REST requests toward the bronhouder. The bronhouder sees a standard FSC request regardless of whether it originated from a Dutch dienstverlener (DvTP) or a German Einwohnermeldeamt (OOTS).</p>
 <h3 id="pubeaa-provider">PubEAA Provider<a class="headerlink" href="#pubeaa-provider" title="Permanent link">&para;</a></h3>
 <p>The PubEAA Provider is shared GBO edge infrastructure that issues PuB-EAAs (Public Body Electronic Attestations of Attributes) on behalf of bronhouders. Without it, the Netherlands would rely entirely on commercial QTSPs for issuing attestations based on government sources -- a supply-chain consideration worth addressing.</p>
-<pre class="mermaid"><code>graph TB
+<div class="mermaid">graph TB
     subgraph "Citizen"
         WALLET[EUDI Wallet]
     end
@@ -1547,7 +1781,7 @@ valid_access_basis if { valid_legal_basis }</p>
     PUBEAA --&gt;|"query via FSC"| FSC_IN
     PUBEAA -.-&gt;|"registered as PuB-EAA issuer"| LOTE
 
-    style PUBEAA fill:#1a5276,stroke:#333,color:#fff</code></pre>
+    style PUBEAA fill:#1a5276,stroke:#333,color:#fff</div>
 <p><strong>Key properties</strong>:</p>
 <table>
 <thead>
@@ -1586,7 +1820,7 @@ valid_access_basis if { valid_legal_basis }</p>
 <p>The PubEAA Provider does not change the bronhouder's responsibilities. It is a shared service that handles the OpenID4VCI protocol, credential formatting (SD-JWT VC / mdoc), and qualified seal signing. The bronhouder only needs to expose a GraphQL API behind an FSC Inway -- the same requirement as for all other trajectories.</p>
 <h3 id="authentic-source-interface-etsi-ts-119-478">Authentic Source Interface (ETSI TS 119 478)<a class="headerlink" href="#authentic-source-interface-etsi-ts-119-478" title="Permanent link">&para;</a></h3>
 <p>Article 45e of the amended eIDAS Regulation obliges EU Member States to ensure that QTSPs can verify attributes against authentic sources within the public sector, at the request of the user. ETSI TS 119 478 specifies the interfaces for this. GBO implements the Authentic Source Interface as an edge layer component on top of existing infrastructure.</p>
-<pre class="mermaid"><code>graph TB
+<div class="mermaid">graph TB
     subgraph "Citizen"
         USER_WALLET[EUDI Wallet / eID]
     end
@@ -1621,7 +1855,7 @@ valid_access_basis if { valid_legal_basis }</p>
     ASIP_NODE --&gt;|"verified / not-verified"| QTSP_NODE
 
     style ASIP_NODE fill:#1a5276,stroke:#333,color:#fff
-    style AZS_NODE fill:#1a5276,stroke:#333,color:#fff</code></pre>
+    style AZS_NODE fill:#1a5276,stroke:#333,color:#fff</div>
 <p><strong>Interfaces implemented</strong>:</p>
 <table>
 <thead>
@@ -1665,7 +1899,7 @@ valid_access_basis if { valid_legal_basis }</p>
 <h2 id="demo-interaction-1-dvtp-hypotheekverlener-queries-income-data">Demo Interaction 1: DvTP -- Hypotheekverlener Queries Income Data<a class="headerlink" href="#demo-interaction-1-dvtp-hypotheekverlener-queries-income-data" title="Permanent link">&para;</a></h2>
 <p><strong>Scenario</strong>: Jan wants a mortgage. His hypotheekverlener (mortgage provider) needs his income data from the Belastingdienst. Jan must give explicit consent.</p>
 <h3 id="full-sequence">Full Sequence<a class="headerlink" href="#full-sequence" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>sequenceDiagram
+<div class="mermaid">sequenceDiagram
     actor Jan as Jan (Burger)
     participant HV as Hypotheekverlener -(Private Dienstverlener)
     participant PORTAL as Toestemmingsportaal -(Government)
@@ -1742,7 +1976,7 @@ valid_access_basis if { valid_legal_basis }</p>
     FSC_I--&gt;&gt;FSC_O: mTLS response
     FSC_O--&gt;&gt;HV: Income data (only consented fields, no BSN)
 
-    HV-&gt;&gt;Jan: "Uw gegevens zijn opgehaald, -we verwerken uw aanvraag."</code></pre>
+    HV-&gt;&gt;Jan: "Uw gegevens zijn opgehaald, -we verwerken uw aanvraag."</div>
 <h3 id="what-the-graphql-request-looks-like">What the GraphQL Request Looks Like<a class="headerlink" href="#what-the-graphql-request-looks-like" title="Permanent link">&para;</a></h3>
 <p>```graphql</p>
 <h1 id="sent-by-hypotheekverlener-via-fsc-belastingdienst-leg-only">Sent by Hypotheekverlener via FSC — Belastingdienst leg only<a class="headerlink" href="#sent-by-hypotheekverlener-via-fsc-belastingdienst-leg-only" title="Permanent link">&para;</a></h1>
@@ -1814,7 +2048,7 @@ DECISION: DENY (reason: "consent_revoked")</code></p>
 <h2 id="demo-interaction-2-eudi-wallet-citizen-stores-income-attestation-via-pubeaa-provider">Demo Interaction 2: EUDI Wallet -- Citizen Stores Income Attestation via PubEAA Provider<a class="headerlink" href="#demo-interaction-2-eudi-wallet-citizen-stores-income-attestation-via-pubeaa-provider" title="Permanent link">&para;</a></h2>
 <p><strong>Scenario</strong>: Jan wants his income data in his EUDI wallet so he can present it to anyone -- not just the hypotheekverlener. He retrieves a PuB-EAA (Public Body Electronic Attestation of Attributes) via the shared PubEAA Provider, which queries the Belastingdienst on his behalf. The PuB-EAA is stored in his wallet.</p>
 <h3 id="issuance-pubeaa-provider-issues-attestation-to-wallet">Issuance -- PubEAA Provider Issues Attestation to Wallet<a class="headerlink" href="#issuance-pubeaa-provider-issues-attestation-to-wallet" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>sequenceDiagram
+<div class="mermaid">sequenceDiagram
     actor Jan as Jan (Burger)
     participant WALLET as EUDI Wallet App
     participant PUBEAA as PubEAA Provider -(GBO Edge)
@@ -1849,13 +2083,13 @@ DECISION: DENY (reason: "consent_revoked")</code></p>
     PUBEAA--&gt;&gt;WALLET: OpenID4VCI Credential Response -(SD-JWT VC or mdoc/CBOR)
     WALLET-&gt;&gt;WALLET: Store attestation
 
-    WALLET-&gt;&gt;Jan: "Inkomensverklaring opgeslagen"</code></pre>
+    WALLET-&gt;&gt;Jan: "Inkomensverklaring opgeslagen"</div>
 <p>Note: Bronhouders can optionally run their own Credential Issuer instead of using the shared PubEAA Provider. The data flow remains the same -- only the issuer endpoint changes.</p>
 <hr />
 <h2 id="demo-interaction-3-gov-to-gov-gemeente-queries-rvig">Demo Interaction 3: Gov-to-Gov -- Gemeente Queries RvIG<a class="headerlink" href="#demo-interaction-3-gov-to-gov-gemeente-queries-rvig" title="Permanent link">&para;</a></h2>
 <p><strong>Scenario</strong>: A gemeente needs to verify a citizen's address data from RvIG (Basisregistratie Personen). This is a government-to-government exchange -- no consent needed, no pseudonymization, just legal-basis authorization over FSC.</p>
 <h3 id="full-sequence_1">Full Sequence<a class="headerlink" href="#full-sequence_1" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>sequenceDiagram
+<div class="mermaid">sequenceDiagram
     participant GEM as Gemeente -(FSC Outway)
     participant FSC_I as FSC Inway -(RvIG)
     participant PEP as PEP
@@ -1874,7 +2108,7 @@ DECISION: DENY (reason: "consent_revoked")</code></p>
     PEP-&gt;&gt;GQL: Execute query template "adresgegevens" -(BSN: 123456789)
     GQL--&gt;&gt;PEP: Address data
     PEP--&gt;&gt;FSC_I: Response + log to Logboek Dataverwerkingen
-    FSC_I--&gt;&gt;GEM: Address data via FSC</code></pre>
+    FSC_I--&gt;&gt;GEM: Address data via FSC</div>
 <p>This is the simplest GBO flow -- it shows the pure backbone without any consent, pseudonymization, or protocol translation. All other trajectories build on this foundation by adding edge-layer components.</p>
 <h3 id="what-the-policy-evaluates">What the Policy Evaluates<a class="headerlink" href="#what-the-policy-evaluates" title="Permanent link">&para;</a></h3>
 <p>```
@@ -1899,7 +2133,7 @@ INPUT:
 <h2 id="demo-interaction-4-citizen-presents-credential-to-relying-party">Demo Interaction 4: Citizen Presents Credential to Relying Party<a class="headerlink" href="#demo-interaction-4-citizen-presents-credential-to-relying-party" title="Permanent link">&para;</a></h2>
 <p><strong>Scenario</strong>: Jan already has his income PuB-EAA in his wallet (from Demo 2). He visits a hypotheekverlener and presents the attestation directly -- no real-time query to the Belastingdienst needed.</p>
 <h3 id="full-sequence_2">Full Sequence<a class="headerlink" href="#full-sequence_2" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>sequenceDiagram
+<div class="mermaid">sequenceDiagram
     actor Jan as Jan (Burger)
     participant WALLET as EUDI Wallet App
     participant HV as Hypotheekverlener -(Relying Party)
@@ -1921,13 +2155,13 @@ INPUT:
 
     HV-&gt;&gt;HV: Verify attestation: -- Signature valid -- Issuer trusted -- Not expired -- Fields present
 
-    HV-&gt;&gt;Jan: "Gegevens ontvangen, -we verwerken uw aanvraag."</code></pre>
+    HV-&gt;&gt;Jan: "Gegevens ontvangen, -we verwerken uw aanvraag."</div>
 <p>The Relying Party verifies the PuB-EAA independently -- no connection to GBO or the bronhouder is needed at presentation time. Trust is established via the EUDI Trusted List: the PubEAA Provider is registered as a qualified PuB-EAA issuer.</p>
 <hr />
 <h2 id="demo-interaction-5-qtsp-verifies-attributes-via-authentic-source-interface">Demo Interaction 5: QTSP Verifies Attributes via Authentic Source Interface<a class="headerlink" href="#demo-interaction-5-qtsp-verifies-attributes-via-authentic-source-interface" title="Permanent link">&para;</a></h2>
 <p><strong>Scenario</strong>: A QTSP wants to issue a QEAA (Qualified Electronic Attestation of Attributes) for Jan's income data. Before issuing, the QTSP must verify the attributes against the authentic source (Belastingdienst), as mandated by Article 45e. Jan authorizes this verification.</p>
 <h3 id="full-sequence_3">Full Sequence<a class="headerlink" href="#full-sequence_3" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>sequenceDiagram
+<div class="mermaid">sequenceDiagram
     actor Jan as Jan (Burger)
     participant WALLET as EUDI Wallet / eID
     participant QTSP as QTSP
@@ -1968,7 +2202,7 @@ INPUT:
 
     Note over QTSP: QTSP now has verified authentic source -confirmation. Issues QEAA.
     QTSP-&gt;&gt;QTSP: Issue QEAA -(qualified electronic seal)
-    QTSP--&gt;&gt;Jan: QEAA stored in wallet</code></pre>
+    QTSP--&gt;&gt;Jan: QEAA stored in wallet</div>
 <p>The Authentic Source Interface acts as a protocol adapter: it translates ETSI TS 119 478 I2 (Verify) requests into GraphQL queries via FSC, compares the QTSP-provided attribute values against the register, and returns a verification result. The bronhouder sees a standard FSC request -- it does not know whether the request came from a DvTP dienstverlener, an OOTS bridge, a PubEAA Provider, or the Authentic Source Interface.</p>
 <hr />
 <h3 id="key-differences-across-trajectories">Key Differences Across Trajectories<a class="headerlink" href="#key-differences-across-trajectories" title="Permanent link">&para;</a></h3>
@@ -2049,7 +2283,7 @@ INPUT:
 <p>The Single Digital Gateway Regulation (EU 2018/1724) mandates cross-border evidence exchange via the Once-Only Technical System (OOTS). This is a legal obligation, not an architectural choice. OOTS uses eDelivery AS4 transport with Domibus Access Points, four-corner routing, and SMP 2.1 discovery.</p>
 <p>GBO must build an AS4 bridge to serve cross-border requests. This bridge translates OOTS AS4 requests into FSC/GraphQL requests toward bronhouders, and returns evidence in OOTS-EDM format.</p>
 <h3 id="oots-bridge-architecture">OOTS Bridge Architecture<a class="headerlink" href="#oots-bridge-architecture" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TB
+<div class="mermaid">graph TB
     subgraph "Cross-Border (EU)"
         OOTS_IN["OOTS AS4 messages from EU Member States"]
     end
@@ -2072,7 +2306,7 @@ INPUT:
     FSC_TRANS -.-&gt;|"publish"| SMP_PUB
 
     style DOMIBUS fill:#2d7a2d,stroke:#333,color:#fff
-    style FSC_TRANS fill:#2d7a2d,stroke:#333,color:#fff</code></pre>
+    style FSC_TRANS fill:#2d7a2d,stroke:#333,color:#fff</div>
 <p>From the bronhouder's perspective, cross-border requests look identical to domestic DvTP requests -- an FSC request with an AuthZEN-evaluable authorization context. Whether it originated from a Dutch hypotheekverlener (DvTP/FSC) or a German Einwohnermeldeamt (OOTS/AS4) is invisible to the source. The bridge handles all translation.</p>
 <p>Domestic dienstverleners use FSC directly. AS4 is reserved for cross-border traffic via the OOTS bridge.</p>
 <hr />
@@ -2160,22 +2394,6 @@ INPUT:
 <li>Build the Authorization Server (I4) using OAuth 2.0 -- citizen authorizes QTSP access via EUDI Wallet or eID (I5)</li>
 <li>Define PDP policies for QTSP verification requests: requester must be on Trusted List, citizen must have authorized, requested attributes must be in scope</li>
 </ol>
-<hr />
-<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">&para;</a></h2>
-<p>This document synthesizes analysis from:</p>
-<ul>
-<li><a href="authorization-models-analysis.md">authorization-models-analysis.md</a> -- Authorization model decomposition: five concerns, protocol-level analysis of iWlz/FSC/FTV/OAuth2/PKI-O/toestemmingsregister, federated PDP design, policy lifecycle, JWT anatomy</li>
-<li><a href="proposals/bsnk-pp-gbo-integration.md">proposals/bsnk-pp-gbo-integration.md</a> -- BSNk PP integration for BSN pseudonymization</li>
-<li><a href="proposals/dvtp-pbac-alignment.md">proposals/dvtp-pbac-alignment.md</a> -- Consent-as-PIP architecture design</li>
-<li><a href="proposals/graphql-pbac.md">proposals/graphql-pbac.md</a> -- GraphQL + PBAC design with iWlz precedent</li>
-<li><a href="conflict-analysis/trust-model-comparison.md">conflict-analysis/trust-model-comparison.md</a> -- Five trust models compared</li>
-<li><a href="synthesis/gbo-synthesis.md">synthesis/gbo-synthesis.md</a> -- Full per-layer synthesis with recommendations</li>
-<li><a href="../02-normalized/dvtp/">../02-normalized/dvtp/</a> -- DvTP protocol analysis (17 components, 5 flows)</li>
-<li><a href="../02-normalized/eudi/">../02-normalized/eudi/</a> -- EUDI Wallet ARF v2.7.4+ analysis</li>
-<li><a href="../02-normalized/iwlz/">../02-normalized/iwlz/</a> -- iWlz reference patterns (GraphQL, OPA/Rego)</li>
-<li><a href="../02-normalized/sdg-oots/">../02-normalized/sdg-oots/</a> -- SDG-OOTS reference implementation analysis</li>
-<li><a href="../02-normalized/bsnk-pp/">../02-normalized/bsnk-pp/</a> -- BSNk PP polymorphic pseudonymization analysis</li>
-</ul>
 
 
 
@@ -2195,6 +2413,12 @@ INPUT:
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Terug naar boven
+</button>
         
       </main>
       
@@ -2222,16 +2446,19 @@ INPUT:
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../../js/print-site.js"></script>
       
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
-        <script src="../../javascripts/mermaid-init.js"></script>
+        <script src="../../javascript/mermaid-init.js"></script>
       
     
   </body>
