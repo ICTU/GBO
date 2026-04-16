@@ -911,12 +911,12 @@
 <p>LET OP: Deze versie van het Globaal Ontwerp is nog in ontwikkeling en dient primair voor de discussie en verdere uitwerking van dit ontwerp, de projectstartarchitectuur en het technisch ontwerp. Er kunnen geen rechten aan dit document ontleend worden.</p>
 </blockquote>
 <h1 id="ontwerp-concept-globaal-ontwerp-1-inleiding-en-doel">1 Inleiding en doel<a class="headerlink" href="#ontwerp-concept-globaal-ontwerp-1-inleiding-en-doel" title="Permanent link">&para;</a></h1>
-<p>Het project Gemeenschappelijke Bronontsluiting (GBO) realiseert een aantal stelselfuncties waarmee overheidsgegevens op een interoperabele, veilige, gecontroleerde en privacybeschermende manier beschikbaar worden gesteld aan drie typen afnemers:</p>
-<ul>
-<li>Private dienstverleners op basis van burgertoestemming (DvTP - Data delen via toestemming met private dienstverleners).</li>
-<li>Europese overheden via het Single Digital Gateway/Once Only Technical System (SDG/OOTS).</li>
-<li>Burgers en organisaties via het EDI-Stelsel (eIDAS2/ARF).</li>
-</ul>
+<p>Diverse ontwikkelingen op nationaal (o.a. <a href="https://www.digitaleoverheid.nl/nederlandse-digitaliseringsstrategie-nds/">NDS</a>, <a href="https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/regie-op-gegevens/">Regie op Gegevens</a>, <a href="https://www.digitaleoverheid.nl/overzicht-van-alle-onderwerpen/wetgeving/wet-digitale-overheid/">Wdo</a>) en Europees vlak (o.a. <a href="https://digital-strategy.ec.europa.eu/nl/policies/data-act">Data Act</a>, <a href="https://single-market-economy.ec.europa.eu/single-market/single-digital-gateway_en">SDG</a>, <a href="https://ec.europa.eu/digital-building-blocks/sites/spaces/EUDIGITALIDENTITYWALLET/pages/694487738/EU+Digital+Identity+Wallet+Home">EUDI-Wallet</a>) maken dat gegevens in overheidsbronnen breder en flexibeler gebruikt moeten kunnen worden. De verschillende ontwikkelingen zorgen voor een uitdaging bij de bronhouders: zij moeten verschillende gegevensstromen bedienen met verschillende technologieën en verschillende grondslagen.<br />
+Het afsprakenstelsel <a href="https://realisatieibds.nl/page/view/564cc96c-115e-4e81-b5e6-01c99b1814ec/de-ontwikkeling-van-het-federatief-datastelsel">FDS</a> werkt aan het delen van gegevens binnen de overheid op een eenduidige, veilige en flexibele manier. Maar voor internationale gegevensuitwisselingen, uitwisselingen met private dienstverleners en het uitgeven van credentials biedt FDS (nog) geen oplossingen.  </p>
+<p>Het project Gemeenschappelijke Bronontsluiting (GBO) realiseert stelselfuncties waarmee overheidsgegevens op een interoperabele, veilige, gecontroleerde en privacybeschermende manier beschikbaar worden gesteld aan drie typen afnemers:<br />
+- Private dienstverleners op basis van burgertoestemming (DvTP - Data delen via toestemming met private dienstverleners).
+- Europese overheden via het Single Digital Gateway/Once Only Technical System (SDG/OOTS).
+- Burgers en organisaties via het EDI-Stelsel (eIDAS2/ARF).</p>
 <figure>
 <pre class="mermaid"><code>
 flowchart LR
@@ -943,10 +943,13 @@ DvTP --&gt; SDG
 </figure>
 
 <p>Het doel van GBO is om interoperabiliteit en hergebruik bij gegevensuitwisselingen te bevorderen en op die manier de implementatielast bij partijen - zowel bronhouders als afnemers - te verlagen. Dit zowel bij gegevensuitwisselingen tussen overheidspartijen als tussen overheid en private partijen.</p>
-<p>GBO is geen nieuw, losstaand stelsel. Het sluit aan op het Federatief Datastelsel (FDS) als basisafsprakenstelsel en Trusted Information Partners (TIP) voor publiek-private interacties. Het breidt gericht de afspraken, standaarden en voorzieningen binnen deze afsprakenstelsels uit die nodig zijn voor de drie toepassingen.<br />
-In dit document is nog wel sprake van een GBO-stelsel en GBO-voorzieningen, maar dat is enkel om het stuk leesbaar te houden. Alle afspraken en voorzieningen moeten landen in bestaande afsprakenstelsels, zoals <a href="https://realisatieibds.nl/groups/view/0056c9ef-5c2e-44f9-a998-e735f1e9ccaa/federatief-datastelsel/wiki/view/d0d0c6b6-b1bd-41a4-962a-b1e628c1ee82/afsprakenstelsel-fds">FDS</a>, <a href="https://www.digitaleoverheid.nl/mido/generieke-digitale-infrastructuur-gdi/">GDI</a> en <a href="https://www.trustedinformationpartners.nl">TIP</a>.</p>
-<p>Centrale begrippen zijn: een juridische grondslag als afdwingbare basis voor gegevensverstrekking, dataminimalisatie via selectieve bevraging en generieke uniforme functies voor ontsluiting zodat bronhouders maar één keer hoeven aan te sluiten.</p>
-<p>De juridische basis wordt gevormd door een wettelijk kader en lagere regelgeving. Zolang die grondslag nog niet in werking is getreden, lopen technische uitwerking en wetgevingstraject parallel aan elkaar.</p>
+<p>GBO is geen nieuw, losstaand stelsel. Het sluit aan op het Federatief Datastelsel (FDS) als basisafsprakenstelsel en <a href="https://www.trustedinformationpartners.nl">Trusted Information Partners</a> voor publiek-private interacties. Het breidt gericht de afspraken, standaarden en voorzieningen binnen deze afsprakenstelsels uit die nodig zijn voor de drie toepassingen.<br />
+In dit document is nog wel sprake van een GBO-stelsel en GBO-voorzieningen, maar dat is enkel om het stuk leesbaar te houden. Alle afspraken en voorzieningen moeten landen in bestaande afsprakenstelsels.</p>
+<p>De juridische basis wordt gevormd door een wettelijk kader en lagere regelgeving. Zolang die grondslag nog niet in werking is getreden, lopen technische uitwerking en wetgevingstraject parallel aan elkaar.  </p>
+<p>In dit globaal ontwerp wordt op hoofdlijnen uiteengezet welke stelselvoorzieningen nodig zijn en hoe deze ingericht kunnen worden. Het doel van dit globaal ontwerp is het ophalen van input op de geschetste oplossingsrichting en het verder uitwerken van het ontwerp. Die uitwerking gebeurt in de volgende stukken:<br />
+- <a href="https://ictu.github.io/GBO/psa/inleiding/">Projectstartarchitectuur</a>: kaders en richtlijnen voor het ontwerp en de inrichting van de stelselvoorzieningen;<br />
+- <a href="https://ictu.github.io/GBO/ref-arch/gbo-reference-architecture/">Technisch ontwerp</a>: technisch ontwerp van de benodigde voorzieningen;<br />
+- <a href="#ontwerp-concept-globaal-ontwerp-nog-op-te-stellen">Informatiemodellen</a>: informatie- en gegevensmodellen van de gegevens die uitgewisseld worden - zowel de gegevens die opgevraagd worden, als gegevens die nodig zijn voor veilige, betrouwbare uitwisseling (zoals toestemmingen, "trusted lists", etc.).  </p>
 <h2 id="ontwerp-concept-globaal-ontwerp-relatie-met-bestaande-stelsels">Relatie met bestaande stelsels<a class="headerlink" href="#ontwerp-concept-globaal-ontwerp-relatie-met-bestaande-stelsels" title="Permanent link">&para;</a></h2>
 <p>GBO hergebruikt maximaal wat er al is:</p>
 <ul>
