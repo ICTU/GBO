@@ -8,21 +8,29 @@
       
       
       
+        <link rel="canonical" href="https://ictu.github.io/gbo/ref-arch/gbo-reference-architecture/">
+      
       
         <link rel="prev" href="../../psa/vraagstukken/">
       
       
       
+        
+      
+      
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Reference architecture - PSA GBO</title>
+        <title>Reference architecture - Documentatie GBO</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -61,17 +69,23 @@
     
       <link rel="stylesheet" href="../../stylesheets/pdf.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
-    
   </head>
   
   
-    <body dir="ltr">
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -100,21 +114,21 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="PSA GBO" class="md-header__button md-logo" aria-label="PSA GBO" data-md-component="logo">
+    <a href="../.." title="Documentatie GBO" class="md-header__button md-logo" aria-label="Documentatie GBO" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            PSA GBO
+            Documentatie GBO
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -127,37 +141,65 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Zoeken" placeholder="Zoeken" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Zoeken">
         
         <button type="reset" class="md-search__icon md-icon" title="Leegmaken" aria-label="Leegmaken" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Zoeken initialiseren
@@ -168,7 +210,20 @@
     </div>
   </div>
 </div>
+      
     
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ictu/gbo" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ictu/gbo
+  </div>
+</a>
+      </div>
     
   </nav>
   
@@ -193,38 +248,32 @@
 
 
 
-<nav class="md-nav md-nav--primary" aria-label="Navigatie" data-md-level="0">
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigatie" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="PSA GBO" class="md-nav__button md-logo" aria-label="PSA GBO" data-md-component="logo">
+    <a href="../.." title="Documentatie GBO" class="md-nav__button md-logo" aria-label="Documentatie GBO" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    PSA GBO
+    Documentatie GBO
   </label>
   
-  <ul class="md-nav__list" data-md-scrollfix>
+    <div class="md-nav__source">
+      <a href="https://github.com/ictu/gbo" title="Ga naar repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
     
-      
-      
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ictu/gbo
+  </div>
+</a>
+    </div>
   
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../voorblad/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Voorblad
-  </span>
-  
-
-      </a>
-    </li>
-  
-
+  <ul class="md-nav__list" data-md-scrollfix>
     
       
       
@@ -236,9 +285,16 @@
       <a href="../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Over dit document
+    
+  
+    Over deze repository
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -252,6 +308,7 @@
   
   
   
+    
     
     
     
@@ -265,15 +322,113 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Globaal ontwerp
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Globaal ontwerp
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ontwerp/concept-globaal-ontwerp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Globaal ontwerp
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     PSA
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -282,9 +437,41 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            PSA
+            
+  
+    PSA
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../psa/voorblad/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Voorblad
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -296,9 +483,16 @@
       <a href="../../psa/inleiding/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Inleiding
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -317,9 +511,16 @@
       <a href="../../psa/context/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Context
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -338,9 +539,16 @@
       <a href="../../psa/architectuurprincipes/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Architectuurprincipes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -359,9 +567,16 @@
       <a href="../../psa/ontwerpprincipes/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Ontwerpprincipes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -380,9 +595,16 @@
       <a href="../../psa/ecosysteem/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Ecosysteem en oplossingsrichting
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -401,9 +623,16 @@
       <a href="../../psa/interactiepatronen/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Interactiepatronen
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -422,9 +651,16 @@
       <a href="../../psa/generieke-functies/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Logische architectuur
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -443,9 +679,16 @@
       <a href="../../psa/capabilities/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Capabilities
+    
+  
+    Stelselfuncties
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -464,9 +707,16 @@
       <a href="../../psa/realisatiestrategie/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Realisatiestrategie
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -485,9 +735,16 @@
       <a href="../../psa/vraagstukken/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Open Vraagstukken en ontwerpkeuzes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -514,6 +771,7 @@
     
     
     
+    
       
         
         
@@ -530,9 +788,16 @@
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Technisch ontwerp
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -541,7 +806,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Technisch ontwerp
+            
+  
+    Technisch ontwerp
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -564,9 +833,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     Reference architecture
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -575,9 +851,16 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Reference architecture
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -600,7 +883,9 @@
         <li class="md-nav__item">
   <a href="#executive-summary" class="md-nav__link">
     <span class="md-ellipsis">
-      Executive Summary
+      
+        Executive Summary
+      
     </span>
   </a>
   
@@ -609,7 +894,9 @@
         <li class="md-nav__item">
   <a href="#architecture-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Architecture Overview
+      
+        Architecture Overview
+      
     </span>
   </a>
   
@@ -618,7 +905,9 @@
         <li class="md-nav__item">
   <a href="#core-design-decisions" class="md-nav__link">
     <span class="md-ellipsis">
-      Core Design Decisions
+      
+        Core Design Decisions
+      
     </span>
   </a>
   
@@ -627,7 +916,9 @@
         <li class="md-nav__item">
   <a href="#component-architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Component Architecture
+      
+        Component Architecture
+      
     </span>
   </a>
   
@@ -636,7 +927,9 @@
         <li class="md-nav__item">
   <a href="#demo-interaction-1-dvtp-hypotheekverlener-queries-income-data" class="md-nav__link">
     <span class="md-ellipsis">
-      Demo Interaction 1: DvTP -- Hypotheekverlener Queries Income Data
+      
+        Demo Interaction 1: DvTP -- Hypotheekverlener Queries Income Data
+      
     </span>
   </a>
   
@@ -645,7 +938,9 @@
         <li class="md-nav__item">
   <a href="#demo-interaction-2-eudi-wallet-citizen-stores-income-attestation-via-pubeaa-provider" class="md-nav__link">
     <span class="md-ellipsis">
-      Demo Interaction 2: EUDI Wallet -- Citizen Stores Income Attestation via PubEAA Provider
+      
+        Demo Interaction 2: EUDI Wallet -- Citizen Stores Income Attestation via PubEAA Provider
+      
     </span>
   </a>
   
@@ -654,7 +949,9 @@
         <li class="md-nav__item">
   <a href="#demo-interaction-3-gov-to-gov-gemeente-queries-rvig" class="md-nav__link">
     <span class="md-ellipsis">
-      Demo Interaction 3: Gov-to-Gov -- Gemeente Queries RvIG
+      
+        Demo Interaction 3: Gov-to-Gov -- Gemeente Queries RvIG
+      
     </span>
   </a>
   
@@ -663,7 +960,9 @@
         <li class="md-nav__item">
   <a href="#demo-interaction-4-citizen-presents-credential-to-relying-party" class="md-nav__link">
     <span class="md-ellipsis">
-      Demo Interaction 4: Citizen Presents Credential to Relying Party
+      
+        Demo Interaction 4: Citizen Presents Credential to Relying Party
+      
     </span>
   </a>
   
@@ -672,7 +971,9 @@
         <li class="md-nav__item">
   <a href="#demo-interaction-5-qtsp-verifies-attributes-via-authentic-source-interface" class="md-nav__link">
     <span class="md-ellipsis">
-      Demo Interaction 5: QTSP Verifies Attributes via Authentic Source Interface
+      
+        Demo Interaction 5: QTSP Verifies Attributes via Authentic Source Interface
+      
     </span>
   </a>
   
@@ -681,7 +982,9 @@
         <li class="md-nav__item">
   <a href="#sdg-oots-cross-border-bridge" class="md-nav__link">
     <span class="md-ellipsis">
-      SDG-OOTS Cross-Border Bridge
+      
+        SDG-OOTS Cross-Border Bridge
+      
     </span>
   </a>
   
@@ -690,16 +993,9 @@
         <li class="md-nav__item">
   <a href="#gap-analysis-recommendations" class="md-nav__link">
     <span class="md-ellipsis">
-      Gap Analysis &amp; Recommendations
-    </span>
-  </a>
-  
-</li>
       
-        <li class="md-nav__item">
-  <a href="#sources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sources
+        Gap Analysis &amp; Recommendations
+      
     </span>
   </a>
   
@@ -728,146 +1024,17 @@
               </div>
             
             
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhoudsopgave
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#executive-summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Executive Summary
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#architecture-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Architecture Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-design-decisions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Core Design Decisions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#component-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      Component Architecture
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demo-interaction-1-dvtp-hypotheekverlener-queries-income-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Demo Interaction 1: DvTP -- Hypotheekverlener Queries Income Data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demo-interaction-2-eudi-wallet-citizen-stores-income-attestation-via-pubeaa-provider" class="md-nav__link">
-    <span class="md-ellipsis">
-      Demo Interaction 2: EUDI Wallet -- Citizen Stores Income Attestation via PubEAA Provider
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demo-interaction-3-gov-to-gov-gemeente-queries-rvig" class="md-nav__link">
-    <span class="md-ellipsis">
-      Demo Interaction 3: Gov-to-Gov -- Gemeente Queries RvIG
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demo-interaction-4-citizen-presents-credential-to-relying-party" class="md-nav__link">
-    <span class="md-ellipsis">
-      Demo Interaction 4: Citizen Presents Credential to Relying Party
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#demo-interaction-5-qtsp-verifies-attributes-via-authentic-source-interface" class="md-nav__link">
-    <span class="md-ellipsis">
-      Demo Interaction 5: QTSP Verifies Attributes via Authentic Source Interface
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sdg-oots-cross-border-bridge" class="md-nav__link">
-    <span class="md-ellipsis">
-      SDG-OOTS Cross-Border Bridge
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gap-analysis-recommendations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gap Analysis &amp; Recommendations
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sources" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sources
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
+
+
+  
+  
 
 
 <h1 id="gbo-reference-architecture">GBO Reference Architecture<a class="headerlink" href="#gbo-reference-architecture" title="Permanent link">&para;</a></h1>
@@ -929,7 +1096,7 @@
 </table>
 <hr />
 <h2 id="architecture-overview">Architecture Overview<a class="headerlink" href="#architecture-overview" title="Permanent link">&para;</a></h2>
-<pre class="mermaid"><code>
+<div class="mermaid">
 graph TB
     subgraph Consumers
         direction TB
@@ -1017,7 +1184,7 @@ graph TB
     style WALLET fill:#1a3c4d,stroke:#333,color:#fff
     style EU_PROC fill:#1a3c4d,stroke:#333,color:#fff
     style GOV fill:#1a3c4d,stroke:#333,color:#fff
-    style QTSP fill:#1a3c4d,stroke:#333,color:#fff</code></pre>
+    style QTSP fill:#1a3c4d,stroke:#333,color:#fff</div>
 <p>The architecture separates concerns cleanly:</p>
 <ul>
 <li><strong>Bronhouders</strong> expose a single GraphQL API behind an FSC Inway with PBAC enforcement. They do not implement trajectory-specific protocols. Each bronhouder runs a federated PDP (OPA/Rego) loaded with centrally-authored, signed policy bundles.</li>
@@ -1134,20 +1301,20 @@ graph TB
 <p><strong>Decision</strong>: Private dienstverleners never see or process the BSN. The Toestemmingsportaal uses BSNk PP (Logius' production polymorphic pseudonymization infrastructure) to generate per-party encrypted pseudonyms. Bronhouders receive the actual BSN through the identity path. The consent_id serves as the opaque bridge between the two worlds.</p>
 <p><strong>The problem</strong>: Private parties (hypotheekverleners, insurers) are not legally allowed to process BSN (Wabb/Wabvpz restrictions). Yet DvTP requires them to query government registers about a specific citizen. The naive solution -- passing BSN to the private party -- is illegal and creates a universal correlation key.</p>
 <p><strong>How BSNk PP solves it</strong>: BSNk PP uses modified El Gamal encryption on elliptic curves (Eric Verheul, Radboud University) to transform a BSN into recipient-specific, irreversible pseudonyms. The Pseudonymization Facility transforms encrypted curve points without ever seeing the plaintext BSN.</p>
-<div class="highlight"><pre><span></span><code>Citizen authenticates → DigiD → BSN (government-internal)
-                                  ↓
-                        BSNk Activate: BSN → PI + PP (encrypted curve points)
-                                  ↓
-                        Consent portal stores PI + PP in consent record
-                                  ↓
-         ┌────────────────────────┴────────────────────────┐
-         ↓                                                 ↓
-BSNk Transform: PP → EP                    BSNk Transform: PI → EI
-(for private dienstverlener)                (for bronhouder, via PEP)
-         ↓                                                 ↓
-Dienstverlener decrypts EP                  PEP decrypts EI → BSN
-→ party-specific pseudonym                  → queries bronhouder by BSN
-(cannot derive BSN)                         (government-internal)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Citizen authenticates → DigiD → BSN (government-internal)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                                  ↓
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                        BSNk Activate: BSN → PI + PP (encrypted curve points)
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                                  ↓
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                        Consent portal stores PI + PP in consent record
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                                  ↓
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>         ┌────────────────────────┴────────────────────────┐
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>         ↓                                                 ↓
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>BSNk Transform: PP → EP                    BSNk Transform: PI → EI
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>(for private dienstverlener)                (for bronhouder, via PEP)
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>         ↓                                                 ↓
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>Dienstverlener decrypts EP                  PEP decrypts EI → BSN
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>→ party-specific pseudonym                  → queries bronhouder by BSN
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>(cannot derive BSN)                         (government-internal)
 </code></pre></div>
 <p><strong>Security properties</strong> (formally proven under DDH assumption):</p>
 <ul>
@@ -1216,7 +1383,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
 </tbody>
 </table>
 <p>Every data request passes through all five checks as a pipeline:</p>
-<pre class="mermaid"><code>graph LR
+<div class="mermaid">graph LR
     REQ[Request] --&gt; C1
     C1["① Org Identity&lt;br/&gt;mTLS + PKI-O X.509"] --&gt; C2
     C2["② Org Permission&lt;br/&gt;FSC Contract + JWT"] --&gt; C3
@@ -1229,7 +1396,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
     style C2 fill:#2d5f8a,stroke:#333,color:#fff
     style C3 fill:#8b3a8b,stroke:#333,color:#fff
     style C4 fill:#8a6d2d,stroke:#333,color:#fff
-    style C5 fill:#8a2d2d,stroke:#333,color:#fff</code></pre>
+    style C5 fill:#8a2d2d,stroke:#333,color:#fff</div>
 <p><strong>Policy-driven FSC Manager</strong>: The FSC Manager is upgraded from a simple grant lookup to a <strong>policy-driven token issuer</strong> — it runs its own OPA/Rego PDP, loaded from the same PAP as the bronhouder PDP, with access to PIPs for organizational attribute verification. This solves two problems at once:</p>
 <ol>
 <li><strong>Organizational attributes</strong> — PKI-O proves <em>who</em> (OIN), but not <em>what kind</em> of organization. The Manager's PDP queries sector PIPs (KvK SBI codes, professional registers like KNB for notarissen, BIG for healthcare) to verify "this OIN is a notaris" before issuing a JWT with a <code>sector</code> claim.</li>
@@ -1264,7 +1431,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
 </tbody>
 </table>
 <p><strong>Policy lifecycle</strong>: Policies are authored centrally (GBO Gremium), stored in Git, built into signed OPA bundles, published to an OCI registry that acts as the <strong>PAP (Policy Administration Point)</strong>, and pulled by each bronhouder's PDP independently at regular intervals.</p>
-<pre class="mermaid"><code>graph LR
+<div class="mermaid">graph LR
     subgraph BUILD["Central — Policy Distribution"]
         GOV["GBO Gremium"] --&gt;|"author"| GIT["Git repo"]
         GIT --&gt;|"merge + CI"| OCI["PAP — OCI Registry&lt;br/&gt;signed bundles"]
@@ -1288,7 +1455,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
 
     style BUILD fill:#1a2a3a,stroke:#48a,color:#fff
     style RUNTIME fill:#1a3a1a,stroke:#4a4,color:#fff
-    style PIPS fill:#3a1a3a,stroke:#a4a,color:#fff</code></pre>
+    style PIPS fill:#3a1a3a,stroke:#a4a,color:#fff</div>
 <p>All authorization evidence -- consent records (DvTP), legal basis (OOTS, domestic law-based), wallet presentations (EUDI) -- is translated into AuthZEN Subject/Action/Resource/Context evaluations at the PEP, then evaluated by OPA/Rego policies:</p>
 <table>
 <thead>
@@ -1344,7 +1511,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
 <h2 id="component-architecture">Component Architecture<a class="headerlink" href="#component-architecture" title="Permanent link">&para;</a></h2>
 <h3 id="graphql-schema-registry-scope-driven-field-authorization">GraphQL Schema Registry + Scope-Driven Field Authorization<a class="headerlink" href="#graphql-schema-registry-scope-driven-field-authorization" title="Permanent link">&para;</a></h3>
 <p>Each bronhouder publishes a GraphQL schema describing their data. The <strong>dienstencatalogus</strong> defines which fields are allowed per scope — not as static query templates, but as field allowlists that the PDP evaluates against the parsed query AST at runtime. This follows the approach proven by nID/iWlz, extended with field-level scope enforcement for DvTP's data minimization requirements.</p>
-<pre class="mermaid"><code>graph LR
+<div class="mermaid">graph LR
     subgraph "Schema Registry (GBO Catalogus)"
         SCHEMA_BD["Belastingdienst (BRI): InkomensgegevensPerJaar, Aanslag"]
         SCHEMA_DUO["DUO: Diploma, Inschrijving, Studieschuld"]
@@ -1359,82 +1526,82 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
 
     S1 --&gt;|"subset of"| SCHEMA_BD
     S2 --&gt;|"subset of"| SCHEMA_DUO
-    S3 --&gt;|"subset of"| SCHEMA_UWV</code></pre>
+    S3 --&gt;|"subset of"| SCHEMA_UWV</div>
 <p>The PDP uses OPA's built-in <code>graphql.parse_query()</code> to parse the incoming query into an AST, then enforces two checks:</p>
 <ol>
 <li><strong>Scope check (field axis)</strong>: every field in the query's selection set must appear in the allowed field set for the granted scopes in the dienstencatalogus</li>
 <li><strong>Constraint check (record axis)</strong>: mandatory <code>where</code>-clause arguments must be present and their values must match the caller's identity claims (consent_id for DvTP, OIN + legal_basis for Gov-to-Gov)</li>
 </ol>
 <p><strong>Example: Belastingdienst BRI schema (subset of <a href="../schemas/belastingdienst-bri-schema.graphql">full schema</a>)</strong></p>
-<div class="highlight"><pre><span></span><code><span class="k">type</span><span class="w"> </span><span class="err">InkomensgegevensPerJaar</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nl">belastingjaar</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span><span class="err">!</span>
-<span class="w">  </span><span class="nl">verzamelinkomen</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span>
-<span class="w">  </span><span class="nl">inkomenUitBox1</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span>
-<span class="w">  </span><span class="nl">inkomenUitBox2</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span>
-<span class="w">  </span><span class="nl">inkomenUitBox3</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span>
-<span class="w">  </span><span class="nl">grondslag</span><span class="p">:</span><span class="w"> </span><span class="n">CodeOmschrijving</span><span class="w"> </span><span class="c"># e.g. &quot;Definitieve aanslag IB&quot;</span>
-<span class="w">  </span><span class="nl">status</span><span class="p">:</span><span class="w"> </span><span class="n">CodeOmschrijving</span><span class="w"> </span><span class="c"># e.g. &quot;Definitief vastgesteld&quot;</span>
-<span class="w">  </span><span class="nl">peilDatum</span><span class="p">:</span><span class="w"> </span><span class="n">Date</span>
-<span class="p">}</span>
-
-<span class="k">type</span><span class="w"> </span><span class="err">Aanslag</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nl">belastingjaar</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span><span class="err">!</span>
-<span class="w">  </span><span class="nl">soort</span><span class="p">:</span><span class="w"> </span><span class="n">SoortAanslag</span><span class="err">!</span><span class="w"> </span><span class="c"># VOORLOPIG | DEFINITIEF</span>
-<span class="w">  </span><span class="nl">dagtekening</span><span class="p">:</span><span class="w"> </span><span class="n">Date</span><span class="err">!</span>
-<span class="w">  </span><span class="nl">verzamelinkomen</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span>
-<span class="w">  </span><span class="nl">verschuldigdeBelasting</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span>
-<span class="w">  </span><span class="nl">teBetalen</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span><span class="w"> </span><span class="c"># positief = betalen, negatief = terug</span>
-<span class="w">  </span><span class="nl">status</span><span class="p">:</span><span class="w"> </span><span class="n">AanslagStatus</span><span class="err">!</span>
-<span class="p">}</span>
-
-<span class="k">input</span><span class="w"> </span><span class="err">InkomensgegevensInput</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nl">burgerservicenummer</span><span class="p">:</span><span class="w"> </span><span class="n">BSN</span><span class="err">!</span>
-<span class="w">  </span><span class="nl">belastingjaren</span><span class="p">:</span><span class="w"> </span><span class="err">[</span><span class="n">Int</span><span class="err">!]</span>
-<span class="w">  </span><span class="c"># Data minimization via GraphQL selection set — PDP validates fields against dienstencatalogus</span>
-<span class="p">}</span>
-
-<span class="k">type</span><span class="w"> </span><span class="err">Query</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">inkomensgegevens</span><span class="p">(</span><span class="n">input</span><span class="p">:</span><span class="w"> </span><span class="no">InkomensgegevensInput</span><span class="err">!</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="err">[</span><span class="n">InkomensgegevensPerJaar</span><span class="err">!]!</span>
-<span class="w">  </span><span class="n">aanslagen</span><span class="p">(</span><span class="n">input</span><span class="p">:</span><span class="w"> </span><span class="no">AanslagenInput</span><span class="err">!</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="err">[</span><span class="n">Aanslag</span><span class="err">!]!</span>
-<span class="w">  </span><span class="n">inkomensverklaring</span><span class="p">(</span>
-<span class="w">    </span><span class="n">input</span><span class="p">:</span><span class="w"> </span><span class="no">InkomensverklaringInput</span><span class="err">!</span>
-<span class="w">  </span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">InkomensverklaringResponse</span><span class="err">!</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">type</span><span class="w"> </span><span class="err">InkomensgegevensPerJaar</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nl">belastingjaar</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span><span class="err">!</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nl">verzamelinkomen</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nl">inkomenUitBox1</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nl">inkomenUitBox2</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nl">inkomenUitBox3</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nl">grondslag</span><span class="p">:</span><span class="w"> </span><span class="n">CodeOmschrijving</span><span class="w"> </span><span class="c"># e.g. &quot;Definitieve aanslag IB&quot;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nl">status</span><span class="p">:</span><span class="w"> </span><span class="n">CodeOmschrijving</span><span class="w"> </span><span class="c"># e.g. &quot;Definitief vastgesteld&quot;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="nl">peilDatum</span><span class="p">:</span><span class="w"> </span><span class="n">Date</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="k">type</span><span class="w"> </span><span class="err">Aanslag</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span><span class="nl">belastingjaar</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span><span class="err">!</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">  </span><span class="nl">soort</span><span class="p">:</span><span class="w"> </span><span class="n">SoortAanslag</span><span class="err">!</span><span class="w"> </span><span class="c"># VOORLOPIG | DEFINITIEF</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">  </span><span class="nl">dagtekening</span><span class="p">:</span><span class="w"> </span><span class="n">Date</span><span class="err">!</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span><span class="nl">verzamelinkomen</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">  </span><span class="nl">verschuldigdeBelasting</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">  </span><span class="nl">teBetalen</span><span class="p">:</span><span class="w"> </span><span class="n">Int</span><span class="w"> </span><span class="c"># positief = betalen, negatief = terug</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">  </span><span class="nl">status</span><span class="p">:</span><span class="w"> </span><span class="n">AanslagStatus</span><span class="err">!</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="p">}</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="k">input</span><span class="w"> </span><span class="err">InkomensgegevensInput</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">  </span><span class="nl">burgerservicenummer</span><span class="p">:</span><span class="w"> </span><span class="n">BSN</span><span class="err">!</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">  </span><span class="nl">belastingjaren</span><span class="p">:</span><span class="w"> </span><span class="err">[</span><span class="n">Int</span><span class="err">!]</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">  </span><span class="c"># Data minimization via GraphQL selection set — PDP validates fields against dienstencatalogus</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="p">}</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="k">type</span><span class="w"> </span><span class="err">Query</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">  </span><span class="n">inkomensgegevens</span><span class="p">(</span><span class="n">input</span><span class="p">:</span><span class="w"> </span><span class="no">InkomensgegevensInput</span><span class="err">!</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="err">[</span><span class="n">InkomensgegevensPerJaar</span><span class="err">!]!</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">  </span><span class="n">aanslagen</span><span class="p">(</span><span class="n">input</span><span class="p">:</span><span class="w"> </span><span class="no">AanslagenInput</span><span class="err">!</span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="err">[</span><span class="n">Aanslag</span><span class="err">!]!</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">  </span><span class="n">inkomensverklaring</span><span class="p">(</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    </span><span class="n">input</span><span class="p">:</span><span class="w"> </span><span class="no">InkomensverklaringInput</span><span class="err">!</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">  </span><span class="p">)</span><span class="err">:</span><span class="w"> </span><span class="n">InkomensverklaringResponse</span><span class="err">!</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="p">}</span>
 </code></pre></div>
 <p>Note: this is the <strong>bronhouder-internal</strong> schema — it uses <code>burgerservicenummer: BSN!</code> directly. For DvTP queries, the dienstverlener never sees BSN. The PEP sits in front and translates: the consumer sends a query with <code>consent_id</code>, the PEP resolves <code>consent_id → PI → BSNk Transform → EI → BSN</code>, then forwards the query to the bronhouder's internal API with the BSN substituted. Debt data (hypotheekschuld, studieschuld) is <strong>not</strong> in the BRI — it comes from other bronhouders (DUO, BKR).</p>
 <p><strong>Example: DvTP query for "aankoop-woning" consent — Belastingdienst leg</strong></p>
 <p>The dienstverlener sends a query with <code>consentId</code> as subject. The PEP intercepts, resolves consent_id → BSN via BSNk PP, and forwards to the bronhouder's internal API. Here is the <strong>consumer-facing</strong> query:</p>
-<div class="highlight"><pre><span></span><code><span class="c"># Dienstverlener sends this via FSC — consentId is the subject, no BSN</span>
-<span class="c"># The selection set IS the data minimization — PDP checks fields against catalog</span>
-<span class="k">query</span><span class="w"> </span><span class="nf">AankoopWoningInkomen</span><span class="p">(</span><span class="nv">$consentId</span><span class="p">:</span><span class="w"> </span><span class="nc">UUID</span><span class="p">!,</span><span class="w"> </span><span class="nv">$jaren</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="nb">Int</span><span class="p">!]!)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">inkomensgegevens</span><span class="p">(</span><span class="n">input</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">consentId</span><span class="p">:</span><span class="w"> </span><span class="nv">$consentId</span><span class="p">,</span><span class="w"> </span><span class="n">belastingjaren</span><span class="p">:</span><span class="w"> </span><span class="nv">$jaren</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">belastingjaar</span>
-<span class="w">    </span><span class="n">verzamelinkomen</span>
-<span class="w">    </span><span class="n">inkomenUitBox1</span>
-<span class="w">    </span><span class="n">grondslag</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">code</span>
-<span class="w">      </span><span class="n">omschrijving</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="c"># inkomenUitBox2 — not in scope bd:ib:*, PDP would reject</span>
-<span class="w">    </span><span class="c"># inkomenUitBox3 — not in scope bd:ib:*, PDP would reject</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c"># Dienstverlener sends this via FSC — consentId is the subject, no BSN</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c"># The selection set IS the data minimization — PDP checks fields against catalog</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">query</span><span class="w"> </span><span class="nf">AankoopWoningInkomen</span><span class="p">(</span><span class="nv">$consentId</span><span class="p">:</span><span class="w"> </span><span class="nc">UUID</span><span class="p">!,</span><span class="w"> </span><span class="nv">$jaren</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="nb">Int</span><span class="p">!]!)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="n">inkomensgegevens</span><span class="p">(</span><span class="n">input</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">consentId</span><span class="p">:</span><span class="w"> </span><span class="nv">$consentId</span><span class="p">,</span><span class="w"> </span><span class="n">belastingjaren</span><span class="p">:</span><span class="w"> </span><span class="nv">$jaren</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">belastingjaar</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">verzamelinkomen</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">inkomenUitBox1</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="n">grondslag</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">      </span><span class="n">code</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">      </span><span class="n">omschrijving</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="c"># inkomenUitBox2 — not in scope bd:ib:*, PDP would reject</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="c"># inkomenUitBox3 — not in scope bd:ib:*, PDP would reject</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="p">}</span>
 </code></pre></div>
 <p>The PEP translates this to the bronhouder-internal query (substituting BSN for consentId):</p>
-<div class="highlight"><pre><span></span><code><span class="c"># Bronhouder-internal — PEP has resolved consentId → BSN via BSNk PP</span>
-<span class="k">query</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">inkomensgegevens</span><span class="p">(</span>
-<span class="w">    </span><span class="n">input</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">burgerservicenummer</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;123456789&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">belastingjaren</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">2025</span><span class="p">,</span><span class="w"> </span><span class="mi">2024</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
-<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">belastingjaar</span>
-<span class="w">    </span><span class="n">verzamelinkomen</span>
-<span class="w">    </span><span class="n">inkomenUitBox1</span>
-<span class="w">    </span><span class="n">grondslag</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">code</span>
-<span class="w">      </span><span class="n">omschrijving</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c"># Bronhouder-internal — PEP has resolved consentId → BSN via BSNk PP</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">query</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="n">inkomensgegevens</span><span class="p">(</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="n">input</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">burgerservicenummer</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;123456789&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">belastingjaren</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">2025</span><span class="p">,</span><span class="w"> </span><span class="mi">2024</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">belastingjaar</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="n">verzamelinkomen</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="n">inkomenUitBox1</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="n">grondslag</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">      </span><span class="n">code</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">      </span><span class="n">omschrijving</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="p">}</span>
 </code></pre></div>
 <p>The PDP validates the consumer-facing query by:</p>
 <ol>
@@ -1471,7 +1638,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
 </tbody>
 </table>
 <h3 id="peppdppip-authorization-chain">PEP/PDP/PIP Authorization Chain<a class="headerlink" href="#peppdppip-authorization-chain" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TB
+<div class="mermaid">graph TB
     REQ["Consumer request&lt;br/&gt;mTLS + PKI-O cert"] --&gt; MGR
 
     subgraph "Token Issuance (concerns ① ②)"
@@ -1510,88 +1677,88 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
     style S_PIP fill:#3a1a3a,stroke:#a4a,color:#fff
     style PIP_C fill:#3a1a3a,stroke:#a4a,color:#fff
     style BUNDLE fill:#1a3a1a,stroke:#4a4,color:#fff
-    style M_BUNDLE fill:#1a3a1a,stroke:#4a4,color:#fff</code></pre>
+    style M_BUNDLE fill:#1a3a1a,stroke:#4a4,color:#fff</div>
 <p><strong>The core GBO authorization policy (Rego pseudocode)</strong>:</p>
 <p>This follows the two-axis model: scopes (field-level) + constraints (record-level), using OPA's built-in <code>graphql.parse_query()</code> for AST inspection — the same approach proven in production by nID/iWlz.</p>
-<div class="highlight"><pre><span></span><code><span class="k">package</span><span class="w"> </span><span class="n">gbo</span><span class="p">.</span><span class="n">authz</span>
-
-<span class="k">import</span><span class="w"> </span><span class="n">future</span><span class="p">.</span><span class="n">keywords</span><span class="p">.</span><span class="k">in</span>
-<span class="k">import</span><span class="w"> </span><span class="n">future</span><span class="p">.</span><span class="n">keywords</span><span class="p">.</span><span class="k">if</span>
-
-<span class="k">default</span><span class="w"> </span><span class="n">allow</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">false</span>
-
-<span class="c1"># Parse the incoming GraphQL query into an AST (OPA built-in, same as nID/iWlz)</span>
-<span class="n">query_ast</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">graphql</span><span class="p">.</span><span class="n">parse_query</span><span class="p">(</span><span class="nb">input</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">query</span><span class="p">)</span>
-
-<span class="c1"># Main policy: all five concerns must pass</span>
-<span class="c1"># Concerns ① and ② are pre-verified by the FSC Inway (JWT + cert-binding)</span>
-<span class="c1"># The PDP evaluates concerns ③, ④, and ⑤</span>
-<span class="n">allow</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">valid_org_permission</span><span class="w">       </span><span class="c1"># Concern ② (double-check grant_hash in active_grants)</span>
-<span class="w">    </span><span class="n">valid_access_basis</span><span class="w">         </span><span class="c1"># Concern ③ (consent OR legal basis)</span>
-<span class="w">    </span><span class="n">valid_data_scope</span><span class="w">           </span><span class="c1"># Concern ④ (scope: allowed fields from dienstencatalogus)</span>
-<span class="w">    </span><span class="n">valid_constraints</span><span class="w">          </span><span class="c1"># Concern ④b (constraint: mandatory where-clause binding)</span>
-<span class="w">    </span><span class="n">valid_request</span><span class="w">              </span><span class="c1"># Concern ⑤ (well-formed, within rate limits)</span>
-<span class="p">}</span>
-
-<span class="c1"># ② Org permission: FSC grant hash matches an active grant for this scope</span>
-<span class="n">valid_org_permission</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">grant</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">active_grants</span><span class="p">[</span><span class="nb">input</span><span class="p">.</span><span class="n">subject</span><span class="p">.</span><span class="n">fsc_grant</span><span class="p">]</span>
-<span class="w">    </span><span class="nb">input</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">scope</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">grant</span><span class="p">.</span><span class="n">allowed_scopes</span>
-<span class="p">}</span>
-
-<span class="c1"># ③ Access basis: either citizen consent or legal basis must be satisfied</span>
-<span class="n">valid_access_basis</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">valid_citizen_consent</span><span class="w"> </span><span class="p">}</span>
-<span class="n">valid_access_basis</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">valid_legal_basis</span><span class="w"> </span><span class="p">}</span>
-
-<span class="c1"># ③a Consent path (DvTP): query toestemmingsregister PIP per-request</span>
-<span class="c1"># Consent record spans multiple bronhouders; PDP checks the scope entry for THIS bronhouder</span>
-<span class="n">valid_citizen_consent</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nb">input</span><span class="p">.</span><span class="n">pip</span><span class="p">.</span><span class="n">consent</span><span class="p">.</span><span class="n">exists</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">true</span>
-<span class="w">    </span><span class="nb">input</span><span class="p">.</span><span class="n">pip</span><span class="p">.</span><span class="n">consent</span><span class="p">.</span><span class="n">withdrawn</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">false</span>
-<span class="w">    </span><span class="n">time</span><span class="p">.</span><span class="n">now_ns</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">time</span><span class="p">.</span><span class="n">parse_rfc3339_ns</span><span class="p">(</span><span class="nb">input</span><span class="p">.</span><span class="n">pip</span><span class="p">.</span><span class="n">consent</span><span class="p">.</span><span class="n">valid_until</span><span class="p">)</span>
-<span class="w">    </span><span class="nb">input</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">scope</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nb">input</span><span class="p">.</span><span class="n">pip</span><span class="p">.</span><span class="n">consent</span><span class="p">.</span><span class="n">granted_scopes</span><span class="w">          </span><span class="c1"># scope entry for this bronhouder</span>
-<span class="w">    </span><span class="nb">input</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">scope</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">dienstencatalogus</span><span class="p">[</span><span class="nb">input</span><span class="p">.</span><span class="n">action</span><span class="p">.</span><span class="n">use_case</span><span class="p">].</span><span class="n">allowed_scopes</span><span class="w">  </span><span class="c1"># catalog ceiling</span>
-<span class="p">}</span>
-
-<span class="c1"># ③b Legal basis path: no PIP call — evaluated from signed policy bundle</span>
-<span class="n">valid_legal_basis</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">basis</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">legal_basis_registry</span><span class="p">[</span><span class="nb">input</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">legal_basis</span><span class="p">]</span>
-<span class="w">    </span><span class="n">basis</span><span class="p">.</span><span class="n">consent_exempt</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">true</span>
-<span class="w">    </span><span class="nb">input</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">scope</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">basis</span><span class="p">.</span><span class="n">allowed_scopes</span>
-<span class="p">}</span>
-
-<span class="c1"># ④ Scope axis: every field in the query AST must be in the allowed field set</span>
-<span class="c1">#    The dienstencatalogus maps each scope to an allowed field set per bronhouder</span>
-<span class="n">valid_data_scope</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">allowed</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">dienstencatalogus</span><span class="p">[</span><span class="nb">input</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">scope</span><span class="p">].</span><span class="n">allowed_fields</span>
-<span class="w">    </span><span class="n">operation</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">query_ast</span><span class="p">.</span><span class="n">Operations</span><span class="p">[</span><span class="m">0</span><span class="p">]</span>
-<span class="w">    </span><span class="k">every</span><span class="w"> </span><span class="n">selection</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">operation</span><span class="p">.</span><span class="n">SelectionSet</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">every</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">selection</span><span class="p">.</span><span class="n">SelectionSet</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">field</span><span class="p">.</span><span class="n">Name</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">allowed</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-
-<span class="c1"># ④b Constraint axis: mandatory input arguments must be present and identity-bound</span>
-<span class="c1">#    Like nID/iWlz: inspect AST arguments, not just field names</span>
-<span class="n">valid_constraints</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">operation</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">query_ast</span><span class="p">.</span><span class="n">Operations</span><span class="p">[</span><span class="m">0</span><span class="p">]</span>
-<span class="w">    </span><span class="c1"># consentId must appear as an input argument (DvTP)</span>
-<span class="w">    </span><span class="k">some</span><span class="w"> </span><span class="n">selection</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">operation</span><span class="p">.</span><span class="n">SelectionSet</span>
-<span class="w">    </span><span class="k">some</span><span class="w"> </span><span class="n">arg</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">selection</span><span class="p">.</span><span class="n">Arguments</span>
-<span class="w">    </span><span class="n">arg</span><span class="p">.</span><span class="n">Name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;input&quot;</span>
-<span class="w">    </span><span class="k">some</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">arg</span><span class="p">.</span><span class="n">Value</span><span class="p">.</span><span class="n">Children</span>
-<span class="w">    </span><span class="n">field</span><span class="p">.</span><span class="n">Name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;consentId&quot;</span>
-<span class="p">}</span>
-
-<span class="c1"># ⑤ Request validity: rate limit, format, timestamp</span>
-<span class="n">valid_request</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">time</span><span class="p">.</span><span class="n">now_ns</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time</span><span class="p">.</span><span class="n">parse_rfc3339_ns</span><span class="p">(</span><span class="nb">input</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">timestamp</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">300000000000</span>
-<span class="w">    </span><span class="k">data</span><span class="p">.</span><span class="n">rate_limits</span><span class="p">[</span><span class="nb">input</span><span class="p">.</span><span class="n">subject</span><span class="p">.</span><span class="n">id</span><span class="p">].</span><span class="n">requests_last_hour</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">1000</span>
-<span class="p">}</span>
-
-<span class="c1"># NOTE: BSN resolution (BSNk Transform) happens AFTER this decision, inside the PEP</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">package</span><span class="w"> </span><span class="n">gbo</span><span class="p">.</span><span class="n">authz</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">import</span><span class="w"> </span><span class="n">future</span><span class="p">.</span><span class="n">keywords</span><span class="p">.</span><span class="k">in</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">import</span><span class="w"> </span><span class="n">future</span><span class="p">.</span><span class="n">keywords</span><span class="p">.</span><span class="k">if</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">default</span><span class="w"> </span><span class="n">allow</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">false</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="c1"># Parse the incoming GraphQL query into an AST (OPA built-in, same as nID/iWlz)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="n">query_ast</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">graphql</span><span class="p">.</span><span class="n">parse_query</span><span class="p">(</span><span class="nb">input</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">query</span><span class="p">)</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="c1"># Main policy: all five concerns must pass</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="c1"># Concerns ① and ② are pre-verified by the FSC Inway (JWT + cert-binding)</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="c1"># The PDP evaluates concerns ③, ④, and ⑤</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="n">allow</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="n">valid_org_permission</span><span class="w">       </span><span class="c1"># Concern ② (double-check grant_hash in active_grants)</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="n">valid_access_basis</span><span class="w">         </span><span class="c1"># Concern ③ (consent OR legal basis)</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="n">valid_data_scope</span><span class="w">           </span><span class="c1"># Concern ④ (scope: allowed fields from dienstencatalogus)</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="n">valid_constraints</span><span class="w">          </span><span class="c1"># Concern ④b (constraint: mandatory where-clause binding)</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="n">valid_request</span><span class="w">              </span><span class="c1"># Concern ⑤ (well-formed, within rate limits)</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="p">}</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="c1"># ② Org permission: FSC grant hash matches an active grant for this scope</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="n">valid_org_permission</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="n">grant</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">active_grants</span><span class="p">[</span><span class="nb">input</span><span class="p">.</span><span class="n">subject</span><span class="p">.</span><span class="n">fsc_grant</span><span class="p">]</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="nb">input</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">scope</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">grant</span><span class="p">.</span><span class="n">allowed_scopes</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="p">}</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="c1"># ③ Access basis: either citizen consent or legal basis must be satisfied</span>
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="n">valid_access_basis</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">valid_citizen_consent</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="n">valid_access_basis</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">valid_legal_basis</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="c1"># ③a Consent path (DvTP): query toestemmingsregister PIP per-request</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="c1"># Consent record spans multiple bronhouders; PDP checks the scope entry for THIS bronhouder</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="n">valid_citizen_consent</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">    </span><span class="nb">input</span><span class="p">.</span><span class="n">pip</span><span class="p">.</span><span class="n">consent</span><span class="p">.</span><span class="n">exists</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">true</span>
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="w">    </span><span class="nb">input</span><span class="p">.</span><span class="n">pip</span><span class="p">.</span><span class="n">consent</span><span class="p">.</span><span class="n">withdrawn</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">false</span>
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="w">    </span><span class="n">time</span><span class="p">.</span><span class="n">now_ns</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">time</span><span class="p">.</span><span class="n">parse_rfc3339_ns</span><span class="p">(</span><span class="nb">input</span><span class="p">.</span><span class="n">pip</span><span class="p">.</span><span class="n">consent</span><span class="p">.</span><span class="n">valid_until</span><span class="p">)</span>
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a><span class="w">    </span><span class="nb">input</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">scope</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="nb">input</span><span class="p">.</span><span class="n">pip</span><span class="p">.</span><span class="n">consent</span><span class="p">.</span><span class="n">granted_scopes</span><span class="w">          </span><span class="c1"># scope entry for this bronhouder</span>
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="w">    </span><span class="nb">input</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">scope</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">dienstencatalogus</span><span class="p">[</span><span class="nb">input</span><span class="p">.</span><span class="n">action</span><span class="p">.</span><span class="n">use_case</span><span class="p">].</span><span class="n">allowed_scopes</span><span class="w">  </span><span class="c1"># catalog ceiling</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a><span class="p">}</span>
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a><span class="c1"># ③b Legal basis path: no PIP call — evaluated from signed policy bundle</span>
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a><span class="n">valid_legal_basis</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a><span class="w">    </span><span class="n">basis</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">legal_basis_registry</span><span class="p">[</span><span class="nb">input</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">legal_basis</span><span class="p">]</span>
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a><span class="w">    </span><span class="n">basis</span><span class="p">.</span><span class="n">consent_exempt</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">true</span>
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a><span class="w">    </span><span class="nb">input</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">scope</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">basis</span><span class="p">.</span><span class="n">allowed_scopes</span>
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a><span class="p">}</span>
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>
+<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a><span class="c1"># ④ Scope axis: every field in the query AST must be in the allowed field set</span>
+<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a><span class="c1">#    The dienstencatalogus maps each scope to an allowed field set per bronhouder</span>
+<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a><span class="n">valid_data_scope</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a><span class="w">    </span><span class="n">allowed</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">data</span><span class="p">.</span><span class="n">dienstencatalogus</span><span class="p">[</span><span class="nb">input</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">scope</span><span class="p">].</span><span class="n">allowed_fields</span>
+<a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a><span class="w">    </span><span class="n">operation</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">query_ast</span><span class="p">.</span><span class="n">Operations</span><span class="p">[</span><span class="m">0</span><span class="p">]</span>
+<a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a><span class="w">    </span><span class="k">every</span><span class="w"> </span><span class="n">selection</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">operation</span><span class="p">.</span><span class="n">SelectionSet</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a><span class="w">        </span><span class="k">every</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">selection</span><span class="p">.</span><span class="n">SelectionSet</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a><span class="w">            </span><span class="n">field</span><span class="p">.</span><span class="n">Name</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">allowed</span>
+<a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-4-58" name="__codelineno-4-58" href="#__codelineno-4-58"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-59" name="__codelineno-4-59" href="#__codelineno-4-59"></a><span class="p">}</span>
+<a id="__codelineno-4-60" name="__codelineno-4-60" href="#__codelineno-4-60"></a>
+<a id="__codelineno-4-61" name="__codelineno-4-61" href="#__codelineno-4-61"></a><span class="c1"># ④b Constraint axis: mandatory input arguments must be present and identity-bound</span>
+<a id="__codelineno-4-62" name="__codelineno-4-62" href="#__codelineno-4-62"></a><span class="c1">#    Like nID/iWlz: inspect AST arguments, not just field names</span>
+<a id="__codelineno-4-63" name="__codelineno-4-63" href="#__codelineno-4-63"></a><span class="n">valid_constraints</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-64" name="__codelineno-4-64" href="#__codelineno-4-64"></a><span class="w">    </span><span class="n">operation</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="n">query_ast</span><span class="p">.</span><span class="n">Operations</span><span class="p">[</span><span class="m">0</span><span class="p">]</span>
+<a id="__codelineno-4-65" name="__codelineno-4-65" href="#__codelineno-4-65"></a><span class="w">    </span><span class="c1"># consentId must appear as an input argument (DvTP)</span>
+<a id="__codelineno-4-66" name="__codelineno-4-66" href="#__codelineno-4-66"></a><span class="w">    </span><span class="k">some</span><span class="w"> </span><span class="n">selection</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">operation</span><span class="p">.</span><span class="n">SelectionSet</span>
+<a id="__codelineno-4-67" name="__codelineno-4-67" href="#__codelineno-4-67"></a><span class="w">    </span><span class="k">some</span><span class="w"> </span><span class="n">arg</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">selection</span><span class="p">.</span><span class="n">Arguments</span>
+<a id="__codelineno-4-68" name="__codelineno-4-68" href="#__codelineno-4-68"></a><span class="w">    </span><span class="n">arg</span><span class="p">.</span><span class="n">Name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;input&quot;</span>
+<a id="__codelineno-4-69" name="__codelineno-4-69" href="#__codelineno-4-69"></a><span class="w">    </span><span class="k">some</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">arg</span><span class="p">.</span><span class="n">Value</span><span class="p">.</span><span class="n">Children</span>
+<a id="__codelineno-4-70" name="__codelineno-4-70" href="#__codelineno-4-70"></a><span class="w">    </span><span class="n">field</span><span class="p">.</span><span class="n">Name</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;consentId&quot;</span>
+<a id="__codelineno-4-71" name="__codelineno-4-71" href="#__codelineno-4-71"></a><span class="p">}</span>
+<a id="__codelineno-4-72" name="__codelineno-4-72" href="#__codelineno-4-72"></a>
+<a id="__codelineno-4-73" name="__codelineno-4-73" href="#__codelineno-4-73"></a><span class="c1"># ⑤ Request validity: rate limit, format, timestamp</span>
+<a id="__codelineno-4-74" name="__codelineno-4-74" href="#__codelineno-4-74"></a><span class="n">valid_request</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-75" name="__codelineno-4-75" href="#__codelineno-4-75"></a><span class="w">    </span><span class="n">time</span><span class="p">.</span><span class="n">now_ns</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">time</span><span class="p">.</span><span class="n">parse_rfc3339_ns</span><span class="p">(</span><span class="nb">input</span><span class="p">.</span><span class="n">context</span><span class="p">.</span><span class="n">timestamp</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">300000000000</span>
+<a id="__codelineno-4-76" name="__codelineno-4-76" href="#__codelineno-4-76"></a><span class="w">    </span><span class="k">data</span><span class="p">.</span><span class="n">rate_limits</span><span class="p">[</span><span class="nb">input</span><span class="p">.</span><span class="n">subject</span><span class="p">.</span><span class="n">id</span><span class="p">].</span><span class="n">requests_last_hour</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">1000</span>
+<a id="__codelineno-4-77" name="__codelineno-4-77" href="#__codelineno-4-77"></a><span class="p">}</span>
+<a id="__codelineno-4-78" name="__codelineno-4-78" href="#__codelineno-4-78"></a>
+<a id="__codelineno-4-79" name="__codelineno-4-79" href="#__codelineno-4-79"></a><span class="c1"># NOTE: BSN resolution (BSNk Transform) happens AFTER this decision, inside the PEP</span>
 </code></pre></div>
 <p><strong>How the two axes work together</strong> — the dienstencatalogus drives both:</p>
 <table>
@@ -1620,7 +1787,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
 </table>
 <p>The scope axis is necessary because DvTP serves private-sector consumers who should only see the specific fields covered by the citizen's consent. The constraint axis ensures queries are bound to the correct citizen and organization. Neither alone is sufficient.</p>
 <h3 id="oots-as4-bridge">OOTS AS4 Bridge<a class="headerlink" href="#oots-as4-bridge" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TB
+<div class="mermaid">graph TB
     subgraph "Cross-border (EU)"
         EU_AP[Member State Access Points]
     end
@@ -1643,7 +1810,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
     TRANSLATOR -.-&gt;|"publish"| SMP_PUB
 
     style DOMIBUS fill:#2d7a2d,stroke:#333,color:#fff
-    style TRANSLATOR fill:#2d7a2d,stroke:#333,color:#fff</code></pre>
+    style TRANSLATOR fill:#2d7a2d,stroke:#333,color:#fff</div>
 <p><strong>OOTS bridge specifications</strong>:</p>
 <table>
 <thead>
@@ -1682,7 +1849,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
 <p>The bridge translates OOTS requests into FSC REST requests toward the bronhouder. The bronhouder sees a standard FSC request regardless of whether it originated from a Dutch dienstverlener (DvTP) or a German Einwohnermeldeamt (OOTS).</p>
 <h3 id="pubeaa-provider">PubEAA Provider<a class="headerlink" href="#pubeaa-provider" title="Permanent link">&para;</a></h3>
 <p>The PubEAA Provider is shared GBO edge infrastructure that issues PuB-EAAs (Public Body Electronic Attestations of Attributes) on behalf of bronhouders. Without it, the Netherlands would rely entirely on commercial QTSPs for issuing attestations based on government sources -- a supply-chain consideration worth addressing.</p>
-<pre class="mermaid"><code>graph TB
+<div class="mermaid">graph TB
     subgraph "Citizen"
         WALLET[EUDI Wallet]
     end
@@ -1703,7 +1870,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
     PUBEAA --&gt;|"query via FSC"| FSC_IN
     PUBEAA -.-&gt;|"registered as PuB-EAA issuer"| LOTE
 
-    style PUBEAA fill:#1a5276,stroke:#333,color:#fff</code></pre>
+    style PUBEAA fill:#1a5276,stroke:#333,color:#fff</div>
 <p><strong>Key properties</strong>:</p>
 <table>
 <thead>
@@ -1742,7 +1909,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
 <p>The PubEAA Provider does not change the bronhouder's responsibilities. It is a shared service that handles the OpenID4VCI protocol, credential formatting (SD-JWT VC / mdoc), and qualified seal signing. The bronhouder only needs to expose a GraphQL API behind an FSC Inway -- the same requirement as for all other trajectories.</p>
 <h3 id="authentic-source-interface-etsi-ts-119-478">Authentic Source Interface (ETSI TS 119 478)<a class="headerlink" href="#authentic-source-interface-etsi-ts-119-478" title="Permanent link">&para;</a></h3>
 <p>Article 45e of the amended eIDAS Regulation obliges EU Member States to ensure that QTSPs can verify attributes against authentic sources within the public sector, at the request of the user. ETSI TS 119 478 specifies the interfaces for this. GBO implements the Authentic Source Interface as an edge layer component on top of existing infrastructure.</p>
-<pre class="mermaid"><code>graph TB
+<div class="mermaid">graph TB
     subgraph "Citizen"
         USER_WALLET[EUDI Wallet / eID]
     end
@@ -1777,7 +1944,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
     ASIP_NODE --&gt;|"verified / not-verified"| QTSP_NODE
 
     style ASIP_NODE fill:#1a5276,stroke:#333,color:#fff
-    style AZS_NODE fill:#1a5276,stroke:#333,color:#fff</code></pre>
+    style AZS_NODE fill:#1a5276,stroke:#333,color:#fff</div>
 <p><strong>Interfaces implemented</strong>:</p>
 <table>
 <thead>
@@ -1821,7 +1988,7 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
 <h2 id="demo-interaction-1-dvtp-hypotheekverlener-queries-income-data">Demo Interaction 1: DvTP -- Hypotheekverlener Queries Income Data<a class="headerlink" href="#demo-interaction-1-dvtp-hypotheekverlener-queries-income-data" title="Permanent link">&para;</a></h2>
 <p><strong>Scenario</strong>: Jan wants a mortgage. His hypotheekverlener (mortgage provider) needs his income data from the Belastingdienst. Jan must give explicit consent.</p>
 <h3 id="full-sequence">Full Sequence<a class="headerlink" href="#full-sequence" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>sequenceDiagram
+<div class="mermaid">sequenceDiagram
     actor Jan as Jan (Burger)
     participant HV as Hypotheekverlener -(Private Dienstverlener)
     participant PORTAL as Toestemmingsportaal -(Government)
@@ -1898,86 +2065,86 @@ Dienstverlener decrypts EP                  PEP decrypts EI → BSN
     FSC_I--&gt;&gt;FSC_O: mTLS response
     FSC_O--&gt;&gt;HV: Income data (only consented fields, no BSN)
 
-    HV-&gt;&gt;Jan: "Uw gegevens zijn opgehaald, -we verwerken uw aanvraag."</code></pre>
+    HV-&gt;&gt;Jan: "Uw gegevens zijn opgehaald, -we verwerken uw aanvraag."</div>
 <h3 id="what-the-graphql-request-looks-like">What the GraphQL Request Looks Like<a class="headerlink" href="#what-the-graphql-request-looks-like" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c"># Sent by Hypotheekverlener via FSC — Belastingdienst leg only</span>
-<span class="c"># PDP validates: selection set fields ⊆ catalog[bd:ib:*] + consentId in input</span>
-<span class="c"># Note: consentId is the subject -- NO BSN in the request</span>
-<span class="k">query</span><span class="w"> </span><span class="nf">AankoopWoningInkomen</span><span class="p">(</span><span class="nv">$consentId</span><span class="p">:</span><span class="w"> </span><span class="nc">UUID</span><span class="p">!,</span><span class="w"> </span><span class="nv">$jaren</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="nb">Int</span><span class="p">!]!)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="n">inkomensgegevens</span><span class="p">(</span><span class="n">input</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">consentId</span><span class="p">:</span><span class="w"> </span><span class="nv">$consentId</span><span class="p">,</span><span class="w"> </span><span class="n">belastingjaren</span><span class="p">:</span><span class="w"> </span><span class="nv">$jaren</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">belastingjaar</span>
-<span class="w">    </span><span class="n">verzamelinkomen</span>
-<span class="w">    </span><span class="n">inkomenUitBox1</span>
-<span class="w">    </span><span class="n">grondslag</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="n">code</span>
-<span class="w">      </span><span class="n">omschrijving</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c"># Sent by Hypotheekverlener via FSC — Belastingdienst leg only</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="c"># PDP validates: selection set fields ⊆ catalog[bd:ib:*] + consentId in input</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="c"># Note: consentId is the subject -- NO BSN in the request</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">query</span><span class="w"> </span><span class="nf">AankoopWoningInkomen</span><span class="p">(</span><span class="nv">$consentId</span><span class="p">:</span><span class="w"> </span><span class="nc">UUID</span><span class="p">!,</span><span class="w"> </span><span class="nv">$jaren</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="nb">Int</span><span class="p">!]!)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="n">inkomensgegevens</span><span class="p">(</span><span class="n">input</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">consentId</span><span class="p">:</span><span class="w"> </span><span class="nv">$consentId</span><span class="p">,</span><span class="w"> </span><span class="n">belastingjaren</span><span class="p">:</span><span class="w"> </span><span class="nv">$jaren</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">belastingjaar</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="n">verzamelinkomen</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="n">inkomenUitBox1</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="n">grondslag</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">      </span><span class="n">code</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">      </span><span class="n">omschrijving</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="p">}</span>
 </code></pre></div>
 <p><strong>Variables</strong>: <code>{ "consentId": "550e8400-e29b-41d4-a716-446655440000", "jaren": [2025, 2024] }</code></p>
 <p>The PEP intercepts this query, resolves <code>consent_id → PI → BSNk Transform → EI → BSN</code>, and substitutes the BSN into the bronhouder's internal query. The dienstverlener's query and response contain no BSN at any point.</p>
 <h3 id="what-the-policies-evaluate">What the Policies Evaluate<a class="headerlink" href="#what-the-policies-evaluate" title="Permanent link">&para;</a></h3>
 <p>Two PDPs evaluate in sequence — the Manager PDP at token issuance, the bronhouder PDP per-request:</p>
-<div class="highlight"><pre><span></span><code>── Manager PDP (at token issuance, concerns ① ②) ──
-
-INPUT:
-  client_cert.oin      = &quot;OIN:00000004003214345001&quot; (Hypotheekverlener BV)
-  client_cert.chain    = valid (PKI-O Root CA → TSP CA → end cert)
-  grant_hash           = &quot;abc123&quot;
-  requested_scopes     = [&quot;dvtp:aankoop-woning&quot;]
-  pip.sector           = { member: true, sector: &quot;hypotheekverleners&quot; } (from KvK SBI PIP)
-
-POLICY CHECKS:
-  ① Is PKI-O cert chain valid?                          -&gt; YES
-  ①→② Is OIN in sector &quot;hypotheekverleners&quot;?            -&gt; YES (KvK SBI PIP)
-  ② Is grant &quot;abc123&quot; active for this scope?             -&gt; YES
-  ② Is &quot;dvtp:aankoop-woning&quot; ⊆ grant.scopes?            -&gt; YES
-
-DECISION: ISSUE JWT
-  { sub: &quot;OIN:...HV&quot;, scope: &quot;dvtp:aankoop-woning&quot;,
-    sector: &quot;hypotheekverleners&quot;, grant_hash: &quot;abc123&quot;,
-    cnf: { x5t#S256: &quot;&lt;cert&gt;&quot; } }
-
-── Bronhouder PDP (per-request, concerns ③ ④ ⑤) ──
-
-INPUT (from JWT claims + request):
-  subject.org_id       = &quot;OIN:00000004003214345001&quot; (from JWT sub)
-  subject.fsc_grant    = &quot;abc123&quot; (from JWT grant_hash)
-  action.scope         = &quot;aankoop-woning&quot;
-  action.query         = &lt;GraphQL AST (fields: verzamelinkomen, inkomenUitBox1, grondslag)&gt;
-  resource.consent_id  = &quot;550e8400-e29b-41d4-a716-446655440000&quot;
-  context.trajectory   = &quot;dvtp&quot;
-
-POLICY CHECKS:
-  ③ Does consent exist for consent_id+provider?            -&gt; YES (PIP query to register)
-  ③ Does consent include scope for this bronhouder?        -&gt; YES (bd:ib:2025 ∈ granted_scopes)
-  ③ Is consent still valid (not expired, not withdrawn)?   -&gt; YES (expires 2026-04-11)
-  ③ Is scope within dienstencatalogus ceiling?             -&gt; YES (bd:ib:2025 ∈ catalog[aankoop-woning])
-  ④ Scope: are all requested fields in catalog[bd:ib:*]?   -&gt; YES (verzamelinkomen, inkomenUitBox1, grondslag ⊆ allowed)
-  ④ Constraint: is consentId in input arguments?            -&gt; YES (identity-bound)
-  ⑤ Rate limit OK? Format valid?                           -&gt; YES
-
-DECISION: ALLOW (obligations: allowed_fields=[verzamelinkomen, inkomenUitBox1, grondslag, peilDatum])
-
-POST-DECISION (inside PEP, not visible to dienstverlener):
-  6. Retrieve PI from consent record
-  7. BSNk Transform(PI, bronhouder_oin) → EI
-  8. Decrypt EI → BSN (government-internal)
-  9. Substitute BSN into bronhouder query
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>── Manager PDP (at token issuance, concerns ① ②) ──
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>INPUT:
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>  client_cert.oin      = &quot;OIN:00000004003214345001&quot; (Hypotheekverlener BV)
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>  client_cert.chain    = valid (PKI-O Root CA → TSP CA → end cert)
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>  grant_hash           = &quot;abc123&quot;
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>  requested_scopes     = [&quot;dvtp:aankoop-woning&quot;]
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>  pip.sector           = { member: true, sector: &quot;hypotheekverleners&quot; } (from KvK SBI PIP)
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>POLICY CHECKS:
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>  ① Is PKI-O cert chain valid?                          -&gt; YES
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>  ①→② Is OIN in sector &quot;hypotheekverleners&quot;?            -&gt; YES (KvK SBI PIP)
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>  ② Is grant &quot;abc123&quot; active for this scope?             -&gt; YES
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>  ② Is &quot;dvtp:aankoop-woning&quot; ⊆ grant.scopes?            -&gt; YES
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>DECISION: ISSUE JWT
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>  { sub: &quot;OIN:...HV&quot;, scope: &quot;dvtp:aankoop-woning&quot;,
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    sector: &quot;hypotheekverleners&quot;, grant_hash: &quot;abc123&quot;,
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>    cnf: { x5t#S256: &quot;&lt;cert&gt;&quot; } }
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>── Bronhouder PDP (per-request, concerns ③ ④ ⑤) ──
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>INPUT (from JWT claims + request):
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>  subject.org_id       = &quot;OIN:00000004003214345001&quot; (from JWT sub)
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>  subject.fsc_grant    = &quot;abc123&quot; (from JWT grant_hash)
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>  action.scope         = &quot;aankoop-woning&quot;
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>  action.query         = &lt;GraphQL AST (fields: verzamelinkomen, inkomenUitBox1, grondslag)&gt;
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>  resource.consent_id  = &quot;550e8400-e29b-41d4-a716-446655440000&quot;
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>  context.trajectory   = &quot;dvtp&quot;
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>POLICY CHECKS:
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a>  ③ Does consent exist for consent_id+provider?            -&gt; YES (PIP query to register)
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a>  ③ Does consent include scope for this bronhouder?        -&gt; YES (bd:ib:2025 ∈ granted_scopes)
+<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a>  ③ Is consent still valid (not expired, not withdrawn)?   -&gt; YES (expires 2026-04-11)
+<a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a>  ③ Is scope within dienstencatalogus ceiling?             -&gt; YES (bd:ib:2025 ∈ catalog[aankoop-woning])
+<a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a>  ④ Scope: are all requested fields in catalog[bd:ib:*]?   -&gt; YES (verzamelinkomen, inkomenUitBox1, grondslag ⊆ allowed)
+<a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a>  ④ Constraint: is consentId in input arguments?            -&gt; YES (identity-bound)
+<a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a>  ⑤ Rate limit OK? Format valid?                           -&gt; YES
+<a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a>
+<a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a>DECISION: ALLOW (obligations: allowed_fields=[verzamelinkomen, inkomenUitBox1, grondslag, peilDatum])
+<a id="__codelineno-6-41" name="__codelineno-6-41" href="#__codelineno-6-41"></a>
+<a id="__codelineno-6-42" name="__codelineno-6-42" href="#__codelineno-6-42"></a>POST-DECISION (inside PEP, not visible to dienstverlener):
+<a id="__codelineno-6-43" name="__codelineno-6-43" href="#__codelineno-6-43"></a>  6. Retrieve PI from consent record
+<a id="__codelineno-6-44" name="__codelineno-6-44" href="#__codelineno-6-44"></a>  7. BSNk Transform(PI, bronhouder_oin) → EI
+<a id="__codelineno-6-45" name="__codelineno-6-45" href="#__codelineno-6-45"></a>  8. Decrypt EI → BSN (government-internal)
+<a id="__codelineno-6-46" name="__codelineno-6-46" href="#__codelineno-6-46"></a>  9. Substitute BSN into bronhouder query
 </code></pre></div>
 <p>Note: steps 6-9 happen <strong>after</strong> the policy decision, inside the PEP. The dienstverlener's request and the policy evaluation never touch BSN. BSN only appears in the government-internal leg between PEP and bronhouder.</p>
 <h3 id="what-if-consent-was-revoked">What If Consent Was Revoked?<a class="headerlink" href="#what-if-consent-was-revoked" title="Permanent link">&para;</a></h3>
 <p>If Jan revokes his consent via the consent management portal (FR-20), the register record status changes to "revoked." The next time the hypotheekverlener sends a query:</p>
-<div class="highlight"><pre><span></span><code>POLICY CHECK ③: consent.status == &quot;open&quot;? -&gt; NO (status: &quot;revoked&quot;)
-DECISION: DENY (reason: &quot;consent_revoked&quot;)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>POLICY CHECK ③: consent.status == &quot;open&quot;? -&gt; NO (status: &quot;revoked&quot;)
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>DECISION: DENY (reason: &quot;consent_revoked&quot;)
 </code></pre></div>
 <p>No token invalidation needed. No notification to the hypotheekverlener needed. The PDP simply denies the next request. This is cleaner than the approach in DvTP's draft v0.1 of checking consent tokens at multiple points.</p>
 <hr />
 <h2 id="demo-interaction-2-eudi-wallet-citizen-stores-income-attestation-via-pubeaa-provider">Demo Interaction 2: EUDI Wallet -- Citizen Stores Income Attestation via PubEAA Provider<a class="headerlink" href="#demo-interaction-2-eudi-wallet-citizen-stores-income-attestation-via-pubeaa-provider" title="Permanent link">&para;</a></h2>
 <p><strong>Scenario</strong>: Jan wants his income data in his EUDI wallet so he can present it to anyone -- not just the hypotheekverlener. He retrieves a PuB-EAA (Public Body Electronic Attestation of Attributes) via the shared PubEAA Provider, which queries the Belastingdienst on his behalf. The PuB-EAA is stored in his wallet.</p>
 <h3 id="issuance-pubeaa-provider-issues-attestation-to-wallet">Issuance -- PubEAA Provider Issues Attestation to Wallet<a class="headerlink" href="#issuance-pubeaa-provider-issues-attestation-to-wallet" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>sequenceDiagram
+<div class="mermaid">sequenceDiagram
     actor Jan as Jan (Burger)
     participant WALLET as EUDI Wallet App
     participant PUBEAA as PubEAA Provider -(GBO Edge)
@@ -2012,13 +2179,13 @@ DECISION: DENY (reason: &quot;consent_revoked&quot;)
     PUBEAA--&gt;&gt;WALLET: OpenID4VCI Credential Response -(SD-JWT VC or mdoc/CBOR)
     WALLET-&gt;&gt;WALLET: Store attestation
 
-    WALLET-&gt;&gt;Jan: "Inkomensverklaring opgeslagen"</code></pre>
+    WALLET-&gt;&gt;Jan: "Inkomensverklaring opgeslagen"</div>
 <p>Note: Bronhouders can optionally run their own Credential Issuer instead of using the shared PubEAA Provider. The data flow remains the same -- only the issuer endpoint changes.</p>
 <hr />
 <h2 id="demo-interaction-3-gov-to-gov-gemeente-queries-rvig">Demo Interaction 3: Gov-to-Gov -- Gemeente Queries RvIG<a class="headerlink" href="#demo-interaction-3-gov-to-gov-gemeente-queries-rvig" title="Permanent link">&para;</a></h2>
 <p><strong>Scenario</strong>: A gemeente needs to verify a citizen's address data from RvIG (Basisregistratie Personen). This is a government-to-government exchange -- no consent needed, no pseudonymization, just legal-basis authorization over FSC.</p>
 <h3 id="full-sequence_1">Full Sequence<a class="headerlink" href="#full-sequence_1" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>sequenceDiagram
+<div class="mermaid">sequenceDiagram
     participant GEM as Gemeente -(FSC Outway)
     participant FSC_I as FSC Inway -(RvIG)
     participant PEP as PEP
@@ -2037,33 +2204,33 @@ DECISION: DENY (reason: &quot;consent_revoked&quot;)
     PEP-&gt;&gt;GQL: Execute query template "adresgegevens" -(BSN: 123456789)
     GQL--&gt;&gt;PEP: Address data
     PEP--&gt;&gt;FSC_I: Response + log to Logboek Dataverwerkingen
-    FSC_I--&gt;&gt;GEM: Address data via FSC</code></pre>
+    FSC_I--&gt;&gt;GEM: Address data via FSC</div>
 <p>This is the simplest GBO flow -- it shows the pure backbone without any consent, pseudonymization, or protocol translation. All other trajectories build on this foundation by adding edge-layer components.</p>
 <h3 id="what-the-policy-evaluates">What the Policy Evaluates<a class="headerlink" href="#what-the-policy-evaluates" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>INPUT:
-  subject.org_id     = &quot;OIN:00000001003214345001&quot; (Gemeente Amsterdam)
-  subject.type       = &quot;government&quot;
-  subject.fsc_contract = { status: &quot;active&quot; }
-  action.scope       = &quot;adresgegevens&quot;
-  action.query       = &lt;GraphQL query body&gt;
-  resource.bsn       = &quot;123456789&quot;
-  context.trajectory = &quot;gov-to-gov&quot;
-  context.legal_basis = &quot;Wet BRP art. 3.5&quot;
-
-POLICY CHECKS:
-  1. Is subject a government organization?                    -&gt; YES
-  2. Is FSC contract active?                                  -&gt; YES
-  3. Is legal basis valid for this data type?                  -&gt; YES (Wet BRP art. 3.5)
-  4. Does query structure conform to template &quot;adresgegevens&quot;? -&gt; YES
-
-DECISION: ALLOW
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>INPUT:
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>  subject.org_id     = &quot;OIN:00000001003214345001&quot; (Gemeente Amsterdam)
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  subject.type       = &quot;government&quot;
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>  subject.fsc_contract = { status: &quot;active&quot; }
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>  action.scope       = &quot;adresgegevens&quot;
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>  action.query       = &lt;GraphQL query body&gt;
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>  resource.bsn       = &quot;123456789&quot;
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>  context.trajectory = &quot;gov-to-gov&quot;
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>  context.legal_basis = &quot;Wet BRP art. 3.5&quot;
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>POLICY CHECKS:
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>  1. Is subject a government organization?                    -&gt; YES
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>  2. Is FSC contract active?                                  -&gt; YES
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>  3. Is legal basis valid for this data type?                  -&gt; YES (Wet BRP art. 3.5)
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>  4. Does query structure conform to template &quot;adresgegevens&quot;? -&gt; YES
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>DECISION: ALLOW
 </code></pre></div>
 <p>No consent register lookup, no BSNk PP resolution. Government parties are BSN-authorized and access is governed by legal basis, enforced by the same PEP/PDP chain.</p>
 <hr />
 <h2 id="demo-interaction-4-citizen-presents-credential-to-relying-party">Demo Interaction 4: Citizen Presents Credential to Relying Party<a class="headerlink" href="#demo-interaction-4-citizen-presents-credential-to-relying-party" title="Permanent link">&para;</a></h2>
 <p><strong>Scenario</strong>: Jan already has his income PuB-EAA in his wallet (from Demo 2). He visits a hypotheekverlener and presents the attestation directly -- no real-time query to the Belastingdienst needed.</p>
 <h3 id="full-sequence_2">Full Sequence<a class="headerlink" href="#full-sequence_2" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>sequenceDiagram
+<div class="mermaid">sequenceDiagram
     actor Jan as Jan (Burger)
     participant WALLET as EUDI Wallet App
     participant HV as Hypotheekverlener -(Relying Party)
@@ -2085,13 +2252,13 @@ DECISION: ALLOW
 
     HV-&gt;&gt;HV: Verify attestation: -- Signature valid -- Issuer trusted -- Not expired -- Fields present
 
-    HV-&gt;&gt;Jan: "Gegevens ontvangen, -we verwerken uw aanvraag."</code></pre>
+    HV-&gt;&gt;Jan: "Gegevens ontvangen, -we verwerken uw aanvraag."</div>
 <p>The Relying Party verifies the PuB-EAA independently -- no connection to GBO or the bronhouder is needed at presentation time. Trust is established via the EUDI Trusted List: the PubEAA Provider is registered as a qualified PuB-EAA issuer.</p>
 <hr />
 <h2 id="demo-interaction-5-qtsp-verifies-attributes-via-authentic-source-interface">Demo Interaction 5: QTSP Verifies Attributes via Authentic Source Interface<a class="headerlink" href="#demo-interaction-5-qtsp-verifies-attributes-via-authentic-source-interface" title="Permanent link">&para;</a></h2>
 <p><strong>Scenario</strong>: A QTSP wants to issue a QEAA (Qualified Electronic Attestation of Attributes) for Jan's income data. Before issuing, the QTSP must verify the attributes against the authentic source (Belastingdienst), as mandated by Article 45e. Jan authorizes this verification.</p>
 <h3 id="full-sequence_3">Full Sequence<a class="headerlink" href="#full-sequence_3" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>sequenceDiagram
+<div class="mermaid">sequenceDiagram
     actor Jan as Jan (Burger)
     participant WALLET as EUDI Wallet / eID
     participant QTSP as QTSP
@@ -2132,7 +2299,7 @@ DECISION: ALLOW
 
     Note over QTSP: QTSP now has verified authentic source -confirmation. Issues QEAA.
     QTSP-&gt;&gt;QTSP: Issue QEAA -(qualified electronic seal)
-    QTSP--&gt;&gt;Jan: QEAA stored in wallet</code></pre>
+    QTSP--&gt;&gt;Jan: QEAA stored in wallet</div>
 <p>The Authentic Source Interface acts as a protocol adapter: it translates ETSI TS 119 478 I2 (Verify) requests into GraphQL queries via FSC, compares the QTSP-provided attribute values against the register, and returns a verification result. The bronhouder sees a standard FSC request -- it does not know whether the request came from a DvTP dienstverlener, an OOTS bridge, a PubEAA Provider, or the Authentic Source Interface.</p>
 <hr />
 <h3 id="key-differences-across-trajectories">Key Differences Across Trajectories<a class="headerlink" href="#key-differences-across-trajectories" title="Permanent link">&para;</a></h3>
@@ -2213,7 +2380,7 @@ DECISION: ALLOW
 <p>The Single Digital Gateway Regulation (EU 2018/1724) mandates cross-border evidence exchange via the Once-Only Technical System (OOTS). This is a legal obligation, not an architectural choice. OOTS uses eDelivery AS4 transport with Domibus Access Points, four-corner routing, and SMP 2.1 discovery.</p>
 <p>GBO must build an AS4 bridge to serve cross-border requests. This bridge translates OOTS AS4 requests into FSC/GraphQL requests toward bronhouders, and returns evidence in OOTS-EDM format.</p>
 <h3 id="oots-bridge-architecture">OOTS Bridge Architecture<a class="headerlink" href="#oots-bridge-architecture" title="Permanent link">&para;</a></h3>
-<pre class="mermaid"><code>graph TB
+<div class="mermaid">graph TB
     subgraph "Cross-Border (EU)"
         OOTS_IN["OOTS AS4 messages from EU Member States"]
     end
@@ -2236,7 +2403,7 @@ DECISION: ALLOW
     FSC_TRANS -.-&gt;|"publish"| SMP_PUB
 
     style DOMIBUS fill:#2d7a2d,stroke:#333,color:#fff
-    style FSC_TRANS fill:#2d7a2d,stroke:#333,color:#fff</code></pre>
+    style FSC_TRANS fill:#2d7a2d,stroke:#333,color:#fff</div>
 <p>From the bronhouder's perspective, cross-border requests look identical to domestic DvTP requests -- an FSC request with an AuthZEN-evaluable authorization context. Whether it originated from a Dutch hypotheekverlener (DvTP/FSC) or a German Einwohnermeldeamt (OOTS/AS4) is invisible to the source. The bridge handles all translation.</p>
 <p>Domestic dienstverleners use FSC directly. AS4 is reserved for cross-border traffic via the OOTS bridge.</p>
 <hr />
@@ -2324,22 +2491,6 @@ DECISION: ALLOW
 <li>Build the Authorization Server (I4) using OAuth 2.0 -- citizen authorizes QTSP access via EUDI Wallet or eID (I5)</li>
 <li>Define PDP policies for QTSP verification requests: requester must be on Trusted List, citizen must have authorized, requested attributes must be in scope</li>
 </ol>
-<hr />
-<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">&para;</a></h2>
-<p>This document synthesizes analysis from:</p>
-<ul>
-<li><a href="authorization-models-analysis.md">authorization-models-analysis.md</a> -- Authorization model decomposition: five concerns, protocol-level analysis of iWlz/FSC/FTV/OAuth2/PKI-O/toestemmingsregister, federated PDP design, policy lifecycle, JWT anatomy</li>
-<li><a href="proposals/bsnk-pp-gbo-integration.md">proposals/bsnk-pp-gbo-integration.md</a> -- BSNk PP integration for BSN pseudonymization</li>
-<li><a href="proposals/dvtp-pbac-alignment.md">proposals/dvtp-pbac-alignment.md</a> -- Consent-as-PIP architecture design</li>
-<li><a href="proposals/graphql-pbac.md">proposals/graphql-pbac.md</a> -- GraphQL + PBAC design with iWlz precedent</li>
-<li><a href="conflict-analysis/trust-model-comparison.md">conflict-analysis/trust-model-comparison.md</a> -- Five trust models compared</li>
-<li><a href="synthesis/gbo-synthesis.md">synthesis/gbo-synthesis.md</a> -- Full per-layer synthesis with recommendations</li>
-<li><a href="../02-normalized/dvtp/">../02-normalized/dvtp/</a> -- DvTP protocol analysis (17 components, 5 flows)</li>
-<li><a href="../02-normalized/eudi/">../02-normalized/eudi/</a> -- EUDI Wallet ARF v2.7.4+ analysis</li>
-<li><a href="../02-normalized/iwlz/">../02-normalized/iwlz/</a> -- iWlz reference patterns (GraphQL, OPA/Rego)</li>
-<li><a href="../02-normalized/sdg-oots/">../02-normalized/sdg-oots/</a> -- SDG-OOTS reference implementation analysis</li>
-<li><a href="../02-normalized/bsnk-pp/">../02-normalized/bsnk-pp/</a> -- BSNk PP polymorphic pseudonymization analysis</li>
-</ul>
 
 
 
@@ -2359,6 +2510,12 @@ DECISION: ALLOW
           
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Terug naar boven
+</button>
         
       </main>
       
@@ -2386,16 +2543,19 @@ DECISION: ALLOW
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "toc.integrate", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../../js/print-site.js"></script>
       
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
-        <script src="../../javascripts/mermaid-init.js"></script>
+        <script src="../../javascript/mermaid-init.js"></script>
       
     
   </body>
