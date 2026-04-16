@@ -215,7 +215,7 @@ _Legenda: ⚠️ = nog te realiseren als nieuwe GBO-voorziening._
 
 ## 4 Afwijkingen en aanvullingen op FDS
 
-GBO gebruikt het Federatief Datastelsel (FDS) en het in wording zijnde TIP-Afsprakenstelsel als basisafsprakenstelsels en bouwt daar zoveel mogelijk op voort. FDS biedt al een aantal cruciale bouwstenen: FSC als koppelnetwerk, FTV als autorisatiemechanisme, DCAT-AP NL voor datacatalogisering en de stelselfuncties Poortwachter en Marktmeester voor onboarding en nalevingsbeheer.
+GBO gebruikt het Federatief Datastelsel (FDS) en het in wording zijnde TIP-Afsprakenstelsel als basisafsprakenstelsels en bouwt daar zoveel mogelijk op voort. FDS biedt al een aantal cruciale bouwstenen: FSC als standaard voor koppelingen, FTV als standaard voor autorisatie, DCAT-AP NL voor datacatalogisering en de stelselfuncties Poortwachter en Marktmeester voor onboarding en nalevingsbeheer.
 
 Voor de drie GBO-toepassingen (DvTP, EDI-Stelsel en SDG/OOTS) is echter meer nodig dan FDS op dit moment biedt. In dit hoofdstuk wordt per onderwerp beschreven wat FDS al levert, wat er nog ontbreekt, en wat er dus afgesproken of ontwikkeld moet worden — hetzij als aanvulling op FDS, hetzij als nieuw onderdeel.
 
