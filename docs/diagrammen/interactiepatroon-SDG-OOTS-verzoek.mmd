@@ -1,35 +1,34 @@
-<figure>
-
 ``` mermaid
 
 sequenceDiagram
     autonumber
-    participant EU as EU dienst<br/>(SDG/OOTS)
-    participant RINIS as RINIS<br/>(nationaal OOTS-punt)
-    participant GBO as GBO<br/>(GBO voorziening)
     participant BRG as Burger<br/>(rechthebbende)
-    participant BRH as Bronhouder<br/>(BRP / DUO / …)
+    participant EU as EU dienst<br/>(SDG/OOTS)
+    participant RINIS as RINIS (namens BZK)<br/>(Basisinrichting OOTS)
+    participant GBO as GBO<br/>(GBO voorziening)
+    participant BRH as Bronhouder<br/>(BRP / BD / …)
 
     rect rgb(230, 241, 251)
-        Note over EU,RINIS: ① Ontvangst OOTS-verzoek (eDelivery/AS4)
-        EU->>RINIS: Evidence Request (eDelivery/AS4)
-        Note over RINIS: eDelivery → REST ontkoppeling
+        Note over BRG,EU: ① Burger neemt dienst af
+        BRG->>EU: Dienst (vereist gegeven Bronhouder)
     end
 
-    rect rgb(250, 238, 218)
-        Note over RINIS,GBO: ② Doorzetten naar GBO (nationaal)
-        RINIS->>GBO: OOTS-payload (REST/JSON)
+    rect rgb(230, 241, 251)
+        Note over EU,RINIS: ② Ontvangst OOTS-verzoek (eDelivery/AS4)
+        EU->>RINIS: Evidence Request (eDelivery/AS4)
     end
+
 
     rect rgb(238, 237, 254)
-        Note over GBO,BRG: ③ Toestemming burger (GBO)
-        GBO->>BRG: Toestemmingsvoorziening (GBO)
-        BRG->>GBO: Toestemming + Consent-ID (incl. BSN)
+        Note over RINIS,BRG: ③ Authenticatie & toestemming burger (RINIS)
+        RINIS->>BRG: Toestemmingsverzoek
+        BRG->>RINIS: Toestemming (incl. BSN)
     end
 
     rect rgb(250, 238, 218)
-        Note over GBO: ④ Identiteit & grondslag (intern GBO)
-        Note over GBO: BSN · pseudonimisering · AVG/grondslag
+        Note over RINIS,GBO: ④ Doorzetten naar GBO (nationaal)
+        RINIS->>GBO: OOTS-payload (REST/JSON)
+        Note over RINIS: eDelivery → REST ontkoppeling
     end
 
     rect rgb(225, 245, 238)
@@ -51,6 +50,3 @@ sequenceDiagram
     end
 
 ```
-
-<figcaption>Interactiepatroon gegevensverzoek Europese overheidsdienst via SDG/OOTS</figcaption>
-</figure>

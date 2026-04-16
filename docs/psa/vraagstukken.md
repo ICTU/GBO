@@ -11,11 +11,19 @@ Als er een oplossing is gevonden of een keuze is gemaakt, wordt dit in dit hoofd
 eHerkenning is de logische kandidaat, maar de onboarding, accreditatie en het onderscheid tussen directe afnemers en intermediairs/integrators moeten worden uitgewerkt. TIP biedt hiervoor aanknopingspunten.
 
 
+## Autorisatiearchitectuur: centrale autorisatieserver vs. gedistribueerde PDP
+
+Gaat GBO werken met een "Autorisatieserver" als centraal component, met een bijbehorende "Vertrouwensleverancier" die tokens afgeeft. De Functionele Requirements en het GBO Beschrijvend Document spreken van een autorisatieserver als apart component (component 4).  
+Het is mogelijk om met decentrale PDP's te werken, die gebruik maken van centraal beheerde policies en centraal beschikbare PIP's (bv. het toestemmingenregister).
+
+
 ## Burgeridentificatie en het BSN
 
 Het BSN mag bij private partijen niet direct worden doorgegeven. Dit vereist een pseudonimiseringslaag of sector-ID, terwijl voor OOTS de eIDAS-identifier geldt en de wallet werkt met SD-JWT VC-attributen. Dit zijn drie verschillende regimes op één generieke ontsluiting.
 
+Welke pseudonimiseringsvoorziening gaat GBO gebruiken?  
 - BSNk-PP dienst van BZK?
+- PRS dat vanuit VWS ontwikkeld wordt?
 
 
 ## Vertrouwensstelsel
@@ -23,14 +31,9 @@ Het BSN mag bij private partijen niet direct worden doorgegeven. Dit vereist een
 Welke partijen mogen deelnemen, hoe worden ze geaccrediteerd, welke niveaus van zekerheid gelden per gegevenstype, en hoe verhouden PKI(O), eHerkenning, eIDAS, FDS en TIP-afspraken zich tot elkaar?
 
 
-## Toestemming
+## Toestemmingsvoorziening SDG-OOTS
 
-De wettelijke grondslag (via Wdo/AMvB), de technische implementatie (toestemmingsregister, tokens, TTL), intrekking, en het onderscheid met OOTS waar toestemming een "verklaring van instemming" is, en de wallet waar de burger zelf de credential beheert.
-
-
-## Toestemmingsvoorziening
-
-De OOTS-verplichte toestemmingspreview (SDG-verordening) is momenteel belegd bij RINIS-basisinrichting. Als GBO de toestemmingsflow overneemt, moet worden bepaald of het preview-scherm bij RINIS blijft of naar GBO verhuist. Dit raakt de verantwoordelijkheidsverdeling en dient te worden beslecht vóór technisch ontwerp.
+De OOTS-verplichte toestemmingspreview (SDG-verordening) is momenteel belegd bij RINIS-basisinrichting. Vooralsnog gaan we ervan uit dat dit zo blijft. Als GBO de toestemmingsflow overneemt, moet worden bepaald of het preview-scherm bij RINIS blijft of naar GBO verhuist. Dit raakt de verantwoordelijkheidsverdeling en dient te worden beslecht vóór technisch ontwerp.
 
 
 ## Gekwalificeerde elektronische attesteringen van attributen
@@ -41,6 +44,8 @@ Dit is nodig voor de Wallet, maar mogelijk ook voor de andere use cases. Er is [
 - Gebruik QEAA / QTSP?
 - Inrichten Pub-EAA?
 - Centrale verificatiedienst tbv QEAA?
+
+Vooralsnog gaan we uit van een centrale Pub-EAA verstrekker en een centrale verificatiedienst t.b.v. QEAA. Daarmee zijn alle opties mogelijk: bronhouder treedt zelf op als Pub-EAA-verstrekker, bronhouder gebruikt centrale Pub-EAA-verstrekker, QTSP geeft attesteringen uit die bij bronhouder geverifieerd zijn.
 
 
 ## Centrale Componenten

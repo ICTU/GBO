@@ -6,7 +6,12 @@ De oplossingsrichting met gemeenschappelijke bronontsluiting wordt gerealiseerd 
 
 Het logische architectuurdiagram schetst de generieke functies ten opzichte van elkaar.
 
+<figure>
+
 --8<-- "diagrammen/Architectuuroverzicht.mmd"
+
+<figcaption>Architectuuroverzicht GBO</figcaption>
+</figure>
 
 Het diagram onderscheidt drie lagen binnen de GBO:
 

@@ -1,37 +1,54 @@
-site_name: PSA GBO
+site_name: Documentatie GBO
 
 theme:
   name: material
   language: nl
+  palette:
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
   features:
     - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
     - content.code.copy
     - content.code.annotate
 
 markdown_extensions:
-
+  - tables
+  - footnotes
+  - sane_lists
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - admonition
+  - attr_list
   # Mermaid diagrammen
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-
-  # Includes voor diagrammen
+          format: !!python/name:pymdownx.superfences.fence_div_format
   - pymdownx.snippets:
       base_path:
         - docs
       check_paths: true
-
   # Automatische inhoudsopgave
   - toc:
       permalink: true
       toc_depth: 2
 
-extra:
-  version:
-    provider: mike
-    alias: true
+site_url: https://ictu.github.io/gbo/
+repo_url: https://github.com/ictu/gbo
+repo_name: ictu/gbo
 
 extra_css:
   - stylesheets/extra.css
@@ -39,31 +56,40 @@ extra_css:
 
 extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
-  - javascripts/mermaid-init.js
+  - javascript/mermaid-init.js
+
+extra:
+  version:
+    provider: mike
+    alias: true
 
 plugins:
   - search
+  - mike:
+      canonical_version: "latest"
   - print-site:
       add_to_navigation: false
-      print_page_title: "PSA GBO"
+      print_page_title: "Documentatie GBO"
       enumerate_headings: true
 
 nav:
-  - Voorblad: voorblad.md
+  - Over deze repository: index.md
 
-  - Over dit document: index.md
+  - Globaal ontwerp:
+      - Globaal ontwerp: ontwerp/concept-globaal-ontwerp.md
 
   - PSA:
-    - Inleiding: psa/inleiding.md
-    - Context: psa/context.md
-    - Architectuurprincipes: psa/architectuurprincipes.md
-    - Ontwerpprincipes: psa/ontwerpprincipes.md
-    - Ecosysteem en oplossingsrichting: psa/ecosysteem.md
-    - Interactiepatronen: psa/interactiepatronen.md
-    - Logische architectuur: psa/generieke-functies.md
-    - Capabilities: psa/capabilities.md
-    - Realisatiestrategie: psa/realisatiestrategie.md
-    - Open Vraagstukken en ontwerpkeuzes: psa/vraagstukken.md
+      - Voorblad: psa/voorblad.md
+      - Inleiding: psa/inleiding.md
+      - Context: psa/context.md
+      - Architectuurprincipes: psa/architectuurprincipes.md
+      - Ontwerpprincipes: psa/ontwerpprincipes.md
+      - Ecosysteem en oplossingsrichting: psa/ecosysteem.md
+      - Interactiepatronen: psa/interactiepatronen.md
+      - Logische architectuur: psa/generieke-functies.md
+      - Stelselfuncties: psa/capabilities.md
+      - Realisatiestrategie: psa/realisatiestrategie.md
+      - Open Vraagstukken en ontwerpkeuzes: psa/vraagstukken.md
 
   - Technisch ontwerp:
-    - Reference architecture: ref-arch/gbo-reference-architecture.md
+      - Reference architecture: ref-arch/gbo-reference-architecture.md

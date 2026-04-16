@@ -1,11 +1,11 @@
-# Capabilities
+# Stelselfuncties
 
-Dit hoofdstuk beschrijft **wat het stelsel moet kunnen** en is een uitwerking van de generieke functies naar afspraken, standaarden en voorzieningen, die als "capabilities" door het stelsel geleverd moeten worden.
+Dit hoofdstuk beschrijft **wat het stelsel moet kunnen** en is een uitwerking van de generieke functies naar afspraken, standaarden en voorzieningen, die als "stelselfuncties" door het stelsel geleverd moeten worden. De term sluit aan op de terminologie van het Federatief Datastelsel (FDS).
 
 
 ## Leeswijzer
 
-Per capability is aangegeven:  
+Per stelselfunctie is aangegeven:  
 - **Type invulling:** afspraak, standaard of voorziening  
 - **Beheer:** centraal (GBO-stelsel of bestaand stelsel beheert) of decentraal (bronhouder / afnemer implementeert zelf)  
 - **Instantiëring:** gedeelde instantie of eigen instantie per partij  
@@ -15,17 +15,17 @@ Per capability is aangegeven:
 
 De context is het GBO-stelsel, ingebed in NORA/GDI en het Federatief Datastelsel (FDS), met aansluiting op het eIDAS2/ARF Europees kader. Stelselafspraken landen in bestaande afsprakenstelsels: FDS en TIP ([Trusted Information Partners](https://www.trustedinformationpartners.nl)).
 
-De structuur "afspraken boven standaarden boven voorzieningen" is het expliciete uitgangspunt van FDS en wordt hier overgenomen. Waar mogelijk worden bestaande FDS-stelselfuncties hergebruikt (zie met name capabilities 3 en 5). Het **iWlz-afsprakenstelsel** geldt als blauwdruk voor de inrichting van het GBO-afsprakenstelsel zelf: gelaagd opgebouwd (organisatiebeleid → proces → informatie → applicatie → IT-infrastructuur → uitwisselprofielen), met een formeel RFC-proces voor wijzigingen.
+De structuur "afspraken boven standaarden boven voorzieningen" is het expliciete uitgangspunt van FDS en wordt hier overgenomen. Waar mogelijk worden bestaande FDS-stelselfuncties hergebruikt (zie met name S04 en S07). Het **iWlz-afsprakenstelsel** geldt als blauwdruk voor de inrichting van het GBO-afsprakenstelsel zelf: gelaagd opgebouwd (organisatiebeleid → proces → informatie → applicatie → IT-infrastructuur → uitwisselprofielen), met een formeel RFC-proces voor wijzigingen.
 
-Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gemarkeerd met ⚖️): capabilities die pas zinvol te realiseren zijn nadat de benodigde wettelijke grondslag in de Wet digitale overheid (Wdo) en bijbehorende AMvB is verankerd.
+Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gemarkeerd met ⚖️): stelselfuncties die pas zinvol te realiseren zijn nadat de benodigde wettelijke grondslag is verankerd.
 
 ---
 
-## Capability 1 — Grondslagregistratie
+## S01 — Toestemmingenregistratie
 
 *Het machineleesbaar vastleggen en raadplegen van de juridische grondslag per gegevensuitvraag (toestemming, wettelijke basis, doelbinding), zodat de autorisatiecomponent deze real-time kan toetsen.*
 
-> ⚖️ **Juridische randvoorwaarde:** Deze capability is voor het DvTP-traject pas zinvol te realiseren nadat de Wdo een expliciete bevoegdheid voor bronhouders bevat om op verzoek van de burger gegevens te verstrekken aan private dienstverleners. Zolang sectorale geheimhoudingsplichten (AWR art. 67, Wet SUWI art. 74 e.a.) niet via de Wdo zijn doorbroken, heeft een technisch grondslagregister geen werkende juridische basis. De technische uitwerking van deze capability loopt parallel aan het wetgevingstraject, maar kan pas operationeel worden na inwerkingtreding van de Wdo-grondslag en bijbehorende AMvB.
+> ⚖️ **Juridische randvoorwaarde:** Deze stelselfunctie is voor het DvTP-traject pas zinvol te realiseren nadat de Wdo een expliciete bevoegdheid voor bronhouders bevat om op verzoek van de burger gegevens te verstrekken aan private dienstverleners. Zolang sectorale geheimhoudingsplichten (AWR art. 67, Wet SUWI art. 74 e.a.) niet via de Wdo zijn doorbroken, heeft een technisch grondslagregister geen werkende juridische basis. De technische uitwerking van deze stelselfunctie loopt parallel aan het wetgevingstraject, maar kan pas operationeel worden na inwerkingtreding van de Wdo-grondslag en bijbehorende AMvB.
 
 ### Afspraken
 
@@ -49,11 +49,48 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 |---|---|---|---|---|
 | Toestemmingsregister / grondslagregister | Centrale voorziening | Centraal — GBO-stelsel (of Logius als beheerder) | Gedeelde instantie | ⚠️ In de zorg gebruikt men Mitz waarvan geleerd kan worden; nog geen generieke GBO-voorziening |
 | Inzage- en beheerinterface voor burger (Mijn Toestemmingen) | Centrale voorziening | Centraal — GBO/Logius | Gedeelde instantie | ⚠️ Raakvlak MijnOverheid; nog geen generieke invulling |
-| Policy Store (centrale beleidsdefinities overige grondslagen) | Centrale voorziening | Centraal — GBO | Gedeeld | ⚠️ Nog te realiseren - zie ook Capability 4 |
+| Policy Store (centrale beleidsdefinities overige grondslagen) | Centrale voorziening | Centraal — GBO | Gedeeld | ⚠️ Nog te realiseren - zie ook S05 |
 
+-e
 ---
 
-## Capability 2 — Burgeridentificatie & Pseudonimisering
+## S02 — Toestemmingsportaal (Burger Interactie)
+
+*De burger geeft via een toegankelijke interface geïnformeerde toestemming voor gegevensdeling, authenticeert zich daarvoor op het vereiste niveau, en kan toestemmingen inzien en intrekken. De pseudonimiseringsactie vindt hier plaats.*
+
+> ⚖️ **Juridische randvoorwaarde:** De werking van dit portaal is onlosmakelijk verbonden aan de Wdo-grondslag (zie S01). Bovendien moeten de vrijwilligheidsborging en het gelijkwaardig alternatief wettelijk worden verankerd als aansluiteis voor private dienstverleners, voordat het portaal operationeel zinvol is. Zonder die verankering is niet afdwingbaar dat dienstverleners de digitale route niet als dwingend voorwaarde mogen stellen.
+
+### Afspraken
+
+| Afspraak | Type | Beheer | Invulling |
+|---|---|---|---|
+| Minimale informatie-eisen voor toestemmingspresentatie aan burger (doel, afnemer, gegevens, geldigheidsduur) | Stelselafspraak | Centraal — GBO, AVG art. 7 als basis | ⚠️ Uitwerking als GBO-UX-richtlijn nog te maken |
+| Betrouwbaarheidsniveau authenticatie burger bij toestemming geven | Stelselafspraak | Centraal — GBO/FDS | ⚠️ Nog te bepalen per type gegevens; minimaal eIDAS Substantieel verwacht |
+| Pseudonimisering vindt plaats in het portaal op het moment van toestemmingsvastlegging | Architectuurafspraak | Centraal — GBO | ⚠️ Nog te maken als GBO-architectuurprincipe |
+| Gelijkwaardig alternatief verplicht: private dienstverleners mogen de digitale toestemmingsroute niet als enige toegangsweg stellen | Aansluiteis (wettelijk te verankeren) | Centraal — Wdo / RDI-toezicht | ⚖️ Moet wettelijk worden verankerd als aansluiteis in Wdo of AMvB; handhaving bij RDI |
+| Geen nadeel bij weigering: weigering van toestemming mag niet leiden tot weigering van dienst, vertraging, hogere kosten of slechtere voorwaarden | Aansluiteis (wettelijk te verankeren) | Centraal — Wdo / RDI-toezicht | ⚖️ Moet wettelijk worden verankerd; bewijslast ligt bij de private dienstverlener |
+| Transparantie over vrijwilligheid: burger wordt vooraf in begrijpelijke taal geïnformeerd dat de route vrijwillig is en welk alternatief beschikbaar is | Stelselafspraak / UX-eis | Centraal — GBO | ⚠️ Uitwerking als GBO-UX-richtlijn en aansluiteis nog te maken |
+
+### Standaarden
+
+| Standaard | Beheer | Bestaande invulling |
+|---|---|---|
+| DigiD-aansluiting (SAML 2.0 / OpenID Connect) | Logius | **Beschikbaar**; standaard aansluitprocedure Logius |
+| WCAG 2.1 AA — toegankelijkheidseisen overheidswebsites | W3C / Digitoegankelijk | **Verplicht** voor overheidsdiensten |
+| OpenID Connect (OIDC) — authenticatieprotocol naar burger | OpenID Foundation | **Beschikbaar**; onderdeel DigiD-aansluiting |
+
+### Voorzieningen
+
+| Voorziening | Type | Beheer | Instantiëring | Bestaande invulling |
+|---|---|---|---|---|
+| Toestemmingsportaal | Centrale voorziening | Centraal — GBO (of Logius als beheerder) | Gedeelde instantie | ⚠️ Nog te realiseren als GBO-voorziening; raakvlakken MijnOverheid en DvTP-pilot |
+| DigiD | Centrale voorziening | Logius | Gedeeld | **Beschikbaar** |
+| BSNk Activate (BSN → PI+PP bij eerste toestemmingsregistratie) | Onderdeel BSNk PP | Logius | Gedeeld | **Beschikbaar**; ⚠️ onboarding portaal als BSNk-deelnemer nog te realiseren |
+
+-e
+---
+
+## S03 — Burgeridentificatie & Pseudonimisering
 
 *Het vaststellen van de identiteit van de burger op het vereiste betrouwbaarheidsniveau, en het omzetten van het BSN naar partij-specifieke, onomkeerbare pseudoniemen zodat het BSN nooit bij private afnemers terechtkomt.*
 
@@ -84,13 +121,14 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | BSNk PP (polymorf pseudonimiseringsstelsel) | Centrale voorziening | Logius | Gedeeld | **Beschikbaar en in productie** (eToegang-stelsel, ~2019); integratiewerk voor GBO/DvTP-traject nog nodig |
 | BSNk Activate / Transform / Close | Onderdelen van BSNk PP | Logius | Gedeeld | Beschikbaar; onboarding Toestemmingsportaal als AD/MR-deelnemer en PEP als BSN-geautoriseerde component nog te realiseren |
 
+-e
 ---
 
-## Capability 3 — Organisatie-authenticatie & Vertrouwensstelsel
+## S04 — Organisatie-authenticatie & Vertrouwensstelsel
 
 *Vaststellen dat een deelnemende organisatie (dienstverlener, bronhouder, EU-lidstaat) is wie zij zegt te zijn, bevoegd is tot deelname, en verifieerbaar verbonden is aan het stelsel.*
 
-> ℹ️ **FDS hergebruik:** De organisatorische stelselfuncties **Poortwachter** (toelating en onboarding van nieuwe deelnemers) en **Marktmeester** (beheer van de deelnemerslijst en naleving van aansluitvoorwaarden) zijn binnen FDS al gedefinieerd en gedeeltelijk ingericht. GBO hergebruikt deze functies voor de toelating van bronhouders en private dienstverleners, aangevuld met GBO-specifieke aansluitvoorwaarden (zie ook Capability 5).
+> ℹ️ **FDS hergebruik:** De organisatorische stelselfuncties **Poortwachter** (toelating en onboarding van nieuwe deelnemers) en **Marktmeester** (beheer van de deelnemerslijst en naleving van aansluitvoorwaarden) zijn binnen FDS al gedefinieerd en gedeeltelijk ingericht. GBO hergebruikt deze functies voor de toelating van bronhouders en private dienstverleners, aangevuld met GBO-specifieke aansluitvoorwaarden (zie ook S07).
 
 ### Afspraken
 
@@ -120,9 +158,10 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | FDS Poortwachter (toelating en onboarding deelnemers) | Organisatorische stelselfunctie FDS | Centraal — FDS-beheer / GBO | Gedeeld | **Beschikbaar als FDS-functie**; GBO vult deze functie in voor bronhouders en private dienstverleners met GBO-specifieke aansluitvoorwaarden — ⚠️ GBO-aansluitvoorwaarden zelf nog te maken |
 | FDS Marktmeester (deelnemerslijst en nalevingsbeheer) | Organisatorische stelselfunctie FDS | Centraal — FDS-beheer / GBO | Gedeeld | **Beschikbaar als FDS-functie**; GBO breidt deze functie uit met GBO-specifieke nalevingseisen voor private dienstverleners |
 
+-e
 ---
 
-## Capability 4 — Autorisatie (PEP/PDP/PIP-keten)
+## S05 — Autorisatie (PEP/PDP/PIP)
 
 *Iedere gegevensuitvraag wordt getoetst aan machineleesbaar beleid, op basis van de identiteit van de afnemer, de gevraagde gegevens, en de real-time raadpleging van de grondslag. De beslissing is herleidbaar en trajectonafhankelijk.*
 
@@ -140,7 +179,7 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | Standaard | Beheer | Bestaande invulling |
 |---|---|---|
 | AuthZEN NL Gov (draft) — gestandaardiseerde interface tussen PEP en PDP | Logius | Draft-standaard; FTV (Federatieve Toegangsverlenig, Logius) loopt pilot |
-| OPA/Rego — machineleesbare beleidstaal voor PDP-evaluatie | Open Policy Agent / CNCF | **In productie bij iWlz** (ZIN/Ketenbureau iWlz) voor gevoelige zorgdata; directe precedentwaarde |
+| OPA/Rego — machineleesbare beleidstaal voor PDP-evaluatie | Open Policy Agent / CNCF | **In productie bij iWlz** (ZIN) voor gevoelige zorgdata; directe precedentwaarde |
 | XACML 3.0 — alternatieve PDP-standaard (minder actueel, maar breed ingezet) | OASIS | Beschikbaar; minder geschikt voor fine-grained data-access dan OPA/Rego |
 | PBAC (Policy-Based Access Control) als autorisatieparadigma | Conceptueel kader | Beschreven in FTV-architectuur; aansluiting GBO gewenst |
 
@@ -149,13 +188,48 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | Voorziening | Type | Beheer | Instantiëring | Bestaande invulling |
 |---|---|---|---|---|
 | PEP (Policy Enforcement Point) | Decentrale voorziening | Decentraal — per bronhouder geïnstantieerd | Eigen instantie per bronhouder | ⚠️ Nog te realiseren; GBO levert referentie-implementatie / deployable package |
-| PDP (Policy Decision Point) | Decentrale voorziening (centraal beheerde policies) | Policies centraal beheerd door GBO; PDP-instantie decentraal bij bronhouder | Eigen instantie per bronhouder | ⚠️ Nog te realiseren; iWlz OPA/Rego als precedent |
-| PIP-interface naar grondslagregistratie | Koppelvlak | Centraal — GBO (grondslagregistratie als PIP) | Gedeeld koppelvlak | ⚠️ Nog te standaardiseren als GBO PIP-profiel (zie Capability 1) |
-| Policy Store (centrale opslag van beleidsdefinities per traject) | Centrale voorziening | Centraal — GBO | Gedeeld | ⚠️ Nog te realiseren |
+| PDP (Policy Decision Point) | Decentrale voorziening (centraal beheerde policies) | Policies centraal beheerd door GBO; PDP-instantie decentraal bij bronhouder | Eigen instantie per bronhouder | ⚠️ Nog te realiseren; iWlz implementatie OPA/Rego als precedent |
+| PIP-interface naar grondslagregistratie | Koppelvlak | Centraal — GBO (grondslagregistratie als PIP) | Gedeeld koppelvlak | ⚠️ Nog te standaardiseren als GBO PIP-profiel (zie S01) |
+| Policy Store / PAP | Centrale voorziening | Centraal — GBO | Gedeeld | Zie S06 — Beleidsbeheer & -distributie |
 
+-e
 ---
 
-## Capability 5 — Gegevensontsluiting (Bronontsluiting API)
+## S06 — Beleidsbeheer & -distributie (PAP)
+
+*Het centraal beheren en distribueren van autorisatiebeleid (OPA/Rego-policies) naar de decentrale autorisatiecomponenten (PDP's) van alle aangesloten bronhouders, zodat het stelsel als geheel consistent en bestuurlijk controleerbaar toegang handhaaft.*
+
+> ⚠️ **Nog te ontwerpen:** Deze stelselfunctie is nieuw en heeft geen bestaande invulling. De PAP (Policy Administration Point) is het technisch-bestuurlijke gezagspunt van het stelsel: hij bepaalt wat iedere deelnemer mag opvragen. Vereist een expliciete governance-afspraak over wie policies mag schrijven, wijzigen en goedkeuren.
+
+### Afspraken
+
+| Afspraak | Type | Beheer | Invulling |
+|---|---|---|---|
+| Governance: wie is bevoegd tot het schrijven, wijzigen en goedkeuren van policies per traject (DvTP, OOTS, EDI) | Stelselafspraak | Centraal — GBO-stelselorganisatie | ⚠️ Nog te maken; raakt aan rolverdeling bronhouder, vakdepartement en GBO-beheer |
+| Beleidswijzigingsproces: RFC-procedure voor het aanpassen van gedeelde policies, inclusief testfase en inwerkingtredingmoment | Stelselafspraak | Centraal — GBO | ⚠️ Nog te maken; analoog aan iWlz RFC-aanpak |
+| Policies worden als gesigneerde bundles gedistribueerd; decentrale PDP's halen updates asynchroon op | Architectuurafspraak | Centraal — GBO | ⚠️ Nog te maken als GBO-architectuurprincipe |
+| Naast toestemming worden ook toepasbare grondslagen (wettelijke basis, doelbinding) als machineleesbaar beleid centraal beheerd | Stelselafspraak | Centraal — GBO/FDS, raakvlak AVG/Wdo | ⚠️ Nog te maken; ODRL of Rego als taal nog te bepalen |
+
+### Standaarden
+
+| Standaard | Beheer | Bestaande invulling |
+|---|---|---|
+| OPA Bundle API — mechanisme voor asynchrone distributie van policy-bundles naar decentrale PDP's | Open Policy Agent / CNCF | **Beschikbaar**; onderdeel OPA-ecosysteem; in gebruik bij iWlz |
+| OCI (Open Container Initiative) — formaat voor gesigneerde policy-bundles | OCI / CNCF | **Beschikbaar**; standaard container-artefact formaat |
+| W3C ODRL — machineleesbare expressie van beleid en grondslagen als aanvulling op Rego | W3C | Beschikbaar; ⚠️ inzet voor GBO-grondslagbeheer nog te bepalen |
+
+### Voorzieningen
+
+| Voorziening | Type | Beheer | Instantiëring | Bestaande invulling |
+|---|---|---|---|---|
+| Policy Administration Point (PAP) | Centrale voorziening | Centraal — GBO-stelselorganisatie | Gedeelde instantie | ⚠️ Nog te realiseren; beheert en publiceert policy-bundles voor alle trajecten |
+| Policy Store (versiebeheer van vastgestelde policies) | Centrale voorziening | Centraal — GBO | Gedeeld | ⚠️ Nog te realiseren; onderdeel PAP of afzonderlijk Git-gebaseerd register |
+| Distributie-endpoint (OPA Bundle Server) | Centrale voorziening | Centraal — GBO | Gedeeld | ⚠️ Nog te realiseren; decentrale PDP's pollen dit endpoint voor policy-updates |
+
+-e
+---
+
+## S07 — Gegevensontsluiting (Bronontsluiting API)
 
 *Bronhouders stellen gegevens beschikbaar via één generieke, herbruikbare interface. Selectieve uitvraag is structureel mogelijk en afdwingbaar. Geen trajectspecifieke endpoints.*
 
@@ -188,9 +262,10 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | Query Template Registry (catalogus van geregistreerde gegevensvragen) | Centrale voorziening | Centraal — GBO | Gedeeld | ⚠️ Nog te realiseren als GBO-voorziening |
 | GBO Vertaallaag (shared service voor kleine bronhouders zonder eigen GraphQL) | Centrale voorziening | Centraal — GBO | Gedeeld | ⚠️ Nog te realiseren; optioneel voor gemeenten en kleine bronhouders |
 
+-e
 ---
 
-## Capability 6 — Grensoverschrijdende gegevensuitwisseling (OOTS-brug)
+## S08 — OOTS-adapter (Grensoverschrijdend)
 
 *Verzoeken vanuit andere EU-lidstaten via het OOTS-stelsel worden vertaald naar het binnenlandse GBO-protocol. Bronhouders zien geen EU-specifiek transport. De brug is een EU-rechtelijke verplichting.*
 
@@ -217,46 +292,12 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 |---|---|---|---|---|
 | Domibus Access Point | Centrale voorziening | Centraal — GBO (één NL-instelling voor GBO-bronhouders) | Gedeelde instantie | **Beschikbaar** als open source (EC); ⚠️ operationele inrichting voor GBO nog te doen |
 | OOTS-EDM Adapter (XML ↔ FSC/GraphQL vertaling) | Centrale voorziening | Centraal — GBO | Gedeelde instantie | ⚠️ Nog te realiseren |
-| SMP 2.1 Publisher | Centrale voorziening | Centraal — GBO | Gedeelde instantie | ⚠️ Nog te realiseren; configuratie gebaseerd op query-catalogus (zie Capability 5) |
+| SMP 2.1 Publisher | Centrale voorziening | Centraal — GBO | Gedeelde instantie | ⚠️ Nog te realiseren; configuratie gebaseerd op query-catalogus (zie S07) |
 
+-e
 ---
 
-## Capability 7 — Toestemmingsportaal (Burger Interactie)
-
-*De burger geeft via een toegankelijke interface geïnformeerde toestemming voor gegevensdeling, authenticeert zich daarvoor op het vereiste niveau, en kan toestemmingen inzien en intrekken. De pseudonimiseringsactie vindt hier plaats.*
-
-> ⚖️ **Juridische randvoorwaarde:** De werking van dit portaal is onlosmakelijk verbonden aan de Wdo-grondslag (zie Capability 1). Bovendien moeten de vrijwilligheidsborging en het gelijkwaardig alternatief wettelijk worden verankerd als aansluiteis voor private dienstverleners, voordat het portaal operationeel zinvol is. Zonder die verankering is niet afdwingbaar dat dienstverleners de digitale route niet als dwingend voorwaarde mogen stellen.
-
-### Afspraken
-
-| Afspraak | Type | Beheer | Invulling |
-|---|---|---|---|
-| Minimale informatie-eisen voor toestemmingspresentatie aan burger (doel, afnemer, gegevens, geldigheidsduur) | Stelselafspraak | Centraal — GBO, AVG art. 7 als basis | ⚠️ Uitwerking als GBO-UX-richtlijn nog te maken |
-| Betrouwbaarheidsniveau authenticatie burger bij toestemming geven | Stelselafspraak | Centraal — GBO/FDS | ⚠️ Nog te bepalen per type gegevens; minimaal eIDAS Substantieel verwacht |
-| Pseudonimisering vindt plaats in het portaal op het moment van toestemmingsvastlegging | Architectuurafspraak | Centraal — GBO | ⚠️ Nog te maken als GBO-architectuurprincipe |
-| Gelijkwaardig alternatief verplicht: private dienstverleners mogen de digitale toestemmingsroute niet als enige toegangsweg stellen | Aansluiteis (wettelijk te verankeren) | Centraal — Wdo / RDI-toezicht | ⚖️ Moet wettelijk worden verankerd als aansluiteis in Wdo of AMvB; handhaving bij RDI |
-| Geen nadeel bij weigering: weigering van toestemming mag niet leiden tot weigering van dienst, vertraging, hogere kosten of slechtere voorwaarden | Aansluiteis (wettelijk te verankeren) | Centraal — Wdo / RDI-toezicht | ⚖️ Moet wettelijk worden verankerd; bewijslast ligt bij de private dienstverlener |
-| Transparantie over vrijwilligheid: burger wordt vooraf in begrijpelijke taal geïnformeerd dat de route vrijwillig is en welk alternatief beschikbaar is | Stelselafspraak / UX-eis | Centraal — GBO | ⚠️ Uitwerking als GBO-UX-richtlijn en aansluiteis nog te maken |
-
-### Standaarden
-
-| Standaard | Beheer | Bestaande invulling |
-|---|---|---|
-| DigiD-aansluiting (SAML 2.0 / OpenID Connect) | Logius | **Beschikbaar**; standaard aansluitprocedure Logius |
-| WCAG 2.1 AA — toegankelijkheidseisen overheidswebsites | W3C / Digitoegankelijk | **Verplicht** voor overheidsdiensten |
-| OpenID Connect (OIDC) — authenticatieprotocol naar burger | OpenID Foundation | **Beschikbaar**; onderdeel DigiD-aansluiting |
-
-### Voorzieningen
-
-| Voorziening | Type | Beheer | Instantiëring | Bestaande invulling |
-|---|---|---|---|---|
-| Toestemmingsportaal | Centrale voorziening | Centraal — GBO (of Logius als beheerder) | Gedeelde instantie | ⚠️ Nog te realiseren als GBO-voorziening; raakvlakken MijnOverheid en DvTP-pilot |
-| DigiD | Centrale voorziening | Logius | Gedeeld | **Beschikbaar** |
-| BSNk Activate (BSN → PI+PP bij eerste toestemmingsregistratie) | Onderdeel BSNk PP | Logius | Gedeeld | **Beschikbaar**; ⚠️ onboarding portaal als BSNk-deelnemer nog te realiseren |
-
----
-
-## Capability 8 — Logging, Audit & Traceerbaarheid
+## S09 — Logging, Audit & Traceerbaarheid
 
 *Iedere gegevensuitvraag is over de hele keten herleidbaar. Logregels zijn correleerbaar, onweerlegbaar, en zodanig ingericht dat inzagerechten van de burger technisch uitvoerbaar zijn.*
 
@@ -287,9 +328,10 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | Centrale audit-aggregatie (optioneel) | Centrale voorziening | Centraal — GBO | Gedeeld | ⚠️ Nog te bepalen of centraal aggregatiepunt nodig is; privacy-implicaties afwegen |
 | Inzageportaal burger (verwerkingsregister) | Centrale voorziening | Centraal — GBO / MijnOverheid | Gedeeld | ⚠️ Raakvlak MijnOverheid/Logius; nog niet gerealiseerd voor GBO |
 
+-e
 ---
 
-## Capability 9 — Semantiek & Gegevenscatalogus
+## S10 — Semantiek & Gegevenscatalogus
 
 *Gegevens die via GBO uitgewisseld worden hebben een eenduidige, beheerde betekenis. Dezelfde canonieke definitie wordt geserialiseerd naar de voor elk traject vereiste uitwisselingsformaten.*
 
@@ -320,18 +362,16 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | Serialisatie-service (canoniek schema → JSON / XML / SD-JWT VC / mdoc) | Centrale voorziening | Centraal — GBO | Gedeeld | ⚠️ Nog te realiseren |
 | FDS Datacatalogus (bestaande DCAT-infrastructuur) | Centrale voorziening | FDS / Logius | Gedeeld | **Beschikbaar**; GBO-uitbreiding voor schema-registry gewenst |
 
+-e
 ---
 
-
----
-
-## Capability 10 — Attesteringsuitgifte (PuB-EAA / QEAA)
+## S11 — Attesteringsuitgifte (PuB-EAA / QEAA)
 
 *Het omzetten van brongegevens uit authentieke overheidsbronnen naar digitaal ondertekende attesteringen die burgers kunnen opslaan in een EUDI-wallet en presenteren aan vertrouwende partijen.*
 
 > ⚖️ **Juridische randvoorwaarde:** De vereisten voor PuB-EAA-uitgifte zijn vastgelegd in Uitvoeringsverordening (EU) 2025/1569 en de bijbehorende ETSI-normen. Overheidsorganen die PuB-EAAs uitgeven moeten beschikken over een goedgekeurd Conformity Assessment Report (CAR) van een geaccrediteerde Conformity Assessment Body (CAB). De Europese regelgeving op dit punt is nog in ontwikkeling; de uitwerking van GBO op dit vlak loopt parallel aan de nadere invulling van het Europese kader.
 
-> ℹ️ **Scope-afbakening:** GBO overweegt een **centrale PuB-EAA-uitgifte-dienst** in te richten die namens overheidsbronhouders attesteringen uitgeeft op basis van de generieke bronontsluiting (Capability 5), en een **centrale verificatiedienst** waar vertrouwende partijen de geldigheid van uitgegeven attesteringen kunnen controleren. De keuze of beide voorzieningen centraal worden ingericht, decentraal per bronhouder, of dat de uitgifte elders (buiten GBO) wordt belegd, is nog niet gemaakt en wordt hier als open vraag behandeld.
+> ℹ️ **Scope-afbakening:** GBO overweegt een **centrale PuB-EAA-uitgifte-dienst** in te richten die namens overheidsbronhouders attesteringen uitgeeft op basis van de generieke bronontsluiting (S07), en een **centrale verificatiedienst** waar vertrouwende partijen de geldigheid van uitgegeven attesteringen kunnen controleren. De keuze of beide voorzieningen centraal worden ingericht, decentraal per bronhouder, of dat de uitgifte elders (buiten GBO) wordt belegd, is nog niet gemaakt en wordt hier als open vraag behandeld.
 
 ### Afspraken
 
@@ -365,42 +405,44 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | Opname op Nederlandse Trusted List (LoTE) | Registratie bij RDI | RDI | Eenmalig per erkende uitgevende dienst | ⚠️ Vereist goedgekeurde CAR; procedure loopt via RDI conform eIDAS Trusted List Infrastructure |
 | NL Wallet (EUDI Wallet referentie-implementatie NL) | Nationale voorziening | Logius / stelselbeheerder EDI-stelsel | Gedeeld | Beschikbaar als pilotimplementatie; GBO-attesteringen moeten aansluiten op NL Wallet-specificaties |
 
+-e
 ---
 
-## Overzicht: gaps per capability
+## Overzicht: gaps per stelselfunctie
 
-De gaps zijn onderverdeeld in drie categorieën:
-- ⚖️ **Juridische gap** — vereist wetgeving of AMvB voordat de technische invulling zinvol is
-- ⚠️ **Technische/organisatorische gap** — nog te realiseren binnen bestaand juridisch kader
-- ✅ **Beschikbaar** — bestaande invulling die hergebruikt wordt
+De gaps zijn onderverdeeld in drie categorieën:  
+- ⚖️ **Juridische gap** — vereist wetgeving of AMvB voordat de technische invulling zinvol is  
+- ⚠️ **Technische/organisatorische gap** — nog te realiseren binnen bestaand juridisch kader  
+- ✅ **Beschikbaar** — bestaande invulling die hergebruikt wordt  
 
-| Capability | Juridische gaps ⚖️ | Technische / organisatorische gaps ⚠️ | Bestaande basis ✅ |
+| Stelselfunctie | Juridische gaps ⚖️ | Technische / organisatorische gaps ⚠️ | Bestaande basis ✅ |
 |---|---|---|---|
-| 1 — Grondslagregistratie | Wdo-grondslag DvTP; AMvB doelbinding en gegevenscategorieën | Grondslagregister als GBO-voorziening; PIP-interface standaard; stelselafspraken intrekking | W3C ODRL; DCAT-AP NL |
-| 2 — Burgeridentificatie & Pseudonimisering | — | BSNk PP-integratie voor DvTP (onboarding portaal en PEP); betrouwbaarheidsniveau-beleid per traject | BSNk PP (productie); DigiD; eIDAS-knooppunt |
-| 3 — Vertrouwensstelsel | — | GBO-vertrouwensprofiel (welke trust anchors per traject); OIN ↔ KvK ↔ eIDAS-identifier koppeling; GBO-aansluitvoorwaarden | FDS Poortwachter; FDS Marktmeester; FSC Directory; PKI Overheid; OIN-register |
-| 4 — Autorisatie (PEP/PDP) | — | Volledige PEP/PDP/PIP-keten nog te realiseren; GBO AuthZEN-profiel; Policy Store; BSN-resolving post-decision | OPA/Rego (iWlz, productie); FTV/AuthZEN (pilot) |
-| 5 — Bronontsluiting API | — | Query Template Registry; GraphQL als FDS-datadienst-type positioneren; GBO onboardingprocedure bronhouders | FSC (productie); FDS Poortwachter; DCAT-AP NL; iWlz GraphQL-patroon |
-| 6 — OOTS-brug | — | OOTS-EDM Adapter; SMP Publisher; operationele inrichting Domibus voor GBO | Domibus (open source, EC); AS4/OOTS-EDM standaarden |
-| 7 — Toestemmingsportaal | Wdo-grondslag DvTP; wettelijke verankering vrijwilligheidseis en gelijkwaardig alternatief als aansluiteis | Portaal zelf; BSNk-onboarding portaal; UX-richtlijnen toestemmingspresentatie; transparantie-eis uitwerking | DigiD; BSNk Activate |
-| 8 — Logging & Audit | — | LDV-profiel per GBO-component; inzagevoorziening burger | LDV (in consultatie, referentie-impl. beschikbaar); OpenTelemetry; iWlz TraceID/SpanID RFC (productie) |
-| 9 — Semantiek | — | Schema Registry; serialisatie-service; mappings naar OOTS-EDM en PuB-EAA | FDS Datacatalogus; DCAT-AP NL; OOTS-EDM |
-| 10 — Attesteringsuitgifte | CAR-certificering uitgifte-dienst; opname op NL Trusted List (RDI) | Centrale uitgifte-dienst; Attestation Rulebooks per attribuuttype; wallet binding profiel; verificatiedienst; intrekkingsbeleid | OpenID4VCI; SD-JWT VC; ARF; NL Wallet (pilot) |
+| S01 — Toestemmingenregistratie | Wdo-grondslag DvTP; AMvB doelbinding en gegevenscategorieën | Toestemmingenregister als GBO-voorziening; PIP-interface standaard; stelselafspraken intrekking | W3C ODRL; DCAT-AP NL |
+| S02 — Toestemmingsportaal | Wdo-grondslag DvTP; wettelijke verankering vrijwilligheidseis en gelijkwaardig alternatief als aansluiteis | Portaal zelf; BSNk-onboarding portaal; UX-richtlijnen toestemmingspresentatie; transparantie-eis uitwerking | DigiD; BSNk Activate |
+| S03 — Burgeridentificatie & Pseudonimisering | — | BSNk PP-integratie voor DvTP (onboarding portaal en PEP); betrouwbaarheidsniveau-beleid per traject | BSNk PP (productie); DigiD; eIDAS-knooppunt |
+| S04 — Organisatie-authenticatie & Vertrouwensstelsel | — | GBO-vertrouwensprofiel (welke trust anchors per traject); OIN ↔ KvK ↔ eIDAS-identifier koppeling; GBO-aansluitvoorwaarden | FDS Poortwachter; FDS Marktmeester; FSC Directory; PKI Overheid; OIN-register |
+| S05 — Autorisatie (PEP/PDP/PIP) | — | Volledige PEP/PDP/PIP-keten nog te realiseren; GBO AuthZEN-profiel; BSN-resolving post-decision | OPA/Rego; FTV/AuthZEN (pilot) |
+| S06 — Beleidsbeheer & -distributie (PAP) | — | Centrale PAP-voorziening; Policy Store; distributie-endpoint; governance-afspraken beleidswijziging; toepasbare grondslagen als machineleesbaar beleid | OPA Bundle API; OCI (beschikbaar) |
+| S07 — Gegevensontsluiting (Bronontsluiting API) | — | Query Template Registry; GraphQL als FDS-datadienst-type positioneren; GBO onboardingprocedure bronhouders | FSC (productie); FDS Poortwachter; DCAT-AP NL; iWlz GraphQL-patroon |
+| S08 — OOTS-adapter (Grensoverschrijdend) | — | GBO ↔ RINIS REST-koppeling; SMP-beheer; SDG-EDM mapping | RINIS basisinrichting beschikbaar; Domibus (open source, EC); AS4/OOTS-EDM standaarden |
+| S09 — Logging, Audit & Traceerbaarheid | — | LDV-profiel per GBO-component; inzagevoorziening burger | LDV (in consultatie, referentie-impl. beschikbaar); OpenTelemetry; iWlz TraceID/SpanID RFC (productie) |
+| S10 — Semantiek & Gegevenscatalogus | — | Schema Registry; serialisatie-service; mappings naar OOTS-EDM en PuB-EAA | FDS Datacatalogus; DCAT-AP NL; OOTS-EDM |
+| S11 — Attesteringsuitgifte (PuB-EAA / QEAA) | CAR-certificering uitgifte-dienst; opname op NL Trusted List (RDI) | Centrale uitgifte-dienst; Attestation Rulebooks per attribuuttype; wallet binding profiel; verificatiedienst; intrekkingsbeleid | OpenID4VCI; SD-JWT VC; ARF; NL Wallet (pilot) |
 
 ---
 
 ## Bijlage: GBO-afsprakenstelsel
 
-Er is een afsprakenstelsel nodig dat de bovenstaande capabilities verbindt in één samenhangend geheel van afspraken, standaarden en voorzieningen. Het **iWlz-afsprakenstelsel** is hiervoor de aangewezen blauwdruk: het is gelaagd opgebouwd, formeel vastgesteld, en heeft een werkend RFC-proces voor wijzigingen.
+Er is een werkend afsprakenstelsel nodig dat de bovenstaande stelselfuncties verbindt in één samenhangend geheel van afspraken, standaarden en voorzieningen. Het **iWlz-afsprakenstelsel** is hiervoor een goede blauwdruk: het is gelaagd opgebouwd, formeel vastgesteld, en heeft een werkend RFC-proces voor wijzigingen.
 
-De aanbevolen lagenstructuur voor het GBO-afsprakenstelsel, analoog aan iWlz:
+De aanbevolen lagenstructuur voor het GBO-afsprakenstelsel (analoog aan iWlz):
 
 | Laag | Inhoud voor GBO |
 |---|---|
 | Organisatiebeleid | Governance, rollen (bronhouder, afnemer, GBO-beheer), ontwerpkeuzes, serviceafspraken, wijzigingsbeheer |
 | Proces | GBO-trajectprocessen: DvTP-toestemmingsstroom, OOTS-brugstroom, EDI-wallet uitgifte- en presentatiestroom |
 | Informatie | Gegevensmodellen per bronhouder, canonieke schema's, mappings naar OOTS-EDM en PuB-EAA |
-| Applicatie | Technische afspraken per capability: PEP/PDP-keten, FSC-profiel, BSNk PP-integratie, query-templates |
+| Applicatie | Technische afspraken per stelselfunctie: PEP/PDP-keten, FSC-profiel, BSNk PP-integratie, query-templates |
 | IT-infrastructuur | Connectiviteit (FSC), certificaten (PKI Overheid), netwerkeisen, SLA's |
 | Uitwisselprofielen | Per traject (DvTP, OOTS, EDI-wallet): specifieke afspraken aanvullend op de generieke lagen |
 
