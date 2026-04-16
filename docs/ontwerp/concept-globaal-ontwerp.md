@@ -1,4 +1,4 @@
-**Gemeenschappelijke Bronontsluiting (GBO)**
+# Gemeenschappelijke Bronontsluiting (GBO)
 
 Eerste ontwerp - ter bespreking
 
