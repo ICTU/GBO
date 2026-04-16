@@ -27,7 +27,7 @@ Het project Gemeenschappelijke Bronontsluiting (GBO) realiseert stelselfuncties 
 In figuur 2 is geschetst hoe een dergelijk stelsel er in de praktijk uit kan komen te zien.
 
 <figure>
---8<-- "./GBO-Abstract"
+--8<-- "./GBO-Abstract.png"
 <figcaption>Figuur 2: GBO-stelsel met deelnemende organisaties, waaronder aanbieders van gegevens (bronnen) en afnemers (waaronder private dienstverleners en de EUDI-Wallet), die dankzij de gemeenschappelijke generieke functies gegevens met elkaar uitwisselen. Organisaties kunnen gebruik maken van 'integrators' die diensten leveren om de generieke functies aan te roepen.</figcaption>
 </figure>
 
