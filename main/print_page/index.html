@@ -47,8 +47,6 @@
       
     
     
-      <link rel="stylesheet" href="../css/print-site-enum-headings1.css">
-    
       <link rel="stylesheet" href="../css/print-site-enum-headings2.css">
     
       <link rel="stylesheet" href="../css/print-site-enum-headings3.css">
@@ -222,11 +220,14 @@
     <!-- Site language selector -->
     
 
-    <!-- Button to print document -->
-    <a href="./" title="Download PDF" class="md-header__button pdf-download">
-      PDF Downloaden
+    <!-- Knop voor PDF Download -->
+    <a href="javascript:void(0)"
+       onclick="downloadPDF('./')"
+       title="Download PDF"
+       class="md-header__button md-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-9.5 8.5c0 .8-.7 1.5-1.5 1.5H7v2H5.5V9H8c.8 0 1.5.7 1.5 1.5zm5 2c0 .8-.7 1.5-1.5 1.5h-2.5V9H13c.8 0 1.5.7 1.5 1.5zm4-3H17v1h1.5V13H17v2h-1.5V9h3zm-6.5 0h1v3h-1zm-5 0h1v1H7z"/></svg>
     </a>
-
+        
     <!-- Button to open search modal -->
     
       
@@ -797,240 +798,6 @@
   
 
     
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Documentatie GBO
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Documentatie GBO
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Inhoudsopgave
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Over deze repository
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#section-psa" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        I. PSA
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="I. PSA">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#psa-inleiding" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Inleiding
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#psa-context" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Context
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#psa-architectuurprincipes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Architectuurprincipes
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#psa-ontwerpprincipes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Ontwerpprincipes
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#psa-ecosysteem" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Ecosysteem en oplossingsrichting
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#psa-interactiepatronen" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        7. Interactiepatronen
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#psa-generieke-functies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        8. Logische architectuur
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#psa-capabilities" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        9. Stelselfuncties
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#psa-realisatiestrategie" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        10. Realisatiestrategie
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#psa-vraagstukken" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        11. Open Vraagstukken en ontwerpkeuzes
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#section-technisch-ontwerp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        II. Technisch ontwerp
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="II. Technisch ontwerp">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ref-arch-gbo-reference-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        12. Reference architecture
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-    
   </ul>
 </nav>
                   </div>
@@ -1048,7 +815,7 @@
 
 
 
-<div id="print-site-page" class="print-site-enumerate-headings print-site-enumerate-figures">
+<div id="print-site-page" class="print-site-enumerate-figures">
         <section class="print-page">
             <div id="print-page-toc" data-toc-depth="3">
                 <nav role='navigation' class='print-page-toc-nav'>

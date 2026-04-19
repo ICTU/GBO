@@ -99,14 +99,3 @@
   color: #e05050;
   background: transparent;
 }
-
-/* Styling voor een PDF knop in de header */
-/* Zorg dat het PDF icoon mooi uitlijnt met andere iconen */
-.md-header__button.md-icon[title="Download PDF"] {
-  margin-left: 0.4rem;
-}
-
-/* Optioneel: geef het icoon een rode kleur bij hover */
-.md-header__button.md-icon[title="Download PDF"]:hover {
-  color: #e91e63;
-}
