@@ -1,10 +1,11 @@
 # GBO
 
-## Project Start Architectuur
+## Project Start Architectuur  
 
-![ICTU](media/ictu-logo.png)
+
+![ICTU](/media/ictu-logo.png)
 
 ---
 
-Auteur: Govert Claus  
+Auteur: project GBO  
 Organisatie: ICTU

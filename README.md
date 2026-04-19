@@ -41,6 +41,9 @@ GBO
     └─ hoofdstukken in markdown formaat
 ```
 
+Bent u op zoek naar het Globaal Ontwerp van het project GBO?  
+Deze is in een aparte repository opgenomen: https://github.com/ICTU/GBO-GO
+
 ---
 
 # Status
