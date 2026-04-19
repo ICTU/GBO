@@ -99,16 +99,14 @@
   color: #e05050;
   background: transparent;
 }
+
 /* Styling voor een PDF knop in de header */
-.md-header__button.pdf-download {
-  background-color: #e91e63; /* Bijv. roze/rood voor PDF */
-  color: white;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  margin-left: 10px;
+/* Zorg dat het PDF icoon mooi uitlijnt met andere iconen */
+.md-header__button.md-icon[title="Download PDF"] {
+  margin-left: 0.4rem;
 }
 
-.md-header__button.pdf-download:hover {
-  background-color: #c2185b;
+/* Optioneel: geef het icoon een rode kleur bij hover */
+.md-header__button.md-icon[title="Download PDF"]:hover {
+  color: #e91e63;
 }
