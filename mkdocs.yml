@@ -70,9 +70,9 @@ plugins:
   - mike:
       canonical_version: "latest"
   - print-site:
-      add_to_navigation: true
+      add_to_navigation: false
       print_page_title: "Documentatie GBO"
-      enumerate_headings: true
+      enumerate_headings: false
       exclude:
         - index.md
 

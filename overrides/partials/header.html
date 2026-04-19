@@ -89,11 +89,14 @@
       {% include "partials/alternate.html" %}
     {% endif %}
 
-    <!-- Button to print document -->
-    <a href="{{ 'print_page/' | url }}" title="Download PDF" class="md-header__button pdf-download">
-      PDF Downloaden
+    <!-- Knop voor PDF Download -->
+    <a href="javascript:void(0)"
+       onclick="downloadPDF('{{ 'print_page/' | url }}')"
+       title="Download PDF"
+       class="md-header__button md-icon">
+      {% include ".icons/material/file-pdf-box.svg" %}
     </a>
-
+        
     <!-- Button to open search modal -->
     {% if "material/search" in config.plugins %}
       {% set search = config.plugins["material/search"] | attr("config") %}

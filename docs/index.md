@@ -19,7 +19,7 @@ De repository is als volgt opgebouwd:
 
 
 Bent u op zoek naar het Globaal Ontwerp van het project GBO?  
-Deze is in een aparte omgeving geplaatst: https://ictu.github.io/GBO-GO/
+Deze is in een aparte omgeving geplaatst: [https://ictu.github.io/GBO-GO/](https://ictu.github.io/GBO-GO/)
 
 
 *Vragen over deze repository kunnen gesteld worden aan de architect van het projectteam.*
