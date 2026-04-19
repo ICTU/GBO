@@ -51,7 +51,6 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | Inzage- en beheerinterface voor burger (Mijn Toestemmingen) | Centrale voorziening | Centraal — GBO/Logius | Gedeelde instantie | ⚠️ Raakvlak MijnOverheid; nog geen generieke invulling |
 | Policy Store (centrale beleidsdefinities overige grondslagen) | Centrale voorziening | Centraal — GBO | Gedeeld | ⚠️ Nog te realiseren - zie ook S05 |
 
--e
 ---
 
 ## S02 — Toestemmingsportaal (Burger Interactie)
@@ -87,7 +86,6 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | DigiD | Centrale voorziening | Logius | Gedeeld | **Beschikbaar** |
 | BSNk Activate (BSN → PI+PP bij eerste toestemmingsregistratie) | Onderdeel BSNk PP | Logius | Gedeeld | **Beschikbaar**; ⚠️ onboarding portaal als BSNk-deelnemer nog te realiseren |
 
--e
 ---
 
 ## S03 — Burgeridentificatie & Pseudonimisering
@@ -121,7 +119,6 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | BSNk PP (polymorf pseudonimiseringsstelsel) | Centrale voorziening | Logius | Gedeeld | **Beschikbaar en in productie** (eToegang-stelsel, ~2019); integratiewerk voor GBO/DvTP-traject nog nodig |
 | BSNk Activate / Transform / Close | Onderdelen van BSNk PP | Logius | Gedeeld | Beschikbaar; onboarding Toestemmingsportaal als AD/MR-deelnemer en PEP als BSN-geautoriseerde component nog te realiseren |
 
--e
 ---
 
 ## S04 — Organisatie-authenticatie & Vertrouwensstelsel
@@ -158,7 +155,6 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | FDS Poortwachter (toelating en onboarding deelnemers) | Organisatorische stelselfunctie FDS | Centraal — FDS-beheer / GBO | Gedeeld | **Beschikbaar als FDS-functie**; GBO vult deze functie in voor bronhouders en private dienstverleners met GBO-specifieke aansluitvoorwaarden — ⚠️ GBO-aansluitvoorwaarden zelf nog te maken |
 | FDS Marktmeester (deelnemerslijst en nalevingsbeheer) | Organisatorische stelselfunctie FDS | Centraal — FDS-beheer / GBO | Gedeeld | **Beschikbaar als FDS-functie**; GBO breidt deze functie uit met GBO-specifieke nalevingseisen voor private dienstverleners |
 
--e
 ---
 
 ## S05 — Autorisatie (PEP/PDP/PIP)
@@ -192,7 +188,6 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | PIP-interface naar grondslagregistratie | Koppelvlak | Centraal — GBO (grondslagregistratie als PIP) | Gedeeld koppelvlak | ⚠️ Nog te standaardiseren als GBO PIP-profiel (zie S01) |
 | Policy Store / PAP | Centrale voorziening | Centraal — GBO | Gedeeld | Zie S06 — Beleidsbeheer & -distributie |
 
--e
 ---
 
 ## S06 — Beleidsbeheer & -distributie (PAP)
@@ -226,7 +221,6 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | Policy Store (versiebeheer van vastgestelde policies) | Centrale voorziening | Centraal — GBO | Gedeeld | ⚠️ Nog te realiseren; onderdeel PAP of afzonderlijk Git-gebaseerd register |
 | Distributie-endpoint (OPA Bundle Server) | Centrale voorziening | Centraal — GBO | Gedeeld | ⚠️ Nog te realiseren; decentrale PDP's pollen dit endpoint voor policy-updates |
 
--e
 ---
 
 ## S07 — Gegevensontsluiting (Bronontsluiting API)
@@ -262,7 +256,6 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | Query Template Registry (catalogus van geregistreerde gegevensvragen) | Centrale voorziening | Centraal — GBO | Gedeeld | ⚠️ Nog te realiseren als GBO-voorziening |
 | GBO Vertaallaag (shared service voor kleine bronhouders zonder eigen GraphQL) | Centrale voorziening | Centraal — GBO | Gedeeld | ⚠️ Nog te realiseren; optioneel voor gemeenten en kleine bronhouders |
 
--e
 ---
 
 ## S08 — OOTS-adapter (Grensoverschrijdend)
@@ -294,7 +287,6 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | OOTS-EDM Adapter (XML ↔ FSC/GraphQL vertaling) | Centrale voorziening | Centraal — GBO | Gedeelde instantie | ⚠️ Nog te realiseren |
 | SMP 2.1 Publisher | Centrale voorziening | Centraal — GBO | Gedeelde instantie | ⚠️ Nog te realiseren; configuratie gebaseerd op query-catalogus (zie S07) |
 
--e
 ---
 
 ## S09 — Logging, Audit & Traceerbaarheid
@@ -328,7 +320,6 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | Centrale audit-aggregatie (optioneel) | Centrale voorziening | Centraal — GBO | Gedeeld | ⚠️ Nog te bepalen of centraal aggregatiepunt nodig is; privacy-implicaties afwegen |
 | Inzageportaal burger (verwerkingsregister) | Centrale voorziening | Centraal — GBO / MijnOverheid | Gedeeld | ⚠️ Raakvlak MijnOverheid/Logius; nog niet gerealiseerd voor GBO |
 
--e
 ---
 
 ## S10 — Semantiek & Gegevenscatalogus
@@ -362,7 +353,6 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | Serialisatie-service (canoniek schema → JSON / XML / SD-JWT VC / mdoc) | Centrale voorziening | Centraal — GBO | Gedeeld | ⚠️ Nog te realiseren |
 | FDS Datacatalogus (bestaande DCAT-infrastructuur) | Centrale voorziening | FDS / Logius | Gedeeld | **Beschikbaar**; GBO-uitbreiding voor schema-registry gewenst |
 
--e
 ---
 
 ## S11 — Attesteringsuitgifte (PuB-EAA / QEAA)
@@ -405,7 +395,6 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | Opname op Nederlandse Trusted List (LoTE) | Registratie bij RDI | RDI | Eenmalig per erkende uitgevende dienst | ⚠️ Vereist goedgekeurde CAR; procedure loopt via RDI conform eIDAS Trusted List Infrastructure |
 | NL Wallet (EUDI Wallet referentie-implementatie NL) | Nationale voorziening | Logius / stelselbeheerder EDI-stelsel | Gedeeld | Beschikbaar als pilotimplementatie; GBO-attesteringen moeten aansluiten op NL Wallet-specificaties |
 
--e
 ---
 
 ## Overzicht: gaps per stelselfunctie
