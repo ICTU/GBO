@@ -75,9 +75,6 @@ plugins:
 nav:
   - Over deze repository: index.md
 
-  - Globaal ontwerp:
-      - Globaal ontwerp: ontwerp/concept-globaal-ontwerp.md
-
   - PSA:
       - Voorblad: psa/voorblad.md
       - Inleiding: psa/inleiding.md
