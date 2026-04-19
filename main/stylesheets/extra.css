@@ -99,3 +99,16 @@
   color: #e05050;
   background: transparent;
 }
+/* Styling voor een PDF knop in de header */
+.md-header__button.pdf-download {
+  background-color: #e91e63; /* Bijv. roze/rood voor PDF */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+
+.md-header__button.pdf-download:hover {
+  background-color: #c2185b;
+}

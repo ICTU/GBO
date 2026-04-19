@@ -112,22 +112,62 @@
       </div>
     
     
-      
+      <!--
+  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine classes -->
+
 
   
 
+
+<!-- Header -->
 <header class="md-header md-header--shadow" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Documentatie GBO" class="md-header__button md-logo" aria-label="Documentatie GBO" data-md-component="logo">
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="Header"
+  >
+
+    <!-- Link to home -->
+    <a
+      href=".."
+      title="Documentatie GBO"
+      class="md-header__button md-logo"
+      aria-label="Documentatie GBO"
+      data-md-component="logo"
+    >
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
+
+    <!-- Button to open drawer -->
     <label class="md-header__button md-icon" for="__drawer">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
+
+    <!-- Header title -->
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
@@ -144,6 +184,8 @@
         </div>
       </div>
     </div>
+
+    <!-- Color palette toggle -->
     
       
         <form class="md-header__option" data-md-component="palette">
@@ -171,17 +213,32 @@
 </form>
       
     
+
+    <!-- User preference: color palette -->
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
+
+    <!-- Site language selector -->
     
+
+    <!-- Button to print document -->
+    <a href="./" title="Download PDF" class="md-header__button pdf-download">
+      PDF Downloaden
+    </a>
+
+    <!-- Button to open search modal -->
     
       
+
+      <!-- Check if search is actually enabled - see https://t.ly/DT_0V -->
       
         <label class="md-header__button md-icon" for="__search">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         </label>
+
+        <!-- Search interface -->
         <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -216,6 +273,8 @@
 </div>
       
     
+
+    <!-- Repository information -->
     
       <div class="md-header__source">
         <a href="https://github.com/ictu/gbo" title="Ga naar repository" class="md-source" data-md-component="source">
@@ -230,6 +289,8 @@
       </div>
     
   </nav>
+
+  <!-- Navigation tabs (sticky) -->
   
 </header>
     
@@ -359,34 +420,6 @@
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../psa/voorblad/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Voorblad
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -764,6 +797,240 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentatie GBO
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Documentatie GBO
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Inhoudsopgave">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Inhoudsopgave
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Over deze repository
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-psa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        I. PSA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="I. PSA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#psa-inleiding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Inleiding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psa-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Context
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psa-architectuurprincipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Architectuurprincipes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psa-ontwerpprincipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Ontwerpprincipes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psa-ecosysteem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Ecosysteem en oplossingsrichting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psa-interactiepatronen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Interactiepatronen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psa-generieke-functies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Logische architectuur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psa-capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Stelselfuncties
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psa-realisatiestrategie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Realisatiestrategie
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psa-vraagstukken" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Open Vraagstukken en ontwerpkeuzes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-technisch-ontwerp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        II. Technisch ontwerp
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="II. Technisch ontwerp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ref-arch-gbo-reference-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Reference architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -789,53 +1056,11 @@
                 </nav>
             </div>
         </section>
-        <section class="print-page" id="index"><h1 id="index-documentatie-gbo">Documentatie GBO<a class="headerlink" href="#index-documentatie-gbo" title="Permanent link">&para;</a></h1>
-<p>Welkom bij de repository met documentatie voor GBO. In deze repository worden alle relevante documentatie voor het project Gemeenschappelijke Bronontsluiting gepubliceerd.</p>
-<h2 id="index-kerngegevens">Kerngegevens<a class="headerlink" href="#index-kerngegevens" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Onderwerp</th>
-<th style="text-align: left;">Details</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong>Status</strong></td>
-<td style="text-align: left;">Concept / In review</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Eigenaar</strong></td>
-<td style="text-align: left;">ICTU</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>GithubRep</strong></td>
-<td style="text-align: left;">https://github.com/ICTU/GBO</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Laatst bijgewerkt</strong></td>
-<td style="text-align: left;">{{ git_revision_date }}</td>
-</tr>
-</tbody>
-</table>
-<h2 id="index-leeswijzer">Leeswijzer<a class="headerlink" href="#index-leeswijzer" title="Permanent link">&para;</a></h2>
-<p>De repository is als volgt opgebouwd:</p>
-<ul>
-<li><strong><a href="#ontwerp-concept-globaal-ontwerp.md">Globaal ontwerp</a></strong>: Globaal Ontwerp GBO</li>
-<li><strong><a href="#psa">PSA</a></strong>: Projectstartarchitectuur</li>
-<li><strong><a href="#ref-arch-gbo-reference-architecture">Technisch ontwerp</a></strong>: Technisch ontwerp</li>
-</ul>
-<hr />
-<p><em>Vragen over deze repository kunnen gesteld worden aan de architect van het projectteam.</em></p></section>
+        
                         <h1 class='nav-section-title' id='section-psa'>
                             PSA <a class='headerlink' href='#section-psa' title='Permanent link'>↵</a>
                         </h1>
-                        <section class="print-page" id="psa-voorblad"><h1 id="psa-voorblad-gbo">GBO<a class="headerlink" href="#psa-voorblad-gbo" title="Permanent link">&para;</a></h1>
-<h2 id="psa-voorblad-project-start-architectuur">Project Start Architectuur<a class="headerlink" href="#psa-voorblad-project-start-architectuur" title="Permanent link">&para;</a></h2>
-<p><img alt="ICTU" src="../psa/voorblad/media/ictu-logo.png" /></p>
-<hr />
-<p>Auteur: Govert Claus<br />
-Organisatie: ICTU</p></section><section class="print-page" id="psa-inleiding"><h1 id="psa-inleiding-inleiding">Inleiding<a class="headerlink" href="#psa-inleiding-inleiding" title="Permanent link">&para;</a></h1>
+                        <section class="print-page" id="psa-inleiding"><h1 id="psa-inleiding-inleiding">Inleiding<a class="headerlink" href="#psa-inleiding-inleiding" title="Permanent link">&para;</a></h1>
 <h2 id="psa-inleiding-doel-van-dit-document">Doel van dit document<a class="headerlink" href="#psa-inleiding-doel-van-dit-document" title="Permanent link">&para;</a></h2>
 <p>Dit document beschrijft de Project Start Architectuur (PSA) voor het
 programma <strong>GBO</strong> (<strong>G</strong>emeenschappelijke <strong>B</strong>ron<strong>O</strong>ntsluiting).</p>
@@ -4948,6 +5173,8 @@ INPUT:
         <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
       
         <script src="../javascript/mermaid-init.js"></script>
+      
+        <script src="../javascript/print.js"></script>
       
     
   </body>
