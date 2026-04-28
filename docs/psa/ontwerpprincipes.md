@@ -1,6 +1,6 @@
-# Ontwerpprincipes GBO — Gegevensuitwisseling
+# Ontwerpprincipes GBO
 
-> Selectie van de meest relevante **ontwerpprincipes** voor de inrichting van het GBO-stelsel.
+> Selectie van de meest relevante **ontwerpprincipes** voor de inrichting van de GBO.
 > Waar de [architectuurprincipes](./architectuurprincipes_GBO.md) de *wat* en *waarom* beschrijven,
 > geven deze ontwerpprincipes richting aan de *hoe* — de concrete keuzes bij het bouwen van het stelsel.
 
@@ -14,7 +14,7 @@
 Taken, bevoegdheden en voorzieningen worden belegd op het laagst mogelijke niveau dat nog doelmatig en doeltreffend is. Centrale voorzieningen worden ingericht als decentrale alternatieven aantoonbaar onvoldoende zijn — bijvoorbeeld vanwege schaalniveau, interoperabiliteitseisen of beveiligingsrisico's. Voor de GBO betekent dit: generieke functies (authenticatie, toegang, bronontsluiting) worden centraal ingericht; domeinspecifieke functies mogen bij de betrokken partij blijven.
 
 **Toelichting voor GBO:**  
-Bronhouders beheren zelf hun gegevens. Het GBO-stelsel biedt een centrale *integratielaag*, maar geen centrale *gegevensopslag*. Keuzes voor centrale voorzieningen worden expliciet gemotiveerd, maar kunnen ook op verzoek van bronhouders gemaakt worden.
+Bronhouders beheren zelf hun gegevens. De GBO biedt een centrale *integratielaag*, maar geen centrale *gegevensopslag*. Keuzes voor centrale voorzieningen worden expliciet gemotiveerd, maar kunnen ook op verzoek van bronhouders gemaakt worden.
 
 **Bronnen:**  
 - Gemeentewet art. 117 lid 2 / Provinciewet art. 115 lid 2 (subsidiariteitsbeginsel)  

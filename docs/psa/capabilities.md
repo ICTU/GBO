@@ -13,9 +13,9 @@ Per stelselfunctie is aangegeven:
 - **Gap:** wat er nog ontbreekt of nog ingevuld moet worden (apart gemarkeerd met ⚠️)  
 
 
-De context is het GBO-stelsel, ingebed in NORA/GDI en het Federatief Datastelsel (FDS), met aansluiting op het eIDAS2/ARF Europees kader. Stelselafspraken landen in bestaande afsprakenstelsels: FDS en TIP ([Trusted Information Partners](https://www.trustedinformationpartners.nl)).
+De context is de GBO, ingebed in NORA/GDI en het Federatief Datastelsel (FDS), met aansluiting op het eIDAS2/ARF Europees kader. Stelselafspraken landen in bestaande afsprakenstelsels zoals FDS, GDI en TIP ([Trusted Information Partners](https://www.trustedinformationpartners.nl)).
 
-De structuur "afspraken boven standaarden boven voorzieningen" is het expliciete uitgangspunt van FDS en wordt hier overgenomen. Waar mogelijk worden bestaande FDS-stelselfuncties hergebruikt (zie met name S04 en S07). Het **iWlz-afsprakenstelsel** geldt als blauwdruk voor de inrichting van het GBO-afsprakenstelsel zelf: gelaagd opgebouwd (organisatiebeleid → proces → informatie → applicatie → IT-infrastructuur → uitwisselprofielen), met een formeel RFC-proces voor wijzigingen.
+De structuur "afspraken boven standaarden boven voorzieningen" is het expliciete uitgangspunt van FDS en wordt hier overgenomen. Waar mogelijk worden bestaande FDS-stelselfuncties hergebruikt (zie met name S04 en S07). Het **iWlz-afsprakenstelsel** geldt als blauwdruk voor de inrichting van het afsprakenstelsel zelf: gelaagd opgebouwd (organisatiebeleid → proces → informatie → applicatie → IT-infrastructuur → uitwisselprofielen), met een formeel RFC-proces voor wijzigingen.
 
 Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gemarkeerd met ⚖️): stelselfuncties die pas zinvol te realiseren zijn nadat de benodigde wettelijke grondslag is verankerd.
 
@@ -90,13 +90,13 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 
 ## S03 — Burgeridentificatie & Pseudonimisering
 
-*Het vaststellen van de identiteit van de burger op het vereiste betrouwbaarheidsniveau, en het omzetten van het BSN naar partij-specifieke, onomkeerbare pseudoniemen zodat het BSN nooit bij private afnemers terechtkomt.*
+*Het vaststellen van de identiteit van de burger op het vereiste betrouwbaarheidsniveau, en het omzetten van het BSN naar partij-specifieke, onomkeerbare pseudoniemen zodat het BSN nooit bij private afnemers terechtkomt als daar geen wettelijke grondslag voor bestaat.*
 
 ### Afspraken
 
 | Afspraak | Type | Beheer | Invulling |
 |---|---|---|---|
-| BSN mag private dienstverleners nooit bereiken; pseudoniem is verplicht voor DvTP-traject | Stelselafspraak | Centraal — GBO, verankerd in AMvB Wdo / Wabvpz | Deels al wettelijk bepaald (Wabvpz); uitwerking in GBO-stelsel nog nodig |
+| BSN mag private dienstverleners (die hiervoor geen wettelijke grondslag hebben) nooit bereiken; pseudoniem is verplicht voor DvTP-traject | Stelselafspraak | Centraal — GBO, verankerd in AMvB Wdo / Wabvpz | Deels al wettelijk bepaald (Wabvpz); uitwerking in GBO-stelsel nog nodig |
 | Koppeling tussen toestemmingsrecord en pseudoniem (consent_id als brug) | Stelselafspraak | Centraal — GBO | ⚠️ Nog te maken |
 | Betrouwbaarheidsniveaus per traject (welk eIDAS-niveau vereist voor welk type gegevens) | Stelselafspraak | Centraal — GBO/FDS, raakvlak eIDAS2 | ⚠️ Nog te maken als GBO-beleidsprofiel |
 | Onboarding private dienstverleners als BSNk PP-deelnemer (EP-sleuteldistributie) | Toetredingsafspraak | Centraal — Logius/BSNk | Bestaand BSNk-onboardingproces; uitbreiding voor DvTP-partijen nodig |
