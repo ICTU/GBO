@@ -158,7 +158,7 @@ Gegevens die via het GBO worden uitgewisseld, zijn semantisch eenduidig vastgele
 ### D-08 · Pas toe of leg uit — verplichte open standaarden
 
 **Betekenis:**  
-Overheidsorganisaties zijn verplicht de open standaarden op de 'pas toe of leg uit'-lijst van Forum Standaardisatie toe te passen. Afwijken is alleen toegestaan als er een zwaarwegende en gedocumenteerde reden is. Voor het GBO gelden in elk geval als verplicht: REST API Design Rules, NL GOV OAuth 2.0-profiel, NL GOV OIDC-profiel, Digikoppeling, MIM, DCAT2, SHACL en — zodra beschikbaar — OID4VC/OID4VP.
+Overheidsorganisaties zijn verplicht de open standaarden op de 'pas toe of leg uit'-lijst van Forum Standaardisatie toe te passen. Afwijken is alleen toegestaan als er een zwaarwegende en gedocumenteerde reden is. Voor het GBO gelden in elk geval als verplicht: REST API Design Rules, NL GOV OAuth 2.0-profiel, NL GOV OIDC-profiel, Digikoppeling, MIM, DCAT2, SHACL en — zodra beschikbaar — OpenID4VCI/OpenID4VP.
 
 **Toelichting voor GBO:**  
 Neem in het stelselontwerp een expliciete mapping op van GBO-koppelvlakken naar verplichte standaarden. Documenteer elk koppelvlak dat afwijkt van de 'pas toe'-standaard.
