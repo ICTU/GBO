@@ -420,25 +420,25 @@ De gaps zijn onderverdeeld in drie categorieën:
 
 ---
 
-## Bijlage: GBO-afsprakenstelsel
+## Bijlage: Afsprakenstelsel
 
 Er is een werkend afsprakenstelsel nodig dat de bovenstaande stelselfuncties verbindt in één samenhangend geheel van afspraken, standaarden en voorzieningen. Het **iWlz-afsprakenstelsel** is hiervoor een goede blauwdruk: het is gelaagd opgebouwd, formeel vastgesteld, en heeft een werkend RFC-proces voor wijzigingen.
 
-De aanbevolen lagenstructuur voor het GBO-afsprakenstelsel (analoog aan iWlz):
+De aanbevolen lagenstructuur voor het afsprakenstelsel (analoog aan iWlz):
 
 | Laag | Inhoud voor GBO |
 |---|---|
 | Organisatiebeleid | Governance, rollen (bronhouder, afnemer, GBO-beheer), ontwerpkeuzes, serviceafspraken, wijzigingsbeheer |
-| Proces | GBO-trajectprocessen: DvTP-toestemmingsstroom, OOTS-brugstroom, EDI-wallet uitgifte- en presentatiestroom |
+| Proces | Trajectprocessen: DvTP-toestemmingsstroom, OOTS-brugstroom, EDI-wallet uitgifte- en presentatiestroom |
 | Informatie | Gegevensmodellen per bronhouder, canonieke schema's, mappings naar OOTS-EDM en PuB-EAA |
 | Applicatie | Technische afspraken per stelselfunctie: PEP/PDP-keten, FSC-profiel, BSNk PP-integratie, query-templates |
 | IT-infrastructuur | Connectiviteit (FSC), certificaten (PKI Overheid), netwerkeisen, SLA's |
 | Uitwisselprofielen | Per traject (DvTP, OOTS, EDI-wallet): specifieke afspraken aanvullend op de generieke lagen |
 
-Wijzigingen in het GBO-afsprakenstelsel verlopen via een formeel RFC-proces, analoog aan de iWlz RFC-aanpak, met gepubliceerde versies en expliciete inwerkingtreding per implementatiestap.
+Wijzigingen in het afsprakenstelsel verlopen via een formeel RFC-proces, analoog aan de iWlz RFC-aanpak, met gepubliceerde versies en expliciete inwerkingtreding per implementatiestap.
 
-NB: waar nu sprake is van het GBO-afsprakenstelsel, kunnen de afspraken landen in bestaande afsprakenstelsels en wetgeving.  
+NB: De afspraken moeten landen in bestaande afsprakenstelsels en wetgeving.  
 Een voorstel hiervoor:  
-- Afspraken die uitsluitend overheid-overheid betreffen → landen in het FDS-afsprakenstelsel  
-- Afspraken waarbij ook private partijen zijn betrokken (toelating dienstverleners, aansluitvoorwaarden, vrijwilligheidseis) → landen in het TIP-afsprakenstelsel (Spoor 1 governance, niet het TIP-transport)  
+- Afspraken die uitsluitend overheid-overheid betreffen → landen in het FDS- en/of het GDI-afsprakenstelsel  
+- Afspraken waarbij ook private dienstverleners zijn betrokken (toelating dienstverleners, aansluitvoorwaarden, vrijwilligheidseis) → landen in publiek-private afsprakenstelsels zoals het TIP-afsprakenstelsel  
 - Wat wettelijk verankerd moet zijn → in Wdo en AMvB
