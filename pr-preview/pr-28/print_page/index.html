@@ -1765,41 +1765,41 @@ sequenceDiagram
     end
 
     %% ── GBO Kern (midden) ────────────────────────────────────
-    subgraph GBO["GBO — Generieke Zijde"]
+    subgraph GBO["GBO"]
         direction TB
 
         subgraph TRUST["Juridisch &amp;amp; Identiteit"]
             direction TB
-            TG["⚖️ Toestemming &amp;amp; Grondslag\nWdo / AMvB / AVG"]
-            BI["🪪 Burgeridentificatie\nBSN · pseudonimisering"]
-            VS["🔐 Vertrouwensstelsel\nPKI(O) · eHerkenning · eIDAS · TIP"]
+            TG["⚖️ Toestemming &amp;amp; Grondslag&lt;br /&gt;Wdo / AMvB / AVG"]
+            BI["🪪 Burgeridentificatie&lt;br /&gt;BSN · pseudonimisering"]
+            VS["🔐 Vertrouwensstelsel&lt;br /&gt;PKIo · eHerkenning · eIDAS"]
         end
 
         subgraph FUNC["Generieke functies — GBO"]
             direction LR
-            F1["Identiteit &amp;amp; Vertrouwen\nID · Authc · Authz · PKI · Audit logging"]
-            F2["Toegang &amp;amp; Interactie\nSSO · Federatief inloggen · Consent UI · Machtigen"]
-            F3["Gegevensvoorziening\nConnectiviteit · Lokalisatie · API-beheer · Raadplegen"]
-            F4["Semantiek &amp;amp; Eenheid van Taal\nGGM · RDF · OWL · SKOS · JSON-LD · Vocabularia"]
-            F5["Gegevenskwaliteit &amp;amp; Validatie\nSHACL · Herkomst · W3C PROV-O · Feedbackloops"]
-            F6["Grondslag &amp;amp; Beleid\nConsent · Doelbinding · AVG · Beleidsregels"]
-            F7["Orkestratie &amp;amp; Integratie\nProcesorkestratie · mapping · Event-afhandeling"]
-            F8["Beheer &amp;amp; Continuïteit\nLogging · Monitoring · Versiebeheer · Incidentbeheer"]
+            F1["Identiteit &amp;amp; Vertrouwen&lt;br /&gt;ID · Authc · Authz · PKI · Audit logging"]
+            F2["Toegang &amp;amp; Interactie&lt;br /&gt;SSO · Federatief inloggen · Consent UI · Machtigen"]
+            F3["Gegevensvoorziening&lt;br /&gt;Connectiviteit · Lokalisatie · API-beheer · Raadplegen"]
+            F4["Semantiek &amp;amp; Eenheid van Taal&lt;br /&gt;DCAT-AP · RDF · OWL · SKOS · JSON-LD · Vocabularia"]
+            F5["Gegevenskwaliteit &amp;amp; Validatie&lt;br /&gt;SHACL · Herkomst · W3C PROV-O · Feedbackloops"]
+            F6["Grondslag &amp;amp; Beleid&lt;br /&gt;Consent · Doelbinding · AVG · Beleidsregels"]
+            F7["Orkestratie &amp;amp; Integratie&lt;br /&gt;Procesorkestratie · Mapping · Event-afhandeling"]
+            F8["Beheer &amp;amp; Continuïteit&lt;br /&gt;Logging · Monitoring · Versiebeheer · Incidentbeheer"]
         end
 
-        BRON_API["🔗 Gemeenschappelijke bronontsluiting API\nOAuth 2.0 · REST/GraphQL · Digikoppeling"]
+        BRON_API["🔗 Gemeenschappelijke bronontsluiting API&lt;br /&gt;OAuth 2.0 · REST/GraphQL · FSC"]
     end
+
+    %% ── Burger (onderaan) ────────────────────────────────────
+    BRG["👤 Burger — rechthebbende&lt;br /&gt;Regie op Gegevens · toestemming"]
 
     %% ── Afnemers (rechts) ────────────────────────────────────
     subgraph AFN["Afnemers — specifieke zijde"]
         direction TB
-        PP["🏢 Private partijen\nDvTP — toestemming burger"]
-        EU["🇪🇺 Europese overheden\nSDG / OOTS"]
-        EDI["📱 EDI-Wallet burger\neIDAS2 / ARF"]
+        EU["🇪🇺 Europese overheden&lt;br /&gt;Basisinrichting OOTS"]
+        EDI["📱 EDI-Wallet burger&lt;br /&gt;eIDAS2 / ARF"]
+        PP["🏢 Private partijen&lt;br /&gt;DvTP — toestemming burger"]
     end
-
-    %% ── Burger (onderaan) ────────────────────────────────────
-    BRG["👤 Burger — rechthebbende\nRegie op Gegevens · toestemming"]
 
     %% ── Verbindingen ─────────────────────────────────────────
     BRP -.-&gt;|generieke ontsluiting| BRON_API
@@ -1815,9 +1815,9 @@ sequenceDiagram
     FUNC --&gt; BI
     FUNC --&gt; VS
 
-    TG --&gt;|DvTP flow| PP
-    TG --&gt;|SDG/OOTS| EU
+    FUNC --&gt;|SDG/OOTS| EU
     BI --&gt;|OID4VC| EDI
+    TG --&gt;|DvTP flow| PP
 
     TG --&gt;|toestemming| BRG
 
@@ -2830,13 +2830,13 @@ sequenceDiagram
 </thead>
 <tbody>
 <tr>
-<td>De OOTS-brug is de enige AS4-toegangspoort; binnenlands verkeer gebruikt FSC direct</td>
+<td>De Basisinrichting OOTS is de enige AS4-toegangspoort; binnenlands verkeer gebruikt FSC direct</td>
 <td>Architectuurafspraak</td>
 <td>Centraal — GBO</td>
 <td>⚠️ Nog te maken als GBO-architectuurprincipe</td>
 </tr>
 <tr>
-<td>SMP-registratie van GBO-bronhouders voor OOTS-discovery wordt centraal beheerd door de brug</td>
+<td>SMP-registratie van GBO-bronhouders voor OOTS-discovery wordt centraal beheerd door de Basisinrichting OOTS</td>
 <td>Stelselafspraak</td>
 <td>Centraal — GBO</td>
 <td>⚠️ Nog te maken</td>
@@ -2896,21 +2896,21 @@ sequenceDiagram
 <tr>
 <td>Domibus Access Point</td>
 <td>Centrale voorziening</td>
-<td>Centraal — GBO (één NL-instelling voor GBO-bronhouders)</td>
+<td>Centraal (één NL-instelling voor GBO-bronhouders)</td>
 <td>Gedeelde instantie</td>
 <td><strong>Beschikbaar</strong> als open source (EC); ⚠️ operationele inrichting voor GBO nog te doen</td>
 </tr>
 <tr>
 <td>OOTS-EDM Adapter (XML ↔ FSC/GraphQL vertaling)</td>
 <td>Centrale voorziening</td>
-<td>Centraal — GBO</td>
+<td>Centraal</td>
 <td>Gedeelde instantie</td>
 <td>⚠️ Nog te realiseren</td>
 </tr>
 <tr>
 <td>SMP 2.1 Publisher</td>
 <td>Centrale voorziening</td>
-<td>Centraal — GBO</td>
+<td>Centraal</td>
 <td>Gedeelde instantie</td>
 <td>⚠️ Nog te realiseren; configuratie gebaseerd op query-catalogus (zie S07)</td>
 </tr>
@@ -3078,7 +3078,7 @@ sequenceDiagram
 </tr>
 <tr>
 <td>Bestaande sectorale gegevensmodellen (zoals GGM, SGR, ...)</td>
-<td>VNG / SBKWI / ...</td>
+<td>VNG / BKWI / ...</td>
 <td>worden als vertrekpunt gebruikt bij de opstelling van het canonieke schema per bronhouder</td>
 </tr>
 <tr>

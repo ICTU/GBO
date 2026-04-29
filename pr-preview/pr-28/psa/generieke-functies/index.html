@@ -1003,41 +1003,41 @@
     end
 
     %% ── GBO Kern (midden) ────────────────────────────────────
-    subgraph GBO["GBO — Generieke Zijde"]
+    subgraph GBO["GBO"]
         direction TB
 
         subgraph TRUST["Juridisch &amp;amp; Identiteit"]
             direction TB
-            TG["⚖️ Toestemming &amp;amp; Grondslag\nWdo / AMvB / AVG"]
-            BI["🪪 Burgeridentificatie\nBSN · pseudonimisering"]
-            VS["🔐 Vertrouwensstelsel\nPKI(O) · eHerkenning · eIDAS · TIP"]
+            TG["⚖️ Toestemming &amp;amp; Grondslag&lt;br /&gt;Wdo / AMvB / AVG"]
+            BI["🪪 Burgeridentificatie&lt;br /&gt;BSN · pseudonimisering"]
+            VS["🔐 Vertrouwensstelsel&lt;br /&gt;PKIo · eHerkenning · eIDAS"]
         end
 
         subgraph FUNC["Generieke functies — GBO"]
             direction LR
-            F1["Identiteit &amp;amp; Vertrouwen\nID · Authc · Authz · PKI · Audit logging"]
-            F2["Toegang &amp;amp; Interactie\nSSO · Federatief inloggen · Consent UI · Machtigen"]
-            F3["Gegevensvoorziening\nConnectiviteit · Lokalisatie · API-beheer · Raadplegen"]
-            F4["Semantiek &amp;amp; Eenheid van Taal\nGGM · RDF · OWL · SKOS · JSON-LD · Vocabularia"]
-            F5["Gegevenskwaliteit &amp;amp; Validatie\nSHACL · Herkomst · W3C PROV-O · Feedbackloops"]
-            F6["Grondslag &amp;amp; Beleid\nConsent · Doelbinding · AVG · Beleidsregels"]
-            F7["Orkestratie &amp;amp; Integratie\nProcesorkestratie · mapping · Event-afhandeling"]
-            F8["Beheer &amp;amp; Continuïteit\nLogging · Monitoring · Versiebeheer · Incidentbeheer"]
+            F1["Identiteit &amp;amp; Vertrouwen&lt;br /&gt;ID · Authc · Authz · PKI · Audit logging"]
+            F2["Toegang &amp;amp; Interactie&lt;br /&gt;SSO · Federatief inloggen · Consent UI · Machtigen"]
+            F3["Gegevensvoorziening&lt;br /&gt;Connectiviteit · Lokalisatie · API-beheer · Raadplegen"]
+            F4["Semantiek &amp;amp; Eenheid van Taal&lt;br /&gt;DCAT-AP · RDF · OWL · SKOS · JSON-LD · Vocabularia"]
+            F5["Gegevenskwaliteit &amp;amp; Validatie&lt;br /&gt;SHACL · Herkomst · W3C PROV-O · Feedbackloops"]
+            F6["Grondslag &amp;amp; Beleid&lt;br /&gt;Consent · Doelbinding · AVG · Beleidsregels"]
+            F7["Orkestratie &amp;amp; Integratie&lt;br /&gt;Procesorkestratie · Mapping · Event-afhandeling"]
+            F8["Beheer &amp;amp; Continuïteit&lt;br /&gt;Logging · Monitoring · Versiebeheer · Incidentbeheer"]
         end
 
-        BRON_API["🔗 Gemeenschappelijke bronontsluiting API\nOAuth 2.0 · REST/GraphQL · Digikoppeling"]
+        BRON_API["🔗 Gemeenschappelijke bronontsluiting API&lt;br /&gt;OAuth 2.0 · REST/GraphQL · FSC"]
     end
+
+    %% ── Burger (onderaan) ────────────────────────────────────
+    BRG["👤 Burger — rechthebbende&lt;br /&gt;Regie op Gegevens · toestemming"]
 
     %% ── Afnemers (rechts) ────────────────────────────────────
     subgraph AFN["Afnemers — specifieke zijde"]
         direction TB
-        PP["🏢 Private partijen\nDvTP — toestemming burger"]
-        EU["🇪🇺 Europese overheden\nSDG / OOTS"]
-        EDI["📱 EDI-Wallet burger\neIDAS2 / ARF"]
+        EU["🇪🇺 Europese overheden&lt;br /&gt;Basisinrichting OOTS"]
+        EDI["📱 EDI-Wallet burger&lt;br /&gt;eIDAS2 / ARF"]
+        PP["🏢 Private partijen&lt;br /&gt;DvTP — toestemming burger"]
     end
-
-    %% ── Burger (onderaan) ────────────────────────────────────
-    BRG["👤 Burger — rechthebbende\nRegie op Gegevens · toestemming"]
 
     %% ── Verbindingen ─────────────────────────────────────────
     BRP -.-&gt;|generieke ontsluiting| BRON_API
@@ -1053,9 +1053,9 @@
     FUNC --&gt; BI
     FUNC --&gt; VS
 
-    TG --&gt;|DvTP flow| PP
-    TG --&gt;|SDG/OOTS| EU
+    FUNC --&gt;|SDG/OOTS| EU
     BI --&gt;|OID4VC| EDI
+    TG --&gt;|DvTP flow| PP
 
     TG --&gt;|toestemming| BRG
 
