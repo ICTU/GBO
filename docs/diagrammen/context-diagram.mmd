@@ -2,16 +2,16 @@
 
 flowchart LR
 
-Bronhouder
-DvTP["GBO stelsel
+Bronhouder["Overheidsbron"]
+DvTP["GBO
 (afspraken, standaarden, voorzieningen)"]
-Wallet
-Privaat["Private partij"]
+Wallet["EDI-Wallet"]
 SDG["SDG/OOTS"]
+Privaat["Private dienstverlener"]
 
 Bronhouder --> DvTP
 DvTP --> Wallet
-DvTP --> Privaat
 DvTP --> SDG
+DvTP --> Privaat
 
 ```

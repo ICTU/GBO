@@ -1,0 +1,63 @@
+``` mermaid
+
+flowchart LR
+  %% Kolommen: Bronhouders <--> Generieke bronontsluiting <--> Stroomspecifieke voorziening <--> Afnemer
+  bron[("Overheidsbronnen<br/>BRP · BD · UWV · KvK…")]:::bron
+
+    subgraph gbo["GBO Basis"]
+        direction TB
+        fsc_pap("PAP<br />(beleidsregels)"):::generiek-gbo
+        fsc("FSC / GraphQL / PBAC<br/>Generieke bronontsluiting"):::generiek-gbo
+        fsc_tools("GBO tools<br />(vertaallaag)"):::generiek-gbo
+        fsc_pap <--> fsc
+        fsc <--> fsc_tools
+    end
+
+    bron <--> gbo
+
+    subgraph eudi["EUDI-Wallet"]
+      direction LR
+      eudi_asi("Authentic Source Interface<br/>Verify dienst"):::eudi-gbo
+      eudi_pubeaa("PubEAA-provider<br/>PubEAA"):::eudi-gbo
+      eudi_qeaa["QTSP<br/>QEAA"]:::eudi
+      eudi_wallet["EUDI-Wallet burger<br/>OID4VC / eIDAS 2"]:::eudi
+
+      eudi_asi <--> eudi_qeaa <--> eudi_wallet
+    end
+    gbo <--> eudi_asi
+    gbo <--> eudi_pubeaa <--> eudi_wallet
+
+    subgraph oots["SDG / OOTS"]
+      direction LR
+      oots_adapter("OOTS adapter<br />(semantische mapping)"):::oots-gbo
+      oots_basis["Basisinrichting OOTS<br/>RINIS / BZK"]:::oots
+      oots_afnemer["Europese overheid<br/>SDG-portaal"]:::oots
+    end
+    gbo <--> oots_adapter <--> oots_basis <--> oots_afnemer
+
+    subgraph dvtp["DvTP"]
+      direction LR
+      dvtp_pseudoniem["Pseudonimiseervoorziening<br/>BSNk PP"]:::dvtp
+      dvtp_toestemming("Toestemmingsvoorziening<br/>AVG consent"):::dvtp-gbo
+      dvtp_afnemer["Private dienstverlener<br/>DvTP-token / API"]:::dvtp
+
+    end
+    gbo <--> dvtp_pseudoniem <--> dvtp_toestemming <--> dvtp_afnemer
+
+    burger["Burger"]:::burger
+    eudi_wallet <--> burger
+    oots_afnemer <--> burger
+    dvtp_afnemer <--> burger
+
+  classDef bron fill:#edf7df,stroke:#6aa13a,color:#27500a
+  classDef generiek fill:#f1efe8,stroke:#5f5e5a,color:#444441
+  classDef eudi fill:#e1f5ee,stroke:#0f6e56,color:#085041
+  classDef oots fill:#e6f1ff,stroke:#185fa5,color:#0c447c
+  classDef dvtp fill:#fff0e8,stroke:#993c1d,color:#712b13
+  classDef generiek-gbo fill:#f1efe8,stroke:#000000,color:#000000
+  classDef eudi-gbo fill:#e1f5ee,stroke:#000000,color:#000000
+  classDef oots-gbo fill:#e6f1ff,stroke:#000000,color:#000000
+  classDef dvtp-gbo fill:#fff0e8,stroke:#000000,color:#000000
+  classDef burger fill:#edf7df,stroke:#6aa13a,color:#27500a
+
+```
