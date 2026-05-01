@@ -3408,13 +3408,87 @@ Een voorstel hiervoor:<br />
 - Afspraken die uitsluitend overheid-overheid betreffen → landen in het FDS- en/of het GDI-afsprakenstelsel<br />
 - Afspraken waarbij ook private dienstverleners zijn betrokken (toelating dienstverleners, aansluitvoorwaarden, vrijwilligheidseis) → landen in publiek-private afsprakenstelsels zoals het TIP-afsprakenstelsel<br />
 - Wat wettelijk verankerd moet zijn → in Wdo en AMvB</p></section><section class="print-page" id="psa-realisatiestrategie"><h1 id="psa-realisatiestrategie-realisatiestrategie">Realisatiestrategie<a class="headerlink" href="#psa-realisatiestrategie-realisatiestrategie" title="Permanent link">&para;</a></h1>
-<p>Beschrijving van:</p>
-<ul>
-<li>pilot  </li>
-<li>gefaseerde implementatie  </li>
-<li>validatie via use cases  </li>
-<li>stelselfuncties bij bestaande gremia  </li>
-</ul></section><section class="print-page" id="psa-vraagstukken"><h1 id="psa-vraagstukken-vraagstukken-en-ontwerpkeuzes">Vraagstukken en ontwerpkeuzes<a class="headerlink" href="#psa-vraagstukken-vraagstukken-en-ontwerpkeuzes" title="Permanent link">&para;</a></h1>
+<h2 id="psa-realisatiestrategie-werkpakketten">Werkpakketten<a class="headerlink" href="#psa-realisatiestrategie-werkpakketten" title="Permanent link">&para;</a></h2>
+<p>De stelselfuncties die nodig zijn om de GBO te kunnen gebruiken voor de drie gewenste toepassingen worden opgedeeld in werkpakketten. Met deze werkpakketten is het mogelijk om de drie toepassingen los van elkaar mogelijk te maken en afhankelijk van de prioriteiten rond de toepassingen geïmplementeerd worden.<br />
+Er worden drie werkpakketten onderscheiden, die gekoppeld zijn aan de drie toepassingen. Daarnaast is er een werkpakket dat voor alle toepassingen nodig is: de basis functies.  </p>
+<figure>
+
+%% GBO — drie gegevensstromen (Mermaid)
+
+flowchart LR
+  %% Kolommen: Bronhouders <--> Generieke bronontsluiting <--> Stroomspecifieke voorziening <--> Afnemer
+  bron[("Overheidsbronnen<br/>BRP · BD · UWV · KvK…")]:::bron
+
+    subgraph gbo["GBO Basis"]
+        direction TB
+        fsc_pap("PAP<br />(beleidsregels)"):::generiek-gbo
+        fsc("FSC / GraphQL / PBAC<br/>Generieke bronontsluiting"):::generiek-gbo
+        fsc_tools("GBO tools<br />(vertaallaag)"):::generiek-gbo
+        fsc_pap <--> fsc
+        fsc <--> fsc_tools
+    end
+
+    bron <--> gbo
+
+    subgraph eudi["EUDI-Wallet"]
+      direction LR
+      eudi_asi("Authentic Source Interface<br/>Verify dienst"):::eudi-gbo
+      eudi_pubeaa("PubEAA-provider<br/>PubEAA"):::eudi-gbo
+      eudi_qeaa["QTSP<br/>QEAA"]:::eudi
+      eudi_wallet["EUDI-Wallet burger<br/>OID4VC / eIDAS 2"]:::eudi
+
+      eudi_asi <--> eudi_qeaa <--> eudi_wallet
+    end
+    gbo <--> eudi_asi
+    gbo <--> eudi_pubeaa <--> eudi_wallet
+
+    subgraph oots["SDG / OOTS"]
+      direction LR
+      oots_adapter("OOTS adapter<br />(semantische mapping)"):::oots-gbo
+      oots_basis["Basisinrichting OOTS<br/>RINIS / BZK"]:::oots
+      oots_afnemer["Europese overheid<br/>SDG-portaal"]:::oots
+    end
+    gbo <--> oots_adapter <--> oots_basis <--> oots_afnemer
+
+    subgraph dvtp["DvTP"]
+      direction LR
+      dvtp_pseudoniem["Pseudonimiseervoorziening<br/>BSNk PP"]:::dvtp
+      dvtp_toestemming("Toestemmingsvoorziening<br/>AVG consent"):::dvtp-gbo
+      dvtp_afnemer["Private dienstverlener<br/>DvTP-token / API"]:::dvtp
+
+    end
+    gbo <--> dvtp_pseudoniem <--> dvtp_toestemming <--> dvtp_afnemer
+
+    burger["Burger"]:::burger
+    eudi_wallet <--> burger
+    oots_afnemer <--> burger
+    dvtp_afnemer <--> burger
+
+  classDef bron fill:#edf7df,stroke:#6aa13a,color:#27500a
+  classDef generiek fill:#f1efe8,stroke:#5f5e5a,color:#444441
+  classDef eudi fill:#e1f5ee,stroke:#0f6e56,color:#085041
+  classDef oots fill:#e6f1ff,stroke:#185fa5,color:#0c447c
+  classDef dvtp fill:#fff0e8,stroke:#993c1d,color:#712b13
+  classDef generiek-gbo fill:#f1efe8,stroke:#000000,color:#000000
+  classDef eudi-gbo fill:#e1f5ee,stroke:#000000,color:#000000
+  classDef oots-gbo fill:#e6f1ff,stroke:#000000,color:#000000
+  classDef dvtp-gbo fill:#fff0e8,stroke:#000000,color:#000000
+  classDef burger fill:#edf7df,stroke:#6aa13a,color:#27500a
+
+<figcaption>De werkpakketten getekend in relatie tot elkaar.  
+NB: in deze figuur zijn enkel de voorzieningen geschetst, en alleen de voorzieningen met een zwarte afgeronde omlijning moeten door GBO ontwikkeld worden. De overige voorzieningen bestaan al, daar moet enkel op aangesloten worden.</figcaption>
+</figure>
+
+<h3 id="psa-realisatiestrategie-werkpakket-gbo-basis">Werkpakket GBO Basis<a class="headerlink" href="#psa-realisatiestrategie-werkpakket-gbo-basis" title="Permanent link">&para;</a></h3>
+<p>Nog uitwerken</p>
+<h3 id="psa-realisatiestrategie-werkpakket-eudi-wallet">Werkpakket EUDI-wallet<a class="headerlink" href="#psa-realisatiestrategie-werkpakket-eudi-wallet" title="Permanent link">&para;</a></h3>
+<p>Nog uitwerken</p>
+<h3 id="psa-realisatiestrategie-werkpakket-sdgoots">Werkpakket SDG/OOTS<a class="headerlink" href="#psa-realisatiestrategie-werkpakket-sdgoots" title="Permanent link">&para;</a></h3>
+<p>Nog uitwerken</p>
+<h3 id="psa-realisatiestrategie-werkpakket-dvtp">Werkpakket DvTP<a class="headerlink" href="#psa-realisatiestrategie-werkpakket-dvtp" title="Permanent link">&para;</a></h3>
+<p>Nog uitwerken</p>
+<h2 id="psa-realisatiestrategie-gebruik-van-bestaande-afsprakenstelsels">Gebruik van bestaande afsprakenstelsels<a class="headerlink" href="#psa-realisatiestrategie-gebruik-van-bestaande-afsprakenstelsels" title="Permanent link">&para;</a></h2>
+<p>Nog uitwerken</p></section><section class="print-page" id="psa-vraagstukken"><h1 id="psa-vraagstukken-vraagstukken-en-ontwerpkeuzes">Vraagstukken en ontwerpkeuzes<a class="headerlink" href="#psa-vraagstukken-vraagstukken-en-ontwerpkeuzes" title="Permanent link">&para;</a></h1>
 <h2 id="psa-vraagstukken-inleiding">Inleiding<a class="headerlink" href="#psa-vraagstukken-inleiding" title="Permanent link">&para;</a></h2>
 <p>In dit hoofdstuk worden de vraagstukken waarvoor een oplossing gevonden moet worden of waarvoor een keuze gemaakt moet worden besproken.<br />
 Als er een oplossing is gevonden of een keuze is gemaakt, wordt dit in dit hoofdstuk als ontwerpkeuze vastgelegd. De verdere uitwerking vindt plaats in het technisch ontwerp.  </p>
