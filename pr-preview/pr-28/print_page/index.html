@@ -3413,56 +3413,55 @@ Een voorstel hiervoor:<br />
 Er worden drie werkpakketten onderscheiden, die gekoppeld zijn aan de drie toepassingen. Daarnaast is er een werkpakket dat voor alle toepassingen nodig is: de basis functies.  </p>
 <figure>
 
-%% GBO — drie gegevensstromen (Mermaid)
-
+<div class="mermaid">
 flowchart LR
-  %% Kolommen: Bronhouders <--> Generieke bronontsluiting <--> Stroomspecifieke voorziening <--> Afnemer
-  bron[("Overheidsbronnen<br/>BRP · BD · UWV · KvK…")]:::bron
+  %% Kolommen: Bronhouders &lt;--&gt; Generieke bronontsluiting &lt;--&gt; Stroomspecifieke voorziening &lt;--&gt; Afnemer
+  bron[("Overheidsbronnen&lt;br/&gt;BRP · BD · UWV · KvK…")]:::bron
 
     subgraph gbo["GBO Basis"]
         direction TB
-        fsc_pap("PAP<br />(beleidsregels)"):::generiek-gbo
-        fsc("FSC / GraphQL / PBAC<br/>Generieke bronontsluiting"):::generiek-gbo
-        fsc_tools("GBO tools<br />(vertaallaag)"):::generiek-gbo
-        fsc_pap <--> fsc
-        fsc <--> fsc_tools
+        fsc_pap("PAP&lt;br /&gt;(beleidsregels)"):::generiek-gbo
+        fsc("FSC / GraphQL / PBAC&lt;br/&gt;Generieke bronontsluiting"):::generiek-gbo
+        fsc_tools("GBO tools&lt;br /&gt;(vertaallaag)"):::generiek-gbo
+        fsc_pap &lt;--&gt; fsc
+        fsc &lt;--&gt; fsc_tools
     end
 
-    bron <--> gbo
+    bron &lt;--&gt; gbo
 
     subgraph eudi["EUDI-Wallet"]
       direction LR
-      eudi_asi("Authentic Source Interface<br/>Verify dienst"):::eudi-gbo
-      eudi_pubeaa("PubEAA-provider<br/>PubEAA"):::eudi-gbo
-      eudi_qeaa["QTSP<br/>QEAA"]:::eudi
-      eudi_wallet["EUDI-Wallet burger<br/>OID4VC / eIDAS 2"]:::eudi
+      eudi_asi("Authentic Source Interface&lt;br/&gt;Verify dienst"):::eudi-gbo
+      eudi_pubeaa("PubEAA-provider&lt;br/&gt;PubEAA"):::eudi-gbo
+      eudi_qeaa["QTSP&lt;br/&gt;QEAA"]:::eudi
+      eudi_wallet["EUDI-Wallet burger&lt;br/&gt;OID4VC / eIDAS 2"]:::eudi
 
-      eudi_asi <--> eudi_qeaa <--> eudi_wallet
+      eudi_asi &lt;--&gt; eudi_qeaa &lt;--&gt; eudi_wallet
     end
-    gbo <--> eudi_asi
-    gbo <--> eudi_pubeaa <--> eudi_wallet
+    gbo &lt;--&gt; eudi_asi
+    gbo &lt;--&gt; eudi_pubeaa &lt;--&gt; eudi_wallet
 
     subgraph oots["SDG / OOTS"]
       direction LR
-      oots_adapter("OOTS adapter<br />(semantische mapping)"):::oots-gbo
-      oots_basis["Basisinrichting OOTS<br/>RINIS / BZK"]:::oots
-      oots_afnemer["Europese overheid<br/>SDG-portaal"]:::oots
+      oots_adapter("OOTS adapter&lt;br /&gt;(semantische mapping)"):::oots-gbo
+      oots_basis["Basisinrichting OOTS&lt;br/&gt;RINIS / BZK"]:::oots
+      oots_afnemer["Europese overheid&lt;br/&gt;SDG-portaal"]:::oots
     end
-    gbo <--> oots_adapter <--> oots_basis <--> oots_afnemer
+    gbo &lt;--&gt; oots_adapter &lt;--&gt; oots_basis &lt;--&gt; oots_afnemer
 
     subgraph dvtp["DvTP"]
       direction LR
-      dvtp_pseudoniem["Pseudonimiseervoorziening<br/>BSNk PP"]:::dvtp
-      dvtp_toestemming("Toestemmingsvoorziening<br/>AVG consent"):::dvtp-gbo
-      dvtp_afnemer["Private dienstverlener<br/>DvTP-token / API"]:::dvtp
+      dvtp_pseudoniem["Pseudonimiseervoorziening&lt;br/&gt;BSNk PP"]:::dvtp
+      dvtp_toestemming("Toestemmingsvoorziening&lt;br/&gt;AVG consent"):::dvtp-gbo
+      dvtp_afnemer["Private dienstverlener&lt;br/&gt;DvTP-token / API"]:::dvtp
 
     end
-    gbo <--> dvtp_pseudoniem <--> dvtp_toestemming <--> dvtp_afnemer
+    gbo &lt;--&gt; dvtp_pseudoniem &lt;--&gt; dvtp_toestemming &lt;--&gt; dvtp_afnemer
 
     burger["Burger"]:::burger
-    eudi_wallet <--> burger
-    oots_afnemer <--> burger
-    dvtp_afnemer <--> burger
+    eudi_wallet &lt;--&gt; burger
+    oots_afnemer &lt;--&gt; burger
+    dvtp_afnemer &lt;--&gt; burger
 
   classDef bron fill:#edf7df,stroke:#6aa13a,color:#27500a
   classDef generiek fill:#f1efe8,stroke:#5f5e5a,color:#444441
@@ -3474,6 +3473,7 @@ flowchart LR
   classDef oots-gbo fill:#e6f1ff,stroke:#000000,color:#000000
   classDef dvtp-gbo fill:#fff0e8,stroke:#000000,color:#000000
   classDef burger fill:#edf7df,stroke:#6aa13a,color:#27500a
+</div>
 
 <figcaption>De werkpakketten getekend in relatie tot elkaar.  
 NB: in deze figuur zijn enkel de voorzieningen geschetst, en alleen de voorzieningen met een zwarte afgeronde omlijning moeten door GBO ontwikkeld worden. De overige voorzieningen bestaan al, daar moet enkel op aangesloten worden.</figcaption>
