@@ -33,3 +33,8 @@ Nog uitwerken
 ## Gebruik van bestaande afsprakenstelsels
 
 Nog uitwerken
+
+
+## Toekomstige ontwikkelingen
+
+Plaatsen t.o.v. GBO - nieuwe "werkpakketten"...
