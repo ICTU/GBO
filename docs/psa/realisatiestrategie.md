@@ -2,7 +2,7 @@
 
 ## Werkpakketten
 
-De stelselfuncties die nodig zijn om de GBO te kunnen gebruiken voor de drie gewenste toepassingen worden opgedeeld in werkpakketten. Met deze werkpakketten is het mogelijk om de drie toepassingen los van elkaar mogelijk te maken en afhankelijk van de prioriteiten rond de toepassingen geïmplementeerd worden.  
+De stelselfuncties die nodig zijn om de GBO te kunnen gebruiken voor de drie gewenste toepassingen worden opgedeeld in werkpakketten. Met deze werkpakketten is het mogelijk om de drie toepassingen los van elkaar mogelijk te maken en afhankelijk van de prioriteiten rond de toepassingen te implementeren.  
 Er worden drie werkpakketten onderscheiden, die gekoppeld zijn aan de drie toepassingen. Daarnaast is er een werkpakket dat voor alle toepassingen nodig is: de basis functies.  
 
 <figure>
@@ -37,4 +37,4 @@ Nog uitwerken
 
 ## Toekomstige ontwikkelingen
 
-Plaatsen t.o.v. GBO - nieuwe "werkpakketten"...
+Plaatsen t.o.v. GBO als nieuwe "werkpakketten"...
