@@ -24,18 +24,27 @@ flowchart LR
         dvtp_pseudoniem["Pseudonimiseervoorziening<br>(BSNk PP)"]
         dvtp_afnemer["Private dienstverlener"]
   end
+  subgraph ebw["EBW"]
+     direction LR
+        ebw_qerds_adapter("`**QERDS-adapter<br>(integratie/client)**`")
+        ebw_pub_qtsp("`**Publieke QTSP**`")
+        ebw_qtsp["Private QTSP"]
+        ebw_wallet["EBW<br>(publiek/privaat)"]
+  end
 
   fsc_pap <--> fsc
   fsc <--> fsc_tools
   bron[("Overheidsbronnen<br>BRP · BD · UWV · KvK…")] <--> gbo
   eudi_asi <--> eudi_qeaa
   eudi_qeaa <--> eudi_wallet
-  gbo <--> eudi_asi & eudi_pubeaa & oots_adapter & dvtp_toestemming
+  gbo <--> eudi_asi & eudi_pubeaa & oots_adapter & dvtp_toestemming & ebw_qerds_adapter
   eudi_pubeaa <--> eudi_wallet
   oots_adapter <--> oots_basis
   oots_basis <--> oots_afnemer
   dvtp_toestemming <--> dvtp_pseudoniem
   dvtp_pseudoniem <--> dvtp_afnemer
+  ebw_qerds_adapter <--> ebw_pub_qtsp <--> ebw_wallet
+  ebw_qerds_adapter <--> ebw_qtsp <--> ebw_wallet
   eudi_wallet <--> burger["Burger"]
   oots_afnemer <--> burger
   dvtp_afnemer <--> burger
