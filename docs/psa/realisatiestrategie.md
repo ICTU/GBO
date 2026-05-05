@@ -6,11 +6,11 @@ De stelselfuncties die nodig zijn om de GBO te kunnen gebruiken voor de drie gew
 Er worden drie werkpakketten onderscheiden, die gekoppeld zijn aan de drie toepassingen. Daarnaast is er een werkpakket dat voor alle toepassingen nodig is: de basis functies.  
 
 <figure>
-
+``` mermaid
 --8<-- "diagrammen/gbo_swimlanes.mmd"
-
+```
 <figcaption>De werkpakketten getekend in relatie tot elkaar.  
-NB: in deze figuur zijn enkel de voorzieningen geschetst - geen afspraken of standaarden die ook nodig zijn. Alleen de voorzieningen met een zwarte afgeronde omlijning moeten door GBO ontwikkeld worden. De overige voorzieningen bestaan al, daar moet enkel op aangesloten worden.</figcaption>
+NB: in deze figuur zijn enkel de voorzieningen geschetst - geen afspraken of standaarden die ook nodig zijn. De lichtrode voorzieningen met afgeronde omlijning moeten door GBO ontwikkeld worden. De overige voorzieningen bestaan al, daar moet op aangesloten worden.</figcaption>
 </figure>
 
 ### Werkpakket GBO Basis
