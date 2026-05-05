@@ -35,8 +35,10 @@ In de contextdiagram worden de actoren ten opzichte van elkaar en van GBO gesche
 
 <figure>
 
+``` mermaid
 --8<-- "diagrammen/context-diagram.mmd"
 
+```
 <figcaption>Contextdiagram</figcaption>
 </figure>
 

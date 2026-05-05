@@ -8,8 +8,10 @@ Het logische architectuurdiagram schetst de generieke functies ten opzichte van 
 
 <figure>
 
+``` mermaid
 --8<-- "diagrammen/Architectuuroverzicht.mmd"
 
+```
 <figcaption>Architectuuroverzicht GBO</figcaption>
 </figure>
 

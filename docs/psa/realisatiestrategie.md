@@ -10,7 +10,7 @@ Er worden drie werkpakketten onderscheiden, die gekoppeld zijn aan de drie toepa
 --8<-- "diagrammen/gbo_swimlanes.mmd"
 ```
 <figcaption>De werkpakketten getekend in relatie tot elkaar.  
-NB: in deze figuur zijn enkel de voorzieningen geschetst - geen afspraken of standaarden die ook nodig zijn. De lichtrode voorzieningen met afgeronde omlijning moeten door GBO ontwikkeld worden. De overige voorzieningen bestaan al, daar moet op aangesloten worden.</figcaption>
+NB: in deze figuur zijn enkel de voorzieningen geschetst - geen afspraken of standaarden die ook nodig zijn. De lichtrode voorzieningen moeten door GBO ontwikkeld worden. De overige voorzieningen bestaan al - daar moet op aangesloten worden.</figcaption>
 </figure>
 
 ### Werkpakket GBO Basis
