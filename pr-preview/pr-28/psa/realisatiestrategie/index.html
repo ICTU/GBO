@@ -904,60 +904,68 @@ Er worden drie werkpakketten onderscheiden, die gekoppeld zijn aan de drie toepa
 
 <div class="mermaid">
 flowchart LR
-  %% Kolommen: Bronhouders &lt;--&gt; Generieke bronontsluiting &lt;--&gt; Stroomspecifieke voorziening &lt;--&gt; Afnemer
-  bron[("Overheidsbronnen&lt;br/&gt;BRP · BD · UWV · KvK…")]:::bron
-
-    subgraph gbo["GBO Basis"]
-        direction TB
-        fsc_pap("PAP&lt;br /&gt;(beleidsregels)"):::gbo
-        fsc("FSC / GraphQL / PBAC&lt;br/&gt;(generieke bronontsluiting)"):::gbo
-        fsc_tools("GBO tools&lt;br /&gt;(vertaallaag)"):::gbo
-        fsc_pap &lt;--&gt; fsc
-        fsc &lt;--&gt; fsc_tools
-    end
-
-    bron &lt;--&gt; gbo
-
-    subgraph eudi["EUDI-Wallet"]
-      direction LR
-      eudi_asi("ASI-provider&lt;br/&gt;(verify dienst)"):::gbo
-      eudi_pubeaa("PubEAA-provider&lt;br/&gt;(PubEAA)"):::gbo
-      eudi_qeaa["QTSP&lt;br/&gt;(QEAA)"]:::eudi
-      eudi_wallet["EUDI-Wallet burger"]:::eudi
-      eudi_asi &lt;--&gt; eudi_qeaa &lt;--&gt; eudi_wallet
-    end
-    gbo &lt;--&gt; eudi_asi
-    gbo &lt;--&gt; eudi_pubeaa &lt;--&gt; eudi_wallet
-
-    subgraph oots["SDG / OOTS"]
-      direction LR
-      oots_adapter("OOTS adapter&lt;br /&gt;(semantische mapping)"):::gbo
-      oots_basis["Basisinrichting OOTS&lt;br/&gt;RINIS / BZK"]:::oots
-      oots_afnemer["Europese overheid&lt;br/&gt;SDG-portaal"]:::oots
-    end
-    gbo &lt;--&gt; oots_adapter &lt;--&gt; oots_basis &lt;--&gt; oots_afnemer
-
-    subgraph dvtp["DvTP"]
-      direction LR
-      dvtp_toestemming("Toestemmingsvoorziening"):::gbo
-      dvtp_pseudoniem["Pseudonimiseervoorziening&lt;br/&gt;(BSNk PP)"]:::dvtp
-      dvtp_afnemer["Private dienstverlener"]:::dvtp
-
-    end
-    gbo &lt;--&gt; dvtp_toestemming &lt;--&gt; dvtp_pseudoniem &lt;--&gt; dvtp_afnemer
-
-    burger["Burger"]:::burger
-    eudi_wallet &lt;--&gt; burger
+ subgraph gbo["GBO Basis"]
+    direction TB
+        fsc_pap("`**PAP&lt;br&gt;(beleidsregels)**`")
+        fsc("`**FSC / GraphQL / PBAC&lt;br&gt;(generieke bronontsluiting)**`")
+        fsc_tools("`**GBO tools&lt;br&gt;(vertaallaag)**`")
+  end
+ subgraph eudi["EUDI-Wallet"]
+    direction LR
+        eudi_asi("`**ASI-provider&lt;br&gt;(verify dienst)**`")
+        eudi_pubeaa("`**PubEAA-provider&lt;br&gt;(PubEAA)**`")
+        eudi_qeaa["QTSP&lt;br&gt;(QEAA)"]
+        eudi_wallet["EUDI-Wallet burger"]
+  end
+ subgraph oots["SDG / OOTS"]
+    direction LR
+        oots_adapter("`**OOTS adapter&lt;br&gt;(semantische mapping)**`")
+        oots_basis["Basisinrichting OOTS&lt;br&gt;RINIS / BZK"]
+        oots_afnemer["Europese overheid&lt;br&gt;SDG-portaal"]
+  end
+ subgraph dvtp["DvTP"]
+    direction LR
+        dvtp_toestemming("`**Toestemmingsvoorziening**`")
+        dvtp_pseudoniem["Pseudonimiseervoorziening&lt;br&gt;(BSNk PP)"]
+        dvtp_afnemer["Private dienstverlener"]
+  end
+    fsc_pap &lt;--&gt; fsc
+    fsc &lt;--&gt; fsc_tools
+    bron[("Overheidsbronnen&lt;br&gt;BRP · BD · UWV · KvK…")] &lt;--&gt; gbo
+    eudi_asi &lt;--&gt; eudi_qeaa
+    eudi_qeaa &lt;--&gt; eudi_wallet
+    gbo &lt;--&gt; eudi_asi &amp; eudi_pubeaa &amp; oots_adapter &amp; dvtp_toestemming
+    eudi_pubeaa &lt;--&gt; eudi_wallet
+    oots_adapter &lt;--&gt; oots_basis
+    oots_basis &lt;--&gt; oots_afnemer
+    dvtp_toestemming &lt;--&gt; dvtp_pseudoniem
+    dvtp_pseudoniem &lt;--&gt; dvtp_afnemer
+    eudi_wallet &lt;--&gt; burger["Burger"]
     oots_afnemer &lt;--&gt; burger
     dvtp_afnemer &lt;--&gt; burger
 
-  classDef bron fill:#edf7df,stroke:#6aa13a,color:#27500a
-  classDef generiek fill:#f1efe8,stroke:#5f5e5a,color:#444441
-  classDef eudi fill:#f1efe8,stroke:#5f5e5a,color:#444441
-  classDef oots fill:#f1efe8,stroke:#5f5e5a,color:#444441
-  classDef dvtp fill:#f1efe8,stroke:#5f5e5a,color:#444441
-  classDef gbo fill:#fff0e8,stroke:#185fa5,color:#0c447c
-  classDef burger fill:#edf7df,stroke:#6aa13a,color:#27500a
+     fsc_pap:::gbo
+     fsc:::gbo
+     fsc_tools:::gbo
+     eudi_asi:::gbo
+     eudi_pubeaa:::gbo
+     eudi_qeaa:::eudi
+     eudi_wallet:::eudi
+     oots_adapter:::gbo
+     oots_basis:::oots
+     oots_afnemer:::oots
+     dvtp_toestemming:::gbo
+     dvtp_pseudoniem:::dvtp
+     dvtp_afnemer:::dvtp
+     bron:::bron
+     burger:::burger
+    classDef bron fill:#edf7df,stroke:#6aa13a,color:#27500a
+    classDef generiek fill:#f1efe8,stroke:#5f5e5a,color:#444441
+    classDef eudi fill:#f1efe8,stroke:#5f5e5a,color:#444441
+    classDef oots fill:#f1efe8,stroke:#5f5e5a,color:#444441
+    classDef dvtp fill:#f1efe8,stroke:#5f5e5a,color:#444441
+    classDef gbo fill:#fff0e8,stroke:#000000,color:#000000
+    classDef burger fill:#edf7df,stroke:#6aa13a,color:#27500a
 </div>
 
 <figcaption>De werkpakketten getekend in relatie tot elkaar.  
