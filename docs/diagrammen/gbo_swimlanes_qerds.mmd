@@ -24,7 +24,7 @@ flowchart LR
         dvtp_pseudoniem["Pseudonimiseervoorziening<br>(BSNk PP)"]
         dvtp_afnemer["Private dienstverlener"]
   end
-  subgraph ebw["EBW"]
+  subgraph ebw["QERDS"]
      direction LR
         ebw_qerds_adapter("`**QERDS-adapter<br>(integratie/client)**`")
         ebw_pub_qtsp("`**Publieke QTSP**`")
@@ -52,6 +52,10 @@ flowchart LR
   fsc_pap:::gbo
   fsc:::gbo
   fsc_tools:::gbo
+  ebw_qerds_adapter:::gbo
+  ebw_pub_qtsp:::gbo
+  ebw_qtsp:::eudi
+  ebw_wallet:::eudi
   eudi_asi:::gbo
   eudi_pubeaa:::gbo
   eudi_qeaa:::eudi
