@@ -913,7 +913,6 @@
     participant VerifDienst as Verificatie-&lt;br/&gt;dienst
     participant Auth as Autorisatie&lt;br/&gt;voorziening
     participant Bron as Overheids-&lt;br/&gt;bron
-    participant DV as Dienst-&lt;br/&gt;verlener
 
     Note over Burger,Bron: Stroom A — PuB-EAA: overheidsinstantie geeft attribuut rechtstreeks uit
 
@@ -954,14 +953,6 @@
         QTSP-&gt;&gt;QTSP: Issue QEAA
         QTSP--&gt;&gt;Wallet: QEAA attestatie
         Wallet--&gt;&gt;Burger: QEAA opgeslagen in wallet
-    end
-
-    Note over Burger,DV: Gebruik — burger deelt attestatie met dienstverlener
-
-    rect rgb(250, 238, 218)
-        Burger-&gt;&gt;DV: Deel attestatie (OpenID4VP)
-        DV-&gt;&gt;DV: Controleer attestatie
-        Note over DV: PuB-EAA of QEAA,&lt;br/&gt;gelijke juridische status (eIDAS 2.0)
     end
 </div>
 <figcaption>Gegevensverzoek van burger om credential via wallet te delen</figcaption>
