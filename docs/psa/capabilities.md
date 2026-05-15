@@ -13,9 +13,9 @@ Per stelselfunctie is aangegeven:
 - **Gap:** wat er nog ontbreekt of nog ingevuld moet worden (apart gemarkeerd met ⚠️)  
 
 
-De context is het GBO-stelsel, ingebed in NORA/GDI en het Federatief Datastelsel (FDS), met aansluiting op het eIDAS2/ARF Europees kader. Stelselafspraken landen in bestaande afsprakenstelsels: FDS en TIP ([Trusted Information Partners](https://www.trustedinformationpartners.nl)).
+De context is de GBO, ingebed in NORA/GDI en het Federatief Datastelsel (FDS), met aansluiting op het eIDAS2/ARF Europees kader. Stelselafspraken landen in bestaande afsprakenstelsels zoals FDS, GDI en TIP ([Trusted Information Partners](https://www.trustedinformationpartners.nl)).
 
-De structuur "afspraken boven standaarden boven voorzieningen" is het expliciete uitgangspunt van FDS en wordt hier overgenomen. Waar mogelijk worden bestaande FDS-stelselfuncties hergebruikt (zie met name S04 en S07). Het **iWlz-afsprakenstelsel** geldt als blauwdruk voor de inrichting van het GBO-afsprakenstelsel zelf: gelaagd opgebouwd (organisatiebeleid → proces → informatie → applicatie → IT-infrastructuur → uitwisselprofielen), met een formeel RFC-proces voor wijzigingen.
+De structuur "afspraken boven standaarden boven voorzieningen" is het expliciete uitgangspunt van FDS en wordt hier overgenomen. Waar mogelijk worden bestaande FDS-stelselfuncties hergebruikt (zie met name S04 en S07). Het **iWlz-afsprakenstelsel** geldt als blauwdruk voor de inrichting van het afsprakenstelsel zelf: gelaagd opgebouwd (organisatiebeleid → proces → informatie → applicatie → IT-infrastructuur → uitwisselprofielen), met een formeel RFC-proces voor wijzigingen.
 
 Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gemarkeerd met ⚖️): stelselfuncties die pas zinvol te realiseren zijn nadat de benodigde wettelijke grondslag is verankerd.
 
@@ -90,13 +90,13 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 
 ## S03 — Burgeridentificatie & Pseudonimisering
 
-*Het vaststellen van de identiteit van de burger op het vereiste betrouwbaarheidsniveau, en het omzetten van het BSN naar partij-specifieke, onomkeerbare pseudoniemen zodat het BSN nooit bij private afnemers terechtkomt.*
+*Het vaststellen van de identiteit van de burger op het vereiste betrouwbaarheidsniveau, en het omzetten van het BSN naar partij-specifieke, onomkeerbare pseudoniemen zodat het BSN nooit bij private afnemers terechtkomt als daar geen wettelijke grondslag voor bestaat.*
 
 ### Afspraken
 
 | Afspraak | Type | Beheer | Invulling |
 |---|---|---|---|
-| BSN mag private dienstverleners nooit bereiken; pseudoniem is verplicht voor DvTP-traject | Stelselafspraak | Centraal — GBO, verankerd in AMvB Wdo / Wabvpz | Deels al wettelijk bepaald (Wabvpz); uitwerking in GBO-stelsel nog nodig |
+| BSN mag private dienstverleners (die hiervoor geen wettelijke grondslag hebben) nooit bereiken; pseudoniem is verplicht voor DvTP-traject | Stelselafspraak | Centraal — GBO, verankerd in AMvB Wdo / Wabvpz | Deels al wettelijk bepaald (Wabvpz); uitwerking in GBO-stelsel nog nodig |
 | Koppeling tussen toestemmingsrecord en pseudoniem (consent_id als brug) | Stelselafspraak | Centraal — GBO | ⚠️ Nog te maken |
 | Betrouwbaarheidsniveaus per traject (welk eIDAS-niveau vereist voor welk type gegevens) | Stelselafspraak | Centraal — GBO/FDS, raakvlak eIDAS2 | ⚠️ Nog te maken als GBO-beleidsprofiel |
 | Onboarding private dienstverleners als BSNk PP-deelnemer (EP-sleuteldistributie) | Toetredingsafspraak | Centraal — Logius/BSNk | Bestaand BSNk-onboardingproces; uitbreiding voor DvTP-partijen nodig |
@@ -266,8 +266,8 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 
 | Afspraak | Type | Beheer | Invulling |
 |---|---|---|---|
-| De OOTS-brug is de enige AS4-toegangspoort; binnenlands verkeer gebruikt FSC direct | Architectuurafspraak | Centraal — GBO | ⚠️ Nog te maken als GBO-architectuurprincipe |
-| SMP-registratie van GBO-bronhouders voor OOTS-discovery wordt centraal beheerd door de brug | Stelselafspraak | Centraal — GBO | ⚠️ Nog te maken |
+| De Basisinrichting OOTS is de enige AS4-toegangspoort; binnenlands verkeer gebruikt FSC direct | Architectuurafspraak | Centraal — GBO | ⚠️ Nog te maken als GBO-architectuurprincipe |
+| SMP-registratie van GBO-bronhouders voor OOTS-discovery wordt centraal beheerd door de Basisinrichting OOTS | Stelselafspraak | Centraal — GBO | ⚠️ Nog te maken |
 | Autorisatie van OOTS-verzoeken doorloopt dezelfde PEP/PDP-keten als binnenlandse verzoeken | Architectuurafspraak | Centraal — GBO | ⚠️ Nog te maken als GBO-architectuurprincipe |
 
 ### Standaarden
@@ -283,9 +283,9 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 
 | Voorziening | Type | Beheer | Instantiëring | Bestaande invulling |
 |---|---|---|---|---|
-| Domibus Access Point | Centrale voorziening | Centraal — GBO (één NL-instelling voor GBO-bronhouders) | Gedeelde instantie | **Beschikbaar** als open source (EC); ⚠️ operationele inrichting voor GBO nog te doen |
-| OOTS-EDM Adapter (XML ↔ FSC/GraphQL vertaling) | Centrale voorziening | Centraal — GBO | Gedeelde instantie | ⚠️ Nog te realiseren |
-| SMP 2.1 Publisher | Centrale voorziening | Centraal — GBO | Gedeelde instantie | ⚠️ Nog te realiseren; configuratie gebaseerd op query-catalogus (zie S07) |
+| Domibus Access Point | Centrale voorziening | Centraal (één NL-instelling voor GBO-bronhouders) | Gedeelde instantie | **Beschikbaar** als open source (EC); ⚠️ operationele inrichting voor GBO nog te doen |
+| OOTS-EDM Adapter (XML ↔ FSC/GraphQL vertaling) | Centrale voorziening | Centraal | Gedeelde instantie | ⚠️ Nog te realiseren |
+| SMP 2.1 Publisher | Centrale voorziening | Centraal | Gedeelde instantie | ⚠️ Nog te realiseren; configuratie gebaseerd op query-catalogus (zie S07) |
 
 ---
 
@@ -340,7 +340,7 @@ Naast technische gaps kent dit document ook **juridische randvoorwaarden** (gema
 | Standaard | Beheer | Bestaande invulling |
 |---|---|---|
 | DCAT-AP NL — datacatalogus voor zelfbeschrijving datasets | Geonovum / FDS | **Beschikbaar en verplicht** binnen FDS |
-| Bestaande sectorale gegevensmodellen (zoals GGM, SGR, ...) | VNG / SBKWI / ... |  worden als vertrekpunt gebruikt bij de opstelling van het canonieke schema per bronhouder |
+| Bestaande sectorale gegevensmodellen (zoals GGM, SGR, ...) | VNG / BKWI / ... |  worden als vertrekpunt gebruikt bij de opstelling van het canonieke schema per bronhouder |
 | SHACL (Shapes Constraint Language) — validatie van RDF-data | W3C | Beschikbaar; relevant voor validatie van uitgewisselde gegevens |
 | SD-JWT VC — credential-formaat voor wallet-presentaties | IETF | Beschikbaar als onderdeel ARF; ⚠️ GBO-serialisatieprofiel nog te maken |
 | OOTS-EDM (Evidence Data Model) | EC / OOTS | **Beschikbaar**; 9 evidence types gedefinieerd in OOTS Semantic Repository |
@@ -420,25 +420,25 @@ De gaps zijn onderverdeeld in drie categorieën:
 
 ---
 
-## Bijlage: GBO-afsprakenstelsel
+## Bijlage: Afsprakenstelsel
 
 Er is een werkend afsprakenstelsel nodig dat de bovenstaande stelselfuncties verbindt in één samenhangend geheel van afspraken, standaarden en voorzieningen. Het **iWlz-afsprakenstelsel** is hiervoor een goede blauwdruk: het is gelaagd opgebouwd, formeel vastgesteld, en heeft een werkend RFC-proces voor wijzigingen.
 
-De aanbevolen lagenstructuur voor het GBO-afsprakenstelsel (analoog aan iWlz):
+De aanbevolen lagenstructuur voor het afsprakenstelsel (analoog aan iWlz):
 
 | Laag | Inhoud voor GBO |
 |---|---|
 | Organisatiebeleid | Governance, rollen (bronhouder, afnemer, GBO-beheer), ontwerpkeuzes, serviceafspraken, wijzigingsbeheer |
-| Proces | GBO-trajectprocessen: DvTP-toestemmingsstroom, OOTS-brugstroom, EDI-wallet uitgifte- en presentatiestroom |
+| Proces | Trajectprocessen: DvTP-toestemmingsstroom, OOTS-brugstroom, EDI-wallet uitgifte- en presentatiestroom |
 | Informatie | Gegevensmodellen per bronhouder, canonieke schema's, mappings naar OOTS-EDM en PuB-EAA |
 | Applicatie | Technische afspraken per stelselfunctie: PEP/PDP-keten, FSC-profiel, BSNk PP-integratie, query-templates |
 | IT-infrastructuur | Connectiviteit (FSC), certificaten (PKI Overheid), netwerkeisen, SLA's |
 | Uitwisselprofielen | Per traject (DvTP, OOTS, EDI-wallet): specifieke afspraken aanvullend op de generieke lagen |
 
-Wijzigingen in het GBO-afsprakenstelsel verlopen via een formeel RFC-proces, analoog aan de iWlz RFC-aanpak, met gepubliceerde versies en expliciete inwerkingtreding per implementatiestap.
+Wijzigingen in het afsprakenstelsel verlopen via een formeel RFC-proces, analoog aan de iWlz RFC-aanpak, met gepubliceerde versies en expliciete inwerkingtreding per implementatiestap.
 
-NB: waar nu sprake is van het GBO-afsprakenstelsel, kunnen de afspraken landen in bestaande afsprakenstelsels en wetgeving.  
+NB: De afspraken moeten landen in bestaande afsprakenstelsels en wetgeving.  
 Een voorstel hiervoor:  
-- Afspraken die uitsluitend overheid-overheid betreffen → landen in het FDS-afsprakenstelsel  
-- Afspraken waarbij ook private partijen zijn betrokken (toelating dienstverleners, aansluitvoorwaarden, vrijwilligheidseis) → landen in het TIP-afsprakenstelsel (Spoor 1 governance, niet het TIP-transport)  
+- Afspraken die uitsluitend overheid-overheid betreffen → landen in het FDS- en/of het GDI-afsprakenstelsel  
+- Afspraken waarbij ook private dienstverleners zijn betrokken (toelating dienstverleners, aansluitvoorwaarden, vrijwilligheidseis) → landen in publiek-private afsprakenstelsels zoals het TIP-afsprakenstelsel  
 - Wat wettelijk verankerd moet zijn → in Wdo en AMvB

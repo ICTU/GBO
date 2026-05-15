@@ -6,7 +6,7 @@ In dit hoofdstuk worden de vraagstukken waarvoor een oplossing gevonden moet wor
 Als er een oplossing is gevonden of een keuze is gemaakt, wordt dit in dit hoofdstuk als ontwerpkeuze vastgelegd. De verdere uitwerking vindt plaats in het technisch ontwerp.  
 
 
-## Identificatie & authenticatie private partijen
+## Identificatie & authenticatie private dienstverleners
 
 eHerkenning is de logische kandidaat, maar de onboarding, accreditatie en het onderscheid tussen directe afnemers en intermediairs/integrators moeten worden uitgewerkt. TIP biedt hiervoor aanknopingspunten.
 
@@ -29,11 +29,6 @@ Welke pseudonimiseringsvoorziening gaat GBO gebruiken?
 ## Vertrouwensstelsel
 
 Welke partijen mogen deelnemen, hoe worden ze geaccrediteerd, welke niveaus van zekerheid gelden per gegevenstype, en hoe verhouden PKI(O), eHerkenning, eIDAS, FDS en TIP-afspraken zich tot elkaar?
-
-
-## Toestemmingsvoorziening SDG-OOTS
-
-De OOTS-verplichte toestemmingspreview (SDG-verordening) is momenteel belegd bij RINIS-basisinrichting. Vooralsnog gaan we ervan uit dat dit zo blijft. Als GBO de toestemmingsflow overneemt, moet worden bepaald of het preview-scherm bij RINIS blijft of naar GBO verhuist. Dit raakt de verantwoordelijkheidsverdeling en dient te worden beslecht vóór technisch ontwerp.
 
 
 ## Gekwalificeerde elektronische attesteringen van attributen
@@ -62,6 +57,6 @@ Bij de volgende voorzieningen die in theorie decentraal ingericht kunnen worden,
 
 Hoe één bronhouder-API leidt tot drie verschillende afnemerprotocollen (DvTP/REST+OAuth, OOTS/AS4+eDelivery, Wallet/OID4VC)? Dit is het technische hart van de "bronhouder één keer, afnemer naar wens"-ambitie.
 
-- RINIS biedt een dienst om berichten uit te wisselen tussen OOTS/eDelivery/AS4 en REST-API?  
-- Vanuit [Synergy](https://ec.europa.eu/digital-building-blocks/sites/spaces/OOTS/pages/930450665/Two+systems+one+vision) en UBO is gekeken naar het koppelen van OOTS en de Wallet.
-- Onze oplossingsrichting werkt vanuit de FDS-standaarden (REST-API/ GraphQL).
+- De basisinrichting OOTS (beheerd door RINIS) biedt een dienst om berichten uit te wisselen tussen OOTS/eDelivery/AS4 en REST-API  
+- Vanuit [Synergy](https://ec.europa.eu/digital-building-blocks/sites/spaces/OOTS/pages/930450665/Two+systems+one+vision) en UBO is gekeken naar het koppelen van OOTS en de Wallet
+- GBO heeft het streven om vanuit de FDS-standaarden (REST-API, aangevuld met GraphQL) te werken

@@ -54,14 +54,14 @@ Het delen van persoonsgegevens ondervindt op dit moment de volgende problemen:
 
 Om de problemen uit de vorige paragraaf op te lossen wordt een stelsel (een verzameling afspraken, standaarden, stelselfuncties en voorzieningen) voorgesteld, waarin het mogelijk is dat:
 
-- burgers toestemming geven en beheren via een vertrouwde overheidsomgeving, op basis van begrijpelijke informatie over doel, gegevens en ontvanger;
+- burgers toestemming geven en beheren via een vertrouwde overheidsomgeving, op basis van begrijpelijke informatie over doel, gegevens en ontvanger
 
-- private dienstverleners alleen gegevens opvragen binnen de afgesproken reikwijdte en de burger terugkoppelen welke gegevens zijn ontvangen en gebruikt;
+- private dienstverleners alleen gegevens opvragen binnen de afgesproken reikwijdte en de burger terugkoppelen welke gegevens zijn ontvangen en gebruikt
 
-- bronhouders alleen verstrekken na verificatie van een geldig verzoek en binnen een afgebakend doel, met waarborgen voor integriteit en herleidbaarheid.
+- bronhouders alleen verstrekken na verificatie van een geldig verzoek en binnen een afgebakend doel, met waarborgen voor integriteit en herleidbaarheid
 
 
-De doelstellingen van het GBO stelsel zijn:
+De doelstellingen van GBO zijn:
 
 - Een lagere implementatielast voor bronhouders
 
@@ -72,3 +72,13 @@ De doelstellingen van het GBO stelsel zijn:
 - Samenhangende afsprakenstelsels die samenwerking tussen stelsels vereenvoudigen
 
 - Meer uniformiteit en interoperabiliteit tussen overheden, en overheid en private partijen
+
+
+## Maximaal borgen in bestaande afsprakenstelsels
+
+GBO wordt geen nieuw, losstaand stelsel. De gerealiseerde stelselfuncties worden zoveel mogelijk geborgd binnen bestaande landelijke afsprakenstelsels, zoals het Federatief Datastelsel (FDS) en de Generieke Digitale Infrastructuur (GDI) voor de overheid, en binnen publiek-private afsprakenstelsels zoals Trusted Information Partners (TIP), voor de uitwisseling met private dienstverleners.  
+GBO breidt deze bestaande stelsels gericht uit met de afspraken, standaarden en voorzieningen die nodig zijn voor de gestandaardiseerde ontsluiting. Gaandeweg zal blijken of er nog onderdelen zijn die niet binnen bestaande stelsels passen en waar aanvullende invulling nodig is. Daarnaast worden relevante inzichten en feedback teruggekoppeld naar de verdere ontwikkeling van EDI en SDG.
+
+> In dit document wordt nog gesproken over een GBO-stelsel en GBO-voorzieningen, maar dat is enkel om het stuk leesbaar te houden.
+
+De juridische basis wordt gevormd door wettelijke kaders en lagere regelgeving. Zolang deze nog niet in werking zijn getreden, loopt de ontwikkeling van de GBO en de wetgevingstrajecten parallel aan elkaar.
