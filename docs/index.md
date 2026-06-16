@@ -14,7 +14,6 @@ GBO richt zich vanuit het perspectief van bronhouders op de gemeenschappelijke a
 - een herbruikbare bronontsluiting voor nieuwe ontwikkelingen
 
 <figure>
-
 ``` mermaid
 --8<-- "diagrammen/context-diagram.mmd"
 
