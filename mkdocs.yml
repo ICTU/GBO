@@ -90,7 +90,7 @@ plugins:
 nav:
   # Huidige repository: lokale navigatie.
   # Dit wordt de actieve tab en de onderliggende items blijven in de linkerkolom zichtbaar.
-  - GBO:
+  - Gemeenschappelijke Bronontsluiting:
       - Introductie: index.md
       - Context: context.md
 #      - Begrippen: begrippen.md
