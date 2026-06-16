@@ -78,18 +78,3 @@ plugins:
 
 nav:
   - Over deze repository: index.md
-
-  - PSA:
-      - Inleiding: psa/inleiding.md
-      - Context: psa/context.md
-      - Architectuurprincipes: psa/architectuurprincipes.md
-      - Ontwerpprincipes: psa/ontwerpprincipes.md
-      - Ecosysteem en oplossingsrichting: psa/ecosysteem.md
-      - Interactiepatronen: psa/interactiepatronen.md
-      - Logische architectuur: psa/generieke-functies.md
-      - Stelselfuncties: psa/capabilities.md
-      - Realisatiestrategie: psa/realisatiestrategie.md
-      - Open Vraagstukken en ontwerpkeuzes: psa/vraagstukken.md
-
-  - Technisch ontwerp:
-      - Reference architecture: ref-arch/gbo-reference-architecture.md

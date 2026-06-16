@@ -18,8 +18,4 @@ De repository is als volgt opgebouwd:
 * **[Technisch ontwerp](ref-arch/gbo-reference-architecture.md)**: Technisch ontwerp
 
 
-Bent u op zoek naar het Globaal Ontwerp van het project GBO?  
-Deze is in een aparte omgeving geplaatst: [https://ictu.github.io/GBO-GO/](https://ictu.github.io/GBO-GO/)
-
-
-*Vragen over deze repository kunnen gesteld worden aan de architect van het projectteam.*
+*Vragen over deze repository kunnen gesteld worden aan de architect van het projectteam: [Govert Claus](mailto:govert.claus@ictu.nl).*

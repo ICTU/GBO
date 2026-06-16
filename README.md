@@ -1,6 +1,6 @@
-# PSA en TO GBO
+# GBO
 
-Deze repository bevat de **Project Start Architectuur (PSA)** en het **Technisch Ontwerp (TO)** voor het project **Gemeenschappelijke Bronontsluiting (GBO)**.
+Deze repository bevat de inleidende documentatie voor het project **Gemeenschappelijke Bronontsluiting (GBO)**.
 
 GBO heeft als doel een **generieke infrastructuur en afsprakenstelsel** te realiseren waarmee gegevens van overheidsorganisaties beschikbaar kunnen worden gemaakt voor:
 
@@ -10,17 +10,10 @@ GBO heeft als doel een **generieke infrastructuur en afsprakenstelsel** te reali
 
 De gegevensuitwisseling met private dienstverleners is hierin speciaal, omdat hier geen wettelijke verplichting aan verbonden is. Daar is enerzijds meer ruimte om de inrichting vorm te geven, maar anderzijds minder verplichting om deze inrichting daadwerkelijk te volgen. Daarom wordt dit specifiek opgepakt onder de naam DvTP (Delen via Toestemming naar Private dienstverleners).
 
-De PSA beschrijft:
+Deze inleidende documentatie beschrijft:
 
 * de context en doelstelling van de oplossing
-* de architectuurprincipes en kaders
-* de logische architectuur
-* de generieke functies
-* de stelselfuncties waarmee de generieke functies ingevuld worden
-* de realisatiestrategie
-
-De PSA beschrijft **wat het stelsel moet kunnen**, maar legt nog **geen technische implementatie** vast.  
-De technische implementatie wordt beschreven in het **technisch ontwerp** middels een **Reference architecture**.
+* leeswijzer voor de rest van de documentatie die in andere repositories gevonden kan worden
 
 ---
 
@@ -31,18 +24,12 @@ GBO
 │
 ├─ README.md
 │
-├─ psa
+├─ docs
 │   └─ hoofdstukken in markdown formaat
 │
-├─ diagrams
-│   └─ diagrammen in Mermaid formaat
-│
-└─ ref-arch
-    └─ hoofdstukken in markdown formaat
+├─ docs/diagrams
+    └─ diagrammen in Mermaid formaat
 ```
-
-Bent u op zoek naar het Globaal Ontwerp van het project GBO?  
-Deze is in een aparte repository opgenomen: https://github.com/ICTU/GBO-GO
 
 ---
 
