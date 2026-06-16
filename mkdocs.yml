@@ -1,4 +1,11 @@
-site_name: Documentatie GBO
+site_name: GBO
+site_description: Documentatie voor GBO
+site_author: ICTU
+site_url: https://ictu.github.io/GBO/
+
+repo_url: https://github.com/ICTU/GBO
+repo_name: ICTU/GBO
+edit_uri: edit/main/docs/
 
 theme:
   name: material
@@ -46,6 +53,10 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 2
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
 
 site_url: https://ictu.github.io/gbo/
 repo_url: https://github.com/ictu/gbo
@@ -76,5 +87,32 @@ plugins:
       exclude:
         - index.md
 
+theme:
+  name: material
+  language: nl
+  features:
+    # Topnavigatie als tabbladen
+    - navigation.tabs
+    - navigation.tabs.sticky
+
+    # Optioneel, maar handig
+    - navigation.sections
+    - navigation.path
+    - navigation.top
+    - toc.follow
+
 nav:
-  - Over deze repository: index.md
+  # Huidige repository: lokale navigatie.
+  # Dit wordt de actieve tab en de onderliggende items blijven in de linkerkolom zichtbaar.
+  - GBO:
+      - Home: index.md
+      - Context: context.md
+#      - Begrippen: begrippen.md
+#      - Werkwijze: werkwijze.md
+
+  # Andere repositories: externe links.
+  # Deze verschijnen als tabs in dezelfde header.
+  - PSA: https://ictu.github.io/GBO-PSA/
+  - GO: https://ictu.github.io/GBO-GO/
+  - TO: https://ictu.github.io/GBO-TO/
+  - SEM: https://ictu.github.io/GBO-SEM/
