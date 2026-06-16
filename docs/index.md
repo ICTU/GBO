@@ -33,13 +33,13 @@ Als deze stelsels onvoldoende ruimte bieden, wordt onderzocht wat aanvullend ger
 
 ## Documentatie
 
-Deze omgeving bevat de inhoudelijke uitwerking van de GBO. Na een beschrijving van de context, inclusief de juridische en organisatorische aspecten op hoofdlijnen, volgen
+Deze omgeving bevat de inhoudelijke uitwerking van de GBO. Na een beschrijving van de context, inclusief de juridische en organisatorische aspecten op hoofdlijnen, volgen:
 
-- het Globaal Ontwerp met o.a.
-- de Projectstartarchitectuur met o.a.
-- het Technisch Ontwerp met o.a.
-- het Semantisch Model met o.a.
-- Technische Requirements met o.a.
+- het Globaal Ontwerp met een beschrijving van de gemeenschappelijke bronontsluiting in grote lijnen
+- de Projectstartarchitectuur waarin het ontwerp uitgewerkt wordt naar benodigde stelselfuncties (afspraken, standaarden en voorzieningen) en een inventarisatie van te ontwikkelen componenten
+- het Technisch Ontwerp waarin het ontwerp uitgewerkt wordt naar in te richten technische componenten
+- Technische Requirements waarin de te ontwikkelen voorzieningen uitgewerkt worden naar technische specificaties
+- het Semantisch Model met o.a. de vereiste gegevensmodellen, vertaaltabellen en metadatering
 
 Deze onderdelen hangen inhoudelijk met elkaar samen en verwijzen waar nodig naar elkaar, maar kunnen ook zelfstandig worden geraadpleegd.
 
@@ -47,10 +47,10 @@ Deze onderdelen hangen inhoudelijk met elkaar samen en verwijzen waar nodig naar
 
 De documentatie is nog in ontwikkeling en vormt de basis voor verdere besluitvorming en de start van de ontwikkelfase. De onderdelen worden stapsgewijs ter review voorgelegd. Hieronder is de planning van de reviewrondes per onderdeel opgenomen.
 
-| **Onderdeel**            | **Reviewversie** | **Reviewronde**                            | **Laatste versie** |
-| ------------------------ | ---------------- | ------------------------------------------ | ------------------ |
-| Globaal Ontwerp          | 0.8.7            | Afgerond<br><br>\[22 april - 22 mei 2026\] |                    |
-| Projectstartarchitectuur |                  | In voorbereiding                           |                    |
-| Technisch Ontwerp        |                  | In voorbereiding                           |                    |
-| Semantisch Model         |                  | In voorbereiding                           |                    |
-| Requirements             |                  | In voorbereiding                           |                    |
+| **Onderdeel**            |  **Reviewronde**                            | **Status** |
+| ------------------------ |  ------------------------------------------ | ------------------ |
+| Globaal Ontwerp          |  Afgerond<br><br>\[22 april - 22 mei 2026\] | Verwerking reviews t.b.v. vaststelling |
+| Projectstartarchitectuur |  In voorbereiding                           | Interne review t.b.v. externe reviewronde |
+| Technisch Ontwerp        |  In voorbereiding                           | In ontwikkeling |
+| Semantisch Model         |  In voorbereiding                           | In ontwikkeling |
+| Requirements             |  In voorbereiding                           | In ontwikkeling |
