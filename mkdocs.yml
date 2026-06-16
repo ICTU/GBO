@@ -1,0 +1,105 @@
+site_name: GBO
+site_description: Documentatie voor GBO
+site_author: ICTU
+site_url: https://ictu.github.io/GBO/
+
+repo_url: https://github.com/ICTU/GBO
+repo_name: ICTU/GBO
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: nl
+  palette:
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+    - content.code.annotate
+    - navigation.path
+    - toc.follow
+
+markdown_extensions:
+  - tables
+  - footnotes
+  - sane_lists
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - admonition
+  - attr_list
+  # Mermaid diagrammen
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+  - pymdownx.snippets:
+      base_path:
+        - docs
+      check_paths: true
+  # Automatische inhoudsopgave
+  - toc:
+      permalink: true
+      toc_depth: 2
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+
+site_url: https://ictu.github.io/gbo/
+repo_url: https://github.com/ictu/gbo
+repo_name: ictu/gbo
+
+extra_css:
+  - stylesheets/extra.css
+  - stylesheets/pdf.css
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - javascript/mermaid-init.js
+  - javascript/print.js
+
+extra:
+  version:
+    provider: mike
+    alias: true
+
+plugins:
+  - search
+  - mike:
+      canonical_version: "latest"
+  - print-site:
+      add_to_navigation: false
+      print_page_title: "Documentatie GBO"
+      enumerate_headings: false
+      exclude:
+        - index.md
+
+nav:
+  # Huidige repository: lokale navigatie.
+  # Dit wordt de actieve tab en de onderliggende items blijven in de linkerkolom zichtbaar.
+  - GBO:
+      - Introductie: index.md
+      - Context: context.md
+#      - Begrippen: begrippen.md
+#      - Werkwijze: werkwijze.md
+  - Globaal Ontwerp: https://ictu.github.io/GBO-GO/pr-preview/pr-10/
+  - PSA: https://ictu.github.io/GBO-PSA/pr-preview/pr-28/psa/
+  - Technisch Ontwerp: https://ictu.github.io/GBO-TO/latest/
+  - Semantiek: https://ictu.github.io/GBO-SEM/latest/
