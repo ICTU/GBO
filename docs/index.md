@@ -25,9 +25,9 @@ GBO richt zich vanuit het perspectief van bronhouders op de gemeenschappelijke a
 
 ## Borgen in bestaande stelsels
 
-De gestandaardiseerde ontsluiting bestaat uit een samenhangende set van generieke afspraken, standaarden en voorzieningen. GBO vormt daarbij geen nieuw, zelfstandig stelsel, maar bouwt zoveel mogelijk voort op bestaande landelijke afspraken, standaarden en voorzieningen.
+De gestandaardiseerde ontsluiting bestaat uit een samenhangende set van generieke afspraken, standaarden en voorzieningen. GBO vormt daarbij geen nieuw, zelfstandig stelsel, maar bouwt voort op bestaande landelijke afspraken, standaarden en voorzieningen.
 
-Nieuwe, aanvullende afspraken, standaarden en voorzieningen worden zoveel mogelijk geborgd binnen deze bestaande afsprakenstelsels. Hiertoe behoren het Federatief Datastelsel (FDS), de Generieke Digitale Infrastructuur (GDI), het EDI-stelsel, de Nederlandse Basisinfrastructuur OOTS en, voor de uitwisseling met private dienstverleners, publiek-private afsprakenstelsels zoals Trusted Information Partners (TIP).
+Nieuwe, aanvullende afspraken, standaarden en voorzieningen worden zoveel mogelijk geborgd binnen de bestaande afsprakenstelsels. Hiertoe behoren het Federatief Datastelsel (FDS), de Generieke Digitale Infrastructuur (GDI), het EDI-stelsel, de Nederlandse Basisinfrastructuur OOTS en, voor de uitwisseling met private dienstverleners, publiek-private afsprakenstelsels zoals Trusted Information Partners (TIP).
 
 Als deze stelsels onvoldoende ruimte bieden, wordt onderzocht wat aanvullend geregeld moet worden.
 
