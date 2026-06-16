@@ -53,6 +53,16 @@
       
     
     
+      <link rel="stylesheet" href="css/print-site-enum-headings2.css">
+    
+      <link rel="stylesheet" href="css/print-site-enum-headings3.css">
+    
+      <link rel="stylesheet" href="css/print-site-enum-headings4.css">
+    
+      <link rel="stylesheet" href="css/print-site-enum-headings5.css">
+    
+      <link rel="stylesheet" href="css/print-site-enum-headings6.css">
+    
       <link rel="stylesheet" href="css/print-site.css">
     
       <link rel="stylesheet" href="css/print-site-material.css">
@@ -799,25 +809,21 @@
 </ul>
 <figure>
 
-<div class="mermaid">```mermaid
+<div class="mermaid">flowchart LR
 
-flowchart LR
-
-Bronhouder
-DvTP["GBO stelsel
+Bronhouder["Overheidsbron"]
+DvTP["GBO
 (afspraken, standaarden, voorzieningen)"]
-Wallet
-Privaat["Private partij"]
+Wallet["EDI-Wallet"]
 SDG["SDG/OOTS"]
+Privaat["Private dienstverlener"]
 
 Bronhouder --&gt; DvTP
 DvTP --&gt; Wallet
-DvTP --&gt; Privaat
 DvTP --&gt; SDG
+DvTP --&gt; Privaat
+
 </div>
-
-
-```
 <figcaption>Gemeenschappelijke bronontsluiting</figcaption>
 </figure>
 
