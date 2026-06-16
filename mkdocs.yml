@@ -97,6 +97,6 @@ nav:
 #      - Werkwijze: werkwijze.md
   - Globaal Ontwerp: https://ictu.github.io/GBO-GO/latest/
   - Projectstartarchitectuur: https://ictu.github.io/GBO-PSA/latest/
-  - Technisch Ontwerp: underconstruction.md
-  - Technische Requirements: underconstruction.md
-  - Semantiek: underconstruction.md
+  - Technisch Ontwerp: https://ictu.github.io/GBO-TO/latest/
+  - Technische Requirements: https://ictu.github.io/GBO-TR/latest/
+  - Semantiek: https://ictu.github.io/GBO-SEM/latest/
