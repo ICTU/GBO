@@ -48,7 +48,7 @@ De documentatie is nog in ontwikkeling en vormt de basis voor verdere besluitvor
 
 | **Onderdeel**            |  **Reviewronde**                            | **Status** |
 | ------------------------ |  ------------------------------------------ | ------------------ |
-| Globaal Ontwerp          |  Afgerond<br><br>\[22 april - 22 mei 2026\] | Verwerking reviews t.b.v. vaststelling |
+| Globaal Ontwerp          |  Afgerond ([v0.8.7](https://ictu.github.io/GBO-GO/0.8.7/))<br\>\[22 april - 22 mei 2026\] | Verwerking review t.b.v. vaststelling |
 | Projectstartarchitectuur |  In voorbereiding                           | Interne review t.b.v. externe reviewronde |
 | Technisch Ontwerp        |  In voorbereiding                           | In ontwikkeling |
 | Semantisch Model         |  In voorbereiding                           | In ontwikkeling |
