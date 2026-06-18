@@ -13,7 +13,15 @@
          <lastmod>2026-06-18</lastmod>
     </url>
     <url>
-         <loc>https://ictu.github.io/GBO/latest/underconstruction/</loc>
+         <loc>https://ictu.github.io/GBO/latest/underconstruction_sem/</loc>
+         <lastmod>2026-06-18</lastmod>
+    </url>
+    <url>
+         <loc>https://ictu.github.io/GBO/latest/underconstruction_to/</loc>
+         <lastmod>2026-06-18</lastmod>
+    </url>
+    <url>
+         <loc>https://ictu.github.io/GBO/latest/underconstruction_tr/</loc>
          <lastmod>2026-06-18</lastmod>
     </url>
 </urlset>
