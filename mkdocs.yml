@@ -97,6 +97,6 @@ nav:
   - Context: context.md
   - Globaal Ontwerp: https://ictu.github.io/GBO-GO/latest/
   - Projectstartarchitectuur: https://ictu.github.io/GBO-PSA/latest/
-  - Technisch Ontwerp: underconstruction.md
-  - Technische Requirements: underconstruction.md
-  - Semantiek: underconstruction.md
+  - Technisch Ontwerp: underconstruction_to.md
+  - Technische Requirements: underconstruction_tr.md
+  - Semantiek: underconstruction_sem.md
