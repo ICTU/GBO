@@ -82,7 +82,7 @@ plugins:
       canonical_version: "latest"
   - print-site:
       add_to_navigation: false
-      print_page_title: "Documentatie GBO"
+      print_page_title: "Gemeenschappelijke Brontontsluiting"
       enumerate_headings: false
       exclude:
         - index.md
@@ -95,8 +95,8 @@ nav:
 #      - Begrippen: begrippen.md
 #      - Werkwijze: werkwijze.md
   - Context: context.md
-  - Globaal Ontwerp: https://ictu.github.io/GBO-GO/latest/
-  - Projectstartarchitectuur: https://ictu.github.io/GBO-PSA/latest/
+  - Globaal Ontwerp: https://ictu.github.io/GBO-GO/
+  - Projectstartarchitectuur: https://ictu.github.io/GBO-PSA/
   - Technisch Ontwerp: underconstruction_to.md
   - Technische Requirements: underconstruction_tr.md
   - Semantiek: underconstruction_sem.md
