@@ -92,9 +92,9 @@ nav:
   # Dit wordt de actieve tab en de onderliggende items blijven in de linkerkolom zichtbaar.
   - Gemeenschappelijke Bronontsluiting:
       - Introductie: index.md
-      - Context: context.md
 #      - Begrippen: begrippen.md
 #      - Werkwijze: werkwijze.md
+  - Context: context.md
   - Globaal Ontwerp: https://ictu.github.io/GBO-GO/latest/
   - Projectstartarchitectuur: https://ictu.github.io/GBO-PSA/latest/
   - Technisch Ontwerp: underconstruction.md
