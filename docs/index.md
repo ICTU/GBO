@@ -32,13 +32,14 @@ Als deze stelsels onvoldoende ruimte bieden, wordt onderzocht wat aanvullend ger
 
 ## Documentatie
 
-Deze omgeving bevat de inhoudelijke uitwerking van de GBO. Na een beschrijving van de context, inclusief de juridische en organisatorische aspecten op hoofdlijnen, volgen:
+Deze omgeving bevat de inhoudelijke uitwerking van de GBO. Deze uitwerking bestaat uit de volgende onderdelen:
 
-- het Globaal Ontwerp met een beschrijving van de gemeenschappelijke bronontsluiting in grote lijnen
-- de Projectstartarchitectuur waarin het ontwerp uitgewerkt wordt naar benodigde stelselfuncties (afspraken, standaarden en voorzieningen) en een inventarisatie van te ontwikkelen componenten
-- het Technisch Ontwerp waarin het ontwerp uitgewerkt wordt naar in te richten technische componenten
-- Technische Requirements waarin de te ontwikkelen voorzieningen uitgewerkt worden naar technische specificaties
-- het Semantisch Model met o.a. de vereiste gegevensmodellen, vertaaltabellen en metadatering
+- de [Context](context.md), waarin de juridische en organisatorische context beschreven wordt
+- het [Globaal Ontwerp](https://ictu.github.io/GBO-GO/) met een beschrijving van de gemeenschappelijke bronontsluiting in grote lijnen
+- de [Projectstartarchitectuur](https://ictu.github.io/GBO-PSA/) waarin het ontwerp uitgewerkt wordt naar benodigde stelselfuncties (afspraken, standaarden en voorzieningen) en een inventarisatie van te ontwikkelen componenten
+- het [Technisch Ontwerp](underconstruction_to.md) waarin het ontwerp uitgewerkt wordt naar in te richten technische componenten
+- [Technische Requirements](underconstruction_tr.md) waarin de te ontwikkelen voorzieningen uitgewerkt worden naar technische specificaties
+- het [Semantisch Model](underconstruction_sem.md) met o.a. de vereiste gegevensmodellen, vertaaltabellen en metadatering
 
 Deze onderdelen hangen inhoudelijk met elkaar samen en verwijzen waar nodig naar elkaar, maar kunnen ook zelfstandig worden geraadpleegd.
 
@@ -48,8 +49,9 @@ De documentatie is nog in ontwikkeling en vormt de basis voor verdere besluitvor
 
 | **Onderdeel**            |  **Reviewronde**                            | **Status** |
 | ------------------------ |  ------------------------------------------ | ------------------ |
-| Globaal Ontwerp          |  Afgerond ([v0.8.7](https://ictu.github.io/GBO-GO/0.8.7/))<br\>\[22 april - 22 mei 2026\] | Verwerking review t.b.v. vaststelling |
-| Projectstartarchitectuur |  In voorbereiding                           | Interne review t.b.v. externe reviewronde |
+| [Context](context.md)    |  In voorbereiding                           | In ontwikkeling    |
+| [Globaal Ontwerp](https://ictu.github.io/GBO-GO/)          |  Afgerond ([v0.8.7](https://ictu.github.io/GBO-GO/0.8.7/))<br\>\[22 april - 22 mei 2026\] | Verwerking review t.b.v. vaststelling |
+| [Projectstartarchitectuur](https://ictu.github.io/GBO-PSA/) |  In voorbereiding       | Interne review t.b.v. externe reviewronde |
 | Technisch Ontwerp        |  In voorbereiding                           | In ontwikkeling |
 | Semantisch Model         |  In voorbereiding                           | In ontwikkeling |
 | Requirements             |  In voorbereiding                           | In ontwikkeling |
