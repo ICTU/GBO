@@ -4,7 +4,7 @@ except ImportError:
     event_priority = lambda priority: lambda func: func
 
 
-PRINT_SECTION_TITLE = "Projectstartarchitectuur"
+PRINT_SECTION_TITLE = "Gemeenschappelijke Bronontsluiting"
 
 
 def get_print_site_plugin(config):
