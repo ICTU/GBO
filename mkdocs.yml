@@ -83,10 +83,13 @@ plugins:
   - print-site:
       add_to_navigation: false
       print_page_title: "Gemeenschappelijke Brontontsluiting"
-      enumerate_headings: false
-      enumerate_headings: false
+      add_cover_page: true
+      cover_page_template: "docs/assets/templates/voorblad.tpl"
+      enumerate_headings: true
       enumerate_figures: false
-      add_table_of_contents: false
+      add_table_of_contents: true
+      toc_title: "Inhoudsopgave"
+      toc_depth: 2
       exclude:
         - underconstruction_to.md
         - underconstruction_tr.md
