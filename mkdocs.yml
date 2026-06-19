@@ -9,8 +9,8 @@ edit_uri: edit/main/docs/
 
 theme:
   name: material
+  language: custom
   custom_dir: overrides
-  language: nl
   palette:
   palette:
     - media: "(prefers-color-scheme: dark)"
