@@ -70,7 +70,6 @@ extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
   - javascript/mermaid-init.js
   - javascript/print.js
-  - javascript/search-warning.js
 
 extra:
   version:
