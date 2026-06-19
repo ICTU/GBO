@@ -84,8 +84,14 @@ plugins:
       add_to_navigation: false
       print_page_title: "Gemeenschappelijke Brontontsluiting"
       enumerate_headings: false
+      enumerate_headings: false
+      enumerate_figures: false
+      add_table_of_contents: false
       exclude:
-        - index.md
+        - underconstruction_to.md
+        - underconstruction_tr.md
+        - underconstruction_sem.md
+        - readme.md
 
 nav:
   # Huidige repository: lokale navigatie.
