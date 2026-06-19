@@ -7,6 +7,15 @@ repo_url: https://github.com/ICTU/GBO
 repo_name: ICTU/GBO
 edit_uri: edit/main/docs/
 
+extra:
+  version:
+    provider: mike
+    alias: true
+  document_version: "0.2.1"
+  document_date: "juni 2026"
+  document_author: "ICTU"
+  document_status: "in ontwikkeling"
+
 theme:
   name: material
   language: custom
@@ -70,11 +79,6 @@ extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
   - javascript/mermaid-init.js
   - javascript/print.js
-
-extra:
-  version:
-    provider: mike
-    alias: true
 
 plugins:
   - search
