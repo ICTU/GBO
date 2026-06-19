@@ -99,3 +99,17 @@
   color: #e05050;
   background: transparent;
 }
+
+.md-search-scope-warning {
+  display: none;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.7rem;
+  line-height: 1.35;
+  color: var(--md-default-fg-color--light);
+  background-color: var(--md-default-bg-color);
+  border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
+}
+
+.md-search--scope-warning-visible .md-search-scope-warning {
+  display: block;
+}
