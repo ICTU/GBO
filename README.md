@@ -27,7 +27,7 @@ GBO
 ├─ docs
 │   └─ hoofdstukken in markdown formaat
 │
-├─ docs/diagrams
+└─ docs/diagrams
     └─ diagrammen in Mermaid formaat
 ```
 
