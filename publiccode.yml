@@ -1,0 +1,43 @@
+publiccodeYmlVersion: "0.1"
+
+name: GBO
+url: "https://github.com/ICTU/gbo.git"
+# softwareVersion: "1.0"    # Optional
+releaseDate: "tbd"
+platforms:
+  - web
+
+categories:
+ - documentation
+
+developmentStatus: development
+
+softwareType: "documentation"
+
+description:
+ en:
+   # localisedName: github-policy   # Optional
+   shortDescription: >
+         Gemeenschappelijke Bronontsluiting
+
+   longDescription: >
+         Het programma Gemeenschappelijke Bronontsluiting (GBO) ontwikkelt een gestandaardiseerde ontsluiting waarmee overheidsorganisaties (bronhouders) hun gegevens direct interoperabel en herbruikbaar beschikbaar stellen voor de Europese Digitale Identiteit wallet (EUDI-Wallet), het Once-Only Technical System (OOTS) en Delen via Toestemming met Private dienstverleners (DvTP).
+
+   features:
+      - Introductie
+      - Context
+      - Juridische aspecten
+
+legal:
+ license: EUPL-1.2
+
+maintenance:
+  type: "community"
+  contacts:
+    - name: Govert Claus
+      email: "govert.claus@ictu.nl"
+
+localisation:
+ localisationReady: false
+ availableLanguages:
+   - nl
