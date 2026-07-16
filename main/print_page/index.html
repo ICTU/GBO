@@ -51,18 +51,6 @@
       
     
     
-      <link rel="stylesheet" href="../css/print-site-enum-headings1.css">
-    
-      <link rel="stylesheet" href="../css/print-site-enum-headings2.css">
-    
-      <link rel="stylesheet" href="../css/print-site-enum-headings3.css">
-    
-      <link rel="stylesheet" href="../css/print-site-enum-headings4.css">
-    
-      <link rel="stylesheet" href="../css/print-site-enum-headings5.css">
-    
-      <link rel="stylesheet" href="../css/print-site-enum-headings6.css">
-    
       <link rel="stylesheet" href="../css/print-site.css">
     
       <link rel="stylesheet" href="../css/print-site-material.css">
@@ -102,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#" class="md-skip">
+        <a href="#index" class="md-skip">
           Ga naar inhoud
         </a>
       
@@ -751,7 +739,7 @@
                 </nav>
             </div>
         </section>
-        <section class="print-page" id="index"><h1 id="index-gemeenschappelijk-bronontsluiting">Gemeenschappelijk Bronontsluiting<a class="headerlink" href="#index-gemeenschappelijk-bronontsluiting" title="Permanent link">&para;</a></h1>
+        <section class="print-page" id="index" heading-number="1"><h1 id="index-gemeenschappelijk-bronontsluiting">Gemeenschappelijk Bronontsluiting<a class="headerlink" href="#index-gemeenschappelijk-bronontsluiting" title="Permanent link">&para;</a></h1>
 <h2 id="index-introductie">Introductie<a class="headerlink" href="#index-introductie" title="Permanent link">&para;</a></h2>
 <p>Het programma Gemeenschappelijke Bronontsluiting (GBO) ontwikkelt een gestandaardiseerde ontsluiting waarmee overheidsorganisaties (bronhouders) hun gegevens direct interoperabel en herbruikbaar beschikbaar stellen voor de Europese Digitale Identiteit wallet (EUDI-Wallet), het Once-Only Technical System (OOTS) en Delen via Toestemming met Private dienstverleners (DvTP).</p>
 <p>GBO richt zich vanuit het perspectief van bronhouders op de gemeenschappelijke aspecten van bronontsluiting en biedt de volgende voordelen:</p>
@@ -785,7 +773,7 @@ DvTP --&gt; Privaat
 <h2 id="index-borgen-in-bestaande-stelsels">Borgen in bestaande stelsels<a class="headerlink" href="#index-borgen-in-bestaande-stelsels" title="Permanent link">&para;</a></h2>
 <p>De gestandaardiseerde ontsluiting bestaat uit een samenhangende set van generieke afspraken, standaarden en voorzieningen. GBO vormt daarbij geen nieuw, zelfstandig stelsel, maar bouwt voort op bestaande landelijke afspraken, standaarden en voorzieningen.</p>
 <p>Nieuwe, aanvullende afspraken, standaarden en voorzieningen worden zoveel mogelijk geborgd binnen de bestaande afsprakenstelsels. Hiertoe behoren het Federatief Datastelsel (FDS), de Generieke Digitale Infrastructuur (GDI), het EDI-stelsel, de Nederlandse Basisinfrastructuur OOTS en, voor de uitwisseling met private dienstverleners, publiek-private afsprakenstelsels zoals Trusted Information Partners (TIP).</p>
-<p>Als deze stelsels onvoldoende ruimte bieden, wordt onderzocht wat aanvullend geregeld moet worden.</p>
+<p>De GBO architectuur formuleert aanvullingen voor en verbeteringen op deze bestaande stelsels. Het project draagt die voorstellen voor aan de governance van de stelsels. De stelsels implementeren de maatregelen vervolgens zelf. Het project ondersteunt dit met specificaties en voorbeeldimplementaties.</p>
 <h2 id="index-documentatie">Documentatie<a class="headerlink" href="#index-documentatie" title="Permanent link">&para;</a></h2>
 <p>Deze omgeving bevat de inhoudelijke uitwerking van de GBO. Deze uitwerking bestaat uit de volgende onderdelen:</p>
 <ul>
@@ -839,10 +827,19 @@ DvTP --&gt; Privaat
 <td>In ontwikkeling</td>
 </tr>
 </tbody>
-</table></section><section class="print-page" id="context"><h1 id="context-juridische-en-organisatorische-context">Juridische en organisatorische context<a class="headerlink" href="#context-juridische-en-organisatorische-context" title="Permanent link">&para;</a></h1>
+</table></section><section class="print-page" id="context" heading-number="2"><h1 id="context-juridische-en-organisatorische-context">Juridische en organisatorische context<a class="headerlink" href="#context-juridische-en-organisatorische-context" title="Permanent link">&para;</a></h1>
 <p>Hier komt de beschrijving van de juridische en organisatorische context:<br />
 - Welke wet- en regelgeving is relevant en welke impact heeft dit?<br />
-- Welke organisaties zijn in scope en waar ligt welke verantwoordelijkheid?  </p></section></div>
+- Welke organisaties zijn in scope en waar ligt welke verantwoordelijkheid?  </p></section></div><style>.print-site-enumerate-headings #index > h1:before { content: '1 ' }
+
+                .print-site-enumerate-headings #index h2:before { content: '1.' counter(counter-index-2) ' ' }
+                .print-site-enumerate-headings #index h2 {  counter-increment: counter-index-2 }
+            
+.print-site-enumerate-headings #context > h1:before { content: '2 ' }
+
+                .print-site-enumerate-headings #context h2:before { content: '2.' counter(counter-context-2) ' ' }
+                .print-site-enumerate-headings #context h2 {  counter-increment: counter-context-2 }
+            </style>
 
 
 
