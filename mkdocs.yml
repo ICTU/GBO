@@ -102,15 +102,11 @@ plugins:
         - readme.md
 
 nav:
-  # Huidige repository: lokale navigatie.
-  # Dit wordt de actieve tab en de onderliggende items blijven in de linkerkolom zichtbaar.
   - Gemeenschappelijke Bronontsluiting: index.md
-#      - Introductie: index.md
-#      - Begrippen: begrippen.md
-#      - Werkwijze: werkwijze.md
   - Context: context.md
   - Globaal Ontwerp: https://ictu.github.io/GBO-GO/
   - Projectstartarchitectuur: https://ictu.github.io/GBO-PSA/
   - Technisch Ontwerp: underconstruction_to.md
   - Technische Requirements: underconstruction_tr.md
-  - Semantiek: underconstruction_sem.md
+  - Semantiek: https://ictu.github.io/gbo-semantiek/
+  - Demo: https://gbo.simulatie.datastelsel.nl/
