@@ -47,11 +47,11 @@ Deze onderdelen hangen inhoudelijk met elkaar samen en verwijzen waar nodig naar
 
 De documentatie is nog in ontwikkeling en vormt de basis voor verdere besluitvorming en de start van de ontwikkelfase. De onderdelen worden stapsgewijs ter review voorgelegd. Hieronder is de planning van de reviewrondes per onderdeel opgenomen.
 
-| **Onderdeel**            |  **Reviewronde**                            | **Status** |
-| ------------------------ |  ------------------------------------------ | ------------------ |
-| [Context](context.md)    |  In voorbereiding                           | In ontwikkeling    |
-| [Globaal Ontwerp](https://ictu.github.io/GBO-GO/)          |  Afgerond ([v0.8.7](https://ictu.github.io/GBO-GO/0.8.7/))<br>[22 april - 22 mei 2026] | Verwerking review t.b.v. vaststelling |
-| [Projectstartarchitectuur](https://ictu.github.io/GBO-PSA/) |  Externe review ([v0.7.2](https://ictu.github.io/GBO-PSA/0.7.2/))<br>[21 juni - 1 augustus 2026]       | Externe review |
-| Technisch Ontwerp        |  In voorbereiding                           | In ontwikkeling |
-| Semantisch Model         |  In voorbereiding                           | In ontwikkeling |
-| Requirements             |  In voorbereiding                           | In ontwikkeling |
+| **Onderdeel** | **Reviewronde** | **Status** |
+| ------------- | --------------- | ---------- |
+| [Context](context.md) | In voorbereiding | In ontwikkeling |
+| [Globaal Ontwerp](https://ictu.github.io/GBO-GO/) | Afgerond ([v0.8.7](https://ictu.github.io/GBO-GO/0.8.7/))<br>[22 april - 22 mei 2026] | Verwerking review t.b.v. vaststelling |
+| [Projectstartarchitectuur](https://ictu.github.io/GBO-PSA/) | Afgerond ([v0.7.2](https://ictu.github.io/GBO-PSA/0.7.2/))<br>[21 juni - 1 augustus 2026] | Verwerking review t.b.v. definitieve versie |
+| Technisch Ontwerp | In voorbereiding | In ontwikkeling |
+| [Semantisch Model](https://ictu.github.io/GBO-Semantiek/) | In voorbereiding | Ontwikkelversie beschikbaar |
+| Requirements | In voorbereiding | In ontwikkeling |
