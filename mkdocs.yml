@@ -11,8 +11,8 @@ extra:
   version:
     provider: mike
     alias: true
-  document_version: "0.2.1"
-  document_date: "juni 2026"
+  document_version: "0.5.0"
+  document_date: "september 2026"
   document_author: "ICTU"
   document_status: "in ontwikkeling"
 
