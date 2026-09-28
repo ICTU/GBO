@@ -1,144 +1,123 @@
-# Juridische en organisatorische context
+# Context
 
-Gemeenschappelijke Bronontsluiting (GBO) staat niet op zichzelf. Verschillende nationale en Europese ontwikkelingen vragen om betrouwbare, veilige en interoperabele toegang tot overheidsbronnen.
+## Achtergrond
 
-Deze ontwikkelingen hebben ieder een eigen doel, doelgroep en juridisch kader. Toch stellen ze voor een belangrijk deel dezelfde eisen aan bronontsluiting.
+Moderne dienstverlening aan burgers, zowel door overheden als door private partijen, begint met het vertrouwen dat persoonsgegevens actueel en betrouwbaar zijn. Momenteel lopen er, naast andere trajecten, drie omvangrijke ontwikkelingen die het mogelijk moeten maken dat burgers hun eigen gegevens uit overheidsbronnen digitaal beschikbaar kunnen stellen aan dienstverleners of zichzelf.
 
-GBO richt zich op deze gemeenschappelijke opgave. GBO voorkomt dat bronhouders voor iedere toepassing een aparte oplossing moeten maken en beheren.
+Het betreft de volgende drie ontwikkelingen:
 
-GBO vormt geen zelfstandig nieuw stelsel. GBO gebruikt bestaande afspraken, standaarden, voorzieningen en governance waar dat mogelijk is.
+- **EDI-wallet**: vanuit de eIDAS2-verordening wordt gewerkt aan de Europese Digitale Identiteit (EDI-wallet). Met deze digitale portemonnee kunnen burgers zich digitaal identificeren, persoonlijke gegevens veilig delen en documenten digitaal ondertekenen, zowel bij publieke als bij private dienstverleners in Nederland en de rest van de EU.
+- **SDG-OOTS**: vanuit de SDG-verordening wordt gewerkt aan het Once Only Technical System (OOTS). OOTS maakt het mogelijk dat burgers (en bedrijven) een verklaring van instemming geven aan Europese publieke dienstverleners, waarna benodigde bewijsdocumenten eenmalig automatisch en veilig tussen overheidsorganisaties kunnen worden uitgewisseld.
+- **DvTP**: vanuit het beleidsdossier Regie op Gegevens wordt, als reactie op het ongewenste scrapen van persoonlijke omgevingen van burgers binnen overheidswebsites (en daarmee overheidsbronnen), een oplossing ontwikkeld voor het delen van gegevens via toestemming met private dienstverleners (DvTP).
 
-## Relevante ontwikkelingen en stelsels
+## Gezamenlijke opgave
 
-Drie ontwikkelingen vormen de directe aanleiding voor GBO: de EUDI-Wallet, het Once-Only Technical System (OOTS) en Delen via Toestemming met Private dienstverleners (DvTP).
+Deze drie ontwikkelingen hebben elk een eigen oorsprong, doel en reikwijdte. Wat ze gemeen hebben, is dat de gegevensdeling wordt geïnitieerd door de burger en dat daarvoor overheidsbronnen moeten worden ontsloten. Op de korte en middellange termijn staan overheidsorganisaties, de zogenoemde bronhouders, dan ook voor de opgave hun overheidsbronnen toegankelijk te maken voor deze ontwikkelingen.
 
-Ook andere ontwikkelingen bepalen de context van GBO. Deze richten zich vooral op gegevensuitwisseling, digitale infrastructuur en interoperabiliteit.
+## FDS, publiek-privaat, NDS en interoperabiliteit
 
-| Ontwikkeling of stelsel                                      | Betekenis voor GBO                                                                                                                                                                                                                           |
-| ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Regie op Gegevens**                                        | Dit beleidsdossier gaat onder andere over het delen van gegevens. Burgers kunnen gegevens uit overheidsbronnen beschikbaar stellen aan zichzelf of dienstverleners. DvTP komt voort uit deze ontwikkeling.                                   |
-| **EUDI-Wallet**                                              | De EUDI-Wallet ondersteunt digitale identificatie en het gebruik van digitale attestaties. GBO ondersteunt de toegang tot gegevens uit authentieke overheidsbronnen.                                                                         |
-| **Single Digital Gateway / OOTS**                            | OOTS ondersteunt de uitwisseling van bewijsstukken tussen bevoegde overheidsorganisaties in Europa. De Basisinfrastructuur OOTS vormt het Nederlandse aansluitpunt op OOTS. GBO ondersteunt de ontsluiting van Nederlandse overheidsbronnen. |
-| **Delen via Toestemming met Private dienstverleners (DvTP)** | DvTP ondersteunt gegevensdeling met private dienstverleners op initiatief van de burger. GBO levert hiervoor de gemeenschappelijke bronontsluiting.                                                                                          |
-| **Federatief Datastelsel (FDS)**                             | Het FDS ontwikkelt afspraken en standaarden voor gegevensuitwisseling binnen de overheid. GBO gebruikt deze afspraken, standaarden en stelselfuncties waar dat mogelijk is.                                                                  |
-| **Generieke Digitale Infrastructuur (GDI)**                  | De GDI bevat generieke afspraken, standaarden en voorzieningen voor digitale overheidsdienstverlening. GBO gebruikt bestaande GDI-voorzieningen waar dat mogelijk is.                                                                        |
-| **Nederlandse Digitaliseringsstrategie (NDS)**               | De NDS stuurt op samenhang, hergebruik en interoperabiliteit binnen de digitale overheid. GBO sluit aan op deze uitgangspunten.                                                                                                              |
-| **Interoperabel Europa**                                     | Europese regels stellen eisen aan de interoperabiliteit van digitale publieke diensten. GBO moet daarom ook aansluiten op Europese afspraken, standaarden en infrastructuren.                                                                |
+Dit speelt zich af in een bredere context waarin bronhouders ook betrokken zijn bij de totstandkoming van het Federatief Datastelsel (FDS). In dit stelsel worden afspraken en standaarden voor gegevensuitwisseling binnen de overheid vastgelegd. Tegelijkertijd krijgt gegevensdeling met private partijen meer aandacht en daarmee ook de afstemming met publiek-private afsprakenstelsels. Daarnaast maken de introductie van de Nederlandse Digitaliseringsstrategie (NDS) en de inwerkingtreding van de Europese verordening Interoperabel Europa (VIE) duidelijk dat het realiseren van nationale en Europese interoperabiliteit niet langer vrijblijvend is.
 
-Deze ontwikkelingen komen bij de bronhouder samen. Een bronhouder kan dezelfde gegevens voor meerdere toepassingen beschikbaar moeten stellen.
+## Gemeenschappelijke Bronontsluiting
 
-GBO voorkomt dat een bronhouder hiervoor steeds een andere technische en organisatorische oplossing nodig heeft.
+In 2025 is vanuit het perspectief van bronhouders onderzocht of het ontsluiten van overheidsbronnen voor deze ontwikkelingen meer samenhangend en gezamenlijk kan worden opgepakt onder de noemer Gemeenschappelijke Bronontsluiting. Het begrip "gemeenschappelijk" benadrukt daarbij de collectieve aard van de opgave. Tegelijkertijd voerde de VNG gerelateerde beproevingen uit onder de noemers Uniforme Bronontsluiting en Bronconnect.
 
-## Betrokken partijen
-
-Verschillende partijen zijn betrokken bij GBO. Sommige partijen leveren of gebruiken gegevens. Andere partijen stellen kaders, beheren voorzieningen of houden toezicht.
-
-| Partij of rol                                                | Betrokkenheid bij GBO                                                                                                                                                           |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Burger**                                                   | De burger is rechthebbende op persoonsgegevens en initieert of stuurt de gegevensdeling. Dit kan via DvTP, OOTS of de EUDI-Wallet.                                              |
-| **Bronhouder**                                               | De bronhouder beheert de overheidsbron. De bronhouder blijft verantwoordelijk voor de gegevens, de leverbaarheid en het eigen juridische regime.                                |
-| **Private dienstverlener**                                   | Een private dienstverlener gebruikt binnen DvTP gegevens uit overheidsbronnen. Dit gebeurt met een geldige grondslag en voor een afgebakend doel.                               |
-| **Sectorvertegenwoordiger**                                  | Een sectorvertegenwoordiger bundelt en stemt gegevensbehoeften af namens een sector of groep private dienstverleners.                                                           |
-| **Europese bevoegde autoriteit**                             | Een bevoegde autoriteit kan binnen SDG/OOTS bewijsgegevens aanvragen of leveren voor een aangewezen Europese procedure.                                                         |
-| **Wallet-actoren**                                           | Het EUDI-stelsel kent verschillende rollen rond attestaties. Voorbeelden zijn issuers, walletgebruikers, relying parties en Qualified Trust Service Providers (QTSP's).         |
-| **Ministerie van BZK**                                       | BZK heeft een kaderstellende en coördinerende rol voor GBO. Het ministerie verzorgt ook de interdepartementale afstemming.                                                      |
-| **Vakdepartementen**                                         | Vakdepartementen zijn verantwoordelijk voor de beleids- en wettelijke kaders binnen hun domein. Zij zijn betrokken bij sectorale verstrekkingsregels en geheimhoudingsplichten. |
-| **Project GBO**                                              | Het project werkt de gemeenschappelijke afspraken, standaarden en benodigde voorzieningen uit. Het project brengt benodigde wijzigingen in bij de verantwoordelijke stelsels.   |
-| **FDS-stelselbeheer**                                        | Het FDS-stelselbeheer beheert afspraken en stelselfuncties van het FDS. GBO gebruikt deze onderdelen waar dat mogelijk is.                                                      |
-| **Logius**                                                   | Logius beheert verschillende onderdelen van de GDI die voor GBO relevant zijn. Voorbeelden zijn voorzieningen voor identificatie en pseudonimisering.                           |
-| **RINIS**                                                    | RINIS beheert de Basisinfrastructuur OOTS. Deze infrastructuur vormt de schakel tussen het Europese OOTS en Nederlandse overheidsbronnen.                                       |
-| **Rijksinspectie Digitale Infrastructuur (RDI)**             | De RDI heeft taken rond toezicht en uitvoering binnen de digitale vertrouwensinfrastructuur. Deze infrastructuur is onder andere relevant voor de EUDI-Wallet.                  |
-| **Autoriteit Persoonsgegevens en sectorale toezichthouders** | Deze toezichthouders toetsen de naleving van privacywetgeving en andere regels voor de verwerking en verstrekking van gegevens.                                                 |
-
-De verantwoordelijkheid verschilt per gegevensstroom. GBO verandert de bestaande verantwoordelijkheid voor gegevens niet.
-
-De bronhouder blijft verantwoordelijk voor de bron. De afnemer blijft verantwoordelijk voor het rechtmatige gebruik van de ontvangen gegevens.
-
-GBO levert gemeenschappelijke afspraken en mechanismen. Daarmee kunnen partijen hun verantwoordelijkheden op een consistente manier invullen.
+Op basis van het onderzoek is het programma Gemeenschappelijke Bronontsluiting ontstaan. Daarbij zijn ook de resultaten en geleerde lessen uit de beproevingen met Uniforme Bronontsluiting en Bronconnect meegenomen. Het programma ontwikkelt en realiseert een gestandaardiseerde ontsluiting waarmee bronhouders hun gegevens direct en interoperabel beschikbaar kunnen stellen voor toepassingen zoals de EDI-wallet, OOTS, DvTP en nieuwe ontwikkelingen.
 
 ## Juridische context
 
-Gegevensdeling via GBO valt onder bestaande Nederlandse en Europese wet- en regelgeving. De geldende grondslag hangt af van de toepassing en de gegevens.
+Voor gegevensdeling via GBO gelden vijf juridische uitgangspunten.
 
-De belangrijkste wettelijke kaders zijn:
+**De grondslag ligt bij de bronhouder.** Voor iedere gegevensverstrekking moet een geldige juridische grondslag bestaan. Die ligt bij de bronhouder; in de regel is dat een wettelijke verplichting of een taak van algemeen belang. De afnemer heeft een eigen grondslag nodig voor het gebruik van de ontvangen gegevens.
 
-| Wet- of regelgeving                                                     | Relevantie voor GBO                                                                                                                                                                               |
-| ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Algemene Verordening Gegevensbescherming (AVG)**                      | De AVG stelt eisen aan de verwerking van persoonsgegevens. Belangrijke onderwerpen zijn rechtmatigheid, doelbinding, dataminimalisatie, transparantie, beveiliging en de rechten van betrokkenen. |
-| **eIDAS-verordening en het Europese raamwerk voor digitale identiteit** | Dit is het juridische kader voor elektronische identificatie, de EUDI-Wallet en elektronische attestaties van attributen.                                                                         |
-| **Single Digital Gateway-verordening (EU) 2018/1724**                   | Deze verordening vormt de juridische basis voor de Single Digital Gateway en het Once-Only Technical System.                                                                                      |
-| **Uitvoeringsverordening (EU) 2022/1463**                               | Deze verordening werkt de technische en organisatorische regels voor OOTS verder uit.                                                                                                             |
-| **Wet algemene bepalingen burgerservicenummer (Wabb)**                  | De Wabb stelt beperkingen aan het gebruik van het BSN. Dit is vooral relevant bij gegevensdeling met private partijen.                                                                            |
-| **Wet digitale overheid (Wdo)**                                         | De Wdo vormt een belangrijk nationaal kader voor de digitale overheid en generieke digitale voorzieningen.                                                                                        |
-| **Sectorale wet- en regelgeving**                                       | Bronhouders moeten voldoen aan de regels van hun eigen domein. Deze regels kunnen voorwaarden of geheimhoudingsplichten bevatten voor het verstrekken van gegevens.                               |
-| **Verordening Interoperabel Europa**                                    | Deze verordening stelt eisen aan de interoperabiliteit van digitale publieke diensten. GBO moet daarom aansluiten op Europese kaders.                                                             |
-| **Informatiebeveiligings- en cyberbeveiligingskaders**                  | Onder andere de Baseline Informatiebeveiliging Overheid en relevante cyberbeveiligingswetgeving stellen eisen aan de beveiliging van gegevensuitwisseling.                                        |
+**De burger stuurt, maar sturing is geen grondslag.** In alle drie de gegevensstromen zet de burger de gegevensdeling in gang. Die sturing is niet hetzelfde als toestemming als verwerkingsgrondslag: de verstrekking door de bronhouder berust op een wettelijke bevoegdheid met waarborgen. Toestemming van de burger is jegens de overheid als grondslag bovendien kwetsbaar.
 
-### Juridische uitgangspunten
+**Doelbinding en dataminimalisatie.** De afnemer krijgt alleen de gegevens die nodig zijn voor het afgesproken doel. GBO maakt dit ook technisch afdwingbaar: alleen vooraf per toepassing vastgelegde gegevenssets worden beantwoord.
 
-Voor iedere gegevensverstrekking moet een geldige juridische grondslag bestaan. Ook moet vooraf duidelijk zijn voor welk doel de afnemer de gegevens gebruikt.
+**Geen BSN buiten de overheid.** De Wabb regelt het gebruik van het burgerservicenummer door overheidsorganen; buiten de overheid mag het BSN alleen worden verwerkt als een wet dat voorschrijft. Private dienstverleners ontvangen daarom geen BSN maar een partijspecifiek pseudoniem. Voor de DvTP-stroom is pseudonimisering verplicht.
 
-GBO ondersteunt doelbinding en dataminimalisatie. De afnemer krijgt alleen de gegevens die nodig zijn voor het afgesproken doel.
+**Controleerbaar achteraf.** Gegevensuitwisseling moet achteraf controleerbaar zijn. GBO ondersteunt daarom logging, toezicht, controle en verantwoording. Ook de burger moet kunnen terugzien welke gegevens zijn gedeeld, met wie en waarvoor.
 
-Burgersturing en transparantie zijn belangrijk bij gegevensdeling die de burger zelf initieert. De burger moet weten welke gegevens worden gedeeld en met wie.
+### Belangrijkste kaders
 
-Ook het doel en de voorwaarden van de gegevensdeling moeten duidelijk zijn.
+- **AVG**: eisen aan de verwerking van persoonsgegevens, waaronder rechtmatigheid, doelbinding, dataminimalisatie, transparantie, beveiliging en de rechten van betrokkenen.
+- **eIDAS-verordening (eIDAS 2.0)**: kader voor elektronische identificatie, de EDI-Wallet en elektronische attestaties van attributen.
+- **Single Digital Gateway-verordening en uitvoeringsverordening OOTS**: juridische basis en technische uitwerking van het Once-Only Technical System.
+- **Wabb en UAVG**: gebruik van het BSN binnen en buiten de overheid.
+- **Sectorale wet- en regelgeving**: voorwaarden en geheimhoudingsplichten per domein.
+- **Verordening Interoperabel Europa**: eisen aan de interoperabiliteit van digitale publieke diensten.
+- **Data Governance Act en Data Act**: hergebruik van gegevens en zeggenschap van de bronhouder over de voorwaarden voor ontsluiting.
+- **BIO en Cyberbeveiligingswet**: eisen aan de beveiliging van gegevensuitwisseling.
 
-Identificerende gegevens vragen extra bescherming. Partijen mogen het BSN alleen verwerken als daarvoor een wettelijke grondslag bestaat.
+Vindplaatsen en artikelen staan in de paragraaf [Bronnen](#bronnen).
 
-Dit is vooral belangrijk bij gegevensdeling met private partijen. GBO gebruikt daarom waar nodig pseudonimisering om onnodige verspreiding van het BSN te voorkomen.
+### Aanvullende grondslag voor DvTP
 
-Gegevensuitwisseling moet achteraf controleerbaar zijn. GBO moet daarom logging, toezicht, controle en verantwoording ondersteunen.
+Voor DvTP speelt een specifiek juridisch aandachtspunt. Verschillende sectorale wetten bevatten geheimhoudingsplichten voor bestuursorganen, en toestemming of een verzoek van de burger doorbreekt zo'n plicht niet altijd. Voor sommige gegevensstromen is daarom een aanvullende wettelijke grondslag nodig.
 
-### Aanvullende juridische grondslag voor DvTP
-
-Voor DvTP speelt een specifiek juridisch aandachtspunt. Verschillende sectorale wetten bevatten geheimhoudingsplichten voor bestuursorganen.
-
-Toestemming of een verzoek van de burger doorbreekt zo'n geheimhoudingsplicht niet altijd. Voor sommige gegevensstromen is daarom een aanvullende wettelijke grondslag nodig.
-
-Het wetgevingstraject voor DvTP werkt deze grondslag verder uit. Daarbij zijn BZK, vakdepartementen, bronhouders en toezichthouders betrokken.
-
-Dit traject is een randvoorwaarde voor gegevensstromen waarvoor de huidige wetgeving nog geen passende grondslag biedt.
+Het wetgevingstraject voor DvTP werkt deze grondslag uit. Daarbij zijn BZK, vakdepartementen, bronhouders en toezichthouders betrokken. Uitgangspunt is een kaderregeling in de wet, die per toepassing wordt ingevuld in lagere regelgeving.
 
 ## Organisatorische context
 
-GBO krijgt geen aparte positie naast bestaande stelsels. GBO sluit zoveel mogelijk aan op bestaande verantwoordelijkheden, afspraken en voorzieningen.
+**Het programma.** Het programma Gemeenschappelijke Bronontsluiting wordt uitgevoerd door ICTU. Binnen het programma werken de trajecten EDI, OOTS en DvTP samen met de afsprakenstelsels FDS en GDI en met bronhouders, waaronder RvIG, VNG, UWV, DUO, de Belastingdienst, Kadaster en KVK. Ook andere bronhouders zijn uitgenodigd om mee te doen. Deelname is voor bronhouders vrijwillig: een bronhouder kan er ook voor kiezen een eigen ontsluiting te ontwikkelen.
 
-Afspraken voor gegevensuitwisseling binnen de overheid sluiten waar mogelijk aan op het FDS.
+**Aansluiting op bestaande stelsels.** GBO krijgt geen aparte positie naast bestaande stelsels en bouwt geen eigen governance- en beheerstructuur. Concreet:
 
-GBO gebruikt bestaande voorzieningen uit de GDI in plaats van nieuwe voorzieningen met dezelfde functie te maken.
+- afspraken voor gegevensuitwisseling binnen de overheid sluiten waar mogelijk aan op het FDS;
+- GBO gebruikt bestaande GDI-voorzieningen in plaats van nieuwe voorzieningen met dezelfde functie;
+- de aansluiting op het Europese OOTS loopt via de Nederlandse Basisinrichting OOTS (onderdeel OOTS-V);
+- voor de EDI-Wallet sluit GBO aan op de nationale en Europese inrichting van het EDI/EUDI-stelsel, waaronder de NL-Wallet en het Architecture and Reference Framework (ARF).
 
-De aansluiting op het Europese OOTS loopt via de Nederlandse Basisinfrastructuur OOTS.
+Dekken bestaande afspraken, standaarden of voorzieningen de behoefte niet, dan beschrijft het programma welke aanvulling nodig is en brengt het die in bij het verantwoordelijke stelsel.
 
-Voor de EUDI-Wallet sluit GBO aan op de nationale en Europese inrichting van het EUDI-stelsel.
+**Loket voor private partijen.** Bureau DvTP is het loket voor private dienstverleners en sectorvertegenwoordigers: intake, eerste toetsing en begeleiding bij het aansluiten op DvTP.
 
-Soms dekken bestaande afspraken, standaarden of voorzieningen de behoefte van GBO niet. Het project beschrijft dan welke aanvulling nodig is.
+## Betrokken partijen
 
-Het project brengt deze aanvulling in bij het verantwoordelijke stelsel. Zo voorkomt GBO een aparte governance- en beheerstructuur.
+We beschrijven de betrokkenen vanuit het perspectief van de bronhouder; de burger is in dit overzicht vooral degene die de gegevensdeling in gang zet. GBO verandert bestaande verantwoordelijkheden niet: de bronhouder blijft verantwoordelijk voor de bron, de afnemer voor het rechtmatige gebruik van de ontvangen gegevens.
 
-## Governance en beheer
+### In de gegevensdeling
 
-Tijdens de projectfase coördineert het project GBO de uitwerking. Voor de structurele situatie moet duidelijk zijn welke organisatie ieder onderdeel beheert.
+- **Burger**: rechthebbende op persoonsgegevens; initieert of stuurt de gegevensdeling via de EDI-wallet, OOTS of de DvTP en kan toestemmingen inzien en intrekken en terugzien welke gegevens zijn gedeeld.
+- **Bronhouder**: beheert de overheidsbron; blijft verantwoordelijk voor de gegevens, de leverbaarheid en het eigen juridische regime en beslist binnen de wettelijke kaders over de voorwaarden voor ontsluiting.
+- **Private dienstverlener**: gebruikt binnen DvTP gegevens uit overheidsbronnen, uitsluitend voor de dienst waarvoor de burger toestemming gaf; voldoet aan de aansluitvoorwaarden van DvTP en ontvangt geen BSN maar een partijspecifiek pseudoniem.
+- **Sectorvertegenwoordiger**: bundelt gegevensbehoeften namens een sector of groep private dienstverleners en brengt die in bij departementen en bronhouders.
+- **Europese bevoegde autoriteit**: vraagt of levert binnen OOTS bewijsgegevens voor een aangewezen Europese procedure.
+- **Wallet-actoren**: issuers (waaronder overheidsbronnen als authentieke bron), walletgebruikers, relying parties en Qualified Trust Service Providers (QTSP's).
 
-De governance moet in ieder geval de volgende onderwerpen afdekken:
+### Kaderstellend
 
-* besluiten over nieuwe of gewijzigde gegevensbehoeften;
-* prioritering van wijzigingen en beschikbare capaciteit;
-* beheer van gemeenschappelijke afspraken en standaarden;
-* beheer van gemeenschappelijke voorzieningen;
-* toetreding van deelnemers;
-* wijzigings- en versiebeheer;
-* servicebeheer, incidentafhandeling en escalatie;
-* toezicht, naleving en controle.
+- **Ministerie van BZK**: kaderstellend en coördinerend voor GBO, verzorgt de interdepartementale afstemming en is eigenaar van centrale voorzieningen EDI, OOTS en DvTP.
+- **Vakdepartementen**: verantwoordelijk voor de beleids- en wettelijke kaders binnen hun domein, waaronder sectorale verstrekkingsregels en de regelgeving die per toepassing de gegevensdeling aanwijst.
 
-Deze taken hoeven niet bij één centrale GBO-organisatie te liggen. Per taak moet duidelijk zijn welk bestaand stelsel of welke organisatie verantwoordelijk is.
+### Uitvoerend en beherend
 
-### Bestuurlijke besluitvorming
+- **Programma GBO**: werkt de gemeenschappelijke afspraken, standaarden en benodigde voorzieningen uit en brengt wijzigingen in bij de verantwoordelijke stelsels.
+- **Bureau DvTP**: loket voor private dienstverleners en sectorvertegenwoordigers.
+- **Programma EDI**: werkt aan het Nederlandse deel van het Europese raamwerk voor digitale identiteit, waaronder de NL-Wallet en het EDI-stelsel.
+- **bNC-SDG**: coördineert de Nederlandse implementatie van de Single Digital Gateway en van OOTS.
+- **FDS-stelselbeheer**: beheert de afspraken en stelselfuncties van het FDS.
+- **Logius**: beheert GDI-voorzieningen die voor GBO relevant zijn, zoals DigiD, BSNk, Digikoppeling, PKIoverheid en MijnOverheid.
+- **RINIS**: levert en beheert de Basisinrichting OOTS (OOTS-V voor bronhouders, OOTS-A voor dienstverleners), de schakel tussen het Europese OOTS en Nederlandse overheidsbronnen.
+- **Integrators en softwareleveranciers**: implementeren de decentrale componenten voor bronhouders en afnemers; de bronhouder blijft verantwoordelijk voor de inhoud van de gegevens.
 
-De bestuurlijke inbedding van GBO moet aansluiten op de bestaande governance van de digitale overheid.
+### Toezicht
 
-Het eerdere beschrijvend document noemt de pGDI als plaats voor besluiten over prioriteiten, capaciteit, gegevensbehoeften en ontwerpkeuzes.
+- **Autoriteit Persoonsgegevens en sectorale toezichthouders**: toetsen de naleving van privacywetgeving en andere regels voor verwerking en verstrekking; de AP adviseert daarnaast in het wetgevingstraject voor DvTP.
+- **Rijksinspectie Digitale Infrastructuur (RDI)**: toezicht en uitvoering binnen de digitale vertrouwensinfrastructuur, waaronder vertrouwensdiensten onder eIDAS.
 
-De precieze rol van de pGDI binnen GBO is nog niet uitgewerkt.
+## Bronnen
 
-<!-- TODO: vul deze paragraaf aan zodra de rol van de pGDI en de structurele governance van GBO bestuurlijk zijn vastgesteld. -->
+Vindplaatsen en artikelen bij deze pagina.
+
+- [Verordening (EU) 2024/1183 (eIDAS 2.0)](https://eur-lex.europa.eu/eli/reg/2024/1183/oj)
+- [Verordening (EU) 2018/1724 (Single Digital Gateway)](https://eur-lex.europa.eu/eli/reg/2018/1724/oj), artikel 14 en bijlage II
+- [Uitvoeringsverordening (EU) 2022/1463 (OOTS)](https://eur-lex.europa.eu/eli/reg_impl/2022/1463/oj)
+- [Verordening (EU) 2024/903 (Interoperabel Europa)](https://eur-lex.europa.eu/eli/reg/2024/903/oj)
+- Verordening (EU) 2022/868 (Data Governance Act) en Verordening (EU) 2023/2854 (Data Act), EUR-Lex
+- [Wet algemene bepalingen burgerservicenummer](https://wetten.overheid.nl/BWBR0022428/), artikel 10
+- [Uitvoeringswet Algemene verordening gegevensbescherming](https://wetten.overheid.nl/BWBR0040940/), artikel 46
+- Rijksoverheid, Cyberbeveiligingswet en Wet weerbaarheid kritieke entiteiten vanaf 15 augustus 2026 van kracht (7 juli 2026)
+- Europese Commissie, OOTS Hub: About OOTS en Go-Live of the Once-Only Technical System (december 2023)
+- VNG, Once Only Technical System (OOTS): Basisinrichting OOTS, OOTS-V en OOTS-A
+- ICTU, [Gemeenschappelijke Bronontsluiting: Globaal Ontwerp en Projectstartarchitectuur](https://ictu.github.io/GBO/)
