@@ -2,7 +2,7 @@
 
 ## Introductie
 
-Het programma Gemeenschappelijke Bronontsluiting (GBO) ontwikkelt een gestandaardiseerde ontsluiting waarmee overheidsorganisaties (bronhouders) hun gegevens direct interoperabel en herbruikbaar beschikbaar stellen voor de Europese Digitale Identiteit wallet (EUDI-Wallet), het Once-Only Technical System (OOTS) en Delen via Toestemming met Private dienstverleners (DvTP).
+Het programma Gemeenschappelijke Bronontsluiting (GBO) ontwikkelt een gestandaardiseerde ontsluiting waarmee overheidsorganisaties (bronhouders) hun gegevens direct interoperabel en herbruikbaar beschikbaar stellen voor de Europese Digitale Identiteit wallet (EUDI-Wallet), het Once-Only Technical System (OOTS) en Delen via Toestemming met Private dienstverleners (DvTP). GBO ontwikkelt ook centrale voorzieningen die voor het aansluiten op deze kanalen gebruik kunnen worden door de bronhouders.
 
 GBO richt zich vanuit het perspectief van bronhouders op de gemeenschappelijke aspecten van bronontsluiting en biedt de volgende voordelen:
 
@@ -21,6 +21,8 @@ GBO richt zich vanuit het perspectief van bronhouders op de gemeenschappelijke a
 <figcaption>Gemeenschappelijke bronontsluiting</figcaption>
 </figure>
 
+Op onze [informatiesite](https://gbo.pleio.nl) lees je over aanleiding en doel van het programma GBO en word je op de hoogte gehouden van de voortgang. Daarnaast vind je hier informatie over de GBO-pilots. Omdat het programma GBO ook DvTP uitvoert, is op deze site ook informatie over DvTP opgenomen.
+
 
 ## Borgen in bestaande stelsels
 
@@ -35,11 +37,11 @@ De GBO architectuur formuleert aanvullingen voor en verbeteringen op deze bestaa
 Deze omgeving bevat de inhoudelijke uitwerking van de GBO. Deze uitwerking bestaat uit de volgende onderdelen:
 
 - de [Context](context.md), waarin de juridische en organisatorische context beschreven wordt
-- het [Globaal Ontwerp](https://ictu.github.io/GBO-GO/) met een beschrijving van de gemeenschappelijke bronontsluiting in grote lijnen
+- het [Globaal Ontwerp](https://ictu.github.io/GBO-GO/) met een beschrijving van de voorgestelde oplossing in grote lijnen
 - de [Projectstartarchitectuur](https://ictu.github.io/GBO-PSA/) waarin het ontwerp uitgewerkt wordt naar benodigde stelselfuncties (afspraken, standaarden en voorzieningen) en een inventarisatie van te ontwikkelen componenten
 - het [Technisch Ontwerp](underconstruction_to.md) waarin het ontwerp uitgewerkt wordt naar in te richten technische componenten
 - [Technische Requirements](underconstruction_tr.md) waarin de te ontwikkelen voorzieningen uitgewerkt worden naar technische specificaties
-- het [Semantisch Model](underconstruction_sem.md) met o.a. de vereiste gegevensmodellen, vertaaltabellen en metadatering
+- het [Semantisch Model](https://ictu.github.io/GBO-Semantiek/) met o.a. de vereiste gegevensmodellen, vertaaltabellen en metadatering
 
 Deze onderdelen hangen inhoudelijk met elkaar samen en verwijzen waar nodig naar elkaar, maar kunnen ook zelfstandig worden geraadpleegd.
 
