@@ -6,7 +6,7 @@ Moderne dienstverlening aan burgers, zowel door overheden als door private parti
 
 Het betreft de volgende drie ontwikkelingen:
 
-- **EDI-wallet**: vanuit de eIDAS2-verordening wordt gewerkt aan de Europese Digitale Identiteit (EDI-wallet). Met deze digitale portemonnee kunnen burgers zich digitaal identificeren, persoonlijke gegevens veilig delen en documenten digitaal ondertekenen, zowel bij publieke als bij private dienstverleners in Nederland en de rest van de EU.
+- **EUDI-wallet**: vanuit de eIDAS2-verordening wordt gewerkt aan de Europese Digitale Identiteit (EUDI-wallet). Met deze digitale portemonnee kunnen burgers zich digitaal identificeren, persoonlijke gegevens veilig delen en documenten digitaal ondertekenen, zowel bij publieke als bij private dienstverleners in Nederland en de rest van de EU.
 - **SDG-OOTS**: vanuit de SDG-verordening wordt gewerkt aan het Once Only Technical System (OOTS). OOTS maakt het mogelijk dat burgers (en bedrijven) een verklaring van instemming geven aan Europese publieke dienstverleners, waarna benodigde bewijsdocumenten eenmalig automatisch en veilig tussen overheidsorganisaties kunnen worden uitgewisseld.
 - **DvTP**: vanuit het beleidsdossier Regie op Gegevens wordt, als reactie op het ongewenste scrapen van persoonlijke omgevingen van burgers binnen overheidswebsites (en daarmee overheidsbronnen), een oplossing ontwikkeld voor het delen van gegevens via toestemming met private dienstverleners (DvTP).
 
@@ -22,7 +22,7 @@ Dit speelt zich af in een bredere context waarin bronhouders ook betrokken zijn 
 
 In 2025 is vanuit het perspectief van bronhouders onderzocht of het ontsluiten van overheidsbronnen voor deze ontwikkelingen meer samenhangend en gezamenlijk kan worden opgepakt onder de noemer Gemeenschappelijke Bronontsluiting. Het begrip "gemeenschappelijk" benadrukt daarbij de collectieve aard van de opgave. Tegelijkertijd voerde de VNG gerelateerde beproevingen uit onder de noemers Uniforme Bronontsluiting en Bronconnect.
 
-Op basis van het onderzoek is het programma Gemeenschappelijke Bronontsluiting ontstaan. Daarbij zijn ook de resultaten en geleerde lessen uit de beproevingen met Uniforme Bronontsluiting en Bronconnect meegenomen. Het programma ontwikkelt en realiseert een gestandaardiseerde ontsluiting waarmee bronhouders hun gegevens direct en interoperabel beschikbaar kunnen stellen voor toepassingen zoals de EDI-wallet, OOTS, DvTP en nieuwe ontwikkelingen.
+Op basis van het onderzoek is het programma Gemeenschappelijke Bronontsluiting ontstaan. Daarbij zijn ook de resultaten en geleerde lessen uit de beproevingen met Uniforme Bronontsluiting en Bronconnect meegenomen. Het programma ontwikkelt en realiseert een gestandaardiseerde ontsluiting waarmee bronhouders hun gegevens direct en interoperabel beschikbaar kunnen stellen voor toepassingen zoals de EUDI-wallet, OOTS, DvTP en nieuwe ontwikkelingen.
 
 ## Juridische context
 
@@ -41,7 +41,7 @@ Voor gegevensdeling via GBO gelden vijf juridische uitgangspunten.
 ### Belangrijkste kaders
 
 - **AVG**: eisen aan de verwerking van persoonsgegevens, waaronder rechtmatigheid, doelbinding, dataminimalisatie, transparantie, beveiliging en de rechten van betrokkenen.
-- **eIDAS-verordening (eIDAS 2.0)**: kader voor elektronische identificatie, de EDI-Wallet en elektronische attestaties van attributen.
+- **eIDAS-verordening (eIDAS 2.0)**: kader voor elektronische identificatie, de EUDI-Wallet en elektronische attestaties van attributen.
 - **Single Digital Gateway-verordening en uitvoeringsverordening OOTS**: juridische basis en technische uitwerking van het Once-Only Technical System.
 - **Wabb en UAVG**: gebruik van het BSN binnen en buiten de overheid.
 - **Sectorale wet- en regelgeving**: voorwaarden en geheimhoudingsplichten per domein.
@@ -59,14 +59,14 @@ Het wetgevingstraject voor DvTP werkt deze grondslag uit. Daarbij zijn BZK, vakd
 
 ## Organisatorische context
 
-**Het programma.** Het programma Gemeenschappelijke Bronontsluiting wordt uitgevoerd door ICTU. Binnen het programma werken de trajecten EDI, OOTS en DvTP samen met de afsprakenstelsels FDS en GDI en met bronhouders, waaronder RvIG, VNG, UWV, DUO, de Belastingdienst, Kadaster en KVK. Ook andere bronhouders zijn uitgenodigd om mee te doen. Deelname is voor bronhouders vrijwillig: een bronhouder kan er ook voor kiezen een eigen ontsluiting te ontwikkelen.
+**Het programma.** Het programma Gemeenschappelijke Bronontsluiting wordt uitgevoerd door ICTU. Binnen het programma werken de trajecten EUDI-Wallet, OOTS en DvTP samen met de afsprakenstelsels FDS en GDI en met bronhouders, waaronder RvIG, VNG, UWV, DUO, de Belastingdienst, Kadaster en KVK. Ook andere bronhouders zijn uitgenodigd om mee te doen. Deelname is voor bronhouders vrijwillig: een bronhouder kan er ook voor kiezen een eigen ontsluiting te ontwikkelen.
 
 **Aansluiting op bestaande stelsels.** GBO krijgt geen aparte positie naast bestaande stelsels en bouwt geen eigen governance- en beheerstructuur. Concreet:
 
 - afspraken voor gegevensuitwisseling binnen de overheid sluiten waar mogelijk aan op het FDS;
 - GBO gebruikt bestaande GDI-voorzieningen in plaats van nieuwe voorzieningen met dezelfde functie;
 - de aansluiting op het Europese OOTS loopt via de Nederlandse Basisinrichting OOTS (onderdeel OOTS-V);
-- voor de EDI-Wallet sluit GBO aan op de nationale en Europese inrichting van het EDI/EUDI-stelsel, waaronder de NL-Wallet en het Architecture and Reference Framework (ARF).
+- voor de EUDI-Wallet sluit GBO aan op de nationale en Europese inrichting van het EDI-stelsel, waaronder de NL-Wallet en het Architecture and Reference Framework (ARF).
 
 Dekken bestaande afspraken, standaarden of voorzieningen de behoefte niet, dan beschrijft het programma welke aanvulling nodig is en brengt het die in bij het verantwoordelijke stelsel.
 
@@ -78,7 +78,7 @@ We beschrijven de betrokkenen vanuit het perspectief van de bronhouder; de burge
 
 ### In de gegevensdeling
 
-- **Burger**: rechthebbende op persoonsgegevens; initieert of stuurt de gegevensdeling via de EDI-wallet, OOTS of de DvTP en kan toestemmingen inzien en intrekken en terugzien welke gegevens zijn gedeeld.
+- **Burger**: rechthebbende op persoonsgegevens; initieert of stuurt de gegevensdeling via de EUDI-wallet, OOTS of de DvTP en kan toestemmingen inzien en intrekken en terugzien welke gegevens zijn gedeeld.
 - **Bronhouder**: beheert de overheidsbron; blijft verantwoordelijk voor de gegevens, de leverbaarheid en het eigen juridische regime en beslist binnen de wettelijke kaders over de voorwaarden voor ontsluiting.
 - **Private dienstverlener**: gebruikt binnen DvTP gegevens uit overheidsbronnen, uitsluitend voor de dienst waarvoor de burger toestemming gaf; voldoet aan de aansluitvoorwaarden van DvTP en ontvangt geen BSN maar een partijspecifiek pseudoniem.
 - **Sectorvertegenwoordiger**: bundelt gegevensbehoeften namens een sector of groep private dienstverleners en brengt die in bij departementen en bronhouders.
@@ -87,7 +87,7 @@ We beschrijven de betrokkenen vanuit het perspectief van de bronhouder; de burge
 
 ### Kaderstellend
 
-- **Ministerie van BZK**: kaderstellend en coördinerend voor GBO, verzorgt de interdepartementale afstemming en is eigenaar van centrale voorzieningen EDI, OOTS en DvTP.
+- **Ministerie van BZK**: kaderstellend en coördinerend voor GBO, verzorgt de interdepartementale afstemming en is eigenaar van centrale voorzieningen voor aansluiting op het EDI-stelsel, OOTS Basisinrichting en DvTP.
 - **Vakdepartementen**: verantwoordelijk voor de beleids- en wettelijke kaders binnen hun domein, waaronder sectorale verstrekkingsregels en de regelgeving die per toepassing de gegevensdeling aanwijst.
 
 ### Uitvoerend en beherend
