@@ -1,6 +1,6 @@
 # GBO
 
-Deze repository bevat de inleidende documentatie voor het project **Gemeenschappelijke Bronontsluiting (GBO)**.
+Deze repository bevat de inleidende documentatie voor het programma **Gemeenschappelijke Bronontsluiting (GBO)**.
 
 GBO heeft als doel een **generieke infrastructuur en afsprakenstelsel** te realiseren waarmee gegevens van overheidsorganisaties beschikbaar kunnen worden gemaakt voor:
 
@@ -52,7 +52,7 @@ Bijdragen aan deze architectuur kunnen worden gedaan via:
 
 # Contact
 
-Eigenaar: project GBO
+Eigenaar: programma GBO
 Contactpersoon: [Govert Claus](mailto:govert.claus@ictu.nl)
 
 

@@ -30,7 +30,7 @@ De gestandaardiseerde ontsluiting bestaat uit een samenhangende set van generiek
 
 Nieuwe, aanvullende afspraken, standaarden en voorzieningen worden zoveel mogelijk geborgd binnen de bestaande afsprakenstelsels. Hiertoe behoren het Federatief Datastelsel (FDS), de Generieke Digitale Infrastructuur (GDI), het EDI-stelsel, de Basisinfrastructuur OOTS (sectorale en eigen aansluitingen zijn buiten scope) en, voor de uitwisseling met private dienstverleners, publiek-private afsprakenstelsels zoals Trusted Information Partners (TIP).
 
-De GBO architectuur formuleert aanvullingen voor en verbeteringen op deze bestaande stelsels. Het project draagt die voorstellen voor aan de governance van de stelsels. De stelsels implementeren de maatregelen vervolgens zelf. Het project ondersteunt dit met specificaties en voorbeeldimplementaties.
+De GBO architectuur formuleert aanvullingen voor en verbeteringen op deze bestaande stelsels. Het programma draagt die voorstellen voor aan de governance van de stelsels. De stelsels implementeren de maatregelen vervolgens zelf. Het programma ondersteunt dit met specificaties en voorbeeldimplementaties.
 
 ## Documentatie
 
