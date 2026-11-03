@@ -2,7 +2,7 @@
 
 ## Introductie
 
-Het programma Gemeenschappelijke Bronontsluiting (GBO) ontwikkelt een gestandaardiseerde ontsluiting waarmee overheidsorganisaties (bronhouders) hun gegevens direct interoperabel en herbruikbaar beschikbaar stellen voor de Europese Digitale Identiteit wallet (EUDI-Wallet), het Once-Only Technical System (OOTS) en Delen via Toestemming met Private dienstverleners (DvTP). GBO ontwikkelt ook centrale voorzieningen die voor het aansluiten op deze kanalen gebruik kunnen worden door de bronhouders.
+Het programma Gemeenschappelijke Bronontsluiting (GBO) ontwikkelt een gestandaardiseerde ontsluiting waarmee overheidsorganisaties (bronhouders) hun gegevens direct interoperabel en herbruikbaar beschikbaar stellen voor de Europese Digitale Identiteit wallet (EUDI-Wallet), het Once-Only Technical System (OOTS) en Delen via Toestemming met Private dienstverleners (DvTP). GBO ontwikkelt ook centrale voorzieningen die voor het aansluiten op deze kanalen gebruikt kunnen worden door de bronhouders.
 
 GBO richt zich vanuit het perspectief van bronhouders op de gemeenschappelijke aspecten van bronontsluiting en biedt de volgende voordelen:
 
