@@ -2,7 +2,7 @@
 
 ## Introductie
 
-Het programma Gemeenschappelijke Bronontsluiting (GBO) ontwikkelt een gestandaardiseerde ontsluiting waarmee overheidsorganisaties (bronhouders) hun gegevens direct interoperabel en herbruikbaar beschikbaar stellen voor de Europese Digitale Identiteit wallet (EUDI-Wallet), het Once-Only Technical System (OOTS) en Delen via Toestemming met Private dienstverleners (DvTP). GBO ontwikkelt ook centrale voorzieningen die voor het aansluiten op deze kanalen gebruik kunnen worden door de bronhouders.
+Het programma Gemeenschappelijke Bronontsluiting (GBO) ontwikkelt een gestandaardiseerde ontsluiting waarmee overheidsorganisaties (bronhouders) hun gegevens direct interoperabel en herbruikbaar beschikbaar stellen voor de Europese Digitale Identiteit wallet (EUDI-Wallet), het Once-Only Technical System (OOTS) en Delen via Toestemming met Private dienstverleners (DvTP). GBO ontwikkelt ook centrale voorzieningen die voor het aansluiten op deze kanalen gebruikt kunnen worden door de bronhouders.
 
 GBO richt zich vanuit het perspectief van bronhouders op de gemeenschappelijke aspecten van bronontsluiting en biedt de volgende voordelen:
 
@@ -52,8 +52,8 @@ De documentatie is nog in ontwikkeling en vormt de basis voor verdere besluitvor
 | **Onderdeel** | **Reviewronde** | **Status** |
 | ------------- | --------------- | ---------- |
 | [Context](context.md) | N.v.t. | In ontwikkeling |
-| [Globaal Ontwerp](https://ictu.github.io/GBO-GO/) | Afgerond ([v0.8.7](https://ictu.github.io/GBO-GO/0.8.7/))<br>[22 april - 22 mei 2026] | Verwerking review t.b.v. vaststelling |
-| [Projectstartarchitectuur](https://ictu.github.io/GBO-PSA/) | Afgerond ([v0.7.2](https://ictu.github.io/GBO-PSA/0.7.2/))<br>[21 juni - 1 augustus 2026] | Verwerking review t.b.v. definitieve versie |
-| Technisch Ontwerp | In voorbereiding | In ontwikkeling |
-| [Semantisch Model](https://ictu.github.io/GBO-Semantiek/) | In voorbereiding | Ontwikkelversie beschikbaar |
+| [Globaal Ontwerp](https://ictu.github.io/GBO-GO/) | Afgerond ([v0.8.7](https://ictu.github.io/GBO-GO/0.8.7/))<br>[22 april - 22 mei 2026] | Review verwerkt t.b.v. vaststelling |
+| [Projectstartarchitectuur](https://ictu.github.io/GBO-PSA/) | Afgerond ([v0.7.2](https://ictu.github.io/GBO-PSA/0.7.2/))<br>[21 juni - 1 augustus 2026] | Verwerking review t.b.v. TO |
+| [Technisch Ontwerp](https://ictu.github.io/GBO-TO/) | Open voor feedback | Ontwikkelversie beschikbaar |
+| [Semantisch Model](https://ictu.github.io/GBO-Semantiek/) | Open voor feedback | Ontwikkelversie beschikbaar |
 | Requirements | In voorbereiding | In ontwikkeling |
