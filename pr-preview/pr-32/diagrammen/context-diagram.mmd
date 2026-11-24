@@ -1,13 +1,12 @@
 flowchart LR
 
 Bronhouder["Overheidsbron"]
-DvTP["GBO
-(afspraken, standaarden, voorzieningen)"]
-Wallet["EUDI-Wallet"]
-SDG["SDG/OOTS"]
-Privaat["Private dienstverlener"]
+Model["Bronontsluitingsmodel<br />(decentrale bronontsluiting en kanaalvoorzieningen)"]
+Wallet["EUDI-Wallet<br/>(EUDI)"]
+SDG["OOTS<br/>(SDG)"]
+Privaat["Private dienstverlener<br/>(DvTP)"]
 
-Bronhouder --> DvTP
-DvTP --> Wallet
-DvTP --> SDG
-DvTP --> Privaat
+Bronhouder --> Model
+Model --> Wallet
+Model --> SDG
+Model --> Privaat

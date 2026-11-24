@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Documentatie voor GBO">
+        <meta name="description" content="Documentatie voor het programma GBO">
       
       
         <meta name="author" content="ICTU">
@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.2">
     
     
       
@@ -785,10 +785,16 @@
                 </nav>
             </div>
         </section>
-        <section class="print-page" id="index" heading-number="1"><h1 id="index-gemeenschappelijk-bronontsluiting">Gemeenschappelijk Bronontsluiting<a class="headerlink" href="#index-gemeenschappelijk-bronontsluiting" title="Permanent link">&para;</a></h1>
+        <section class="print-page" id="index" heading-number="1"><h1 id="index-gemeenschappelijke-bronontsluiting">Gemeenschappelijke Bronontsluiting<a class="headerlink" href="#index-gemeenschappelijke-bronontsluiting" title="Permanent link">&para;</a></h1>
 <h2 id="index-introductie">Introductie<a class="headerlink" href="#index-introductie" title="Permanent link">&para;</a></h2>
-<p>Het programma Gemeenschappelijke Bronontsluiting (GBO) ontwikkelt een gestandaardiseerde ontsluiting waarmee overheidsorganisaties (bronhouders) hun gegevens direct interoperabel en herbruikbaar beschikbaar stellen voor de Europese Digitale Identiteit wallet (EUDI-Wallet), het Once-Only Technical System (OOTS) en Delen via Toestemming met Private dienstverleners (DvTP). GBO ontwikkelt ook centrale voorzieningen die voor het aansluiten op deze kanalen gebruikt kunnen worden door de bronhouders.</p>
-<p>GBO richt zich vanuit het perspectief van bronhouders op de gemeenschappelijke aspecten van bronontsluiting en biedt de volgende voordelen:</p>
+<p><strong>GBO</strong> verwijst in deze documentatie uitsluitend naar het programma Gemeenschappelijke Bronontsluiting. Het programma onderzoekt en beproeft oplossingsrichtingen, doet voorstellen voor aanvullende afspraken en coördineert de ontwikkeling van referentiecomponenten en voorzieningen.</p>
+<p>Het programma werkt vanuit het perspectief van bronhouders een <strong>bronontsluitingsmodel</strong> uit. Dit model bestaat uit:</p>
+<ol>
+<li>een decentrale, herbruikbare bronontsluiting die iedere bronhouder zelf inricht of laat inrichten; en</li>
+<li>kanaalvoorzieningen voor de EUDI-Wallet, het Once-Only Technical System (OOTS) en Delen via Toestemming met Private dienstverleners (DvTP).</li>
+</ol>
+<p>Het bronontsluitingsmodel is geen afzonderlijke standaard, voorziening, organisatie of afsprakenstelsel. Het bouwt voort op bestaande afspraken, standaarden en voorzieningen van onder meer de Generieke Digitale Infrastructuur (GDI) en het Federatief Datastelsel (FDS).</p>
+<p>Het bronontsluitingsmodel beoogt de volgende voordelen:</p>
 <ul>
 <li>aansluiting op de Europese en internationale afspraken en standaarden</li>
 <li>lagere implementatielast voor bronhouders</li>
@@ -801,31 +807,30 @@
 <div class="mermaid">flowchart LR
 
 Bronhouder["Overheidsbron"]
-DvTP["GBO
-(afspraken, standaarden, voorzieningen)"]
-Wallet["EUDI-Wallet"]
-SDG["SDG/OOTS"]
-Privaat["Private dienstverlener"]
+Model["Bronontsluitingsmodel&lt;br /&gt;(decentrale bronontsluiting en kanaalvoorzieningen)"]
+Wallet["EUDI-Wallet&lt;br/&gt;(EUDI)"]
+SDG["OOTS&lt;br/&gt;(SDG)"]
+Privaat["Private dienstverlener&lt;br/&gt;(DvTP)"]
 
-Bronhouder --&gt; DvTP
-DvTP --&gt; Wallet
-DvTP --&gt; SDG
-DvTP --&gt; Privaat
+Bronhouder --&gt; Model
+Model --&gt; Wallet
+Model --&gt; SDG
+Model --&gt; Privaat
 
 </div>
-<figcaption>Gemeenschappelijke bronontsluiting</figcaption>
+<figcaption>Het voorgestelde bronontsluitingsmodel</figcaption>
 </figure>
 
-<p>Op onze <a href="https://gbo.pleio.nl">informatiesite</a> lees je over aanleiding en doel van het programma GBO en word je op de hoogte gehouden van de voortgang. Daarnaast vind je hier informatie over de GBO-pilots. Omdat het programma GBO ook DvTP uitvoert, is op deze site ook informatie over DvTP opgenomen.</p>
+<p>Op onze <a href="https://gbo.pleio.nl">informatiesite</a> lees je over aanleiding en doel van het programma GBO en word je op de hoogte gehouden van de voortgang. Daarnaast vind je hier informatie over de pilots van het programma. Omdat het programma ook DvTP uitvoert, is op deze site informatie over DvTP opgenomen.</p>
 <h2 id="index-borgen-in-bestaande-stelsels">Borgen in bestaande stelsels<a class="headerlink" href="#index-borgen-in-bestaande-stelsels" title="Permanent link">&para;</a></h2>
-<p>De gestandaardiseerde ontsluiting bestaat uit een samenhangende set van generieke afspraken, standaarden en voorzieningen. GBO vormt daarbij geen nieuw, zelfstandig stelsel, maar bouwt voort op bestaande landelijke afspraken, standaarden en voorzieningen.</p>
-<p>Nieuwe, aanvullende afspraken, standaarden en voorzieningen worden zoveel mogelijk geborgd binnen de bestaande afsprakenstelsels. Hiertoe behoren het Federatief Datastelsel (FDS), de Generieke Digitale Infrastructuur (GDI), het EDI-stelsel, de Basisinfrastructuur OOTS (sectorale en eigen aansluitingen zijn buiten scope) en, voor de uitwisseling met private dienstverleners, publiek-private afsprakenstelsels zoals Trusted Information Partners (TIP).</p>
-<p>De GBO architectuur formuleert aanvullingen voor en verbeteringen op deze bestaande stelsels. Het programma draagt die voorstellen voor aan de governance van de stelsels. De stelsels implementeren de maatregelen vervolgens zelf. Het programma ondersteunt dit met specificaties en voorbeeldimplementaties.</p>
+<p>Het bronontsluitingsmodel bouwt voort op bestaande landelijke afspraken, standaarden en voorzieningen. Het model vormt geen nieuw, zelfstandig stelsel.</p>
+<p>Aanvullende afspraken worden pas na besluitvorming onderdeel van de daarvoor aangewezen standaarden en afsprakenstelsels, waaronder het FDS en de GDI. Voor de kanalen sluit het model aan op de nationale en Europese inrichting van de EUDI-Wallet, de Basisinrichting OOTS en de afspraken voor uitwisseling met private dienstverleners. Sectorale en eigen aansluitingen op OOTS vallen buiten de scope van het programma GBO.</p>
+<p>De architectuurdocumentatie van het programma GBO beschrijft voorstellen voor aanvullingen op bestaande afspraken en standaarden. Het programma brengt deze voorstellen in bij de governance van de verantwoordelijke stelsels en ondersteunt de uitwerking met specificaties en referentie-implementaties. Het programma wordt daarmee zelf geen standaard, stelsel, voorziening, product of toekomstige beheerorganisatie.</p>
 <h2 id="index-documentatie">Documentatie<a class="headerlink" href="#index-documentatie" title="Permanent link">&para;</a></h2>
-<p>Deze omgeving bevat de inhoudelijke uitwerking van de GBO. Deze uitwerking bestaat uit de volgende onderdelen:</p>
+<p>Deze omgeving bevat de algemene introductie en context van het programma GBO. De verdere uitwerking van het voorgestelde bronontsluitingsmodel bestaat uit de volgende onderdelen:</p>
 <ul>
 <li>de <a href="#context">Context</a>, waarin de juridische en organisatorische context beschreven wordt</li>
-<li>het <a href="https://ictu.github.io/GBO-GO/">Globaal Ontwerp</a> met een beschrijving van de voorgestelde oplossing in grote lijnen</li>
+<li>het <a href="https://ictu.github.io/GBO-GO/">Globaal Ontwerp</a> met een beschrijving van het voorgestelde bronontsluitingsmodel, de interactiepatronen, generieke functies en componenten</li>
 <li>de <a href="https://ictu.github.io/GBO-PSA/">Projectstartarchitectuur</a> waarin het ontwerp uitgewerkt wordt naar benodigde stelselfuncties (afspraken, standaarden en voorzieningen) en een inventarisatie van te ontwikkelen componenten</li>
 <li>het <a href="#underconstruction_to">Technisch Ontwerp</a> waarin het ontwerp uitgewerkt wordt naar in te richten technische componenten</li>
 <li><a href="#underconstruction_tr">Technische Requirements</a> waarin de te ontwikkelen voorzieningen uitgewerkt worden naar technische specificaties</li>
@@ -889,14 +894,14 @@ DvTP --&gt; Privaat
 <p>Dit speelt zich af in een bredere context waarin bronhouders ook betrokken zijn bij de totstandkoming van het Federatief Datastelsel (FDS). In dit stelsel worden afspraken en standaarden voor gegevensuitwisseling binnen de overheid vastgelegd. Tegelijkertijd krijgt gegevensdeling met private partijen meer aandacht en daarmee ook de afstemming met publiek-private afsprakenstelsels. Daarnaast maken de introductie van de Nederlandse Digitaliseringsstrategie (NDS) en de inwerkingtreding van de Europese verordening Interoperabel Europa (VIE) duidelijk dat het realiseren van nationale en Europese interoperabiliteit niet langer vrijblijvend is.</p>
 <h2 id="context-gemeenschappelijke-bronontsluiting">Gemeenschappelijke Bronontsluiting<a class="headerlink" href="#context-gemeenschappelijke-bronontsluiting" title="Permanent link">&para;</a></h2>
 <p>In 2025 is vanuit het perspectief van bronhouders onderzocht of het ontsluiten van overheidsbronnen voor deze ontwikkelingen meer samenhangend en gezamenlijk kan worden opgepakt onder de noemer Gemeenschappelijke Bronontsluiting. Het begrip "gemeenschappelijk" benadrukt daarbij de collectieve aard van de opgave. Tegelijkertijd voerde de VNG gerelateerde beproevingen uit onder de noemers Uniforme Bronontsluiting en Bronconnect.</p>
-<p>Op basis van het onderzoek is het programma Gemeenschappelijke Bronontsluiting ontstaan. Daarbij zijn ook de resultaten en geleerde lessen uit de beproevingen met Uniforme Bronontsluiting en Bronconnect meegenomen. Het programma ontwikkelt en realiseert een gestandaardiseerde ontsluiting waarmee bronhouders hun gegevens direct en interoperabel beschikbaar kunnen stellen voor toepassingen zoals de EUDI-wallet, OOTS, DvTP en nieuwe ontwikkelingen.</p>
+<p>Op basis van het onderzoek is het programma Gemeenschappelijke Bronontsluiting ontstaan. Daarbij zijn ook de resultaten en geleerde lessen uit de beproevingen met Uniforme Bronontsluiting en Bronconnect meegenomen. Het programma onderzoekt en beproeft een bronontsluitingsmodel waarmee bronhouders hun gegevens volgens bestaande afspraken en standaarden herbruikbaar beschikbaar kunnen stellen voor de EUDI-Wallet, OOTS en DvTP. Het programma doet voorstellen voor aanvullende afspraken en coördineert de ontwikkeling van referentiecomponenten en voorzieningen.</p>
 <h2 id="context-juridische-context">Juridische context<a class="headerlink" href="#context-juridische-context" title="Permanent link">&para;</a></h2>
-<p>Voor gegevensdeling via GBO gelden vijf juridische uitgangspunten.</p>
+<p>Voor gegevensdeling volgens het voorgestelde bronontsluitingsmodel gelden vijf juridische uitgangspunten.</p>
 <p><strong>De grondslag ligt bij de bronhouder.</strong> Voor iedere gegevensverstrekking moet een geldige juridische grondslag bestaan. Die ligt bij de bronhouder; in de regel is dat een wettelijke verplichting of een taak van algemeen belang. De afnemer heeft een eigen grondslag nodig voor het gebruik van de ontvangen gegevens.</p>
 <p><strong>De burger stuurt, maar sturing is geen grondslag.</strong> In alle drie de gegevensstromen zet de burger de gegevensdeling in gang. Die sturing is niet hetzelfde als toestemming als verwerkingsgrondslag: de verstrekking door de bronhouder berust op een wettelijke bevoegdheid met waarborgen. Toestemming van de burger is jegens de overheid als grondslag bovendien kwetsbaar.</p>
-<p><strong>Doelbinding en dataminimalisatie.</strong> De afnemer krijgt alleen de gegevens die nodig zijn voor het afgesproken doel. GBO maakt dit ook technisch afdwingbaar: alleen vooraf per toepassing vastgelegde gegevenssets worden beantwoord.</p>
+<p><strong>Doelbinding en dataminimalisatie.</strong> De afnemer krijgt alleen de gegevens die nodig zijn voor het afgesproken doel. Het bronontsluitingsmodel maakt dit ook technisch afdwingbaar: alleen vooraf per toepassing vastgelegde gegevenssets worden beantwoord.</p>
 <p><strong>Geen BSN buiten de overheid.</strong> De Wabb regelt het gebruik van het burgerservicenummer door overheidsorganen; buiten de overheid mag het BSN alleen worden verwerkt als een wet dat voorschrijft. Private dienstverleners ontvangen daarom geen BSN maar een partijspecifiek pseudoniem. Voor de DvTP-stroom is pseudonimisering verplicht.</p>
-<p><strong>Controleerbaar achteraf.</strong> Gegevensuitwisseling moet achteraf controleerbaar zijn. GBO ondersteunt daarom logging, toezicht, controle en verantwoording. Ook de burger moet kunnen terugzien welke gegevens zijn gedeeld, met wie en waarvoor.</p>
+<p><strong>Controleerbaar achteraf.</strong> Gegevensuitwisseling moet achteraf controleerbaar zijn. Het bronontsluitingsmodel ondersteunt daarom logging, toezicht, controle en verantwoording. Ook de burger moet kunnen terugzien welke gegevens zijn gedeeld, met wie en waarvoor.</p>
 <h3 id="context-belangrijkste-kaders">Belangrijkste kaders<a class="headerlink" href="#context-belangrijkste-kaders" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>AVG</strong>: eisen aan de verwerking van persoonsgegevens, waaronder rechtmatigheid, doelbinding, dataminimalisatie, transparantie, beveiliging en de rechten van betrokkenen.</li>
@@ -913,18 +918,18 @@ DvTP --&gt; Privaat
 <p>Voor DvTP speelt een specifiek juridisch aandachtspunt. Verschillende sectorale wetten bevatten geheimhoudingsplichten voor bestuursorganen, en toestemming of een verzoek van de burger doorbreekt zo'n plicht niet altijd. Voor sommige gegevensstromen is daarom een aanvullende wettelijke grondslag nodig.</p>
 <p>Het wetgevingstraject voor DvTP werkt deze grondslag uit. Daarbij zijn BZK, vakdepartementen, bronhouders en toezichthouders betrokken. Uitgangspunt is een kaderregeling in de wet, die per toepassing wordt ingevuld in lagere regelgeving.</p>
 <h2 id="context-organisatorische-context">Organisatorische context<a class="headerlink" href="#context-organisatorische-context" title="Permanent link">&para;</a></h2>
-<p><strong>Het programma.</strong> Het programma Gemeenschappelijke Bronontsluiting wordt uitgevoerd door ICTU. Binnen het programma werken de trajecten EUDI-Wallet, OOTS en DvTP samen met de afsprakenstelsels FDS en GDI en met bronhouders, waaronder RvIG, VNG, UWV, DUO, de Belastingdienst, Kadaster en KVK. Ook andere bronhouders zijn uitgenodigd om mee te doen. Deelname is voor bronhouders vrijwillig: een bronhouder kan er ook voor kiezen een eigen ontsluiting te ontwikkelen.</p>
-<p><strong>Aansluiting op bestaande stelsels.</strong> GBO krijgt geen aparte positie naast bestaande stelsels en bouwt geen eigen governance- en beheerstructuur. Concreet:</p>
+<p><strong>Het programma.</strong> Het programma Gemeenschappelijke Bronontsluiting wordt uitgevoerd door ICTU. Binnen het programma werken de trajecten EUDI-Wallet, OOTS en DvTP samen met de afsprakenstelsels FDS en GDI en met bronhouders, waaronder RvIG, VNG, UWV, DUO, de Belastingdienst, Kadaster en KVK. Ook andere bronhouders zijn uitgenodigd om mee te doen. Een bronhouder mag de oplossingen van het programma volgen of een functioneel gelijkwaardig alternatief gebruiken dat aan de vastgestelde afspraken, standaarden en koppelvlakken voldoet.</p>
+<p><strong>Aansluiting op bestaande stelsels.</strong> Het bronontsluitingsmodel is geen afzonderlijk stelsel en het programma GBO wordt geen toekomstige beheerorganisatie. Concreet:</p>
 <ul>
 <li>afspraken voor gegevensuitwisseling binnen de overheid sluiten waar mogelijk aan op het FDS;</li>
-<li>GBO gebruikt bestaande GDI-voorzieningen in plaats van nieuwe voorzieningen met dezelfde functie;</li>
+<li>het bronontsluitingsmodel gebruikt bestaande GDI-voorzieningen in plaats van nieuwe voorzieningen met dezelfde functie;</li>
 <li>de aansluiting op het Europese OOTS loopt via de Nederlandse Basisinrichting OOTS (onderdeel OOTS-V);</li>
-<li>voor de EUDI-Wallet sluit GBO aan op de nationale en Europese inrichting van het EDI-stelsel, waaronder de NL-Wallet en het Architecture and Reference Framework (ARF).</li>
+<li>voor de EUDI-Wallet sluit het bronontsluitingsmodel aan op de nationale en Europese inrichting van het EDI-stelsel, waaronder de NL-Wallet en het Architecture and Reference Framework (ARF).</li>
 </ul>
 <p>Dekken bestaande afspraken, standaarden of voorzieningen de behoefte niet, dan beschrijft het programma welke aanvulling nodig is en brengt het die in bij het verantwoordelijke stelsel.</p>
 <p><strong>Loket voor private partijen.</strong> Bureau DvTP is het loket voor private dienstverleners en sectorvertegenwoordigers: intake, eerste toetsing en begeleiding bij het aansluiten op DvTP.</p>
 <h2 id="context-betrokken-partijen">Betrokken partijen<a class="headerlink" href="#context-betrokken-partijen" title="Permanent link">&para;</a></h2>
-<p>We beschrijven de betrokkenen vanuit het perspectief van de bronhouder; de burger is in dit overzicht vooral degene die de gegevensdeling in gang zet. GBO verandert bestaande verantwoordelijkheden niet: de bronhouder blijft verantwoordelijk voor de bron, de afnemer voor het rechtmatige gebruik van de ontvangen gegevens.</p>
+<p>We beschrijven de betrokkenen vanuit het perspectief van de bronhouder; de burger is in dit overzicht vooral degene die de gegevensdeling in gang zet. Het bronontsluitingsmodel verandert bestaande verantwoordelijkheden niet: de bronhouder blijft verantwoordelijk voor de bron, de afnemer voor het rechtmatige gebruik van de ontvangen gegevens.</p>
 <h3 id="context-in-de-gegevensdeling">In de gegevensdeling<a class="headerlink" href="#context-in-de-gegevensdeling" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Burger</strong>: rechthebbende op persoonsgegevens; initieert of stuurt de gegevensdeling via de EUDI-wallet, OOTS of de DvTP en kan toestemmingen inzien en intrekken en terugzien welke gegevens zijn gedeeld.</li>
@@ -941,7 +946,7 @@ DvTP --&gt; Privaat
 </ul>
 <h3 id="context-uitvoerend-en-beherend">Uitvoerend en beherend<a class="headerlink" href="#context-uitvoerend-en-beherend" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Programma GBO</strong>: werkt de gemeenschappelijke afspraken, standaarden en benodigde voorzieningen uit en brengt wijzigingen in bij de verantwoordelijke stelsels.</li>
+<li><strong>Programma GBO</strong>: onderzoekt en beproeft oplossingsrichtingen, doet voorstellen voor aanvullende afspraken en coördineert de ontwikkeling van referentiecomponenten en voorzieningen. Het programma brengt voorstellen voor wijzigingen in bij de verantwoordelijke stelsels.</li>
 <li><strong>Bureau DvTP</strong>: loket voor private dienstverleners en sectorvertegenwoordigers.</li>
 <li><strong>Programma EDI</strong>: werkt aan het Nederlandse deel van het Europese raamwerk voor digitale identiteit, waaronder de NL-Wallet en het EDI-stelsel.</li>
 <li><strong>bNC-SDG</strong>: coördineert de Nederlandse implementatie van de Single Digital Gateway en van OOTS.</li>
@@ -1037,7 +1042,7 @@ DvTP --&gt; Privaat
       <script id="__config" type="application/json">{"annotate": null, "base": "/GBO/", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "toc.integrate", "content.code.copy", "content.code.annotate", "navigation.path", "toc.follow"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Let op: er wordt alleen gezocht binnen dit documentatie-onderdeel. Om in andere onderdelen te zoeken: ga via het hoofdmenu eerst naar het onderdeel en voer dan de zoekterm in.", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": {"alias": true, "provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="../js/print-site.js"></script>
       
