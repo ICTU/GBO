@@ -46,7 +46,7 @@ Deze omgeving bevat de algemene introductie en context van het programma GBO. De
 - de [Context](context.md), waarin de juridische en organisatorische context beschreven wordt
 - het [Globaal Ontwerp](https://ictu.github.io/GBO-GO/) met een beschrijving van het voorgestelde bronontsluitingsmodel, de interactiepatronen, generieke functies en componenten
 - de [Projectstartarchitectuur](https://ictu.github.io/GBO-PSA/) waarin het ontwerp uitgewerkt wordt naar benodigde stelselfuncties (afspraken, standaarden en voorzieningen) en een inventarisatie van te ontwikkelen componenten
-- het [Technisch Ontwerp](underconstruction_to.md) waarin het ontwerp uitgewerkt wordt naar in te richten technische componenten
+- het [Technisch Ontwerp](https://ictu.github.io/GBO-TO/) waarin het ontwerp uitgewerkt wordt naar in te richten technische componenten
 - [Technische Requirements](underconstruction_tr.md) waarin de te ontwikkelen voorzieningen uitgewerkt worden naar technische specificaties
 - het [Semantisch Model](https://ictu.github.io/GBO-Semantiek/) met o.a. de vereiste gegevensmodellen, vertaaltabellen en metadatering
 
