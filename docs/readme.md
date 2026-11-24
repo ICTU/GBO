@@ -1,6 +1,6 @@
 # Documentatie GBO
 
-Welkom bij de repository met documentatie voor GBO. In deze repository worden alle relevante documentatie voor het programma Gemeenschappelijke Bronontsluiting gepubliceerd.
+Welkom bij de repository met de algemene introductie en context van het programma Gemeenschappelijke Bronontsluiting (GBO).
 
 ## Kerngegevens
 | Onderwerp | Details |
@@ -14,8 +14,8 @@ Welkom bij de repository met documentatie voor GBO. In deze repository worden al
 
 De repository is opgebouwd uit een aantal "deel-repositories":
 
-- GBO (deze repository): inleiding en Context
-- Globaal ontwerp: het globale ontwerp van de gemeenschappelijke bronontsluiting
+- GBO (deze repository): algemene introductie en context van het programma
+- Globaal ontwerp: het voorgestelde bronontsluitingsmodel, de interactiepatronen, generieke functies en componenten
 - Projectstartarchitectuur: het uitgewerkte ontwerp met kaders, richtlijnen, stelselfuncties en te ontwerpen/ in te richten componenten
 - Technisch ontwerp: de technische invulling van de componenten
 - Technische requirements: specificaties van de in te richten componenten en koppelvlakken
