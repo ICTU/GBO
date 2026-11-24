@@ -2,13 +2,15 @@
 
 Deze repository bevat de inleidende documentatie voor het programma **Gemeenschappelijke Bronontsluiting (GBO)**.
 
-GBO heeft als doel een **generieke infrastructuur en afsprakenstelsel** te realiseren waarmee gegevens van overheidsorganisaties beschikbaar kunnen worden gemaakt voor:
+Het programma GBO onderzoekt en beproeft een **bronontsluitingsmodel** waarmee gegevens van overheidsorganisaties volgens bestaande afspraken en standaarden herbruikbaar beschikbaar kunnen worden gemaakt voor:
 
-* burgers
-* private partijen
-* Europese toepassingen zoals **EDI Wallet** en **Single Digital Gateway (SDG/OOTS)**
+* de **EUDI-Wallet**
+* het **Once-Only Technical System (OOTS)**
+* private dienstverleners binnen **Delen via Toestemming met Private dienstverleners (DvTP)**
 
-De gegevensuitwisseling met private dienstverleners is hierin speciaal, omdat hier geen wettelijke verplichting aan verbonden is. Daar is enerzijds meer ruimte om de inrichting vorm te geven, maar anderzijds minder verplichting om deze inrichting daadwerkelijk te volgen. Daarom wordt dit specifiek opgepakt onder de naam DvTP (Delen via Toestemming naar Private dienstverleners).
+Het voorgestelde bronontsluitingsmodel bestaat uit een decentrale, herbruikbare bronontsluiting die iedere bronhouder zelf inricht of laat inrichten, en uit kanaalvoorzieningen voor deze drie toepassingsgebieden. Het model is zelf geen standaard, voorziening, organisatie of afsprakenstelsel. Het bouwt voort op bestaande afspraken, standaarden en voorzieningen van onder meer de Generieke Digitale Infrastructuur (GDI) en het Federatief Datastelsel (FDS).
+
+Het programma GBO onderzoekt en beproeft oplossingsrichtingen, doet voorstellen voor aanvullende afspraken en coördineert de ontwikkeling van referentiecomponenten en voorzieningen. Aanvullende afspraken worden pas na besluitvorming onderdeel van de daarvoor aangewezen standaarden en afsprakenstelsels.
 
 Deze inleidende documentatie beschrijft:
 
@@ -52,7 +54,7 @@ Bijdragen aan deze architectuur kunnen worden gedaan via:
 
 # Contact
 
-Eigenaar: programma GBO
+Eigenaar: programma GBO  
 Contactpersoon: [Govert Claus](mailto:govert.claus@ictu.nl)
 
 

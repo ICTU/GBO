@@ -22,21 +22,21 @@ Dit speelt zich af in een bredere context waarin bronhouders ook betrokken zijn 
 
 In 2025 is vanuit het perspectief van bronhouders onderzocht of het ontsluiten van overheidsbronnen voor deze ontwikkelingen meer samenhangend en gezamenlijk kan worden opgepakt onder de noemer Gemeenschappelijke Bronontsluiting. Het begrip "gemeenschappelijk" benadrukt daarbij de collectieve aard van de opgave. Tegelijkertijd voerde de VNG gerelateerde beproevingen uit onder de noemers Uniforme Bronontsluiting en Bronconnect.
 
-Op basis van het onderzoek is het programma Gemeenschappelijke Bronontsluiting ontstaan. Daarbij zijn ook de resultaten en geleerde lessen uit de beproevingen met Uniforme Bronontsluiting en Bronconnect meegenomen. Het programma ontwikkelt en realiseert een gestandaardiseerde ontsluiting waarmee bronhouders hun gegevens direct en interoperabel beschikbaar kunnen stellen voor toepassingen zoals de EUDI-wallet, OOTS, DvTP en nieuwe ontwikkelingen.
+Op basis van het onderzoek is het programma Gemeenschappelijke Bronontsluiting ontstaan. Daarbij zijn ook de resultaten en geleerde lessen uit de beproevingen met Uniforme Bronontsluiting en Bronconnect meegenomen. Het programma onderzoekt en beproeft een bronontsluitingsmodel waarmee bronhouders hun gegevens volgens bestaande afspraken en standaarden herbruikbaar beschikbaar kunnen stellen voor de EUDI-Wallet, OOTS en DvTP. Het programma doet voorstellen voor aanvullende afspraken en coördineert de ontwikkeling van referentiecomponenten en voorzieningen.
 
 ## Juridische context
 
-Voor gegevensdeling via GBO gelden vijf juridische uitgangspunten.
+Voor gegevensdeling volgens het voorgestelde bronontsluitingsmodel gelden vijf juridische uitgangspunten.
 
 **De grondslag ligt bij de bronhouder.** Voor iedere gegevensverstrekking moet een geldige juridische grondslag bestaan. Die ligt bij de bronhouder; in de regel is dat een wettelijke verplichting of een taak van algemeen belang. De afnemer heeft een eigen grondslag nodig voor het gebruik van de ontvangen gegevens.
 
 **De burger stuurt, maar sturing is geen grondslag.** In alle drie de gegevensstromen zet de burger de gegevensdeling in gang. Die sturing is niet hetzelfde als toestemming als verwerkingsgrondslag: de verstrekking door de bronhouder berust op een wettelijke bevoegdheid met waarborgen. Toestemming van de burger is jegens de overheid als grondslag bovendien kwetsbaar.
 
-**Doelbinding en dataminimalisatie.** De afnemer krijgt alleen de gegevens die nodig zijn voor het afgesproken doel. GBO maakt dit ook technisch afdwingbaar: alleen vooraf per toepassing vastgelegde gegevenssets worden beantwoord.
+**Doelbinding en dataminimalisatie.** De afnemer krijgt alleen de gegevens die nodig zijn voor het afgesproken doel. Het bronontsluitingsmodel maakt dit ook technisch afdwingbaar: alleen vooraf per toepassing vastgelegde gegevenssets worden beantwoord.
 
 **Geen BSN buiten de overheid.** De Wabb regelt het gebruik van het burgerservicenummer door overheidsorganen; buiten de overheid mag het BSN alleen worden verwerkt als een wet dat voorschrijft. Private dienstverleners ontvangen daarom geen BSN maar een partijspecifiek pseudoniem. Voor de DvTP-stroom is pseudonimisering verplicht.
 
-**Controleerbaar achteraf.** Gegevensuitwisseling moet achteraf controleerbaar zijn. GBO ondersteunt daarom logging, toezicht, controle en verantwoording. Ook de burger moet kunnen terugzien welke gegevens zijn gedeeld, met wie en waarvoor.
+**Controleerbaar achteraf.** Gegevensuitwisseling moet achteraf controleerbaar zijn. Het bronontsluitingsmodel ondersteunt daarom logging, toezicht, controle en verantwoording. Ook de burger moet kunnen terugzien welke gegevens zijn gedeeld, met wie en waarvoor.
 
 ### Belangrijkste kaders
 
@@ -59,14 +59,14 @@ Het wetgevingstraject voor DvTP werkt deze grondslag uit. Daarbij zijn BZK, vakd
 
 ## Organisatorische context
 
-**Het programma.** Het programma Gemeenschappelijke Bronontsluiting wordt uitgevoerd door ICTU. Binnen het programma werken de trajecten EUDI-Wallet, OOTS en DvTP samen met de afsprakenstelsels FDS en GDI en met bronhouders, waaronder RvIG, VNG, UWV, DUO, de Belastingdienst, Kadaster en KVK. Ook andere bronhouders zijn uitgenodigd om mee te doen. Deelname is voor bronhouders vrijwillig: een bronhouder kan er ook voor kiezen een eigen ontsluiting te ontwikkelen.
+**Het programma.** Het programma Gemeenschappelijke Bronontsluiting wordt uitgevoerd door ICTU. Binnen het programma werken de trajecten EUDI-Wallet, OOTS en DvTP samen met de afsprakenstelsels FDS en GDI en met bronhouders, waaronder RvIG, VNG, UWV, DUO, de Belastingdienst, Kadaster en KVK. Ook andere bronhouders zijn uitgenodigd om mee te doen. Een bronhouder mag de oplossingen van het programma volgen of een functioneel gelijkwaardig alternatief gebruiken dat aan de vastgestelde afspraken, standaarden en koppelvlakken voldoet.
 
-**Aansluiting op bestaande stelsels.** GBO krijgt geen aparte positie naast bestaande stelsels en bouwt geen eigen governance- en beheerstructuur. Concreet:
+**Aansluiting op bestaande stelsels.** Het bronontsluitingsmodel is geen afzonderlijk stelsel en het programma GBO wordt geen toekomstige beheerorganisatie. Concreet:
 
 - afspraken voor gegevensuitwisseling binnen de overheid sluiten waar mogelijk aan op het FDS;
-- GBO gebruikt bestaande GDI-voorzieningen in plaats van nieuwe voorzieningen met dezelfde functie;
+- het bronontsluitingsmodel gebruikt bestaande GDI-voorzieningen in plaats van nieuwe voorzieningen met dezelfde functie;
 - de aansluiting op het Europese OOTS loopt via de Nederlandse Basisinrichting OOTS (onderdeel OOTS-V);
-- voor de EUDI-Wallet sluit GBO aan op de nationale en Europese inrichting van het EDI-stelsel, waaronder de NL-Wallet en het Architecture and Reference Framework (ARF).
+- voor de EUDI-Wallet sluit het bronontsluitingsmodel aan op de nationale en Europese inrichting van het EDI-stelsel, waaronder de NL-Wallet en het Architecture and Reference Framework (ARF).
 
 Dekken bestaande afspraken, standaarden of voorzieningen de behoefte niet, dan beschrijft het programma welke aanvulling nodig is en brengt het die in bij het verantwoordelijke stelsel.
 
@@ -74,7 +74,7 @@ Dekken bestaande afspraken, standaarden of voorzieningen de behoefte niet, dan b
 
 ## Betrokken partijen
 
-We beschrijven de betrokkenen vanuit het perspectief van de bronhouder; de burger is in dit overzicht vooral degene die de gegevensdeling in gang zet. GBO verandert bestaande verantwoordelijkheden niet: de bronhouder blijft verantwoordelijk voor de bron, de afnemer voor het rechtmatige gebruik van de ontvangen gegevens.
+We beschrijven de betrokkenen vanuit het perspectief van de bronhouder; de burger is in dit overzicht vooral degene die de gegevensdeling in gang zet. Het bronontsluitingsmodel verandert bestaande verantwoordelijkheden niet: de bronhouder blijft verantwoordelijk voor de bron, de afnemer voor het rechtmatige gebruik van de ontvangen gegevens.
 
 ### In de gegevensdeling
 
@@ -92,7 +92,7 @@ We beschrijven de betrokkenen vanuit het perspectief van de bronhouder; de burge
 
 ### Uitvoerend en beherend
 
-- **Programma GBO**: werkt de gemeenschappelijke afspraken, standaarden en benodigde voorzieningen uit en brengt wijzigingen in bij de verantwoordelijke stelsels.
+- **Programma GBO**: onderzoekt en beproeft oplossingsrichtingen, doet voorstellen voor aanvullende afspraken en coördineert de ontwikkeling van referentiecomponenten en voorzieningen. Het programma brengt voorstellen voor wijzigingen in bij de verantwoordelijke stelsels.
 - **Bureau DvTP**: loket voor private dienstverleners en sectorvertegenwoordigers.
 - **Programma EDI**: werkt aan het Nederlandse deel van het Europese raamwerk voor digitale identiteit, waaronder de NL-Wallet en het EDI-stelsel.
 - **bNC-SDG**: coördineert de Nederlandse implementatie van de Single Digital Gateway en van OOTS.
